@@ -167,6 +167,20 @@
   "trustbox": {
     "ariaLabel": "Trustpilot"
   },
+  "editorialStickyCta": {
+    "freeBadge": "Gratuita",
+    "title": "Consulta médica online para perder peso",
+    "subtitleHighlight": "Perca peso de forma segura",
+    "subtitleSuffix": "· primeira consulta gratuita · resposta em minutos",
+    "cta": "Começar agora",
+    "close": "Fechar aviso",
+    "includes": [
+      "Até 22,5% de perda de peso",
+      "Receita médica em 3 horas úteis",
+      "Avaliação e acompanhamento com médico inscrito na Ordem",
+      "Sem marcação prévia nem deslocações"
+    ]
+  },
   "notFound": {
     "error": "Erro 404",
     "title": "Não encontrámos esta página",

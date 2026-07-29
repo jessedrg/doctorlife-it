@@ -167,6 +167,20 @@
   "trustbox": {
     "ariaLabel": "Trustpilot"
   },
+  "editorialStickyCta": {
+    "freeBadge": "Bezpłatnie",
+    "title": "Konsultacja lekarska online w celu schudnięcia",
+    "subtitleHighlight": "Schudnij bezpiecznie",
+    "subtitleSuffix": "· pierwsza konsultacja bezpłatna · odpowiedź w kilka minut",
+    "cta": "Zacznij teraz",
+    "close": "Zamknij powiadomienie",
+    "includes": [
+      "Do 22,5% utraty wagi",
+      "Recepta lekarska w ciągu 3 godzin roboczych",
+      "Ocena i opieka lekarza z uprawnieniami",
+      "Bez wizyty i bez podróży"
+    ]
+  },
   "notFound": {
     "error": "Błąd 404",
     "title": "Nie znaleźliśmy tej strony",

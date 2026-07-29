@@ -167,6 +167,20 @@
   "trustbox": {
     "ariaLabel": "Trustpilot"
   },
+  "editorialStickyCta": {
+    "freeBadge": "Gratis",
+    "title": "Online medisch consult om af te vallen",
+    "subtitleHighlight": "Val veilig af",
+    "subtitleSuffix": "· eerste consult gratis · reactie binnen minuten",
+    "cta": "Nu starten",
+    "close": "Melding sluiten",
+    "includes": [
+      "Tot 22,5% gewichtsverlies",
+      "Medisch recept binnen 3 werkuren",
+      "Beoordeling en opvolging door een geregistreerde arts",
+      "Zonder afspraak of reistijd"
+    ]
+  },
   "notFound": {
     "error": "Fout 404",
     "title": "We hebben deze pagina niet gevonden",

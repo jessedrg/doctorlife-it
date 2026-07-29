@@ -167,6 +167,20 @@
   "trustbox": {
     "ariaLabel": "Trustpilot"
   },
+  "editorialStickyCta": {
+    "freeBadge": "Gratuit",
+    "title": "Consultation médicale en ligne pour maigrir",
+    "subtitleHighlight": "Perdez du poids en toute sécurité",
+    "subtitleSuffix": "· première consultation gratuite · réponse en quelques minutes",
+    "cta": "Commencer maintenant",
+    "close": "Fermer l'avis",
+    "includes": [
+      "Jusqu'à 22,5 % de perte de poids",
+      "Ordonnance médicale sous 3 heures ouvrées",
+      "Évaluation et suivi par un médecin inscrit à l'Ordre",
+      "Sans rendez-vous ni déplacement"
+    ]
+  },
   "notFound": {
     "error": "Erreur 404",
     "title": "Nous n'avons pas trouvé cette page",
