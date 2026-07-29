@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 import { QuizProvider } from "@/components/quiz-context";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -26,14 +27,16 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
   const post = getPost(slug);
-  if (!post) return { title: `Artículo no encontrado — ${BRAND}` };
+  const tNotFound = await getTranslations("ui.notFound");
+  if (!post) return { title: `${tNotFound("title")} — ${BRAND}` };
   const url = `${SITE_URL}/blog/${post.slug}`;
   const optimizedTitle = seoTitle(post);
   const optimizedDescription = seoDescription(post);
+  const tHero = await getTranslations("ui.hero");
   return {
     title: optimizedTitle,
     description: optimizedDescription,
-    keywords: [post.keyword, "GLP-1", "pérdida de peso", "semaglutida", "tirzepatida", BRAND],
+    keywords: [post.keyword, "GLP-1", tHero("titleHighlight"), BRAND],
     authors: [{ name: MEDICAL_REVIEWER.name }],
     alternates: { canonical: url },
     openGraph: {

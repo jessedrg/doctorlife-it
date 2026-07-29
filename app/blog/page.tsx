@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { QuizProvider } from "@/components/quiz-context";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -8,19 +9,20 @@ import { BlogFunnel } from "@/components/blog-funnel";
 import { BlogFilters } from "@/components/blog-filters";
 import { posts, SITE_URL, type Post } from "@/lib/blog";
 
-export const metadata: Metadata = {
-  title: "Blog DoctorLife — Wegovy, Mounjaro y pérdida de peso con GLP‑1",
-  description:
-    "Guías claras y médicas sobre Wegovy, Mounjaro, semaglutida y tirzepatida: precios, recetas y cómo empezar tu tratamiento de pérdida de peso en España.",
-  alternates: { canonical: `${SITE_URL}/blog` },
-  openGraph: {
-    title: "Blog DoctorLife — Cuidado del peso con GLP‑1",
-    description:
-      "Guías sobre Wegovy, Mounjaro y pérdida de peso con GLP‑1: precios, recetas y cómo empezar con seguimiento médico.",
-    url: `${SITE_URL}/blog`,
-    type: "website",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("pages.blog");
+  return {
+    title: t("metaTitle"),
+    description: t("metaDescription"),
+    alternates: { canonical: `${SITE_URL}/blog` },
+    openGraph: {
+      title: t("metaTitle"),
+      description: t("metaDescription"),
+      url: `${SITE_URL}/blog`,
+      type: "website",
+    },
+  };
+}
 
 const PER_PAGE = 24;
 
@@ -70,6 +72,7 @@ export default async function BlogIndex({
 }: {
   searchParams: Promise<{ q?: string; cat?: string; page?: string }>;
 }) {
+  const t = await getTranslations("pages.blog");
   const sp = await searchParams;
   const q = (sp.q ?? "").trim();
   const cat = (sp.cat ?? "").trim();
@@ -114,13 +117,13 @@ export default async function BlogIndex({
         <main className="mx-auto max-w-none px-3 pb-10 pt-10 sm:px-4 lg:px-5">
           <header className="mx-auto max-w-[760px] py-12 text-center sm:py-16">
             <span className="text-[13px] font-semibold uppercase tracking-[.18em] text-clay">
-              Blog DoctorLife
+              {t("badge")}
             </span>
             <h1 className="mt-4 text-balance text-[clamp(34px,5vw,58px)] font-light leading-[1.04] tracking-[-.02em] text-ink">
-              Todo sobre el <span className="font-serif italic text-olive">cuidado del peso</span> con GLP‑1
+              {t("title")} <span className="font-serif italic text-olive">{t("titleHighlight")}</span> {t("titleSuffix")}
             </h1>
             <p className="mx-auto mt-5 max-w-[52ch] text-pretty text-[17px] leading-relaxed text-ink-soft">
-              Wegovy, Mounjaro, semaglutida, tirzepatida: precios, recetas y cómo empezar de forma segura y con seguimiento médico real.
+              {t("subtitle")}
             </p>
           </header>
 
@@ -131,10 +134,10 @@ export default async function BlogIndex({
           {isFiltering && (
             <p className="mx-auto mt-8 max-w-[760px] text-center text-[14px] text-ink-mute">
               {pool.length === 0
-                ? "No hemos encontrado guías que coincidan."
-                : `${pool.length} ${pool.length === 1 ? "guía encontrada" : "guías encontradas"}`}
-              {cat && ` en ${cat}`}
-              {q && ` para «${q}»`}.
+                ? t("noResults")
+                : `${pool.length} ${pool.length === 1 ? t("resultsSingular") : t("resultsPlural")}`}
+              {cat && ` ${t("inCategory")} ${cat}`}
+              {q && ` ${t("forQuery", { query: q })}`}
             </p>
           )}
 
@@ -170,7 +173,7 @@ export default async function BlogIndex({
                 href="/blog"
                 className="inline-block rounded-full bg-ink px-7 py-[13px] text-[15px] font-semibold text-paper no-underline"
               >
-                Ver todas las guías
+                {t("viewAll")}
               </Link>
             </div>
           )}
@@ -178,7 +181,7 @@ export default async function BlogIndex({
           {/* Paginación */}
           {totalPages > 1 && (
             <nav
-              aria-label="Paginación del blog"
+              aria-label={t("pagination")}
               className="mt-14 flex flex-wrap items-center justify-center gap-2"
             >
               {safePage > 1 ? (
@@ -187,11 +190,11 @@ export default async function BlogIndex({
                   className="rounded-full border border-ink/12 bg-warm px-4 py-[9px] text-[14px] font-medium text-ink no-underline transition-colors hover:border-ink/25"
                   rel="prev"
                 >
-                  ← Anterior
+                  {t("prev")}
                 </Link>
               ) : (
                 <span className="cursor-not-allowed rounded-full border border-ink/8 bg-warm px-4 py-[9px] text-[14px] font-medium text-ink-mute/50">
-                  ← Anterior
+                  {t("prev")}
                 </span>
               )}
 
@@ -240,11 +243,11 @@ export default async function BlogIndex({
                   className="rounded-full border border-ink/12 bg-warm px-4 py-[9px] text-[14px] font-medium text-ink no-underline transition-colors hover:border-ink/25"
                   rel="next"
                 >
-                  Siguiente →
+                  {t("next")}
                 </Link>
               ) : (
                 <span className="cursor-not-allowed rounded-full border border-ink/8 bg-warm px-4 py-[9px] text-[14px] font-medium text-ink-mute/50">
-                  Siguiente →
+                  {t("next")}
                 </span>
               )}
             </nav>
