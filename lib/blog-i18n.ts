@@ -14,6 +14,12 @@ import itDrugs from "@/messages/it/blog-drugs.json";
 import itTemplates from "@/messages/it/blog-templates.json";
 import itArticles from "@/messages/it/blog-articles.json";
 
+import deDrugs from "@/messages/de/blog-drugs.json";
+import frDrugs from "@/messages/fr/blog-drugs.json";
+import ptDrugs from "@/messages/pt/blog-drugs.json";
+import nlDrugs from "@/messages/nl/blog-drugs.json";
+import plDrugs from "@/messages/pl/blog-drugs.json";
+
 export type DrugRaw = {
   key: string;
   name: string;
@@ -123,8 +129,18 @@ export type ArticleDraft = {
 
 const DRUGS_BY_LOCALE: Record<string, BlogDrugsData> = {
   it: itDrugs as BlogDrugsData,
+  de: deDrugs as BlogDrugsData,
+  fr: frDrugs as BlogDrugsData,
+  pt: ptDrugs as BlogDrugsData,
+  nl: nlDrugs as BlogDrugsData,
+  pl: plDrugs as BlogDrugsData,
 };
 
+/* Solo "it" ha già blog-templates.json / blog-articles.json completi (contenuto
+   editoriale enorme). Gli altri paesi sono scaffolding: finché non vengono
+   tradotti, il cluster blog usa i template italiani come fallback per evitare
+   che il build fallisca. Aggiungi messages/{locale}/blog-templates.json e
+   blog-articles.json e registrali qui sotto per completare la localizzazione. */
 const TEMPLATES_BY_LOCALE: Record<string, BlogTemplatesData> = {
   it: itTemplates as BlogTemplatesData,
 };
@@ -133,6 +149,7 @@ const ARTICLES_BY_LOCALE: Record<string, ArticleDraft[]> = {
   it: itArticles as ArticleDraft[],
 };
 
-export const blogDrugsData: BlogDrugsData = DRUGS_BY_LOCALE[LOCALE];
-export const blogTemplates: BlogTemplatesData = TEMPLATES_BY_LOCALE[LOCALE];
-export const blogArticles: ArticleDraft[] = ARTICLES_BY_LOCALE[LOCALE];
+export const blogDrugsData: BlogDrugsData = DRUGS_BY_LOCALE[LOCALE] ?? (itDrugs as BlogDrugsData);
+export const blogTemplates: BlogTemplatesData =
+  TEMPLATES_BY_LOCALE[LOCALE] ?? (itTemplates as BlogTemplatesData);
+export const blogArticles: ArticleDraft[] = ARTICLES_BY_LOCALE[LOCALE] ?? (itArticles as ArticleDraft[]);

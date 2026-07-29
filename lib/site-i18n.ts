@@ -7,6 +7,11 @@
 
 import { LOCALE } from "@/i18n/config";
 import itSite from "@/messages/it/site.json";
+import deSite from "@/messages/de/site.json";
+import frSite from "@/messages/fr/site.json";
+import ptSite from "@/messages/pt/site.json";
+import nlSite from "@/messages/nl/site.json";
+import plSite from "@/messages/pl/site.json";
 
 export type Product = {
   name: string;
@@ -38,6 +43,11 @@ export type SiteData = {
 
 const SITE_BY_LOCALE: Record<string, SiteData> = {
   it: itSite as SiteData,
+  de: deSite as SiteData,
+  fr: frSite as SiteData,
+  pt: ptSite as SiteData,
+  nl: nlSite as SiteData,
+  pl: plSite as SiteData,
 };
 
-export const siteData: SiteData = SITE_BY_LOCALE[LOCALE];
+export const siteData: SiteData = SITE_BY_LOCALE[LOCALE] ?? (itSite as SiteData);

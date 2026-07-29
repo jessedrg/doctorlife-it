@@ -7,6 +7,11 @@
 
 import { LOCALE } from "@/i18n/config";
 import itLegal from "@/messages/it/legal.json";
+import deLegal from "@/messages/de/legal.json";
+import frLegal from "@/messages/fr/legal.json";
+import ptLegal from "@/messages/pt/legal.json";
+import nlLegal from "@/messages/nl/legal.json";
+import plLegal from "@/messages/pl/legal.json";
 
 export type LegalEntity = {
   companyName: string;
@@ -24,9 +29,16 @@ export type LegalSection = { title: string; body?: string; bullets?: string[] };
 
 export type LegalData = typeof itLegal;
 
-const LEGAL_BY_LOCALE: Record<string, LegalData> = { it: itLegal };
+const LEGAL_BY_LOCALE: Record<string, LegalData> = {
+  it: itLegal,
+  de: deLegal,
+  fr: frLegal,
+  pt: ptLegal,
+  nl: nlLegal,
+  pl: plLegal,
+};
 
-export const legalData: LegalData = LEGAL_BY_LOCALE[LOCALE];
+export const legalData: LegalData = LEGAL_BY_LOCALE[LOCALE] ?? itLegal;
 export const legalEntity: LegalEntity = legalData.entity;
 
 /** Interpola {campo} en un texto usando los datos de la entidad legal. */
