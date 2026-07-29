@@ -1,0 +1,111 @@
+{
+  "quiz": {
+    "ariaLabel": "Zarezerwuj swoją pierwszą bezpłatną konsultację",
+    "close": "Zamknij",
+    "form": {
+      "title": "Twoja pierwsza konsultacja, bezpłatna",
+      "subtitle": "Podaj nam te dane i wybierz swój termin z lekarzem. Bez oczekiwania i bez zobowiązań.",
+      "height": "Wzrost (cm)",
+      "weight": "Waga (kg)",
+      "phone": "Telefon",
+      "email": "E-mail",
+      "namePlaceholder": "Twoje imię (opcjonalnie)",
+      "bmiLabel": "Twoje BMI",
+      "bmiUnderweight": "Niedowaga",
+      "bmiHealthy": "Waga zdrowa",
+      "bmiOverweight": "Nadwaga",
+      "bmiObesity": "Otyłość",
+      "submit": "Wybierz mój bezpłatny termin",
+      "submitting": "Szukam Twojego terminu…",
+      "errorHeightWeight": "Podaj swój wzrost i wagę.",
+      "errorPhone": "Podaj prawidłowy numer telefonu.",
+      "errorEmail": "Podaj prawidłowy adres e-mail.",
+      "privacyText": "Kontynuując, akceptujesz naszą",
+      "privacyLink": "politykę prywatności",
+      "privacySuffix": ". Pierwsza konsultacja bezpłatna, bez karty i bez zobowiązań.",
+      "orPrefers": "lub jeśli wolisz",
+      "whatsappCta": "Napisz do nas na WhatsApp",
+      "goal": "Schudnąć",
+      "formatPreference": "Tygodniowy pen"
+    },
+    "slot": {
+      "title": "Wybierz swój pierwszy termin",
+      "subtitle": "Rozmowa wideo z endokrynologiem. Twoja",
+      "subtitleHighlight": "pierwsza konsultacja jest bezpłatna",
+      "subtitleSuffix": " i utworzymy Twoje konto automatycznie po potwierdzeniu.",
+      "loading": "Szukam dostępnych terminów…",
+      "noSlotsTitle": "Obecnie brak dostępnych terminów",
+      "noSlotsDesc": "Napisz do nas na WhatsApp, a znajdziemy dla Ciebie dostępny termin w mniej niż 24 godziny.",
+      "whatsappCta": "Napisz do nas na WhatsApp",
+      "emailText": "Możesz też napisać do nas na",
+      "confirming": "Potwierdzam Twoją rezerwację…",
+      "back": "← Wstecz",
+      "errorCheckout": "Nie można uruchomić płatności. Spróbuj ponownie."
+    },
+    "done": {
+      "thanks": "Dziękujemy, {name}",
+      "allSet": "Wszystko gotowe",
+      "message": "Otrzymaliśmy Twoje dane. Lekarz z uprawnieniami przeanalizuje Twój przypadek i napisze do Ciebie na",
+      "messageSuffix": "w mniej niż 24 godziny.",
+      "done": "Gotowe"
+    }
+  },
+  "quizSteps": [
+    {
+      "key": "objective",
+      "q": "Jaki jest Twój główny cel?",
+      "sub": "Zrób pierwszy krok. W 2 minuty dowiesz się, czy terapia GLP‑1 jest dla Ciebie.",
+      "opts": [
+        "Schudnąć i nie odzyskać wagi",
+        "Kontrolować głód i zachcianki",
+        "Poprawić swoje zdrowie i energię",
+        "Czuć się lepiej ze swoim ciałem"
+      ]
+    },
+    {
+      "key": "amount",
+      "q": "Ile wagi chciałbyś/chciałabyś zgubić?",
+      "sub": "Nie ma błędnych odpowiedzi. Chcemy tylko zrozumieć Twój punkt wyjścia.",
+      "opts": ["Mniej niż 5 kg", "Od 5 do 10 kg", "Od 10 do 20 kg", "Więcej niż 20 kg"]
+    },
+    {
+      "key": "tried",
+      "q": "Co już próbowałeś/próbowałaś wcześniej, nie mogąc tego utrzymać?",
+      "sub": "Jeśli waga zawsze wraca, to nie Twoja wina: to Twoja biologia się broni.",
+      "opts": [
+        "Diety i liczenie kalorii",
+        "Intensywne ćwiczenia",
+        "Przerywany post",
+        "Trochę wszystkiego… i zawsze wraca"
+      ]
+    },
+    {
+      "key": "frustration",
+      "q": "Co dziś najbardziej Cię obciąża?",
+      "sub": "Wybierz to, co najbardziej odpowiada Twojej obecnej sytuacji.",
+      "opts": [
+        "Ciągły głód i zachcianki",
+        "Odzyskiwanie tego, co tak wiele mnie kosztowało, aby zgubić",
+        "Nie czuć się dobrze ze sobą",
+        "Jak to wpływa na moje zdrowie"
+      ]
+    },
+    {
+      "key": "glp1Experience",
+      "q": "Próbowałeś/próbowałaś już terapii GLP‑1, takiej jak semaglutyd?",
+      "sub": "To lek, który zmienia utratę wagi z prawdziwą opieką lekarską.",
+      "opts": ["Używam teraz", "Używałem/am wcześniej", "Nie, ale mnie interesuje", "Nie wiem, co to jest"]
+    },
+    {
+      "key": "why",
+      "q": "Dlaczego chcesz zrobić ten krok teraz?",
+      "sub": "Jasność w tej kwestii to już połowa drogi.",
+      "opts": [
+        "Dla mojego zdrowia i przyszłości",
+        "Chcę znowu czuć się sobą",
+        "Mam przed sobą ważny moment",
+        "Jestem zmęczony/a próbowaniem samemu/samej"
+      ]
+    }
+  ]
+}

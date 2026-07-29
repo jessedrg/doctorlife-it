@@ -1,0 +1,27 @@
+{
+  "badge": "Hoe de behandeling werkt",
+  "title": "Wat zijn",
+  "titleHighlight": "GLP-1-behandelingen",
+  "intro": "GLP-1-analogen zijn een klasse medicijnen die een natuurlijk hormoon nabootsen dat het lichaam afgeeft tijdens het eten. Ze helpen de eetlust en verzadiging te reguleren en kunnen, volgens klinische studies, bijdragen aan relevant gewichtsverlies in combinatie met evenwichtige voeding, fysieke activiteit en medische opvolging.",
+  "disclaimer": "Informatie met een educatief doel. Behandelingen met GLP-1-analogen zijn receptplichtige geneesmiddelen: ze vereisen een recept en een voorafgaande medische beoordeling. De beslissing om voor te schrijven en de specifieke behandeling liggen altijd bij de arts, na beoordeling van elk geval. Deze pagina vervangt geen medisch advies en promoot geen gebruik zonder toezicht.",
+  "principles": [
+    {
+      "activo": "Semaglutide",
+      "clase": "GLP-1-analoog",
+      "desc": "Bootst het hormoon GLP-1 na om het verzadigingsgevoel te verlengen en de eetlust te verminderen, waardoor je minder eet zonder honger te voelen.",
+      "admin": "Wekelijkse injectie"
+    },
+    {
+      "activo": "Tirzepatide",
+      "clase": "GLP-1/GIP-analoog",
+      "desc": "Werkt op twee hormonen (GLP-1 en GIP) die eetlust en verzadiging reguleren, en bevordert gewichtsbeheersing in combinatie met gezonde gewoonten.",
+      "admin": "Wekelijkse injectie"
+    },
+    {
+      "activo": "Liraglutide",
+      "clase": "GLP-1-analoog",
+      "desc": "Verhoogt het verzadigingsgevoel op vergelijkbare wijze, maar met dagelijkse in plaats van wekelijkse toediening.",
+      "admin": "Dagelijkse injectie"
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "entity": {
+    "companyName": "DOCTORLIFE HEALTH POLSKA SP. Z O.O.",
+    "vatNumber": "NIP do uzupełnienia",
+    "healthProviderName": "[PODMIOT LECZNICZY POLSKA — DO UZUPEŁNIENIA]",
+    "healthRegistryNumber": "Nr rejestru izby lekarskiej: do uzupełnienia",
+    "dpoEmail": "hello@doctorlife.io",
+    "supportEmail": "hello@doctorlife.io",
+    "jurisdictionCity": "Warszawa",
+    "dataProtectionAuthority": "Urząd Ochrony Danych Osobowych — UODO (uodo.gov.pl)",
+    "emergencyNumber": "112"
+  },
+  "privacy": {
+    "metaTitle": "Polityka prywatności — DoctorLife",
+    "metaDescription": "Jak DoctorLife ({companyName}) przetwarza Twoje dane osobowe i zdrowotne zgodnie z RODO.",
+    "badge": "Informacje prawne",
+    "titlePrefix": "Polityka",
+    "titleHighlight": "prywatności",
+    "intro": "Polska wersja tego dokumentu jest wiążącym tekstem prawnym.",
+    "sections": [
+      {
+        "title": "Administrator danych",
+        "body": "{companyName} — {supportEmail}. Przetwarzamy Twoje dane zgodnie z Rozporządzeniem (UE) 2016/679 (RODO) oraz polską ustawą o ochronie danych osobowych."
+      },
+      {
+        "title": "Inspektor Ochrony Danych",
+        "body": "Możesz skontaktować się z naszym Inspektorem Ochrony Danych (IOD/DPO) pod adresem {dpoEmail} w sprawie każdej kwestii związanej z przetwarzaniem Twoich danych osobowych lub zdrowotnych."
+      },
+      {
+        "title": "Jakie dane przetwarzamy",
+        "bullets": [
+          "Dane identyfikacyjne: imię, e-mail, telefon.",
+          "Dane zdrowotne podane w kwestionariuszu.",
+          "Dane płatnicze (przetwarzane przez naszego certyfikowanego dostawcę płatności)."
+        ]
+      },
+      {
+        "title": "Cele",
+        "bullets": [
+          "Przeprowadzenie konsultacji lekarskiej i wystawienie, jeśli wskazane, recepty.",
+          "Komunikacja operacyjna (e-mail, prywatny czat platformy).",
+          "Wypełnianie obowiązków prawnych."
+        ]
+      },
+      {
+        "title": "Podstawa prawna",
+        "body": "Wyraźna zgoda (art. 6 ust. 1 lit. a RODO), wykonanie umowy (lit. b) oraz wypełnienie obowiązku prawnego (lit. c). Dla danych zdrowotnych: art. 9 ust. 2 lit. h RODO — przetwarzanie przez pracowników medycznych."
+      },
+      {
+        "title": "Okres przechowywania",
+        "body": "Przechowujemy dane przez cały okres istnienia Twojego konta oraz do pięciu lat po ostatniej konsultacji z powodu obowiązków medyczno-prawnych."
+      },
+      {
+        "title": "Odbiorcy",
+        "body": "Twoje dane nie są przekazywane osobom trzecim w celach komercyjnych. Podmioty przetwarzające (hosting w UE, wysyłka e-maili, certyfikowany dostawca płatności PCI DSS) podpisują umowy powierzenia zgodne z art. 28 RODO."
+      },
+      {
+        "title": "Transfery międzynarodowe",
+        "body": "Zasadniczo Twoje dane są przechowywane na serwerach znajdujących się w Unii Europejskiej. W przypadku okazjonalnego korzystania z dostawcy spoza EOG obowiązują gwarancje z rozdziału V RODO (Standardowe Klauzule Umowne zatwierdzone przez Komisję Europejską)."
+      },
+      {
+        "title": "Środki bezpieczeństwa",
+        "body": "Stosujemy środki techniczne i organizacyjne przewidziane w art. 32 RODO: szyfrowanie podczas przesyłania i przechowywania, kontrolę dostępu opartą na rolach, logi audytowe, zaszyfrowane kopie zapasowe, ciągłe szkolenia personelu oraz procedury reagowania na incydenty."
+      },
+      {
+        "title": "Prawa",
+        "bullets": [
+          "Dostęp, sprostowanie, usunięcie, sprzeciw, ograniczenie, przenoszenie danych.",
+          "Wycofanie zgody w każdym momencie.",
+          "Wniesienie skargi do {dataProtectionAuthority}."
+        ]
+      }
+    ],
+    "rightsExerciseTitle": "Wykonywanie Twoich praw",
+    "rightsExerciseBody": "Skorzystaj ze swoich praw, pisząc na {dpoEmail}. Odpowiadamy w ciągu maksymalnie 30 dni."
+  },
+  "terms": {
+    "metaTitle": "Warunki korzystania — DoctorLife",
+    "metaDescription": "Warunki korzystania z usługi konsultacji medycznej online DoctorLife ({companyName}): uprawnienia, cena, odpowiedzialność i obowiązujące prawo.",
+    "badge": "Informacje prawne",
+    "titlePrefix": "Warunki",
+    "titleHighlight": "korzystania",
+    "intro": "Polska wersja tego dokumentu jest wiążącym tekstem prawnym.",
+    "sections": [
+      {
+        "title": "1. Przedmiot",
+        "body": "DoctorLife to usługa konsultacji medycznej online. Lekarz z prawem wykonywania zawodu analizuje Twój kwestionariusz i decyduje, czy leczenie jest dla Ciebie odpowiednie. Nigdy nie przepisujemy leków bez oceny lekarskiej."
+      },
+      {
+        "title": "2. Uprawnienia",
+        "body": "Musisz mieć co najmniej 18 lat i mieszkać w Unii Europejskiej. Kwestionariusz jest obecnie zoptymalizowany dla pacjentów w Polsce."
+      },
+      {
+        "title": "3. Cena i płatność",
+        "body": "Pierwsza ocena jest bezpłatna, bez zobowiązań. Jeśli lekarz zatwierdzi leczenie i zdecydujesz się kontynuować, wybierz swój plan: abonament miesięczny 599 zł/miesiąc (bez zobowiązań, do odwołania w każdym momencie), pakiet 5-miesięczny za 1999 zł lub dietetyk + GLP1 za 2799 zł (jednorazowa płatność, 5 miesięcy dostępu). Usługi medyczne są zwolnione z VAT."
+      },
+      {
+        "title": "4. Ograniczenia usługi",
+        "body": "Ta usługa nie zastępuje medycyny ratunkowej. Jeśli masz problem zdrowotny wymagający natychmiastowej pomocy, zadzwoń pod {emergencyNumber} lub udaj się na pogotowie."
+      },
+      {
+        "title": "5. Odpowiedzialność",
+        "body": "DoctorLife jest technologiczną platformą pośredniczącą, łączącą pacjentów z niezależnymi lekarzami z uprawnieniami. DoctorLife nie świadczy usług medycznych i nie stawia diagnoz. Lekarz prowadzący Twój przypadek działa wyłącznie zgodnie z własną oceną zawodową i jest jedynym odpowiedzialnym za czynność medyczną. Stosunek umowny dotyczący czynności medycznej powstaje bezpośrednio między pacjentem a lekarzem, nie z DoctorLife."
+      },
+      {
+        "title": "6. Podmiot świadczący usługi zdrowotne",
+        "body": "Te usługi obejmują wideokonsultacje i rozmowy telefoniczne z pracownikami medycznymi w celu zapobiegania, diagnozowania i leczenia chorób oraz utrzymania zdrowia. Opinie medyczne wynikające z tych usług są oparte na informacjach zdrowotnych podanych przez klienta. Usługi zdrowotne świadczone przez {healthProviderName} ({healthRegistryNumber})."
+      },
+      {
+        "title": "7. Własność intelektualna",
+        "body": "Treści na doctorlife.pl (teksty, obrazy, kod) są własnością {companyName}, o ile nie wskazano inaczej."
+      },
+      {
+        "title": "8. Prawo odstąpienia",
+        "body": "Jako usługa konsultacji medycznej, świadczenie zaczyna się natychmiast po Twojej wyraźnej zgodzie na początku kwestionariusza klinicznego. Zgodnie z ustawą o prawach konsumenta, prawo odstąpienia wygasa po rozpoczęciu analizy medycznej. Jeśli lekarz odmówi leczenia, zwracamy pełną kwotę w ciągu 48 godzin."
+      },
+      {
+        "title": "9. Obowiązujące prawo",
+        "body": "Niniejsze warunki są regulowane prawem polskim. Spory będą rozstrzygane przez sąd właściwy w {jurisdictionCity}, o ile prawo nie wskazuje innego forum."
+      },
+      {
+        "title": "10. Rozstrzyganie sporów online",
+        "body": "Zgodnie z Rozporządzeniem (UE) 524/2013, jako konsument masz dostęp do europejskiej platformy internetowego rozstrzygania sporów, dostępnej na ec.europa.eu/consumers/odr. Przed jej użyciem prosimy o kontakt z nami pod adresem {supportEmail} w celu bezpośredniego rozwiązania sprawy."
+      }
+    ]
+  },
+  "cookies": {
+    "metaTitle": "Polityka cookies — DoctorLife",
+    "metaDescription": "Jakie cookies wykorzystuje DoctorLife (techniczne, analityczne i marketingowe), ich czas trwania i jak zarządzać zgodą.",
+    "badge": "Informacje prawne",
+    "titlePrefix": "Polityka",
+    "titleHighlight": "cookies",
+    "intro": "Wyjaśniamy, jakie cookies wykorzystujemy, do czego służą i jak możesz zarządzać swoją zgodą w każdym momencie.",
+    "sections": [
+      {
+        "title": "Co to są cookies",
+        "body": "Małe pliki przechowywane w Twojej przeglądarce, aby pamiętać Twoje preferencje i mierzyć wykorzystanie strony."
+      },
+      {
+        "title": "Jakie cookies wykorzystujemy",
+        "bullets": [
+          "Techniczne — niezbędne do działania strony (na przykład zapamiętanie Twojego języka). Nie wymagają zgody.",
+          "Analityczne — pomagają nam zrozumieć, co działa, a co nie. Tylko z Twoją zgodą.",
+          "Marketingowe — tylko jeśli się zgadzasz. Nigdy nie udostępniamy danych zdrowotnych sieciom reklamowym."
+        ]
+      },
+      {
+        "title": "Czas trwania",
+        "body": "Cookies techniczne wygasają po zamknięciu sesji lub, w odpowiednich przypadkach, po 12 miesiącach. Analityczne są przechowywane maksymalnie 14 miesięcy. Marketingowe, jeśli zaakceptujesz, są przechowywane maksymalnie 13 miesięcy i usuwane w przypadku wycofania zgody."
+      },
+      {
+        "title": "Zarządzanie",
+        "body": "Możesz zmienić swój wybór w każdym momencie za pomocą banera cookies lub ustawień przeglądarki."
+      }
+    ]
+  },
+  "shared": {
+    "moreInfoBadge": "Potrzebujesz więcej informacji?",
+    "moreInfoTitle": "Porozmawiajmy o tym.",
+    "moreInfoBody": "Jeśli jakaś sekcja tego dokumentu jest niejasna lub chcesz skorzystać z prawa, nasz zespół prawny i ochrony prywatności odpowie Ci bezpośrednio.",
+    "contactCta": "Skontaktuj się z zespołem"
+  }
+}

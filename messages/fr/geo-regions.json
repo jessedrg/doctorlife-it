@@ -1,0 +1,30 @@
+{
+  "healthServices": {
+    "Île-de-France": { "short": "ARS IDF", "long": "Agence Régionale de Santé Île-de-France" },
+    "Auvergne-Rhône-Alpes": { "short": "ARS ARA", "long": "Agence Régionale de Santé Auvergne-Rhône-Alpes" },
+    "Provence-Alpes-Côte d'Azur": { "short": "ARS PACA", "long": "Agence Régionale de Santé Provence-Alpes-Côte d'Azur" },
+    "Occitanie": { "short": "ARS Occitanie", "long": "Agence Régionale de Santé Occitanie" },
+    "Nouvelle-Aquitaine": { "short": "ARS NA", "long": "Agence Régionale de Santé Nouvelle-Aquitaine" },
+    "Hauts-de-France": { "short": "ARS HdF", "long": "Agence Régionale de Santé Hauts-de-France" },
+    "Grand Est": { "short": "ARS GE", "long": "Agence Régionale de Santé Grand Est" },
+    "Pays de la Loire": { "short": "ARS PdL", "long": "Agence Régionale de Santé Pays de la Loire" },
+    "Bretagne": { "short": "ARS Bretagne", "long": "Agence Régionale de Santé Bretagne" },
+    "Normandie": { "short": "ARS Normandie", "long": "Agence Régionale de Santé Normandie" },
+    "Bourgogne-Franche-Comté": { "short": "ARS BFC", "long": "Agence Régionale de Santé Bourgogne-Franche-Comté" },
+    "Centre-Val de Loire": { "short": "ARS CVL", "long": "Agence Régionale de Santé Centre-Val de Loire" }
+  },
+  "regions": [
+    { "name": "Île-de-France", "slug": "ile-de-france", "capital": "Paris", "capitalSlug": "paris", "pop": 12320000, "obesity": 13, "provinces": ["Paris", "Hauts-de-Seine", "Seine-Saint-Denis", "Val-de-Marne"] },
+    { "name": "Auvergne-Rhône-Alpes", "slug": "auvergne-rhone-alpes", "capital": "Lyon", "capitalSlug": "lyon", "pop": 8100000, "obesity": 14, "provinces": ["Rhône", "Isère", "Loire", "Puy-de-Dôme"] },
+    { "name": "Provence-Alpes-Côte d'Azur", "slug": "paca", "capital": "Marseille", "capitalSlug": "marseille", "pop": 5100000, "obesity": 15, "provinces": ["Bouches-du-Rhône", "Var", "Alpes-Maritimes"] },
+    { "name": "Occitanie", "slug": "occitanie", "capital": "Toulouse", "capitalSlug": "toulouse", "pop": 6100000, "obesity": 16, "provinces": ["Haute-Garonne", "Hérault", "Gard"] },
+    { "name": "Nouvelle-Aquitaine", "slug": "nouvelle-aquitaine", "capital": "Bordeaux", "capitalSlug": "bordeaux", "pop": 6100000, "obesity": 16, "provinces": ["Gironde", "Pyrénées-Atlantiques", "Charente-Maritime"] },
+    { "name": "Hauts-de-France", "slug": "hauts-de-france", "capital": "Lille", "capitalSlug": "lille", "pop": 6000000, "obesity": 21, "provinces": ["Nord", "Pas-de-Calais", "Oise"] },
+    { "name": "Grand Est", "slug": "grand-est", "capital": "Strasbourg", "capitalSlug": "strasbourg", "pop": 5550000, "obesity": 17, "provinces": ["Bas-Rhin", "Marne", "Moselle"] },
+    { "name": "Pays de la Loire", "slug": "pays-de-la-loire", "capital": "Nantes", "capitalSlug": "nantes", "pop": 3810000, "obesity": 15, "provinces": ["Loire-Atlantique", "Maine-et-Loire"] },
+    { "name": "Bretagne", "slug": "bretagne", "capital": "Rennes", "capitalSlug": "rennes", "pop": 3360000, "obesity": 14, "provinces": ["Ille-et-Vilaine", "Finistère"] },
+    { "name": "Normandie", "slug": "normandie", "capital": "Rouen", "capitalSlug": "rouen", "pop": 3320000, "obesity": 18, "provinces": ["Seine-Maritime", "Calvados"] },
+    { "name": "Bourgogne-Franche-Comté", "slug": "bourgogne-franche-comte", "capital": "Dijon", "capitalSlug": "dijon", "pop": 2800000, "obesity": 17, "provinces": ["Côte-d'Or", "Doubs"] },
+    { "name": "Centre-Val de Loire", "slug": "centre-val-de-loire", "capital": "Orléans", "capitalSlug": "orleans", "pop": 2570000, "obesity": 18, "provinces": ["Loiret", "Indre-et-Loire"] }
+  ]
+}

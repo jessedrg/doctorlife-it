@@ -1,0 +1,82 @@
+{
+  "productCarousel": {
+    "firstVisitTitle": "Deine erste Beratung ist",
+    "firstVisitHighlight": "kostenlos",
+    "firstVisitDesc": "Danach, falls du dich für den Start entscheidest, wähle deinen Plan: Abo für 139 €/Monat ohne Mindestlaufzeit, 5-Monats-Paket für 449 € oder Ernährungsberatung + GLP1 für 649 €. Dein gesamtes Follow-up läuft über die DoctorLife-App.",
+    "firstVisitCta": "Ersten Termin buchen",
+    "choosePlan": "Wähle deinen Plan,",
+    "choosePlanHighlight": "alles inklusive",
+    "prev": "Zurück",
+    "next": "Weiter",
+    "medicalBadge": "Approbierter Arzt",
+    "comingSoon": "Demnächst",
+    "startNow": "Jetzt starten",
+    "disclaimer": "*Die erste ärztliche Bewertung ist {free}. Wenn du fortfährst, wähle deinen Plan: {monthly} ohne Mindestlaufzeit, {pack} oder {nutritionist}. Enthält Chat mit deinem Arzt, das GLP‑1-Rezept falls nötig und das Follow-up. Medizinische Leistungen sind umsatzsteuerfrei. Das Medikament ist nur nach ärztlicher Verordnung erhältlich und erfordert ein aktives DoctorLife-Abo.",
+    "free": "kostenlos",
+    "monthly": "139 €/Monat",
+    "pack": "5-Monats-Paket für 449 €",
+    "nutritionist": "Ernährungsberatung + GLP1 für 649 €"
+  },
+  "products": {
+    "subscription": {
+      "name": "Monatsabo",
+      "subtitle": "Kontinuierliches ärztliches Follow-up, Rezept und eine Telefonberatung pro Monat. Ohne Mindestlaufzeit.",
+      "price": "139€",
+      "priceSuffix": "/Monat",
+      "tag": "Abo",
+      "features": [
+        "Erste Bewertung kostenlos",
+        "Kontinuierliches ärztliches Follow-up mit deinem Arzt",
+        "GLP-1-Rezept (Mounjaro, Ozempic oder Wegovy), wenn geeignet",
+        "Eine Telefonberatung pro Monat",
+        "Direkter Chat mit deinem Arzt über die App",
+        "Ohne Mindestlaufzeit: kündige, wann du willst"
+      ]
+    },
+    "pack5": {
+      "name": "5-Monats-Paket",
+      "subtitle": "Das komplette Programm in einer Zahlung. Das beste Preis-Leistungs-Verhältnis für dein Engagement.",
+      "price": "449€",
+      "priceSuffix": "· Einmalzahlung · 5 Monate",
+      "tag": "Sparpaket",
+      "features": [
+        "5 Monate ärztliches Follow-up",
+        "GLP-1-Rezept, wenn geeignet",
+        "Eine Telefonberatung pro Monat",
+        "Direkter Chat mit deinem Arzt über die App",
+        "Festpreis: deutlich günstiger"
+      ]
+    },
+    "nutritionist": {
+      "name": "Ernährungsberatung + GLP1",
+      "subtitle": "5-monatiges Programm mit ärztlichem Follow-up und Begleitung durch eine Ernährungsberatung.",
+      "price": "649€",
+      "priceSuffix": "· Einmalzahlung · 5 Monate",
+      "tag": "Komplettprogramm",
+      "features": [
+        "5 Monate ärztliches Follow-up",
+        "Begleitung durch eine Ernährungsberatung",
+        "GLP-1-Rezept, wenn geeignet",
+        "Eine Telefonberatung pro Monat",
+        "Direkter Chat mit deinem Team über die App"
+      ]
+    }
+  },
+  "adsProducts": {
+    "subscription": {
+      "name": "Monatsabo",
+      "subtitle": "Alles, was du brauchst, um dein Gewicht mit echtem ärztlichem Follow-up zu betreuen. Erste Bewertung kostenlos.",
+      "price": "139€",
+      "priceSuffix": "/Monat",
+      "tag": "Abo",
+      "features": [
+        "Erste Bewertung kostenlos mit approbiertem Arzt",
+        "Online-Rezept für GLP-1 (Mounjaro, Ozempic oder Wegovy) zur Abholung in der Apotheke",
+        "Kontinuierliches Follow-up und Dosisanpassungen über die App",
+        "Direkter Chat mit deinem Arzt, wenn nötig",
+        "Eine Telefonberatung pro Monat inklusive",
+        "Ohne Mindestlaufzeit: kündige, wann du willst"
+      ]
+    }
+  }
+}

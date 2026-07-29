@@ -1,0 +1,160 @@
+{
+  "lossStat": 25,
+  "products": [
+    {
+      "name": "Monatsabo",
+      "subtitle": "Kontinuierliches ärztliches Follow-up, Rezept und eine Telefonberatung pro Monat. Ohne Mindestlaufzeit.",
+      "price": "139€",
+      "priceSuffix": "/Monat",
+      "tag": "Abo",
+      "img": "/products/maren-pen.png",
+      "featured": true,
+      "features": [
+        "Erste Bewertung kostenlos",
+        "Kontinuierliches ärztliches Follow-up mit deinem Arzt",
+        "GLP-1-Rezept (Mounjaro, Ozempic oder Wegovy), wenn geeignet",
+        "Eine Telefonberatung pro Monat",
+        "Direkter Chat mit deinem Arzt über die App",
+        "Ohne Mindestlaufzeit: kündige, wann du willst"
+      ]
+    },
+    {
+      "name": "5-Monats-Paket",
+      "subtitle": "Das komplette Programm in einer Zahlung. Das beste Preis-Leistungs-Verhältnis für dein Engagement.",
+      "price": "449€",
+      "priceSuffix": "· Einmalzahlung · 5 Monate",
+      "tag": "Sparpaket",
+      "img": "/products/maren-daily.png",
+      "features": [
+        "5 Monate ärztliches Follow-up",
+        "GLP-1-Rezept, wenn geeignet",
+        "Eine Telefonberatung pro Monat",
+        "Direkter Chat mit deinem Arzt über die App",
+        "Festpreis: deutlich günstiger"
+      ]
+    },
+    {
+      "name": "Ernährungsberatung + GLP1",
+      "subtitle": "5-monatiges Programm mit ärztlichem Follow-up und Begleitung durch eine Ernährungsberatung.",
+      "price": "649€",
+      "priceSuffix": "· Einmalzahlung · 5 Monate",
+      "tag": "Komplettprogramm",
+      "img": "/products/maren-hd.png",
+      "features": [
+        "5 Monate ärztliches Follow-up",
+        "Begleitung durch eine Ernährungsberatung",
+        "GLP-1-Rezept, wenn geeignet",
+        "Eine Telefonberatung pro Monat",
+        "Direkter Chat mit deinem Team über die App"
+      ]
+    }
+  ],
+  "adsProducts": [
+    {
+      "name": "Monatsabo",
+      "subtitle": "Alles, was du brauchst, um dein Gewicht mit echtem ärztlichem Follow-up zu betreuen. Erste Bewertung kostenlos.",
+      "price": "139€",
+      "priceSuffix": "/Monat",
+      "tag": "Abo",
+      "img": "/products/maren-pen.png",
+      "featured": true,
+      "features": [
+        "Erste Bewertung kostenlos mit approbiertem Arzt",
+        "Online-Rezept für GLP-1 (Mounjaro, Ozempic oder Wegovy) zur Abholung in der Apotheke",
+        "Kontinuierliches Follow-up und Dosisanpassungen über die App",
+        "Direkter Chat mit deinem Arzt, wenn nötig",
+        "Eine Telefonberatung pro Monat inklusive",
+        "Ohne Mindestlaufzeit: kündige, wann du willst"
+      ]
+    }
+  ],
+  "experts": [
+    { "name": "Dr. Elena Ruiz", "role": "Unabhängige Ärztin auf der Plattform", "spec": "Frauen- und Hormongesundheit", "img": "/experts/elena-ruiz.png" },
+    { "name": "Dr. Marcus Hale", "role": "Unabhängiger Arzt auf der Plattform", "spec": "Stoffwechselmedizin", "img": "/experts/marcus-hale.png" },
+    { "name": "Dr. Priya Nair", "role": "Unabhängige Ärztin auf der Plattform", "spec": "Schilddrüse und Hormone", "img": "/experts/priya-nair.png" },
+    { "name": "Dr. James Okafor", "role": "Unabhängiger Arzt auf der Plattform", "spec": "Innere Medizin", "img": "/experts/james-okafor.png" },
+    { "name": "Dr. Sofia Bergman", "role": "Unabhängige Ärztin auf der Plattform", "spec": "Herz-Kreislauf-Gesundheit", "img": "/experts/sofia-bergman.png" }
+  ],
+  "metrics": [
+    { "value": 24, "prefix": "−", "suffix": "%", "label": "durchschnittlich verlorenes Körpergewicht*" },
+    { "value": 92, "suffix": "%", "label": "blieb beim Behandlungsplan" },
+    { "value": 50, "suffix": "k+", "label": "Patient*innen in Follow-up" },
+    { "value": 4.9, "suffix": "★", "label": "durchschnittliche Bewertung" }
+  ],
+  "footerColumns": [
+    {
+      "title": "Behandlung",
+      "links": [
+        { "label": "So funktioniert's", "href": "/#product" },
+        { "label": "Pläne & Preise", "href": "/#planes" },
+        { "label": "Echte Geschichten", "href": "/#transform" },
+        { "label": "Termin buchen", "href": "/#cta" }
+      ]
+    },
+    {
+      "title": "Ressourcen",
+      "links": [
+        { "label": "Über uns", "href": "/sobre-nosotros" },
+        { "label": "Redaktionelle Richtlinie", "href": "/politica-editorial" },
+        { "label": "Abnehmen unter ärztlicher Begleitung", "href": "/adelgazar-con-supervision-medica" },
+        { "label": "Medizin-Blog", "href": "/blog" },
+        { "label": "Unsere Ärzte", "href": "/autores" }
+      ]
+    },
+    {
+      "title": "Tools",
+      "links": [
+        { "label": "BMI-Rechner", "href": "/herramientas/calculadora-imc" },
+        { "label": "TDEE-Rechner", "href": "/herramientas/calculadora-tdee" },
+        { "label": "Kaloriendefizit", "href": "/herramientas/calculadora-deficit-calorico" },
+        { "label": "Täglicher Proteinbedarf", "href": "/herramientas/calculadora-proteina-diaria" }
+      ]
+    },
+    {
+      "title": "Rechtliches",
+      "links": [
+        { "label": "Datenschutzerklärung", "href": "/privacidad" },
+        { "label": "AGB", "href": "/terminos" },
+        { "label": "Cookie-Richtlinie", "href": "/cookies" }
+      ]
+    }
+  ],
+  "quizSteps": [
+    {
+      "key": "objective",
+      "q": "Was ist dein Hauptziel?",
+      "sub": "Mach den ersten Schritt. In 2 Minuten weißt du, ob die GLP‑1-Behandlung zu dir passt.",
+      "opts": ["Gewicht verlieren und es nicht wieder zunehmen", "Hunger und Gelüste kontrollieren", "Meine Gesundheit und Energie verbessern", "Mich besser in meinem Körper fühlen"]
+    },
+    {
+      "key": "amount",
+      "q": "Wie viel Gewicht möchtest du verlieren?",
+      "sub": "Es gibt keine falschen Antworten. Wir wollen nur deinen Ausgangspunkt verstehen.",
+      "opts": ["Weniger als 5 kg", "5 bis 10 kg", "10 bis 20 kg", "Mehr als 20 kg"]
+    },
+    {
+      "key": "tried",
+      "q": "Was hast du vorher versucht, ohne es halten zu können?",
+      "sub": "Wenn das Gewicht immer wiederkommt, liegt es nicht an dir — es ist deine Biologie, die sich verteidigt.",
+      "opts": ["Diäten und Kalorienzählen", "Intensives Training", "Intervallfasten", "Von allem etwas… und es kommt immer wieder"]
+    },
+    {
+      "key": "frustration",
+      "q": "Was belastet dich heute am meisten?",
+      "sub": "Wähle, was gerade am meisten auf dich zutrifft.",
+      "opts": ["Ständiger Hunger und Gelüste", "Wieder zunehmen, was mich so viel Mühe gekostet hat", "Mich nicht wohl in meiner Haut fühlen", "Wie es meine Gesundheit beeinflusst"]
+    },
+    {
+      "key": "glp1Experience",
+      "q": "Hast du schon eine GLP‑1-Behandlung wie Semaglutid ausprobiert?",
+      "sub": "Es ist das Medikament, das die Gewichtsabnahme mit echtem ärztlichem Follow-up verändert.",
+      "opts": ["Ich nutze es gerade", "Ich habe es früher genutzt", "Nein, aber es interessiert mich", "Ich weiß nicht, was das ist"]
+    },
+    {
+      "key": "why",
+      "q": "Warum möchtest du jetzt den Schritt machen?",
+      "sub": "Das klarzuhaben ist der halbe Weg.",
+      "opts": ["Für meine Gesundheit und Zukunft", "Ich möchte mich wieder wie ich selbst fühlen", "Ich habe einen wichtigen Moment vor mir", "Ich bin es leid, es allein zu versuchen"]
+    }
+  ]
+}

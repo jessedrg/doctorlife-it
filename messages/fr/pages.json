@@ -1,0 +1,64 @@
+{
+  "herramientas": {
+    "metaTitle": "Calculateurs de santé et de poids gratuits | DoctorLife",
+    "metaDescription": "Calculateurs de santé gratuits : IMC, dépense calorique (TDEE), déficit calorique et protéines quotidiennes. Résultats instantanés et orientation médicale de DoctorLife.",
+    "breadcrumbHome": "Accueil",
+    "breadcrumbTools": "Outils",
+    "badge": "Outils gratuits",
+    "title": "Calculateurs de",
+    "titleHighlight": "santé et de poids",
+    "description": "Des outils scientifiquement fondés pour comprendre votre corps : IMC, dépense calorique, déficit et protéines. Ils constituent un point de départ — pour un vrai plan, une évaluation médicale fait la différence.",
+    "toolsListHeading": "Liste des calculateurs",
+    "openCalculator": "Ouvrir le calculateur →",
+    "relatedTitle": "Continuez à vous informer",
+    "tools": {
+      "bmi": {
+        "title": "Calculateur d'IMC",
+        "desc": "Découvrez votre Indice de Masse Corporelle et votre catégorie de poids en quelques secondes.",
+        "tag": "Poids"
+      },
+      "tdee": {
+        "title": "Calculateur de TDEE",
+        "desc": "Calculez votre dépense énergétique quotidienne totale : combien de calories vous brûlez selon votre activité.",
+        "tag": "Calories"
+      },
+      "deficit": {
+        "title": "Calculateur de déficit calorique",
+        "desc": "Découvrez combien de calories manger pour perdre du poids à un rythme sain et durable.",
+        "tag": "Perte de poids"
+      },
+      "protein": {
+        "title": "Calculateur de protéines quotidiennes",
+        "desc": "Calculez combien de protéines vous avez besoin par jour selon votre poids, votre objectif et votre niveau d'activité.",
+        "tag": "Nutrition"
+      }
+    },
+    "related": [
+      { "href": "/dimagrire-con-supervisione-medica", "label": "Perdre du poids sous suivi médical" },
+      { "href": "/blog/wegovy-prezzo-italia", "label": "Prix du Wegovy" },
+      { "href": "/blog/ozempic-vs-wegovy-vs-mounjaro", "label": "Ozempic vs Wegovy vs Mounjaro" }
+    ],
+    "ctaBadge": "Première visite gratuite",
+    "ctaTitle": "Prêt(e) pour un vrai plan ?",
+    "ctaDesc": "Les calculateurs orientent, mais votre corps est unique. Réservez votre première visite gratuite et démarrez avec un plan conçu autour de vous.",
+    "ctaButton": "Réserver la première visite"
+  },
+  "blog": {
+    "metaTitle": "Blog DoctorLife — Wegovy, Mounjaro et perte de poids avec GLP‑1",
+    "metaDescription": "Guides clairs et médicaux sur Wegovy, Mounjaro, sémaglutide et tirzépatide : prix, ordonnances et comment démarrer votre traitement de perte de poids en France.",
+    "badge": "Blog DoctorLife",
+    "title": "Tout sur la",
+    "titleHighlight": "prise en charge du poids",
+    "titleSuffix": "avec GLP‑1",
+    "subtitle": "Wegovy, Mounjaro, sémaglutide, tirzépatide : prix, ordonnances et comment démarrer en toute sécurité avec un vrai suivi médical.",
+    "noResults": "Nous n'avons trouvé aucun guide correspondant.",
+    "resultsSingular": "guide trouvé",
+    "resultsPlural": "guides trouvés",
+    "inCategory": "dans",
+    "forQuery": "pour « {query} ».",
+    "viewAll": "Voir tous les guides",
+    "pagination": "Pagination du blog",
+    "prev": "← Précédent",
+    "next": "Suivant →"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "badge": "So funktioniert die Behandlung",
+  "title": "Was sind",
+  "titleHighlight": "GLP-1-Behandlungen",
+  "intro": "GLP-1-Analoga sind eine Medikamentenklasse, die ein natürliches Hormon nachahmt, das der Körper beim Essen ausschüttet. Sie helfen, Appetit und Sättigung zu regulieren und können laut klinischen Studien in Kombination mit ausgewogener Ernährung, Bewegung und ärztlichem Follow-up zu einer relevanten Gewichtsabnahme beitragen.",
+  "disclaimer": "Informationen zu Aufklärungszwecken. Behandlungen mit GLP-1-Analoga sind verschreibungspflichtige Medikamente: Sie erfordern ein Rezept und eine vorherige ärztliche Bewertung. Die Entscheidung über die Verschreibung und die konkrete Behandlung liegt stets beim Arzt nach individueller Beurteilung. Diese Seite ersetzt keine ärztliche Beratung und fördert nicht die Anwendung ohne ärztliche Aufsicht.",
+  "principles": [
+    {
+      "activo": "Semaglutid",
+      "clase": "GLP-1-Analogon",
+      "desc": "Imitiert das Hormon GLP-1, um das Sättigungsgefühl zu verlängern und den Appetit zu reduzieren — so isst du weniger, ohne Hunger zu verspüren.",
+      "admin": "Wöchentliche Injektion"
+    },
+    {
+      "activo": "Tirzepatid",
+      "clase": "GLP-1/GIP-Analogon",
+      "desc": "Wirkt auf zwei Hormone (GLP-1 und GIP), die Appetit und Sättigung regulieren, und unterstützt so die Gewichtskontrolle in Kombination mit gesunden Gewohnheiten.",
+      "admin": "Wöchentliche Injektion"
+    },
+    {
+      "activo": "Liraglutid",
+      "clase": "GLP-1-Analogon",
+      "desc": "Erhöht das Sättigungsgefühl auf ähnliche Weise, jedoch mit täglicher statt wöchentlicher Verabreichung.",
+      "admin": "Tägliche Injektion"
+    }
+  ]
+}

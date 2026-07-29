@@ -1,0 +1,111 @@
+{
+  "quiz": {
+    "ariaLabel": "Boek je eerste gratis consult",
+    "close": "Sluiten",
+    "form": {
+      "title": "Jouw eerste consult, gratis",
+      "subtitle": "Laat ons deze gegevens achter en kies jouw afspraak met de arts. Zonder wachttijd en zonder verplichting.",
+      "height": "Lengte (cm)",
+      "weight": "Gewicht (kg)",
+      "phone": "Telefoon",
+      "email": "E-mail",
+      "namePlaceholder": "Jouw naam (optioneel)",
+      "bmiLabel": "Jouw BMI",
+      "bmiUnderweight": "Ondergewicht",
+      "bmiHealthy": "Gezond gewicht",
+      "bmiOverweight": "Overgewicht",
+      "bmiObesity": "Obesitas",
+      "submit": "Mijn gratis afspraak kiezen",
+      "submitting": "Op zoek naar jouw afspraak…",
+      "errorHeightWeight": "Voer je lengte en gewicht in.",
+      "errorPhone": "Voer een geldig telefoonnummer in.",
+      "errorEmail": "Voer een geldig e-mailadres in.",
+      "privacyText": "Door verder te gaan accepteer je ons",
+      "privacyLink": "privacybeleid",
+      "privacySuffix": ". Eerste consult gratis, zonder kaart en zonder verplichting.",
+      "orPrefers": "of als je liever",
+      "whatsappCta": "Neem contact met ons op via WhatsApp",
+      "goal": "Gewicht verliezen",
+      "formatPreference": "Wekelijkse pen"
+    },
+    "slot": {
+      "title": "Kies jouw eerste afspraak",
+      "subtitle": "Videogesprek met een endocrinoloog. Jouw",
+      "subtitleHighlight": "eerste consult is gratis",
+      "subtitleSuffix": " en we maken automatisch jouw account aan bij bevestiging.",
+      "loading": "Beschikbare tijden zoeken…",
+      "noSlotsTitle": "Er zijn momenteel geen tijden beschikbaar",
+      "noSlotsDesc": "Schrijf ons op WhatsApp en we vinden binnen 24 uur een beschikbare tijd voor je.",
+      "whatsappCta": "Schrijf ons op WhatsApp",
+      "emailText": "Je kunt ons ook e-mailen op",
+      "confirming": "Jouw boeking wordt bevestigd…",
+      "back": "← Terug",
+      "errorCheckout": "Kon de betaling niet starten. Probeer het opnieuw."
+    },
+    "done": {
+      "thanks": "Bedankt, {name}",
+      "allSet": "Alles klaar",
+      "message": "We hebben jouw gegevens ontvangen. Een geregistreerde arts bekijkt jouw situatie en schrijft je op",
+      "messageSuffix": "binnen 24 uur.",
+      "done": "Klaar"
+    }
+  },
+  "quizSteps": [
+    {
+      "key": "objective",
+      "q": "Wat is jouw belangrijkste doel?",
+      "sub": "Zet de eerste stap. Binnen 2 minuten weet je of de GLP‑1-behandeling bij jou past.",
+      "opts": [
+        "Gewicht verliezen en het niet terugkrijgen",
+        "Honger en trek beheersen",
+        "Mijn gezondheid en energie verbeteren",
+        "Me beter voelen in mijn lichaam"
+      ]
+    },
+    {
+      "key": "amount",
+      "q": "Hoeveel gewicht zou je willen verliezen?",
+      "sub": "Er zijn geen foute antwoorden. We willen alleen jouw startpunt begrijpen.",
+      "opts": ["Minder dan 5 kg", "Tussen 5 en 10 kg", "Tussen 10 en 20 kg", "Meer dan 20 kg"]
+    },
+    {
+      "key": "tried",
+      "q": "Wat heb je eerder geprobeerd zonder het te kunnen volhouden?",
+      "sub": "Als het gewicht altijd terugkomt, is dat niet jouw schuld: het is jouw biologie die zich verdedigt.",
+      "opts": [
+        "Diëten en calorieën tellen",
+        "Intensief trainen",
+        "Intermittent fasting",
+        "Een beetje van alles… en het komt altijd terug"
+      ]
+    },
+    {
+      "key": "frustration",
+      "q": "Wat weegt vandaag het meest op je?",
+      "sub": "Kies wat op dit moment het meest bij je past.",
+      "opts": [
+        "Constante honger en trek",
+        "Terugvallen naar wat me zo veel moeite kostte om te verliezen",
+        "Me niet goed voelen bij mezelf",
+        "Hoe het mijn gezondheid beïnvloedt"
+      ]
+    },
+    {
+      "key": "glp1Experience",
+      "q": "Heb je al eens een GLP‑1-behandeling zoals semaglutide geprobeerd?",
+      "sub": "Het is het medicijn dat gewichtsverlies verandert met echte medische opvolging.",
+      "opts": ["Ik gebruik het nu", "Ik heb het eerder gebruikt", "Nee, maar ik ben geïnteresseerd", "Ik weet niet wat dat is"]
+    },
+    {
+      "key": "why",
+      "q": "Waarom wil je nu deze stap zetten?",
+      "sub": "Dit duidelijk hebben is al de helft van de weg.",
+      "opts": [
+        "Voor mijn gezondheid en toekomst",
+        "Ik wil me weer mezelf voelen",
+        "Ik heb een belangrijk moment in het vooruitzicht",
+        "Ik ben het beu om het alleen te proberen"
+      ]
+    }
+  ]
+}

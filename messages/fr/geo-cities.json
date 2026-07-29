@@ -1,0 +1,22 @@
+{
+  "paris": { "region": "Île-de-France", "province": "Paris", "pop": 2100000, "hospital": "Hôpital Pitié-Salpêtrière (AP-HP)", "trait": "la capitale de la France et sa plus grande ville" },
+  "marseille": { "region": "Provence-Alpes-Côte d'Azur", "province": "Bouches-du-Rhône", "pop": 870000, "hospital": "Hôpital de la Timone (AP-HM)", "trait": "la deuxième ville de France, port méditerranéen" },
+  "lyon": { "region": "Auvergne-Rhône-Alpes", "province": "Rhône", "pop": 520000, "hospital": "Hôpital Édouard Herriot (HCL)", "trait": "capitale de la région Auvergne-Rhône-Alpes" },
+  "toulouse": { "region": "Occitanie", "province": "Haute-Garonne", "pop": 500000, "hospital": "CHU de Toulouse", "trait": "capitale de l'Occitanie, ville aéronautique" },
+  "nice": { "region": "Provence-Alpes-Côte d'Azur", "province": "Alpes-Maritimes", "pop": 340000, "hospital": "CHU de Nice (Pasteur)", "trait": "capitale de la Côte d'Azur" },
+  "nantes": { "region": "Pays de la Loire", "province": "Loire-Atlantique", "pop": 320000, "hospital": "CHU de Nantes", "trait": "capitale des Pays de la Loire" },
+  "strasbourg": { "region": "Grand Est", "province": "Bas-Rhin", "pop": 285000, "hospital": "Hôpitaux Universitaires de Strasbourg", "trait": "capitale du Grand Est, siège d'institutions européennes" },
+  "montpellier": { "region": "Occitanie", "province": "Hérault", "pop": 300000, "hospital": "CHU de Montpellier", "trait": "ville universitaire du sud de la France" },
+  "bordeaux": { "region": "Nouvelle-Aquitaine", "province": "Gironde", "pop": 260000, "hospital": "CHU de Bordeaux", "trait": "capitale de la Nouvelle-Aquitaine" },
+  "lille": { "region": "Hauts-de-France", "province": "Nord", "pop": 235000, "hospital": "CHU de Lille", "trait": "capitale des Hauts-de-France, proche de la Belgique" },
+  "rennes": { "region": "Bretagne", "province": "Ille-et-Vilaine", "pop": 220000, "hospital": "CHU de Rennes", "trait": "capitale de la Bretagne" },
+  "reims": { "region": "Grand Est", "province": "Marne", "pop": 182000, "hospital": "CHU de Reims", "trait": "ville historique de la Champagne" },
+  "toulon": { "region": "Provence-Alpes-Côte d'Azur", "province": "Var", "pop": 178000, "hospital": "Hôpital Sainte-Musse", "trait": "ville portuaire militaire du Var" },
+  "grenoble": { "region": "Auvergne-Rhône-Alpes", "province": "Isère", "pop": 158000, "hospital": "CHU Grenoble Alpes", "trait": "ville alpine, pôle universitaire et technologique" },
+  "dijon": { "region": "Bourgogne-Franche-Comté", "province": "Côte-d'Or", "pop": 156000, "hospital": "CHU Dijon Bourgogne", "trait": "capitale de la Bourgogne" },
+  "angers": { "region": "Pays de la Loire", "province": "Maine-et-Loire", "pop": 155000, "hospital": "CHU d'Angers", "trait": "ville historique de l'Anjou" },
+  "nimes": { "region": "Occitanie", "province": "Gard", "pop": 150000, "hospital": "CHU Carémeau", "trait": "ville romaine du Gard" },
+  "clermont-ferrand": { "region": "Auvergne-Rhône-Alpes", "province": "Puy-de-Dôme", "pop": 145000, "hospital": "CHU de Clermont-Ferrand", "trait": "capitale de l'Auvergne" },
+  "le-havre": { "region": "Normandie", "province": "Seine-Maritime", "pop": 170000, "hospital": "Groupe Hospitalier du Havre", "trait": "grand port de Normandie" },
+  "rouen": { "region": "Normandie", "province": "Seine-Maritime", "pop": 112000, "hospital": "CHU de Rouen", "trait": "capitale de la Normandie" }
+}

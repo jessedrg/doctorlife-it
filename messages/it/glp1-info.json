@@ -1,0 +1,27 @@
+{
+  "badge": "Come funziona il trattamento",
+  "title": "Cosa sono i trattamenti",
+  "titleHighlight": "GLP-1",
+  "intro": "Gli analoghi del GLP-1 sono una classe di farmaci che imitano un ormone naturale che il corpo rilascia mangiando. Aiutano a regolare l'appetito e la sazietà e, secondo studi clinici, possono favorire una perdita di peso rilevante se combinati con alimentazione equilibrata, attività fisica e follow-up medico.",
+  "disclaimer": "Informazioni a scopo divulgativo. I trattamenti con analoghi del GLP-1 sono farmaci su prescrizione: richiedono ricetta e una valutazione medica preventiva. La decisione di prescrivere e il trattamento specifico spettano sempre al medico dopo aver valutato ogni caso. Questa pagina non sostituisce il consiglio medico né promuove l'uso di alcun farmaco senza supervisione.",
+  "principles": [
+    {
+      "activo": "Semaglutide",
+      "clase": "Analogo del GLP-1",
+      "desc": "Imita l'ormone GLP-1 per prolungare la sensazione di sazietà e ridurre l'appetito, aiutando a mangiare meno senza sentire fame.",
+      "admin": "Iniezione settimanale"
+    },
+    {
+      "activo": "Tirzepatide",
+      "clase": "Analogo GLP-1 / GIP",
+      "desc": "Agisce su due ormoni (GLP-1 e GIP) che regolano l'appetito e la sazietà, favorendo il controllo del peso insieme ad abitudini sane.",
+      "admin": "Iniezione settimanale"
+    },
+    {
+      "activo": "Liraglutide",
+      "clase": "Analogo del GLP-1",
+      "desc": "Aumenta la sensazione di sazietà in modo simile, con una somministrazione giornaliera invece che settimanale.",
+      "admin": "Iniezione giornaliera"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[
+  { "name": "Berlin", "slug": "berlin", "capital": "Berlin", "capitalSlug": "berlin", "region": "Berlin", "pop": 3700000, "cities": ["Potsdam", "Oranienburg"] },
+  { "name": "Hamburg", "slug": "hamburg", "capital": "Hamburg", "capitalSlug": "hamburg", "region": "Hamburg", "pop": 1850000, "cities": ["Norderstedt", "Pinneberg"] },
+  { "name": "München", "slug": "muenchen", "capital": "München", "capitalSlug": "muenchen", "region": "Bayern", "pop": 1500000, "cities": ["Fürstenfeldbruck", "Dachau"] },
+  { "name": "Köln", "slug": "koeln", "capital": "Köln", "capitalSlug": "koeln", "region": "Nordrhein-Westfalen", "pop": 1080000, "cities": ["Leverkusen", "Bergisch Gladbach"] },
+  { "name": "Frankfurt", "slug": "frankfurt", "capital": "Frankfurt am Main", "capitalSlug": "frankfurt", "region": "Hessen", "pop": 770000, "cities": ["Offenbach", "Bad Homburg"] },
+  { "name": "Stuttgart", "slug": "stuttgart", "capital": "Stuttgart", "capitalSlug": "stuttgart", "region": "Baden-Württemberg", "pop": 630000, "cities": ["Esslingen", "Ludwigsburg"] },
+  { "name": "Düsseldorf", "slug": "duesseldorf", "capital": "Düsseldorf", "capitalSlug": "duesseldorf", "region": "Nordrhein-Westfalen", "pop": 620000, "cities": ["Neuss", "Ratingen"] },
+  { "name": "Dortmund", "slug": "dortmund", "capital": "Dortmund", "capitalSlug": "dortmund", "region": "Nordrhein-Westfalen", "pop": 590000, "cities": ["Lünen", "Castrop-Rauxel"] },
+  { "name": "Essen", "slug": "essen", "capital": "Essen", "capitalSlug": "essen", "region": "Nordrhein-Westfalen", "pop": 580000, "cities": ["Mülheim an der Ruhr", "Oberhausen"] },
+  { "name": "Leipzig", "slug": "leipzig", "capital": "Leipzig", "capitalSlug": "leipzig", "region": "Sachsen", "pop": 615000, "cities": ["Markkleeberg"] },
+  { "name": "Bremen", "slug": "bremen", "capital": "Bremen", "capitalSlug": "bremen", "region": "Bremen", "pop": 570000, "cities": ["Bremerhaven"] },
+  { "name": "Dresden", "slug": "dresden", "capital": "Dresden", "capitalSlug": "dresden", "region": "Sachsen", "pop": 560000, "cities": ["Radebeul", "Freital"] },
+  { "name": "Hannover", "slug": "hannover", "capital": "Hannover", "capitalSlug": "hannover", "region": "Niedersachsen", "pop": 540000, "cities": ["Langenhagen", "Garbsen"] },
+  { "name": "Nürnberg", "slug": "nuernberg", "capital": "Nürnberg", "capitalSlug": "nuernberg", "region": "Bayern", "pop": 520000, "cities": ["Fürth", "Erlangen"] },
+  { "name": "Duisburg", "slug": "duisburg", "capital": "Duisburg", "capitalSlug": "duisburg", "region": "Nordrhein-Westfalen", "pop": 500000, "cities": ["Moers"] }
+]

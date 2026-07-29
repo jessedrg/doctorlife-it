@@ -1,0 +1,163 @@
+{
+  "entity": {
+    "companyName": "DOCTORLIFE HEALTH PORTUGAL, LDA.",
+    "vatNumber": "NIPC a completar",
+    "healthProviderName": "[ENTIDADE PRESTADORA DE SAÚDE PORTUGAL — A COMPLETAR]",
+    "healthRegistryNumber": "N.º de cédula/Ordem dos Médicos: a completar",
+    "dpoEmail": "hello@doctorlife.io",
+    "supportEmail": "hello@doctorlife.io",
+    "jurisdictionCity": "Lisboa",
+    "dataProtectionAuthority": "Comissão Nacional de Proteção de Dados — CNPD (cnpd.pt)",
+    "emergencyNumber": "112"
+  },
+  "privacy": {
+    "metaTitle": "Política de privacidade — DoctorLife",
+    "metaDescription": "Como a DoctorLife ({companyName}) trata os seus dados pessoais e de saúde em conformidade com o RGPD e a lei portuguesa de proteção de dados.",
+    "badge": "Legal",
+    "titlePrefix": "Política de",
+    "titleHighlight": "privacidade",
+    "intro": "A versão portuguesa deste documento é o texto legal de referência.",
+    "sections": [
+      {
+        "title": "Responsável pelo tratamento",
+        "body": "{companyName} — {supportEmail}. Tratamos os seus dados em conformidade com o Regulamento (UE) 2016/679 (RGPD) e a Lei n.º 58/2019, que assegura a execução do RGPD na ordem jurídica nacional."
+      },
+      {
+        "title": "Encarregado de Proteção de Dados",
+        "body": "Pode contactar o nosso Encarregado de Proteção de Dados (EPD/DPO) em {dpoEmail} para qualquer questão relacionada com o tratamento dos seus dados pessoais ou de saúde."
+      },
+      {
+        "title": "Que dados tratamos",
+        "bullets": [
+          "Dados identificativos: nome, e-mail, telefone.",
+          "Dados de saúde fornecidos no questionário.",
+          "Dados de pagamento (processados pelo nosso fornecedor de pagamentos certificado)."
+        ]
+      },
+      {
+        "title": "Finalidades",
+        "bullets": [
+          "Realizar a consulta médica e emitir, se apropriado, uma receita.",
+          "Comunicações operacionais (e-mail, chat privado da plataforma).",
+          "Cumprir obrigações legais."
+        ]
+      },
+      {
+        "title": "Base jurídica",
+        "body": "Consentimento expresso (art. 6.º, n.º 1, al. a) RGPD), execução do contrato (al. b) e cumprimento de obrigação legal (al. c). Para dados de saúde, art. 9.º, n.º 2, al. h) RGPD — tratamento por profissionais de saúde."
+      },
+      {
+        "title": "Conservação",
+        "body": "Conservamos os dados durante toda a duração da sua conta, e até cinco anos após a última consulta por obrigações médico-legais."
+      },
+      {
+        "title": "Destinatários",
+        "body": "Os seus dados não são comunicados a terceiros para fins comerciais. Os subcontratantes (alojamento na UE, envio de e-mails, fornecedor de pagamentos certificado PCI DSS) assinam contratos conformes ao art. 28.º do RGPD."
+      },
+      {
+        "title": "Transferências internacionais",
+        "body": "Regra geral, os seus dados são alojados em servidores situados na União Europeia. Em caso de recurso ocasional a um fornecedor fora do EEE, aplicam-se as garantias previstas no capítulo V do RGPD (Cláusulas Contratuais-Tipo aprovadas pela Comissão Europeia)."
+      },
+      {
+        "title": "Medidas de segurança",
+        "body": "Aplicamos as medidas técnicas e organizativas previstas no art. 32.º do RGPD: cifragem em trânsito e em repouso, controlo de acessos baseado em funções, registos de auditoria, cópias de segurança cifradas, formação contínua da equipa e procedimentos de resposta a incidentes."
+      },
+      {
+        "title": "Direitos",
+        "bullets": [
+          "Acesso, rectificação, eliminação, oposição, limitação, portabilidade.",
+          "Retirar o consentimento em qualquer momento.",
+          "Apresentar reclamação junto da {dataProtectionAuthority}."
+        ]
+      }
+    ],
+    "rightsExerciseTitle": "Exercício dos seus direitos",
+    "rightsExerciseBody": "Exerça os seus direitos escrevendo para {dpoEmail}. Respondemos no prazo máximo de 30 dias."
+  },
+  "terms": {
+    "metaTitle": "Termos e condições — DoctorLife",
+    "metaDescription": "Condições de utilização do serviço de consulta médica online da DoctorLife ({companyName}): elegibilidade, preço, responsabilidade e lei aplicável.",
+    "badge": "Legal",
+    "titlePrefix": "Termos e",
+    "titleHighlight": "condições",
+    "intro": "A versão portuguesa deste documento é o texto legal de referência.",
+    "sections": [
+      {
+        "title": "1. Objeto",
+        "body": "A DoctorLife é um serviço de consulta médica online. Um médico inscrito na Ordem analisa o seu questionário e decide se o tratamento é adequado para si. Nunca prescrevemos sem avaliação médica."
+      },
+      {
+        "title": "2. Elegibilidade",
+        "body": "Deve ter pelo menos 18 anos e residir na União Europeia. Atualmente, o questionário está otimizado para pacientes em Portugal."
+      },
+      {
+        "title": "3. Preço e pagamento",
+        "body": "A primeira avaliação é gratuita, sem compromisso. Se o médico aprovar o tratamento e decidir continuar, escolha o seu plano: assinatura mensal de 139 €/mês (sem fidelização, cancelável quando quiser), pacote de 5 meses por 449 € ou nutricionista + GLP1 por 649 € (ambos em pagamento único, com 5 meses de acesso). Os serviços médicos estão isentos de IVA."
+      },
+      {
+        "title": "4. Limitações do serviço",
+        "body": "Este serviço não substitui a medicina de urgência. Se tiver um problema de saúde que exija assistência imediata, contacte o {emergencyNumber} ou dirija-se ao serviço de urgência."
+      },
+      {
+        "title": "5. Responsabilidade",
+        "body": "A DoctorLife é uma plataforma tecnológica de intermediação que liga pacientes a médicos inscritos na Ordem, independentes. A DoctorLife não presta serviços médicos nem emite diagnósticos. O médico que acompanha o seu caso atua exclusivamente segundo o seu próprio critério profissional e é o único responsável pelo ato médico. A relação contratual relativa ao ato médico estabelece-se diretamente entre o paciente e o médico, não com a DoctorLife."
+      },
+      {
+        "title": "6. Prestador dos serviços de saúde",
+        "body": "Estes serviços oferecem videoconsultas e chamadas telefónicas com profissionais médicos para a prevenção, diagnóstico e tratamento de patologias, bem como a manutenção da saúde. Os pareceres médicos derivados destes serviços baseiam-se nas informações de saúde fornecidas pelo cliente. Serviços de saúde prestados por {healthProviderName} ({healthRegistryNumber})."
+      },
+      {
+        "title": "7. Propriedade intelectual",
+        "body": "Os conteúdos de doctorlife.pt (textos, imagens, código) são propriedade da {companyName}, salvo indicação em contrário."
+      },
+      {
+        "title": "8. Direito de retratação",
+        "body": "Como serviço de consulta médica, a prestação inicia-se imediatamente com o seu consentimento expresso no início do questionário clínico. Assim, e em conformidade com o Decreto-Lei n.º 24/2014, o direito de livre resolução deixa de se aplicar uma vez iniciada a análise médica. Se o médico recusar o tratamento, reembolsamos o valor total no prazo de 48 horas."
+      },
+      {
+        "title": "9. Lei aplicável",
+        "body": "Estas condições são regidas pela lei portuguesa. Os litígios serão resolvidos no tribunal de {jurisdictionCity}, salvo se a lei designar outro foro."
+      },
+      {
+        "title": "10. Resolução de litígios online",
+        "body": "Em conformidade com o Regulamento (UE) 524/2013, se for consumidor, tem acesso à plataforma europeia de resolução de litígios online, disponível em ec.europa.eu/consumers/odr. Antes de a utilizar, pedimos que nos contacte em {supportEmail} para tentarmos resolver a questão diretamente."
+      }
+    ]
+  },
+  "cookies": {
+    "metaTitle": "Política de cookies — DoctorLife",
+    "metaDescription": "Que cookies utiliza a DoctorLife (técnicos, analíticos e de marketing), a sua duração e como gerir o seu consentimento.",
+    "badge": "Legal",
+    "titlePrefix": "Política de",
+    "titleHighlight": "cookies",
+    "intro": "Explicamos que cookies utilizamos, para que servem e como pode gerir o seu consentimento em qualquer momento.",
+    "sections": [
+      {
+        "title": "O que são cookies",
+        "body": "Pequenos ficheiros que se armazenam no seu navegador para memorizar as suas preferências e medir a utilização do site."
+      },
+      {
+        "title": "Que cookies utilizamos",
+        "bullets": [
+          "Técnicos — indispensáveis para o funcionamento do site (por exemplo, memorizar o seu idioma). Não requerem consentimento.",
+          "Analíticos — ajudam-nos a compreender o que funciona e o que não funciona. Apenas com o seu consentimento.",
+          "Marketing — apenas se aceitar. Nunca partilhamos dados de saúde com redes publicitárias."
+        ]
+      },
+      {
+        "title": "Duração",
+        "body": "Os cookies técnicos expiram ao fechar a sessão ou, se aplicável, após 12 meses. Os analíticos são conservados no máximo 14 meses. Os de marketing, se aceitar, são conservados no máximo 13 meses e eliminados se retirar o consentimento."
+      },
+      {
+        "title": "Gestão",
+        "body": "Pode alterar a sua escolha em qualquer momento através do banner de cookies ou das definições do navegador."
+      }
+    ]
+  },
+  "shared": {
+    "moreInfoBadge": "Precisa de mais informações?",
+    "moreInfoTitle": "Vamos falar sobre isso.",
+    "moreInfoBody": "Se alguma secção deste documento não estiver clara, ou quiser exercer um direito, a nossa equipa jurídica e de privacidade responde diretamente.",
+    "contactCta": "Contactar a equipa"
+  }
+}

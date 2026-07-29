@@ -1,0 +1,160 @@
+{
+  "lossStat": 25,
+  "products": [
+    {
+      "name": "Abonament miesięczny",
+      "subtitle": "Ciągła opieka lekarska, recepta i jedna konsultacja telefoniczna w miesiącu. Bez zobowiązań.",
+      "price": "599zł",
+      "priceSuffix": "/miesiąc",
+      "tag": "Abonament",
+      "img": "/products/maren-pen.png",
+      "featured": true,
+      "features": [
+        "Pierwsza ocena bezpłatna",
+        "Ciągła opieka lekarska z Twoim lekarzem",
+        "Recepta na GLP-1 (Mounjaro, Ozempic lub Wegovy), jeśli wskazana",
+        "Jedna konsultacja telefoniczna w miesiącu",
+        "Bezpośredni czat z lekarzem w aplikacji",
+        "Bez zobowiązań: zrezygnuj kiedy chcesz"
+      ]
+    },
+    {
+      "name": "Pakiet 5-miesięczny",
+      "subtitle": "Pełny program w jednej płatności. Najlepsza relacja jakości do ceny, aby się zaangażować.",
+      "price": "1999zł",
+      "priceSuffix": "· jednorazowa płatność · 5 miesięcy",
+      "tag": "Pakiet oszczędnościowy",
+      "img": "/products/maren-daily.png",
+      "features": [
+        "5 miesięcy opieki lekarskiej",
+        "Recepta na GLP-1, jeśli wskazana",
+        "Jedna konsultacja telefoniczna w miesiącu",
+        "Bezpośredni czat z lekarzem w aplikacji",
+        "Stała cena: znacznie taniej"
+      ]
+    },
+    {
+      "name": "Dietetyk + GLP1",
+      "subtitle": "5-miesięczny program z opieką lekarską i wsparciem dietetyka.",
+      "price": "2799zł",
+      "priceSuffix": "· jednorazowa płatność · 5 miesięcy",
+      "tag": "Pełny program",
+      "img": "/products/maren-hd.png",
+      "features": [
+        "5 miesięcy opieki lekarskiej",
+        "Wsparcie dietetyka",
+        "Recepta na GLP-1, jeśli wskazana",
+        "Jedna konsultacja telefoniczna w miesiącu",
+        "Bezpośredni czat z zespołem w aplikacji"
+      ]
+    }
+  ],
+  "adsProducts": [
+    {
+      "name": "Abonament miesięczny",
+      "subtitle": "Wszystko, czego potrzebujesz, aby zająć się swoją wagą z realną opieką lekarską. Pierwsza ocena bezpłatna.",
+      "price": "599zł",
+      "priceSuffix": "/miesiąc",
+      "tag": "Abonament",
+      "img": "/products/maren-pen.png",
+      "featured": true,
+      "features": [
+        "Pierwsza ocena bezpłatna z lekarzem z uprawnieniami",
+        "Recepta online na GLP-1 (Mounjaro, Ozempic lub Wegovy) do odebrania w apotece",
+        "Ciągła opieka i korekty dawki z aplikacji",
+        "Bezpośredni czat z lekarzem, gdy potrzebujesz",
+        "Jedna konsultacja telefoniczna w miesiącu w cenie",
+        "Bez zobowiązań: zrezygnuj kiedy chcesz"
+      ]
+    }
+  ],
+  "experts": [
+    { "name": "Dr Elena Ruiz", "role": "Niezależny lekarz na platformie", "spec": "Zdrowie kobiet i hormony", "img": "/experts/elena-ruiz.png" },
+    { "name": "Dr Marcus Hale", "role": "Niezależny lekarz na platformie", "spec": "Medycyna metaboliczna", "img": "/experts/marcus-hale.png" },
+    { "name": "Dr Priya Nair", "role": "Niezależny lekarz na platformie", "spec": "Tarczyca i hormony", "img": "/experts/priya-nair.png" },
+    { "name": "Dr James Okafor", "role": "Niezależny lekarz na platformie", "spec": "Medycyna wewnętrzna", "img": "/experts/james-okafor.png" },
+    { "name": "Dr Sofia Bergman", "role": "Niezależny lekarz na platformie", "spec": "Zdrowie sercowo-naczyniowe", "img": "/experts/sofia-bergman.png" }
+  ],
+  "metrics": [
+    { "value": 24, "prefix": "−", "suffix": "%", "label": "średnia utrata masy ciała*" },
+    { "value": 92, "suffix": "%", "label": "kontynuowało plan" },
+    { "value": 50, "suffix": "k+", "label": "pacjentów w opiece" },
+    { "value": 4.9, "suffix": "★", "label": "średnia ocena" }
+  ],
+  "footerColumns": [
+    {
+      "title": "Leczenie",
+      "links": [
+        { "label": "Jak to działa", "href": "/#product" },
+        { "label": "Plany i cennik", "href": "/#planes" },
+        { "label": "Prawdziwe historie", "href": "/#transform" },
+        { "label": "Zarezerwuj wizytę", "href": "/#cta" }
+      ]
+    },
+    {
+      "title": "Zasoby",
+      "links": [
+        { "label": "O nas", "href": "/sobre-nosotros" },
+        { "label": "Polityka redakcyjna", "href": "/politica-editorial" },
+        { "label": "Odchudzanie pod nadzorem lekarskim", "href": "/adelgazar-con-supervision-medica" },
+        { "label": "Blog medyczny", "href": "/blog" },
+        { "label": "Nasi lekarze", "href": "/autores" }
+      ]
+    },
+    {
+      "title": "Narzędzia",
+      "links": [
+        { "label": "Kalkulator BMI", "href": "/herramientas/calculadora-imc" },
+        { "label": "Kalkulator TDEE", "href": "/herramientas/calculadora-tdee" },
+        { "label": "Deficyt kaloryczny", "href": "/herramientas/calculadora-deficit-calorico" },
+        { "label": "Dzienna dawka białka", "href": "/herramientas/calculadora-proteina-diaria" }
+      ]
+    },
+    {
+      "title": "Informacje prawne",
+      "links": [
+        { "label": "Polityka prywatności", "href": "/privacidad" },
+        { "label": "Warunki korzystania", "href": "/terminos" },
+        { "label": "Polityka cookies", "href": "/cookies" }
+      ]
+    }
+  ],
+  "quizSteps": [
+    {
+      "key": "objective",
+      "q": "Jaki jest Twój główny cel?",
+      "sub": "Zrób pierwszy krok. W 2 minuty dowiesz się, czy terapia GLP‑1 jest dla Ciebie.",
+      "opts": ["Schudnąć i nie odzyskać wagi", "Kontrolować głód i zachcianki", "Poprawić swoje zdrowie i energię", "Czuć się lepiej ze swoim ciałem"]
+    },
+    {
+      "key": "amount",
+      "q": "Ile wagi chciałbyś/chciałabyś zgubić?",
+      "sub": "Nie ma błędnych odpowiedzi. Chcemy tylko zrozumieć Twój punkt wyjścia.",
+      "opts": ["Mniej niż 5 kg", "Od 5 do 10 kg", "Od 10 do 20 kg", "Więcej niż 20 kg"]
+    },
+    {
+      "key": "tried",
+      "q": "Co już próbowałeś/próbowałaś wcześniej, nie mogąc tego utrzymać?",
+      "sub": "Jeśli waga zawsze wraca, to nie Twoja wina: to Twoja biologia się broni.",
+      "opts": ["Diety i liczenie kalorii", "Intensywne ćwiczenia", "Przerywany post", "Trochę wszystkiego… i zawsze wraca"]
+    },
+    {
+      "key": "frustration",
+      "q": "Co dziś najbardziej Cię obciąża?",
+      "sub": "Wybierz to, co najbardziej odpowiada Twojej obecnej sytuacji.",
+      "opts": ["Ciągły głód i zachcianki", "Odzyskiwanie tego, co tak wiele mnie kosztowało, aby zgubić", "Nie czuć się dobrze ze sobą", "Jak to wpływa na moje zdrowie"]
+    },
+    {
+      "key": "glp1Experience",
+      "q": "Próbowałeś/próbowałaś już terapii GLP‑1, takiej jak semaglutyd?",
+      "sub": "To lek, który zmienia utratę wagi z prawdziwą opieką lekarską.",
+      "opts": ["Używam teraz", "Używałem/am wcześniej", "Nie, ale mnie interesuje", "Nie wiem, co to jest"]
+    },
+    {
+      "key": "why",
+      "q": "Dlaczego chcesz zrobić ten krok teraz?",
+      "sub": "Jasność w tej kwestii to już połowa drogi.",
+      "opts": ["Dla mojego zdrowia i przyszłości", "Chcę znowu czuć się sobą", "Mam przed sobą ważny moment", "Jestem zmęczony/a próbowaniem samemu/samej"]
+    }
+  ]
+}

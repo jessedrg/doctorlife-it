@@ -1,0 +1,82 @@
+{
+  "productCarousel": {
+    "firstVisitTitle": "Jouw eerste consult is",
+    "firstVisitHighlight": "gratis",
+    "firstVisitDesc": "Daarna, als je besluit door te gaan, kies je jouw plan: abonnement van 139 €/maand zonder minimale looptijd, pakket van 5 maanden voor 449 € of diëtist + GLP1 voor 649 €. Alle opvolging verloopt via de DoctorLife-app.",
+    "firstVisitCta": "Eerste afspraak boeken",
+    "choosePlan": "Kies jouw plan,",
+    "choosePlanHighlight": "alles inbegrepen",
+    "prev": "Vorige",
+    "next": "Volgende",
+    "medicalBadge": "Geregistreerde arts",
+    "comingSoon": "Binnenkort",
+    "startNow": "Nu starten",
+    "disclaimer": "*De eerste medische beoordeling is {free}. Als je besluit door te gaan, kies je jouw plan: {monthly} zonder minimale looptijd, {pack} of {nutritionist}. Inclusief chat met je arts, het GLP‑1-recept indien nodig en de opvolging. Medische diensten zijn btw-vrij. Het medicijn is alleen verkrijgbaar op recept na een medisch consult en vereist een actief DoctorLife-abonnement.",
+    "free": "gratis",
+    "monthly": "139 €/maand",
+    "pack": "pakket van 5 maanden voor 449 €",
+    "nutritionist": "diëtist + GLP1 voor 649 €"
+  },
+  "products": {
+    "subscription": {
+      "name": "Maandabonnement",
+      "subtitle": "Continue medische opvolging, recept en één telefonisch consult per maand. Zonder minimale looptijd.",
+      "price": "139€",
+      "priceSuffix": "/maand",
+      "tag": "Abonnement",
+      "features": [
+        "Eerste beoordeling gratis",
+        "Continue medische opvolging met jouw arts",
+        "GLP-1-recept (Mounjaro, Ozempic of Wegovy) indien geschikt",
+        "Één telefonisch consult per maand",
+        "Directe chat met jouw arts via de app",
+        "Geen minimale looptijd: zeg op wanneer je wilt"
+      ]
+    },
+    "pack5": {
+      "name": "5-maanden pakket",
+      "subtitle": "Het volledige programma in één betaling. De beste prijs-kwaliteitverhouding om je te committeren.",
+      "price": "449€",
+      "priceSuffix": "· eenmalige betaling · 5 maanden",
+      "tag": "Voordeelpakket",
+      "features": [
+        "5 maanden medische opvolging",
+        "GLP-1-recept indien geschikt",
+        "Één telefonisch consult per maand",
+        "Directe chat met jouw arts via de app",
+        "Vaste prijs: veel voordeliger"
+      ]
+    },
+    "nutritionist": {
+      "name": "Diëtist + GLP1",
+      "subtitle": "Programma van 5 maanden met medische opvolging en begeleiding door een diëtist.",
+      "price": "649€",
+      "priceSuffix": "· eenmalige betaling · 5 maanden",
+      "tag": "Compleet programma",
+      "features": [
+        "5 maanden medische opvolging",
+        "Begeleiding door een diëtist",
+        "GLP-1-recept indien geschikt",
+        "Één telefonisch consult per maand",
+        "Directe chat met jouw team via de app"
+      ]
+    }
+  },
+  "adsProducts": {
+    "subscription": {
+      "name": "Maandabonnement",
+      "subtitle": "Alles wat je nodig hebt om je gewicht te beheren met echte medische opvolging. Eerste beoordeling gratis.",
+      "price": "139€",
+      "priceSuffix": "/maand",
+      "tag": "Abonnement",
+      "features": [
+        "Eerste beoordeling gratis met geregistreerde arts",
+        "Online recept voor GLP-1 (Mounjaro, Ozempic of Wegovy) om af te halen bij de apotheek",
+        "Continue opvolging en dosisaanpassingen via de app",
+        "Directe chat met jouw arts wanneer nodig",
+        "Één telefonisch consult per maand inbegrepen",
+        "Geen minimale looptijd: zeg op wanneer je wilt"
+      ]
+    }
+  }
+}

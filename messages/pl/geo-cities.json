@@ -1,0 +1,17 @@
+{
+  "warszawa": { "region": "Mazowieckie", "province": "Warszawa", "pop": 1860000, "hospital": "Centralny Szpital Kliniczny MSWiA", "trait": "stolica Polski i największe miasto kraju" },
+  "krakow": { "region": "Małopolskie", "province": "Kraków", "pop": 800000, "hospital": "Szpital Uniwersytecki w Krakowie", "trait": "druga co do wielkości metropolia w Polsce, dawna stolica" },
+  "lodz": { "region": "Łódzkie", "province": "Łódź", "pop": 670000, "hospital": "Uniwersytecki Szpital Kliniczny im. WAM", "trait": "trzecie największe miasto Polski, ośrodek przemysłu tekstylnego" },
+  "wroclaw": { "region": "Dolnośląskie", "province": "Wrocław", "pop": 640000, "hospital": "Uniwersytecki Szpital Kliniczny we Wrocławiu", "trait": "stolica Dolnego Śląska" },
+  "poznan": { "region": "Wielkopolskie", "province": "Poznań", "pop": 540000, "hospital": "Szpital Kliniczny Przemienienia Pańskiego", "trait": "stolica Wielkopolski" },
+  "gdansk": { "region": "Pomorskie", "province": "Gdańsk", "pop": 470000, "hospital": "Uniwersyteckie Centrum Kliniczne", "trait": "stolica Pomorza, historyczne miasto portowe" },
+  "szczecin": { "region": "Zachodniopomorskie", "province": "Szczecin", "pop": 395000, "hospital": "Samodzielny Publiczny Szpital Kliniczny nr 1", "trait": "stolica województwa zachodniopomorskiego" },
+  "bydgoszcz": { "region": "Kujawsko-Pomorskie", "province": "Bydgoszcz", "pop": 340000, "hospital": "Szpital Uniwersytecki nr 1", "trait": "miasto nad Brdą i Wisłą" },
+  "lublin": { "region": "Lubelskie", "province": "Lublin", "pop": 335000, "hospital": "Samodzielny Publiczny Szpital Kliniczny nr 1", "trait": "stolica Lubelszczyzny" },
+  "katowice": { "region": "Śląskie", "province": "Katowice", "pop": 290000, "hospital": "Uniwersyteckie Centrum Kliniczne w Katowicach", "trait": "stolica Górnego Śląska" },
+  "bialystok": { "region": "Podlaskie", "province": "Białystok", "pop": 295000, "hospital": "Uniwersytecki Szpital Kliniczny w Białymstoku", "trait": "największe miasto Polski Wschodniej" },
+  "gdynia": { "region": "Pomorskie", "province": "Gdańsk", "pop": 245000, "hospital": "Szpitale Pomorskie", "trait": "miasto portowe Trójmiasta" },
+  "czestochowa": { "region": "Śląskie", "province": "Częstochowa", "pop": 220000, "hospital": "Wojewódzki Szpital Specjalistyczny", "trait": "miasto Jasnej Góry" },
+  "rzeszow": { "region": "Podkarpackie", "province": "Rzeszów", "pop": 200000, "hospital": "Kliniczny Szpital Wojewódzki nr 1", "trait": "stolica Podkarpacia" },
+  "torun": { "region": "Kujawsko-Pomorskie", "province": "Toruń", "pop": 195000, "hospital": "Wojewódzki Szpital Zespolony", "trait": "gotyckie miasto nad Wisłą, miasto Kopernika" }
+}

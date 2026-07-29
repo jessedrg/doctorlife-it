@@ -1,0 +1,64 @@
+{
+  "herramientas": {
+    "metaTitle": "Kostenlose Gesundheits- und Gewichtsrechner | DoctorLife",
+    "metaDescription": "Kostenlose Gesundheitsrechner: BMI, Kalorienverbrauch (TDEE), Kaloriendefizit und täglicher Proteinbedarf. Sofortige Ergebnisse und medizinische Orientierung von DoctorLife.",
+    "breadcrumbHome": "Startseite",
+    "breadcrumbTools": "Tools",
+    "badge": "Kostenlose Tools",
+    "title": "Rechner für",
+    "titleHighlight": "Gesundheit und Gewicht",
+    "description": "Wissenschaftlich fundierte Tools, um deinen Körper zu verstehen: BMI, Kalorienverbrauch, Defizit und Protein. Sie sind ein Ausgangspunkt — für einen echten Plan macht eine ärztliche Bewertung den Unterschied.",
+    "toolsListHeading": "Liste der Rechner",
+    "openCalculator": "Rechner öffnen →",
+    "relatedTitle": "Informiere dich weiter",
+    "tools": {
+      "bmi": {
+        "title": "BMI-Rechner",
+        "desc": "Erfahre in Sekunden deinen Body-Mass-Index und in welcher Gewichtskategorie du dich befindest.",
+        "tag": "Gewicht"
+      },
+      "tdee": {
+        "title": "TDEE-Rechner",
+        "desc": "Berechne deinen täglichen Gesamtenergieverbrauch: wie viele Kalorien du je nach Aktivität verbrennst.",
+        "tag": "Kalorien"
+      },
+      "deficit": {
+        "title": "Kaloriendefizit-Rechner",
+        "desc": "Erfahre, wie viele Kalorien du essen solltest, um in einem gesunden und nachhaltigen Tempo Gewicht zu verlieren.",
+        "tag": "Gewichtsverlust"
+      },
+      "protein": {
+        "title": "Täglicher Proteinbedarfsrechner",
+        "desc": "Berechne, wie viel Protein du täglich brauchst, je nach Gewicht, Ziel und Aktivitätslevel.",
+        "tag": "Ernährung"
+      }
+    },
+    "related": [
+      { "href": "/dimagrire-con-supervisione-medica", "label": "Abnehmen unter ärztlicher Begleitung" },
+      { "href": "/blog/wegovy-prezzo-italia", "label": "Wegovy Preis" },
+      { "href": "/blog/ozempic-vs-wegovy-vs-mounjaro", "label": "Ozempic vs Wegovy vs Mounjaro" }
+    ],
+    "ctaBadge": "Erster Termin kostenlos",
+    "ctaTitle": "Bereit für einen echten Plan?",
+    "ctaDesc": "Die Rechner geben Orientierung, aber dein Körper ist einzigartig. Buche deinen kostenlosen ersten Termin und starte mit einem Plan, der um dich herum entwickelt wurde.",
+    "ctaButton": "Ersten Termin buchen"
+  },
+  "blog": {
+    "metaTitle": "DoctorLife Blog — Wegovy, Mounjaro und Gewichtsabnahme mit GLP‑1",
+    "metaDescription": "Klare, medizinische Leitfäden zu Wegovy, Mounjaro, Semaglutid und Tirzepatid: Preise, Rezepte und wie du deine Gewichtsbehandlung in Deutschland startest.",
+    "badge": "DoctorLife Blog",
+    "title": "Alles über die",
+    "titleHighlight": "Gewichtsbetreuung",
+    "titleSuffix": "mit GLP‑1",
+    "subtitle": "Wegovy, Mounjaro, Semaglutid, Tirzepatid: Preise, Rezepte und wie du sicher und mit echtem ärztlichem Follow-up startest.",
+    "noResults": "Wir haben keine passenden Leitfäden gefunden.",
+    "resultsSingular": "Leitfaden gefunden",
+    "resultsPlural": "Leitfäden gefunden",
+    "inCategory": "in",
+    "forQuery": "für «{query}».",
+    "viewAll": "Alle Leitfäden ansehen",
+    "pagination": "Blog-Seitennummerierung",
+    "prev": "← Zurück",
+    "next": "Weiter →"
+  }
+}

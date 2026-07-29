@@ -1,0 +1,60 @@
+{
+  "drugs": [
+    {
+      "key": "wegovy", "name": "Wegovy", "inn": "semaglutide 2,4 mg", "category": "Wegovy", "kind": "weight",
+      "frequency": "één wekelijkse injectie", "cover": "/blog/wegovy-sevilla.png",
+      "rows": [["0,25 mg", "Start (weken 1–4)", "200–230 €"], ["0,5 mg", "Aanpassing", "200–250 €"], ["1 mg", "Verhoging", "230–270 €"], ["1,7 mg", "Verhoging", "250–290 €"], ["2,4 mg", "Onderhoud", "270–300 €"]],
+      "priceLow": "200 €", "priceHigh": "300 €",
+      "pillarBuy": "comprare-wegovy-online", "pillarPrice": "wegovy-prezzo-italia", "compare": "wegovy-vs-mounjaro"
+    },
+    {
+      "key": "mounjaro", "name": "Mounjaro", "inn": "tirzepatide", "category": "Mounjaro", "kind": "weight",
+      "frequency": "één wekelijkse injectie", "cover": "/blog/mounjaro-valencia.png",
+      "rows": [["2,5 mg", "Start", "200–250 €"], ["5 mg", "Aanpassing", "230–280 €"], ["7,5–10 mg", "Verhoging", "280–330 €"], ["12,5–15 mg", "Onderhoud", "300–350 €"]],
+      "priceLow": "200 €", "priceHigh": "350 €",
+      "pillarBuy": "comprare-mounjaro-online", "pillarPrice": "mounjaro-prezzo-italia", "compare": "wegovy-vs-mounjaro"
+    },
+    {
+      "key": "ozempic", "name": "Ozempic", "inn": "semaglutide", "category": "Ozempic", "kind": "diabetes",
+      "frequency": "één wekelijkse injectie", "cover": "/blog/ozempic-madrid.png",
+      "rows": [["0,25 mg", "Start", "120–140 €"], ["0,5 mg", "Onderhoud", "130–150 €"], ["1 mg", "Onderhoud", "150–170 €"]],
+      "priceLow": "120 €", "priceHigh": "170 €",
+      "pillarBuy": "comprare-ozempic-online", "pillarPrice": "ozempic-prezzo-italia", "compare": "ozempic-vs-wegovy-vs-mounjaro"
+    },
+    {
+      "key": "saxenda", "name": "Saxenda", "inn": "liraglutide", "category": "Saxenda", "kind": "weight",
+      "frequency": "één dagelijkse injectie", "cover": "/products/maren-daily.png",
+      "rows": [["Pennenverpakking", "Dagelijkse behandeling", "130–200 €/verp."], ["Maandelijkse kosten", "Onderhoudsdosis (3,0 mg/dag)", "200–300 €/maand"]],
+      "priceLow": "200 €", "priceHigh": "300 €",
+      "pillarBuy": "comprare-saxenda-italia", "pillarPrice": "saxenda-prezzo-italia", "compare": "ozempic-vs-saxenda"
+    },
+    {
+      "key": "rybelsus", "name": "Rybelsus", "inn": "oraal semaglutide", "category": "Rybelsus", "kind": "diabetes",
+      "frequency": "één tablet per dag op een lege maag", "cover": "/products/maren-oral.png",
+      "rows": [["3 mg", "Start (30 dagen)", "120–140 €"], ["7 mg", "Onderhoud", "130–160 €"], ["14 mg", "Onderhoud (hoge dosis)", "160–190 €"]],
+      "priceLow": "120 €", "priceHigh": "190 €",
+      "pillarBuy": "comprare-semaglutide-online", "pillarPrice": "wegovy-prezzo-italia", "compare": "ozempic-vs-wegovy-vs-mounjaro"
+    }
+  ],
+  "priceDrugKeys": ["wegovy", "mounjaro", "ozempic", "saxenda", "rybelsus"],
+  "research": [
+    {
+      "key": "retatrutide", "name": "retatrutide", "Name": "Retatrutide", "maker": "Eli Lilly",
+      "klass": "drievoudige agonist van GLP‑1-, GIP- en glucagonreceptoren", "route": "één wekelijkse subcutane injectie",
+      "altKey": "mounjaro",
+      "resultsP": "In fase II klinische studies bereikten mensen met obesitas die werden behandeld met de hoogste doses retatrutide zeer opmerkelijke gemiddelde gewichtsreducties binnen bijna een jaar, tot de grootste die tot nu toe zijn waargenomen met dit type medicijn. Het zijn echter voorlopige gegevens: fase III-studies moeten de werkelijke werkzaamheid en veiligheid nog bevestigen."
+    },
+    {
+      "key": "cagrisema", "name": "CagriSema", "Name": "CagriSema", "maker": "Novo Nordisk",
+      "klass": "combinatie van cagrilintide (amyline-analoog) en semaglutide", "route": "één wekelijkse subcutane injectie",
+      "altKey": "wegovy",
+      "resultsP": "CagriSema combineert twee complementaire mechanismen voor eetlustcontrole en toonde in studies relevante gewichtsreducties. De definitieve resultaten zijn afhankelijk van de lopende fase III-studies."
+    },
+    {
+      "key": "orforglipron", "name": "orforglipron", "Name": "Orforglipron", "maker": "Eli Lilly",
+      "klass": "GLP‑1-receptoragonist in tabletvorm (oraal klein molecuul)", "route": "één tablet per dag oraal",
+      "altKey": "mounjaro",
+      "resultsP": "Als tablet in plaats van injectie zou orforglipron in de toekomst de toegang tot behandeling kunnen vergemakkelijken. In vroege studies toonde het relevante gewichtsverliezen, te bevestigen in fase III-studies."
+    }
+  ]
+}

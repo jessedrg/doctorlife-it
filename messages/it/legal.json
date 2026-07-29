@@ -1,0 +1,163 @@
+{
+  "entity": {
+    "companyName": "DOCTORLIFE HEALTH ITALIA S.R.L.",
+    "vatNumber": "P.IVA da completare",
+    "healthProviderName": "[RAGIONE SOCIALE SANITARIA ITALIANA DA COMPLETARE]",
+    "healthRegistryNumber": "Registro sanitario/ASL: da completare",
+    "dpoEmail": "hello@doctorlife.io",
+    "supportEmail": "hello@doctorlife.io",
+    "jurisdictionCity": "Milano",
+    "dataProtectionAuthority": "Garante per la protezione dei dati personali (garanteprivacy.it)",
+    "emergencyNumber": "112"
+  },
+  "privacy": {
+    "metaTitle": "Informativa sulla privacy — DoctorLife",
+    "metaDescription": "Come DoctorLife ({companyName}) tratta i tuoi dati personali e sanitari in conformità al GDPR e al Codice Privacy italiano.",
+    "badge": "Legale",
+    "titlePrefix": "Informativa sulla",
+    "titleHighlight": "privacy",
+    "intro": "La versione in italiano di questo documento è il testo legale di riferimento.",
+    "sections": [
+      {
+        "title": "Titolare del trattamento",
+        "body": "{companyName} — {supportEmail}. Trattiamo i tuoi dati in conformità al Regolamento (UE) 2016/679 (GDPR) e al Decreto Legislativo 196/2003 (Codice Privacy), come modificato dal D.Lgs. 101/2018."
+      },
+      {
+        "title": "Responsabile della Protezione dei Dati",
+        "body": "Puoi contattare il nostro Responsabile della Protezione dei Dati (DPO) all'indirizzo {dpoEmail} per qualsiasi questione relativa al trattamento dei tuoi dati personali o sanitari."
+      },
+      {
+        "title": "Quali dati trattiamo",
+        "bullets": [
+          "Dati identificativi: nome, email, telefono.",
+          "Dati sanitari forniti nel questionario.",
+          "Dati di pagamento (elaborati dal nostro fornitore di pagamenti certificato)."
+        ]
+      },
+      {
+        "title": "Finalità",
+        "bullets": [
+          "Erogare il consulto medico ed emettere, se appropriato, una prescrizione.",
+          "Comunicazioni operative (email, chat privata della piattaforma).",
+          "Adempiere agli obblighi legali."
+        ]
+      },
+      {
+        "title": "Base giuridica",
+        "body": "Consenso espresso (art. 6.1.a GDPR), esecuzione del contratto (6.1.b) e adempimento di obbligo legale (6.1.c). Per i dati sanitari, art. 9.2.h GDPR — trattamento da parte di professionisti sanitari."
+      },
+      {
+        "title": "Conservazione",
+        "body": "Conserviamo i dati per tutta la durata del tuo account, e fino a cinque anni dopo l'ultimo consulto per obblighi medico-legali (AIFA)."
+      },
+      {
+        "title": "Destinatari",
+        "body": "I tuoi dati non vengono comunicati a terzi per finalità commerciali. I responsabili del trattamento (hosting nell'UE, invio email, fornitore di pagamenti certificato PCI DSS) firmano accordi di trattamento conformi all'art. 28 GDPR."
+      },
+      {
+        "title": "Trasferimenti internazionali",
+        "body": "Di norma, i tuoi dati sono ospitati su server situati nell'Unione Europea. Quando occasionalmente si ricorre a un fornitore fuori dal SEE, si applicano le garanzie previste dal capo V del GDPR (Clausole Contrattuali Tipo approvate dalla Commissione Europea)."
+      },
+      {
+        "title": "Misure di sicurezza",
+        "body": "Applichiamo le misure tecniche e organizzative previste dall'art. 32 GDPR: cifratura in transito e a riposo, controllo degli accessi basato sui ruoli, log di audit, backup cifrati, formazione continua del personale e procedure di risposta agli incidenti."
+      },
+      {
+        "title": "Diritti",
+        "bullets": [
+          "Accesso, rettifica, cancellazione, opposizione, limitazione, portabilità.",
+          "Revocare il consenso in qualsiasi momento.",
+          "Presentare reclamo al {dataProtectionAuthority}."
+        ]
+      }
+    ],
+    "rightsExerciseTitle": "Esercizio dei diritti",
+    "rightsExerciseBody": "Esercita i tuoi diritti scrivendo a {dpoEmail}. Rispondiamo entro un massimo di 30 giorni."
+  },
+  "terms": {
+    "metaTitle": "Termini e condizioni — DoctorLife",
+    "metaDescription": "Condizioni d'uso del servizio di consulto medico online di DoctorLife ({companyName}): idoneità, prezzo, responsabilità e legge applicabile.",
+    "badge": "Legale",
+    "titlePrefix": "Termini e",
+    "titleHighlight": "condizioni",
+    "intro": "La versione in italiano di questo documento è il testo legale di riferimento.",
+    "sections": [
+      {
+        "title": "1. Oggetto",
+        "body": "DoctorLife è un servizio di consulto medico online. Un medico iscritto all'Ordine esamina il tuo questionario e decide se il trattamento è adatto a te. Non prescriviamo mai senza valutazione medica."
+      },
+      {
+        "title": "2. Idoneità",
+        "body": "Devi avere almeno 18 anni e risiedere nell'Unione Europea. Al momento, il questionario è ottimizzato per pazienti in Italia."
+      },
+      {
+        "title": "3. Prezzo e pagamento",
+        "body": "La prima valutazione è gratuita, senza impegno. Se il medico approva il trattamento e decidi di continuare, scegli il tuo piano: abbonamento mensile di 139 €/mese (senza permanenza e cancellabile quando vuoi), pacchetto di 5 mesi a 449 € o nutrizionista + GLP1 a 649 € (entrambi pagamento unico, 5 mesi di accesso). I servizi medici sono esenti da IVA."
+      },
+      {
+        "title": "4. Limitazioni del servizio",
+        "body": "Questo servizio non sostituisce la medicina d'urgenza. Se hai un problema di salute che richiede assistenza immediata, contatta il {emergencyNumber} o vai al pronto soccorso."
+      },
+      {
+        "title": "5. Responsabilità",
+        "body": "DoctorLife è una piattaforma tecnologica di intermediazione che collega pazienti con medici iscritti all'Ordine indipendenti. DoctorLife non fornisce servizi medici né emette diagnosi. Il medico che segue il tuo caso agisce esclusivamente secondo il proprio giudizio professionale ed è l'unico responsabile dell'atto medico. Il rapporto contrattuale relativo all'atto medico si stabilisce direttamente tra il paziente e il medico, non con DoctorLife."
+      },
+      {
+        "title": "6. Erogatore dei servizi sanitari",
+        "body": "Questi servizi offrono videoconsulti e chiamate telefoniche con professionisti medici per la prevenzione, la diagnosi e il trattamento di patologie, così come il mantenimento della salute. I pareri medici derivati da questi servizi si basano sulle informazioni sanitarie fornite dal cliente. Servizi sanitari erogati da {healthProviderName} ({healthRegistryNumber})."
+      },
+      {
+        "title": "7. Proprietà intellettuale",
+        "body": "I contenuti di doctorlife-it.com (testi, immagini, codice) sono proprietà di {companyName} salvo diversa indicazione."
+      },
+      {
+        "title": "8. Diritto di recesso",
+        "body": "Come servizio di consulto medico, la prestazione inizia immediatamente con il tuo consenso espresso all'avvio del questionario clinico. Per questo, e conformemente al Codice del Consumo italiano (D.Lgs. 206/2005, art. 59), una volta iniziata la revisione medica decade il diritto di recesso. Se il medico rifiuta il trattamento, ti rimborsiamo l'intero importo entro 48 ore."
+      },
+      {
+        "title": "9. Legge applicabile",
+        "body": "Queste condizioni sono regolate dalla legislazione italiana. Le controversie saranno risolte presso il tribunale di {jurisdictionCity}, salvo che la legge designi un foro diverso."
+      },
+      {
+        "title": "10. Risoluzione delle controversie online",
+        "body": "Conformemente al Regolamento (UE) 524/2013, se sei un consumatore hai accesso alla piattaforma europea di risoluzione delle controversie online disponibile su ec.europa.eu/consumers/odr. Prima di ricorrervi, ti chiediamo di contattarci a {supportEmail} per provare a risolvere la questione direttamente."
+      }
+    ]
+  },
+  "cookies": {
+    "metaTitle": "Politica dei cookie — DoctorLife",
+    "metaDescription": "Quali cookie usa DoctorLife (tecnici, analitici e di marketing), la loro durata e come gestire il tuo consenso.",
+    "badge": "Legale",
+    "titlePrefix": "Politica dei",
+    "titleHighlight": "cookie",
+    "intro": "Ti spieghiamo quali cookie utilizziamo, a cosa servono e come puoi gestire il tuo consenso in qualsiasi momento.",
+    "sections": [
+      {
+        "title": "Cosa sono i cookie",
+        "body": "Piccoli file che si memorizzano nel tuo browser per ricordare le tue preferenze e misurare l'utilizzo del sito."
+      },
+      {
+        "title": "Quali cookie usiamo",
+        "bullets": [
+          "Tecnici — indispensabili per il funzionamento del sito (ad esempio, ricordare la tua lingua). Non richiedono consenso.",
+          "Analitici — ci aiutano a capire cosa funziona e cosa no. Solo con il tuo consenso.",
+          "Marketing — esclusivamente se accetti. Non condividiamo mai dati sanitari con reti pubblicitarie."
+        ]
+      },
+      {
+        "title": "Durata",
+        "body": "I cookie tecnici scadono alla chiusura della sessione o, se del caso, dopo 12 mesi. Gli analitici vengono conservati per un massimo di 14 mesi. Quelli di marketing, se accetti, vengono conservati per un massimo di 13 mesi e vengono eliminati se revochi il consenso."
+      },
+      {
+        "title": "Gestione",
+        "body": "Puoi cambiare la tua scelta in qualsiasi momento dal banner dei cookie o dalle impostazioni del browser."
+      }
+    ]
+  },
+  "shared": {
+    "moreInfoBadge": "Hai bisogno di più informazioni?",
+    "moreInfoTitle": "Parliamone insieme.",
+    "moreInfoBody": "Se una sezione di questo documento non è chiara, o vuoi esercitare un diritto, il nostro team legale e privacy risponde direttamente.",
+    "contactCta": "Contatta il team"
+  }
+}

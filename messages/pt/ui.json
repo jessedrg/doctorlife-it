@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "title": "DoctorLife — O seu corpo, finalmente compreendido",
+    "description": "Cuidados de peso e hormonais orientados por médicos, pensados à medida do seu corpo — não de um protocolo único.",
+    "siteName": "DoctorLife",
+    "locale": "pt_PT",
+    "slogan": "O seu corpo, finalmente compreendido"
+  },
+  "navbar": {
+    "howItWorks": "Como funciona",
+    "plansPricing": "Planos e preços",
+    "start": "Começar",
+    "signIn": "Entrar",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "ariaLabel": "DoctorLife — página inicial"
+  },
+  "announcement": {
+    "text": "Tratamento GLP‑1 com caneta semanal e acompanhamento médico.",
+    "cta": "Comece hoje"
+  },
+  "hero": {
+    "badge": "A sua plataforma médica 100% online",
+    "title": "O tratamento médico para a",
+    "titleHighlight": "perda de peso",
+    "titleSuffix": ", adaptado à sua realidade",
+    "subtitle": "Cuidados orientados por médicos, pensados à medida do seu corpo.",
+    "altImage": "Paciente DoctorLife sorridente"
+  },
+  "immersiveProduct": {
+    "titleLine1": "Uma nova era para os",
+    "titleLine2": "cuidados de peso",
+    "titleLine3": "já chegou",
+    "subtitle": "Perca até {loss}% do peso corporal",
+    "subtitleSuffix": " com GLP‑1 com apoio clínico.",
+    "cta": "Começar",
+    "altImage": "Canetas injetoras para tratamento GLP-1",
+    "disclaimer": "*Dado médio observado em estudos clínicos sobre análogos do GLP-1 e no acompanhamento de pacientes. Os resultados individuais variam e dependem de cada caso e do tratamento prescrito pelo médico."
+  },
+  "metrics": {
+    "weightLoss": "peso corporal médio perdido*",
+    "retention": "continuou com o plano",
+    "patients": "pacientes em acompanhamento",
+    "rating": "avaliação média"
+  },
+  "transformation": {
+    "badge": "Uma mudança real",
+    "titleLine1": "Uma mudança que dura,",
+    "titleLine2": "nos",
+    "titleLine3": "seus",
+    "titleLine4": "termos",
+    "ctaStart": "Começar",
+    "ctaCheck": "Verifique a sua elegibilidade"
+  },
+  "wegovyPenCard": {
+    "badge": "Nova dose elevada",
+    "titlePrefix": "O seu tratamento",
+    "titleHighlight": "GLP-1",
+    "titleSuffix": "com acompanhamento médico",
+    "altImage": "Caneta injetora para tratamento GLP-1 com supervisão médica",
+    "cta": "Iniciar a minha avaliação",
+    "disclaimer": "Os tratamentos com análogos do GLP-1 requerem receita e uma avaliação médica prévia. Os resultados individuais podem variar."
+  },
+  "mobileFollowup": {
+    "badge": "100% digital",
+    "title": "Acompanhamento médico",
+    "titleHighlight": "a partir do seu telemóvel",
+    "subtitle": "O seu médico acompanha-o em cada etapa — sem salas de espera.",
+    "altImage": "Médico DoctorLife em videochamada a partir do telemóvel",
+    "cta": "Começar agora"
+  },
+  "medicalTeam": {
+    "badge": "A nossa equipa médica",
+    "title": "Médicos especialistas em obesidade",
+    "doctorName": "Equipa médica DoctorLife",
+    "doctorRole": "Endocrinologia, Nutrição e Medicina Interna · Médicos inscritos na Ordem"
+  },
+  "experts": {
+    "titleLine1": "Os melhores cuidados, pelas mãos",
+    "titleLine2": "dos melhores em",
+    "titleLine3": "medicina",
+    "subtitle": "Uma equipa de especialistas de referência com décadas de experiência combinada em tudo o que envolve a sua saúde.",
+    "role": "Médico independente na plataforma",
+    "specs": {
+      "elena": "Saúde feminina e hormonal",
+      "marcus": "Medicina metabólica",
+      "priya": "Tiroide e hormonas",
+      "james": "Medicina interna",
+      "sofia": "Saúde cardiovascular"
+    }
+  },
+  "finalCta": {
+    "titleLine1": "Comece com um plano",
+    "titleLine2": "criado à medida de",
+    "titleLine2Highlight": "si",
+    "subtitle": "Receba gratuitamente o nosso guia «Equilibre as suas hormonas», escrito por médicos inscritos para o acompanhar no seu percurso.",
+    "placeholder": "E-mail",
+    "altImage": "Paciente DoctorLife sorridente",
+    "submit": "Obter o guia",
+    "submitting": "A enviar...",
+    "success": "Guia enviado. Verifique o seu e-mail.",
+    "disclaimer": "Ao introduzir o seu e-mail, aceita os nossos Termos e Condições e reconhece a Política de Privacidade."
+  },
+  "footer": {
+    "description": "Plataforma que liga pacientes a médicos inscritos independentes para o acompanhamento de peso com tratamento GLP‑1.",
+    "cta": "Primeira consulta gratuita",
+    "legalNote": "Estes serviços oferecem videoconsultas e chamadas telefónicas com profissionais médicos para a prevenção, diagnóstico e tratamento de patologias, bem como a manutenção da saúde. Os pareceres médicos derivados destes serviços baseiam-se nas informações de saúde fornecidas pelo cliente. Serviços de saúde prestados por {healthProviderName} ({healthRegistryNumber}).",
+    "securePayment": "Pagamento seguro",
+    "paymentMethodsLabel": "Métodos de pagamento aceites",
+    "copyright": "© 2026 DoctorLife · doctorlife.pt",
+    "medicalNote": "Tratamento sujeito a avaliação médica.",
+    "ariaLabel": "DoctorLife — página inicial"
+  },
+  "footerColumns": {
+    "treatment": {
+      "title": "Tratamento",
+      "howItWorks": "Como funciona",
+      "plansPricing": "Planos e preços",
+      "realStories": "Histórias reais",
+      "bookVisit": "Marcar consulta"
+    },
+    "resources": {
+      "title": "Recursos",
+      "aboutUs": "Sobre nós",
+      "editorialPolicy": "Política editorial",
+      "loseWeight": "Perder peso com acompanhamento médico",
+      "medicalBlog": "Blog médico",
+      "ourDoctors": "Os nossos médicos"
+    },
+    "tools": {
+      "title": "Ferramentas",
+      "bmi": "Calculadora de IMC",
+      "tdee": "Calculadora de TDEE",
+      "caloricDeficit": "Défice calórico",
+      "dailyProtein": "Proteína diária"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Política de privacidade",
+      "terms": "Termos e condições",
+      "cookies": "Política de cookies"
+    }
+  },
+  "whatsapp": {
+    "messages": [
+      "Como começa o seu plano?",
+      "Consulta em 2 minutos",
+      "O médico responde hoje",
+      "Primeira consulta gratuita"
+    ],
+    "responseTime": "Resposta em minutos",
+    "close": "Fechar",
+    "ariaLabel": "Contacte-nos pelo WhatsApp",
+    "defaultMessage": "Gostaria de receber mais informações sobre o tratamento com GLP-1.",
+    "noSlotsMessage": "Olá, acabei de deixar os meus dados na DoctorLife e não há horários disponíveis. Gostaria de marcar uma consulta. O meu nome é {name}."
+  },
+  "stickyCta": {
+    "title": "Avaliação médica online",
+    "subtitle": "Primeira avaliação gratuita · médicos inscritos · sem compromisso",
+    "cta": "Começar gratuitamente",
+    "close": "Fechar aviso"
+  },
+  "geoGreeting": {
+    "text": "Atendemos em",
+    "suffix": "e em toda a região — consulta médica online, sem deslocações."
+  },
+  "trustbox": {
+    "ariaLabel": "Trustpilot"
+  },
+  "notFound": {
+    "error": "Erro 404",
+    "title": "Não encontrámos esta página",
+    "description": "O link pode ter mudado ou a página pode já não existir. Deixamos-lhe alguns acessos úteis para continuar.",
+    "backHome": "Voltar à página inicial",
+    "suggestions": {
+      "howItWorks": "Como funciona o tratamento",
+      "plansPricing": "Planos e preços",
+      "medicalBlog": "Blog médico",
+      "ourDoctors": "Os nossos médicos",
+      "bmiCalculator": "Calculadora de IMC"
+    }
+  },
+  "lossStat": 25
+}

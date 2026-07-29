@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "siteUrl": "https://doctorlife.nl",
+    "brand": "DoctorLife",
+    "contactEmail": "hello@doctorlife.io",
+    "organizationDescription": "Gewichts- en hormonale zorg onder leiding van geregistreerde artsen, met medische beoordeling en echte follow-up via de app.",
+    "knowsAbout": ["Obesitas", "Overgewicht", "Metabole gezondheid", "Gewichtsbeheersing", "Endocrinologie"],
+    "areaServed": "Nederland",
+    "countryCode": "NL",
+    "availableLanguage": ["Dutch"],
+    "schemaLang": "nl-NL",
+    "trustpilotLocale": "nl-NL",
+    "dateLocale": "nl-NL",
+    "htmlLang": "nl",
+    "ogLocale": "nl_NL",
+    "sameAs": "https://nl.trustpilot.com/review/doctorlife.io"
+  },
+  "medicalReviewer": {
+    "name": "Dr. Laura Méndez",
+    "role": "Arts gespecialiseerd in Endocrinologie en Voeding",
+    "credentials": "BIG-geregistreerd",
+    "bio": "BIG-geregistreerde endocrinoloog met meer dan 12 jaar ervaring in obesitas en behandeling met GLP‑1-analogen. Beoordeelt de klinische inhoud van DoctorLife."
+  },
+  "priceNote": "Bij DoctorLife is je eerste medische consult gratis, zonder verplichting. Alle follow-up verloopt via onze app.",
+  "serviceCta": "Bij DoctorLife beoordeelt een geregistreerde arts jouw situatie via videoconsult en schrijft, indien geschikt, de behandeling voor met e-recept en follow-up via de app. Het eerste bezoek is gratis."
+}

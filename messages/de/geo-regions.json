@@ -1,0 +1,38 @@
+{
+  "healthServices": {
+    "Bayern": { "short": "KVB", "long": "Kassenärztliche Vereinigung Bayerns" },
+    "Nordrhein-Westfalen": { "short": "KVNO/KVWL", "long": "Kassenärztliche Vereinigung Nordrhein/Westfalen-Lippe" },
+    "Baden-Württemberg": { "short": "KVBW", "long": "Kassenärztliche Vereinigung Baden-Württemberg" },
+    "Niedersachsen": { "short": "KVN", "long": "Kassenärztliche Vereinigung Niedersachsen" },
+    "Hessen": { "short": "KVH", "long": "Kassenärztliche Vereinigung Hessen" },
+    "Sachsen": { "short": "KVS", "long": "Kassenärztliche Vereinigung Sachsen" },
+    "Rheinland-Pfalz": { "short": "KV RLP", "long": "Kassenärztliche Vereinigung Rheinland-Pfalz" },
+    "Berlin": { "short": "KV Berlin", "long": "Kassenärztliche Vereinigung Berlin" },
+    "Schleswig-Holstein": { "short": "KVSH", "long": "Kassenärztliche Vereinigung Schleswig-Holstein" },
+    "Brandenburg": { "short": "KVBB", "long": "Kassenärztliche Vereinigung Brandenburg" },
+    "Sachsen-Anhalt": { "short": "KVSA", "long": "Kassenärztliche Vereinigung Sachsen-Anhalt" },
+    "Thüringen": { "short": "KVT", "long": "Kassenärztliche Vereinigung Thüringen" },
+    "Hamburg": { "short": "KVHH", "long": "Kassenärztliche Vereinigung Hamburg" },
+    "Mecklenburg-Vorpommern": { "short": "KVMV", "long": "Kassenärztliche Vereinigung Mecklenburg-Vorpommern" },
+    "Saarland": { "short": "KVS Saarland", "long": "Kassenärztliche Vereinigung Saarland" },
+    "Bremen": { "short": "KVHB", "long": "Kassenärztliche Vereinigung Bremen" }
+  },
+  "regions": [
+    { "name": "Nordrhein-Westfalen", "slug": "nordrhein-westfalen", "capital": "Düsseldorf", "capitalSlug": "duesseldorf", "pop": 18140000, "obesity": 17, "provinces": ["Köln", "Düsseldorf", "Dortmund", "Essen", "Duisburg"] },
+    { "name": "Bayern", "slug": "bayern", "capital": "München", "capitalSlug": "muenchen", "pop": 13180000, "obesity": 15, "provinces": ["München", "Nürnberg", "Augsburg", "Würzburg", "Regensburg"] },
+    { "name": "Baden-Württemberg", "slug": "baden-wuerttemberg", "capital": "Stuttgart", "capitalSlug": "stuttgart", "pop": 11120000, "obesity": 15, "provinces": ["Stuttgart", "Mannheim", "Karlsruhe", "Freiburg"] },
+    { "name": "Niedersachsen", "slug": "niedersachsen", "capital": "Hannover", "capitalSlug": "hannover", "pop": 8000000, "obesity": 18, "provinces": ["Hannover", "Braunschweig", "Osnabrück"] },
+    { "name": "Hessen", "slug": "hessen", "capital": "Wiesbaden", "capitalSlug": "wiesbaden", "pop": 6300000, "obesity": 16, "provinces": ["Frankfurt am Main", "Wiesbaden", "Kassel"] },
+    { "name": "Sachsen", "slug": "sachsen", "capital": "Dresden", "capitalSlug": "dresden", "pop": 4050000, "obesity": 17, "provinces": ["Leipzig", "Dresden", "Chemnitz"] },
+    { "name": "Rheinland-Pfalz", "slug": "rheinland-pfalz", "capital": "Mainz", "capitalSlug": "mainz", "pop": 4100000, "obesity": 17, "provinces": ["Mainz", "Ludwigshafen", "Koblenz"] },
+    { "name": "Berlin", "slug": "berlin", "capital": "Berlin", "capitalSlug": "berlin", "pop": 3700000, "obesity": 16, "provinces": ["Berlin"] },
+    { "name": "Schleswig-Holstein", "slug": "schleswig-holstein", "capital": "Kiel", "capitalSlug": "kiel", "pop": 2920000, "obesity": 18, "provinces": ["Kiel", "Lübeck"] },
+    { "name": "Brandenburg", "slug": "brandenburg", "capital": "Potsdam", "capitalSlug": "potsdam", "pop": 2570000, "obesity": 18, "provinces": ["Potsdam", "Cottbus"] },
+    { "name": "Sachsen-Anhalt", "slug": "sachsen-anhalt", "capital": "Magdeburg", "capitalSlug": "magdeburg", "pop": 2180000, "obesity": 20, "provinces": ["Magdeburg", "Halle"] },
+    { "name": "Thüringen", "slug": "thueringen", "capital": "Erfurt", "capitalSlug": "erfurt", "pop": 2120000, "obesity": 19, "provinces": ["Erfurt", "Jena"] },
+    { "name": "Hamburg", "slug": "hamburg", "capital": "Hamburg", "capitalSlug": "hamburg", "pop": 1900000, "obesity": 14, "provinces": ["Hamburg"] },
+    { "name": "Mecklenburg-Vorpommern", "slug": "mecklenburg-vorpommern", "capital": "Schwerin", "capitalSlug": "schwerin", "pop": 1610000, "obesity": 20, "provinces": ["Rostock", "Schwerin"] },
+    { "name": "Saarland", "slug": "saarland", "capital": "Saarbrücken", "capitalSlug": "saarbruecken", "pop": 990000, "obesity": 19, "provinces": ["Saarbrücken"] },
+    { "name": "Bremen", "slug": "bremen", "capital": "Bremen", "capitalSlug": "bremen", "pop": 680000, "obesity": 17, "provinces": ["Bremen", "Bremerhaven"] }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "quiz": {
+    "ariaLabel": "Prenota la tua prima consultazione gratis",
+    "close": "Chiudi",
+    "form": {
+      "title": "La tua prima consultazione, gratis",
+      "subtitle": "Lasciaci questi dati e scegli il tuo appuntamento con il medico. Senza attese e senza impegno.",
+      "height": "Altezza (cm)",
+      "weight": "Peso (kg)",
+      "phone": "Telefono",
+      "email": "Email",
+      "namePlaceholder": "Il tuo nome (opzionale)",
+      "bmiLabel": "Il tuo IMC",
+      "bmiUnderweight": "Sottopeso",
+      "bmiHealthy": "Peso sano",
+      "bmiOverweight": "Sovrappeso",
+      "bmiObesity": "Obesità",
+      "submit": "Scegli il mio appuntamento gratis",
+      "submitting": "Cerco il tuo appuntamento…",
+      "errorHeightWeight": "Inserisci la tua altezza e peso.",
+      "errorPhone": "Inserisci un telefono valido.",
+      "errorEmail": "Inserisci un'email valida.",
+      "privacyText": "Continuando accetti la nostra",
+      "privacyLink": "informativa sulla privacy",
+      "privacySuffix": ". Prima consultazione gratis, senza carta e senza impegno.",
+      "orPrefers": "o se preferisci",
+      "whatsappCta": "Parla con noi su WhatsApp",
+      "goal": "Perdere peso",
+      "formatPreference": "Pennetta settimanale"
+    },
+    "slot": {
+      "title": "Scegli il tuo primo appuntamento",
+      "subtitle": "Videochiamata con un endocrinologo. La tua",
+      "subtitleHighlight": "prima consultazione è gratis",
+      "subtitleSuffix": " e creeremo il tuo account automaticamente confermando.",
+      "loading": "Cerco slot disponibili…",
+      "noSlotsTitle": "Non ci sono orari disponibili al momento",
+      "noSlotsDesc": "Scrivici su WhatsApp e ti troviamo una disponibilità in meno di 24 ore.",
+      "whatsappCta": "Scrivici su WhatsApp",
+      "emailText": "Puoi anche scriverci a",
+      "confirming": "Confermo la tua prenotazione…",
+      "back": "← Indietro",
+      "errorCheckout": "Impossibile avviare il pagamento. Riprova."
+    },
+    "done": {
+      "thanks": "Grazie, {name}",
+      "allSet": "Tutto pronto",
+      "message": "Abbiamo ricevuto i tuoi dati. Un medico iscritto esaminerà il tuo caso e ti scriverà a",
+      "messageSuffix": "in meno di 24 ore.",
+      "done": "Fatto"
+    }
+  },
+  "quizSteps": [
+    {
+      "key": "objective",
+      "q": "Qual è il tuo obiettivo principale?",
+      "sub": "Fai il primo passo. In 2 minuti saprai se il trattamento GLP‑1 fa per te.",
+      "opts": [
+        "Perdere peso e non riprenderlo",
+        "Controllare la fame e le voglie",
+        "Migliorare la mia salute e la mia energia",
+        "Sentirmi meglio con il mio corpo"
+      ]
+    },
+    {
+      "key": "amount",
+      "q": "Quanto peso vorresti perdere?",
+      "sub": "Non ci sono risposte sbagliate. Vogliamo solo capire il tuo punto di partenza.",
+      "opts": ["Meno di 5 kg", "Tra 5 e 10 kg", "Tra 10 e 20 kg", "Più di 20 kg"]
+    },
+    {
+      "key": "tried",
+      "q": "Cosa hai provato prima senza riuscire a mantenerlo?",
+      "sub": "Se il peso torna sempre, non è colpa tua: è la tua biologia che si difende.",
+      "opts": [
+        "Diete e contare le calorie",
+        "Esercizio intenso",
+        "Digiuno intermittente",
+        "Un po' di tutto… e torna sempre"
+      ]
+    },
+    {
+      "key": "frustration",
+      "q": "Cosa ti pesa di più oggi?",
+      "sub": "Scegli ciò che ti risuona di più in questo momento.",
+      "opts": [
+        "La fame costante e le voglie",
+        "Riprendere ciò che mi è costato tanto perdere",
+        "Non sentirmi bene con me stesso/a",
+        "Come sta influendo sulla mia salute"
+      ]
+    },
+    {
+      "key": "glp1Experience",
+      "q": "Hai provato un trattamento GLP‑1 come la semaglutide?",
+      "sub": "È il farmaco che sta cambiando la perdita di peso con un follow-up medico reale.",
+      "opts": ["Lo sto usando ora", "L'ho usato in passato", "No, ma mi interessa", "Non so cos'è"]
+    },
+    {
+      "key": "why",
+      "q": "Perché vuoi fare il passo ora?",
+      "sub": "Averlo chiaro è metà del percorso.",
+      "opts": [
+        "Per la mia salute e il mio futuro",
+        "Voglio tornare a sentirmi me stesso/a",
+        "Ho un momento importante vicino",
+        "Sono stanco/a di provarci da solo/a"
+      ]
+    }
+  ]
+}

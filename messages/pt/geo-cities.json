@@ -1,0 +1,19 @@
+{
+  "lisboa": { "region": "Lisboa", "province": "Lisboa", "pop": 545000, "hospital": "Hospital de Santa Maria", "trait": "a capital de Portugal e a maior cidade do país" },
+  "porto": { "region": "Norte", "province": "Porto", "pop": 230000, "hospital": "Centro Hospitalar Universitário de São João", "trait": "a segunda maior cidade de Portugal, no Norte" },
+  "vila-nova-de-gaia": { "region": "Norte", "province": "Porto", "pop": 300000, "hospital": "Centro Hospitalar Vila Nova de Gaia/Espinho", "trait": "cidade da área metropolitana do Porto" },
+  "amadora": { "region": "Lisboa", "province": "Lisboa", "pop": 175000, "hospital": "Hospital Fernando Fonseca", "trait": "cidade da área metropolitana de Lisboa" },
+  "braga": { "region": "Norte", "province": "Braga", "pop": 195000, "hospital": "Hospital de Braga", "trait": "importante cidade histórica do Norte de Portugal" },
+  "coimbra": { "region": "Centro", "province": "Coimbra", "pop": 140000, "hospital": "Centro Hospitalar e Universitário de Coimbra", "trait": "cidade universitária, antiga capital de Portugal" },
+  "setubal": { "region": "Lisboa", "province": "Lisboa", "pop": 120000, "hospital": "Hospital de São Bernardo", "trait": "cidade portuária ao sul do Tejo" },
+  "almada": { "region": "Lisboa", "province": "Lisboa", "pop": 175000, "hospital": "Hospital Garcia de Orta", "trait": "cidade na margem sul do Tejo, frente a Lisboa" },
+  "agualva-cacem": { "region": "Lisboa", "province": "Lisboa", "pop": 80000, "hospital": "Hospital Fernando Fonseca", "trait": "cidade do concelho de Sintra" },
+  "queluz": { "region": "Lisboa", "province": "Lisboa", "pop": 78000, "hospital": "Hospital Fernando Fonseca", "trait": "cidade histórica próxima de Lisboa" },
+  "funchal": { "region": "Madeira", "province": "Funchal", "pop": 105000, "hospital": "Hospital Dr. Nélio Mendonça", "trait": "capital da Região Autónoma da Madeira" },
+  "aveiro": { "region": "Centro", "province": "Aveiro", "pop": 80000, "hospital": "Centro Hospitalar do Baixo Vouga", "trait": "cidade dos canais, conhecida como a Veneza de Portugal" },
+  "faro": { "region": "Algarve", "province": "Faro", "pop": 65000, "hospital": "Centro Hospitalar Universitário do Algarve", "trait": "capital do Algarve" },
+  "evora": { "region": "Alentejo", "province": "Évora", "pop": 57000, "hospital": "Hospital do Espírito Santo de Évora", "trait": "cidade histórica do Alentejo, Património Mundial" },
+  "guimaraes": { "region": "Norte", "province": "Braga", "pop": 52000, "hospital": "Hospital de Guimarães", "trait": "berço da nacionalidade portuguesa" },
+  "viseu": { "region": "Centro", "province": "Viseu", "pop": 48000, "hospital": "Centro Hospitalar Tondela-Viseu", "trait": "cidade central da região Centro" },
+  "leiria": { "region": "Centro", "province": "Leiria", "pop": 55000, "hospital": "Centro Hospitalar de Leiria", "trait": "cidade histórica com castelo medieval" }
+}

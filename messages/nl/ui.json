@@ -1,0 +1,184 @@
+{
+  "metadata": {
+    "title": "DoctorLife — Jouw lichaam, eindelijk begrepen",
+    "description": "Medisch begeleide gewichts- en hormoonzorg, afgestemd op jouw lichaam — niet op één standaardprotocol.",
+    "siteName": "DoctorLife",
+    "locale": "nl_NL",
+    "slogan": "Jouw lichaam, eindelijk begrepen"
+  },
+  "navbar": {
+    "howItWorks": "Hoe het werkt",
+    "plansPricing": "Plannen en prijzen",
+    "start": "Starten",
+    "signIn": "Inloggen",
+    "openMenu": "Menu openen",
+    "closeMenu": "Menu sluiten",
+    "ariaLabel": "DoctorLife — home"
+  },
+  "announcement": {
+    "text": "GLP‑1-behandeling met wekelijkse pen en medische opvolging.",
+    "cta": "Begin vandaag"
+  },
+  "hero": {
+    "badge": "Jouw 100% online medisch platform",
+    "title": "De medische behandeling voor",
+    "titleHighlight": "gewichtsverlies",
+    "titleSuffix": ", aangepast aan jouw situatie",
+    "subtitle": "Medisch begeleide zorg, afgestemd op jouw lichaam.",
+    "altImage": "Glimlachende DoctorLife-patiënt"
+  },
+  "immersiveProduct": {
+    "titleLine1": "Een nieuw tijdperk voor",
+    "titleLine2": "gewichtszorg",
+    "titleLine3": "is er al",
+    "subtitle": "Verlies tot {loss}% van je lichaamsgewicht",
+    "subtitleSuffix": " met klinisch onderbouwde GLP‑1.",
+    "cta": "Starten",
+    "altImage": "Injectiepennen voor GLP-1-behandeling",
+    "disclaimer": "*Gemiddelde waarde uit klinische studies naar GLP-1-analogen en patiëntopvolging. Individuele resultaten variëren en zijn afhankelijk van elk geval en de door de arts voorgeschreven behandeling."
+  },
+  "metrics": {
+    "weightLoss": "gemiddeld verloren lichaamsgewicht*",
+    "retention": "bleef bij het plan",
+    "patients": "patiënten in opvolging",
+    "rating": "gemiddelde beoordeling"
+  },
+  "transformation": {
+    "badge": "Een echte verandering",
+    "titleLine1": "Een verandering die blijft,",
+    "titleLine2": "op",
+    "titleLine3": "jouw",
+    "titleLine4": "voorwaarden",
+    "ctaStart": "Starten",
+    "ctaCheck": "Controleer of je in aanmerking komt"
+  },
+  "wegovyPenCard": {
+    "badge": "Nieuwe hoge dosis",
+    "titlePrefix": "Jouw",
+    "titleHighlight": "GLP-1",
+    "titleSuffix": "-behandeling met medische opvolging",
+    "altImage": "Injectiepen voor GLP-1-behandeling met medisch toezicht",
+    "cta": "Start mijn beoordeling",
+    "disclaimer": "Behandelingen met GLP-1-analogen vereisen een recept en een voorafgaande medische beoordeling. Individuele resultaten kunnen variëren."
+  },
+  "mobileFollowup": {
+    "badge": "100% digitaal",
+    "title": "Medische opvolging",
+    "titleHighlight": "vanaf je telefoon",
+    "subtitle": "Jouw arts begeleidt je in elke fase — zonder wachtkamers.",
+    "altImage": "DoctorLife-arts in videogesprek vanaf de telefoon",
+    "cta": "Nu starten"
+  },
+  "medicalTeam": {
+    "badge": "Ons medisch team",
+    "title": "Artsen gespecialiseerd in obesitas",
+    "doctorName": "DoctorLife medisch team",
+    "doctorRole": "Endocrinologie, Voeding en Interne Geneeskunde · BIG-geregistreerde artsen"
+  },
+  "experts": {
+    "titleLine1": "De beste zorg, door de",
+    "titleLine2": "besten in de",
+    "titleLine3": "geneeskunde",
+    "subtitle": "Een team van toonaangevende specialisten met decennia gecombineerde ervaring op alle gebieden van jouw gezondheid.",
+    "role": "Onafhankelijke arts op het platform",
+    "specs": {
+      "elena": "Vrouwen- en hormoongezondheid",
+      "marcus": "Metabole geneeskunde",
+      "priya": "Schildklier en hormonen",
+      "james": "Interne geneeskunde",
+      "sofia": "Cardiovasculaire gezondheid"
+    }
+  },
+  "finalCta": {
+    "titleLine1": "Begin met een plan",
+    "titleLine2": "gemaakt rond",
+    "titleLine2Highlight": "jou",
+    "subtitle": "Ontvang gratis onze gids «Balanceer je hormonen», geschreven door geregistreerde artsen om je op je traject te begeleiden.",
+    "placeholder": "E-mail",
+    "altImage": "Glimlachende DoctorLife-patiënt",
+    "submit": "Gids ontvangen",
+    "submitting": "Versturen...",
+    "success": "Gids verstuurd. Controleer je e-mail.",
+    "disclaimer": "Door je e-mail in te voeren accepteer je onze Algemene Voorwaarden en erken je het Privacybeleid."
+  },
+  "footer": {
+    "description": "Platform dat patiënten verbindt met onafhankelijke, geregistreerde artsen voor gewichtsopvolging met GLP‑1-behandeling.",
+    "cta": "Eerste consult gratis",
+    "legalNote": "Deze diensten bieden videoconsulten en telefoongesprekken met medisch personeel voor preventie, diagnose en behandeling van aandoeningen, en voor het behoud van gezondheid. De medische adviezen uit deze diensten zijn gebaseerd op de door de klant verstrekte gezondheidsinformatie. Gezondheidsdiensten verleend door {healthProviderName} ({healthRegistryNumber}).",
+    "securePayment": "Veilige betaling",
+    "paymentMethodsLabel": "Geaccepteerde betaalmethoden",
+    "copyright": "© 2026 DoctorLife · doctorlife.nl",
+    "medicalNote": "Behandeling onder voorbehoud van medische beoordeling.",
+    "ariaLabel": "DoctorLife — home"
+  },
+  "footerColumns": {
+    "treatment": {
+      "title": "Behandeling",
+      "howItWorks": "Hoe het werkt",
+      "plansPricing": "Plannen en prijzen",
+      "realStories": "Echte verhalen",
+      "bookVisit": "Afspraak maken"
+    },
+    "resources": {
+      "title": "Bronnen",
+      "aboutUs": "Over ons",
+      "editorialPolicy": "Redactioneel beleid",
+      "loseWeight": "Afvallen onder medisch toezicht",
+      "medicalBlog": "Medische blog",
+      "ourDoctors": "Onze artsen"
+    },
+    "tools": {
+      "title": "Tools",
+      "bmi": "BMI-calculator",
+      "tdee": "TDEE-calculator",
+      "caloricDeficit": "Calorietekort",
+      "dailyProtein": "Dagelijkse eiwitbehoefte"
+    },
+    "legal": {
+      "title": "Juridisch",
+      "privacy": "Privacybeleid",
+      "terms": "Algemene voorwaarden",
+      "cookies": "Cookiebeleid"
+    }
+  },
+  "whatsapp": {
+    "messages": [
+      "Hoe begint jouw plan?",
+      "Consult in 2 minuten",
+      "De arts reageert vandaag",
+      "Eerste bezoek gratis"
+    ],
+    "responseTime": "Antwoord binnen minuten",
+    "close": "Sluiten",
+    "ariaLabel": "Neem contact op via WhatsApp",
+    "defaultMessage": "Ik zou graag meer informatie willen ontvangen over de GLP-1-behandeling.",
+    "noSlotsMessage": "Hallo, ik heb net mijn gegevens achtergelaten bij DoctorLife en er zijn geen beschikbare tijden. Ik zou graag een afspraak willen maken. Mijn naam is {name}."
+  },
+  "stickyCta": {
+    "title": "Medische beoordeling online",
+    "subtitle": "Eerste beoordeling gratis · geregistreerde artsen · zonder verplichting",
+    "cta": "Gratis starten",
+    "close": "Melding sluiten"
+  },
+  "geoGreeting": {
+    "text": "Wij zijn actief in",
+    "suffix": "en de hele omgeving — medisch consult online, zonder reizen."
+  },
+  "trustbox": {
+    "ariaLabel": "Trustpilot"
+  },
+  "notFound": {
+    "error": "Fout 404",
+    "title": "We hebben deze pagina niet gevonden",
+    "description": "De link is mogelijk gewijzigd of de pagina bestaat niet meer. Hier zijn enkele nuttige links om verder te gaan.",
+    "backHome": "Terug naar home",
+    "suggestions": {
+      "howItWorks": "Hoe de behandeling werkt",
+      "plansPricing": "Plannen en prijzen",
+      "medicalBlog": "Medische blog",
+      "ourDoctors": "Onze artsen",
+      "bmiCalculator": "BMI-calculator"
+    }
+  },
+  "lossStat": 25
+}

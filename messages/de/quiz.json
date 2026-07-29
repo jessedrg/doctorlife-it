@@ -1,0 +1,111 @@
+{
+  "quiz": {
+    "ariaLabel": "Buche deine erste kostenlose Beratung",
+    "close": "Schließen",
+    "form": {
+      "title": "Deine erste Beratung, kostenlos",
+      "subtitle": "Gib uns diese Daten und wähle deinen Termin mit dem Arzt. Ohne Wartezeit und ohne Verpflichtung.",
+      "height": "Größe (cm)",
+      "weight": "Gewicht (kg)",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "namePlaceholder": "Dein Name (optional)",
+      "bmiLabel": "Dein BMI",
+      "bmiUnderweight": "Untergewicht",
+      "bmiHealthy": "Gesundes Gewicht",
+      "bmiOverweight": "Übergewicht",
+      "bmiObesity": "Adipositas",
+      "submit": "Meinen kostenlosen Termin wählen",
+      "submitting": "Suche deinen Termin…",
+      "errorHeightWeight": "Bitte gib deine Größe und dein Gewicht ein.",
+      "errorPhone": "Bitte gib eine gültige Telefonnummer ein.",
+      "errorEmail": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "privacyText": "Mit Fortfahren akzeptierst du unsere",
+      "privacyLink": "Datenschutzerklärung",
+      "privacySuffix": ". Erste Beratung kostenlos, ohne Karte und ohne Verpflichtung.",
+      "orPrefers": "oder falls du lieber",
+      "whatsappCta": "Sprich mit uns auf WhatsApp",
+      "goal": "Gewicht verlieren",
+      "formatPreference": "Wöchentlicher Pen"
+    },
+    "slot": {
+      "title": "Wähle deinen ersten Termin",
+      "subtitle": "Videoanruf mit einem Endokrinologen. Deine",
+      "subtitleHighlight": "erste Beratung ist kostenlos",
+      "subtitleSuffix": " und wir erstellen dein Konto automatisch bei Bestätigung.",
+      "loading": "Suche verfügbare Termine…",
+      "noSlotsTitle": "Derzeit sind keine Termine verfügbar",
+      "noSlotsDesc": "Schreib uns auf WhatsApp und wir finden in unter 24 Stunden einen freien Termin für dich.",
+      "whatsappCta": "Schreib uns auf WhatsApp",
+      "emailText": "Du kannst uns auch schreiben an",
+      "confirming": "Bestätige deine Buchung…",
+      "back": "← Zurück",
+      "errorCheckout": "Zahlung konnte nicht gestartet werden. Bitte versuche es erneut."
+    },
+    "done": {
+      "thanks": "Danke, {name}",
+      "allSet": "Alles bereit",
+      "message": "Wir haben deine Daten erhalten. Ein approbierter Arzt prüft deinen Fall und schreibt dir an",
+      "messageSuffix": "in weniger als 24 Stunden.",
+      "done": "Fertig"
+    }
+  },
+  "quizSteps": [
+    {
+      "key": "objective",
+      "q": "Was ist dein Hauptziel?",
+      "sub": "Mach den ersten Schritt. In 2 Minuten weißt du, ob die GLP‑1-Behandlung zu dir passt.",
+      "opts": [
+        "Gewicht verlieren und es nicht wieder zunehmen",
+        "Hunger und Gelüste kontrollieren",
+        "Meine Gesundheit und Energie verbessern",
+        "Mich besser in meinem Körper fühlen"
+      ]
+    },
+    {
+      "key": "amount",
+      "q": "Wie viel Gewicht möchtest du verlieren?",
+      "sub": "Es gibt keine falschen Antworten. Wir wollen nur deinen Ausgangspunkt verstehen.",
+      "opts": ["Weniger als 5 kg", "5 bis 10 kg", "10 bis 20 kg", "Mehr als 20 kg"]
+    },
+    {
+      "key": "tried",
+      "q": "Was hast du vorher versucht, ohne es halten zu können?",
+      "sub": "Wenn das Gewicht immer wiederkommt, liegt es nicht an dir — es ist deine Biologie, die sich verteidigt.",
+      "opts": [
+        "Diäten und Kalorienzählen",
+        "Intensives Training",
+        "Intervallfasten",
+        "Von allem etwas… und es kommt immer wieder"
+      ]
+    },
+    {
+      "key": "frustration",
+      "q": "Was belastet dich heute am meisten?",
+      "sub": "Wähle, was gerade am meisten auf dich zutrifft.",
+      "opts": [
+        "Ständiger Hunger und Gelüste",
+        "Wieder zunehmen, was mich so viel Mühe gekostet hat",
+        "Mich nicht wohl in meiner Haut fühlen",
+        "Wie es meine Gesundheit beeinflusst"
+      ]
+    },
+    {
+      "key": "glp1Experience",
+      "q": "Hast du schon eine GLP‑1-Behandlung wie Semaglutid ausprobiert?",
+      "sub": "Es ist das Medikament, das die Gewichtsabnahme mit echtem ärztlichem Follow-up verändert.",
+      "opts": ["Ich nutze es gerade", "Ich habe es früher genutzt", "Nein, aber es interessiert mich", "Ich weiß nicht, was das ist"]
+    },
+    {
+      "key": "why",
+      "q": "Warum möchtest du jetzt den Schritt machen?",
+      "sub": "Das klarzuhaben ist der halbe Weg.",
+      "opts": [
+        "Für meine Gesundheit und Zukunft",
+        "Ich möchte mich wieder wie ich selbst fühlen",
+        "Ich habe einen wichtigen Moment vor mir",
+        "Ich bin es leid, es allein zu versuchen"
+      ]
+    }
+  ]
+}

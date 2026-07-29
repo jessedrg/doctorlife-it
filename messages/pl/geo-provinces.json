@@ -1,0 +1,12 @@
+[
+  { "name": "Warszawa", "slug": "warszawa", "capital": "Warszawa", "capitalSlug": "warszawa", "region": "Mazowieckie", "pop": 1860000, "cities": ["Pruszków", "Legionowo"] },
+  { "name": "Kraków", "slug": "krakow", "capital": "Kraków", "capitalSlug": "krakow", "region": "Małopolskie", "pop": 800000, "cities": ["Wieliczka", "Skawina"] },
+  { "name": "Łódź", "slug": "lodz", "capital": "Łódź", "capitalSlug": "lodz", "region": "Łódzkie", "pop": 670000, "cities": ["Pabianice", "Zgierz"] },
+  { "name": "Wrocław", "slug": "wroclaw", "capital": "Wrocław", "capitalSlug": "wroclaw", "region": "Dolnośląskie", "pop": 640000, "cities": ["Oława", "Oleśnica"] },
+  { "name": "Poznań", "slug": "poznan", "capital": "Poznań", "capitalSlug": "poznan", "region": "Wielkopolskie", "pop": 540000, "cities": ["Swarzędz", "Luboń"] },
+  { "name": "Gdańsk", "slug": "gdansk", "capital": "Gdańsk", "capitalSlug": "gdansk", "region": "Pomorskie", "pop": 470000, "cities": ["Gdynia", "Sopot"] },
+  { "name": "Szczecin", "slug": "szczecin", "capital": "Szczecin", "capitalSlug": "szczecin", "region": "Zachodniopomorskie", "pop": 395000, "cities": ["Police"] },
+  { "name": "Bydgoszcz", "slug": "bydgoszcz", "capital": "Bydgoszcz", "capitalSlug": "bydgoszcz", "region": "Kujawsko-Pomorskie", "pop": 340000, "cities": ["Toruń"] },
+  { "name": "Lublin", "slug": "lublin", "capital": "Lublin", "capitalSlug": "lublin", "region": "Lubelskie", "pop": 335000, "cities": ["Świdnik"] },
+  { "name": "Katowice", "slug": "katowice", "capital": "Katowice", "capitalSlug": "katowice", "region": "Śląskie", "pop": 290000, "cities": ["Chorzów", "Siemianowice Śląskie"] }
+]

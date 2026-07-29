@@ -1,0 +1,64 @@
+{
+  "herramientas": {
+    "metaTitle": "Bezpłatne kalkulatory zdrowia i wagi | DoctorLife",
+    "metaDescription": "Bezpłatne kalkulatory zdrowia: BMI, wydatek kaloryczny (TDEE), deficyt kaloryczny i dzienna dawka białka. Natychmiastowe wyniki i wskazówki medyczne od DoctorLife.",
+    "breadcrumbHome": "Strona główna",
+    "breadcrumbTools": "Narzędzia",
+    "badge": "Bezpłatne narzędzia",
+    "title": "Kalkulatory",
+    "titleHighlight": "zdrowia i wagi",
+    "description": "Naukowo uzasadnione narzędzia do zrozumienia Twojego ciała: BMI, wydatek kaloryczny, deficyt i białko. Są punktem wyjścia — dla prawdziwego planu ocena lekarska ma znaczenie.",
+    "toolsListHeading": "Lista kalkulatorów",
+    "openCalculator": "Otwórz kalkulator →",
+    "relatedTitle": "Dalej się informuj",
+    "tools": {
+      "bmi": {
+        "title": "Kalkulator BMI",
+        "desc": "Poznaj swój wskaźnik masy ciała i kategorię wagową w kilka sekund.",
+        "tag": "Waga"
+      },
+      "tdee": {
+        "title": "Kalkulator TDEE",
+        "desc": "Oblicz swój całkowity dzienny wydatek energetyczny: ile kalorii spalasz w zależności od aktywności.",
+        "tag": "Kalorie"
+      },
+      "deficit": {
+        "title": "Kalkulator deficytu kalorycznego",
+        "desc": "Sprawdź, ile kalorii jeść, aby schudnąć w zdrowym i trwałym tempie.",
+        "tag": "Utrata wagi"
+      },
+      "protein": {
+        "title": "Kalkulator dziennej dawki białka",
+        "desc": "Oblicz, ile białka potrzebujesz dziennie w zależności od wagi, celu i poziomu aktywności.",
+        "tag": "Odżywianie"
+      }
+    },
+    "related": [
+      { "href": "/dimagrire-con-supervisione-medica", "label": "Odchudzanie pod nadzorem lekarskim" },
+      { "href": "/blog/wegovy-prezzo-italia", "label": "Cena Wegovy" },
+      { "href": "/blog/ozempic-vs-wegovy-vs-mounjaro", "label": "Ozempic vs Wegovy vs Mounjaro" }
+    ],
+    "ctaBadge": "Pierwsza wizyta bezpłatna",
+    "ctaTitle": "Gotowy/a na prawdziwy plan?",
+    "ctaDesc": "Kalkulatory kierują, ale Twoje ciało jest unikalne. Zarezerwuj swoją bezpłatną pierwszą wizytę i zacznij z planem stworzonym dla Ciebie.",
+    "ctaButton": "Zarezerwuj pierwszą wizytę"
+  },
+  "blog": {
+    "metaTitle": "Blog DoctorLife — Wegovy, Mounjaro i utrata wagi z GLP‑1",
+    "metaDescription": "Jasne, medyczne przewodniki o Wegovy, Mounjaro, semaglutydzie i tirzepatydzie: ceny, recepty i jak zacząć leczenie utraty wagi w Polsce.",
+    "badge": "Blog DoctorLife",
+    "title": "Wszystko o",
+    "titleHighlight": "opiece nad wagą",
+    "titleSuffix": "z GLP‑1",
+    "subtitle": "Wegovy, Mounjaro, semaglutyd, tirzepatyd: ceny, recepty i jak zacząć bezpiecznie z prawdziwą opieką lekarską.",
+    "noResults": "Nie znaleźliśmy odpowiadających przewodników.",
+    "resultsSingular": "znaleziony przewodnik",
+    "resultsPlural": "znalezione przewodniki",
+    "inCategory": "w",
+    "forQuery": "dla «{query}».",
+    "viewAll": "Zobacz wszystkie przewodniki",
+    "pagination": "Paginacja bloga",
+    "prev": "← Poprzedni",
+    "next": "Następny →"
+  }
+}

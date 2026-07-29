@@ -1,0 +1,19 @@
+{
+  "amsterdam": { "region": "Noord-Holland", "province": "Amsterdam", "pop": 920000, "hospital": "Amsterdam UMC", "trait": "de hoofdstad van Nederland en de grootste stad" },
+  "rotterdam": { "region": "Zuid-Holland", "province": "Rotterdam", "pop": 655000, "hospital": "Erasmus MC", "trait": "de tweede stad van Nederland, grootste haven van Europa" },
+  "den-haag": { "region": "Zuid-Holland", "province": "Den Haag", "pop": 550000, "hospital": "Haaglanden Medisch Centrum (HMC)", "trait": "regeringszetel van Nederland" },
+  "utrecht": { "region": "Utrecht", "province": "Utrecht", "pop": 360000, "hospital": "Universitair Medisch Centrum Utrecht (UMC Utrecht)", "trait": "centraal gelegen universiteitsstad" },
+  "eindhoven": { "region": "Noord-Brabant", "province": "Eindhoven", "pop": 240000, "hospital": "Catharina Ziekenhuis", "trait": "technologiestad in het zuiden van Nederland" },
+  "groningen": { "region": "Groningen", "province": "Groningen", "pop": 235000, "hospital": "Universitair Medisch Centrum Groningen (UMCG)", "trait": "grootste stad van het noorden" },
+  "tilburg": { "region": "Noord-Brabant", "province": "Tilburg", "pop": 225000, "hospital": "Elisabeth-TweeSteden Ziekenhuis", "trait": "stad in Noord-Brabant" },
+  "almere": { "region": "Flevoland", "province": "Almere", "pop": 220000, "hospital": "Flevoziekenhuis", "trait": "jongste grote stad van Nederland" },
+  "breda": { "region": "Noord-Brabant", "province": "Breda", "pop": 185000, "hospital": "Amphia Ziekenhuis", "trait": "stad in West-Brabant" },
+  "nijmegen": { "region": "Gelderland", "province": "Nijmegen", "pop": 180000, "hospital": "Radboudumc", "trait": "oudste stad van Nederland" },
+  "apeldoorn": { "region": "Gelderland", "province": "Apeldoorn", "pop": 165000, "hospital": "Gelre Ziekenhuizen", "trait": "groene stad aan de Veluwe" },
+  "haarlem": { "region": "Noord-Holland", "province": "Haarlem", "pop": 165000, "hospital": "Spaarne Gasthuis", "trait": "hoofdstad van Noord-Holland" },
+  "arnhem": { "region": "Gelderland", "province": "Arnhem", "pop": 165000, "hospital": "Rijnstate", "trait": "hoofdstad van Gelderland" },
+  "enschede": { "region": "Overijssel", "province": "Enschede", "pop": 160000, "hospital": "Medisch Spectrum Twente", "trait": "grootste stad van Twente" },
+  "zwolle": { "region": "Overijssel", "province": "Zwolle", "pop": 135000, "hospital": "Isala", "trait": "hoofdstad van Overijssel" },
+  "maastricht": { "region": "Limburg", "province": "Maastricht", "pop": 122000, "hospital": "Maastricht UMC+", "trait": "historische stad in het zuiden, aan de Maas" },
+  "leiden": { "region": "Zuid-Holland", "province": "Leiden", "pop": 128000, "hospital": "Leids Universitair Medisch Centrum (LUMC)", "trait": "universiteitsstad in Zuid-Holland" }
+}

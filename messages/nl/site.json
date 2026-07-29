@@ -1,0 +1,160 @@
+{
+  "lossStat": 25,
+  "products": [
+    {
+      "name": "Maandabonnement",
+      "subtitle": "Continue medische opvolging, recept en één telefonisch consult per maand. Zonder minimale looptijd.",
+      "price": "139€",
+      "priceSuffix": "/maand",
+      "tag": "Abonnement",
+      "img": "/products/maren-pen.png",
+      "featured": true,
+      "features": [
+        "Eerste beoordeling gratis",
+        "Continue medische opvolging met jouw arts",
+        "GLP-1-recept (Mounjaro, Ozempic of Wegovy) indien geschikt",
+        "Één telefonisch consult per maand",
+        "Directe chat met jouw arts via de app",
+        "Geen minimale looptijd: zeg op wanneer je wilt"
+      ]
+    },
+    {
+      "name": "5-maanden pakket",
+      "subtitle": "Het volledige programma in één betaling. De beste prijs-kwaliteitverhouding om je te committeren.",
+      "price": "449€",
+      "priceSuffix": "· eenmalige betaling · 5 maanden",
+      "tag": "Voordeelpakket",
+      "img": "/products/maren-daily.png",
+      "features": [
+        "5 maanden medische opvolging",
+        "GLP-1-recept indien geschikt",
+        "Één telefonisch consult per maand",
+        "Directe chat met jouw arts via de app",
+        "Vaste prijs: veel voordeliger"
+      ]
+    },
+    {
+      "name": "Diëtist + GLP1",
+      "subtitle": "Programma van 5 maanden met medische opvolging en begeleiding door een diëtist.",
+      "price": "649€",
+      "priceSuffix": "· eenmalige betaling · 5 maanden",
+      "tag": "Compleet programma",
+      "img": "/products/maren-hd.png",
+      "features": [
+        "5 maanden medische opvolging",
+        "Begeleiding door een diëtist",
+        "GLP-1-recept indien geschikt",
+        "Één telefonisch consult per maand",
+        "Directe chat met jouw team via de app"
+      ]
+    }
+  ],
+  "adsProducts": [
+    {
+      "name": "Maandabonnement",
+      "subtitle": "Alles wat je nodig hebt om je gewicht te beheren met echte medische opvolging. Eerste beoordeling gratis.",
+      "price": "139€",
+      "priceSuffix": "/maand",
+      "tag": "Abonnement",
+      "img": "/products/maren-pen.png",
+      "featured": true,
+      "features": [
+        "Eerste beoordeling gratis met geregistreerde arts",
+        "Online recept voor GLP-1 (Mounjaro, Ozempic of Wegovy) om af te halen bij de apotheek",
+        "Continue opvolging en dosisaanpassingen via de app",
+        "Directe chat met jouw arts wanneer nodig",
+        "Één telefonisch consult per maand inbegrepen",
+        "Geen minimale looptijd: zeg op wanneer je wilt"
+      ]
+    }
+  ],
+  "experts": [
+    { "name": "Dr. Elena Ruiz", "role": "Onafhankelijke arts op het platform", "spec": "Vrouwen- en hormoongezondheid", "img": "/experts/elena-ruiz.png" },
+    { "name": "Dr. Marcus Hale", "role": "Onafhankelijke arts op het platform", "spec": "Metabole geneeskunde", "img": "/experts/marcus-hale.png" },
+    { "name": "Dr. Priya Nair", "role": "Onafhankelijke arts op het platform", "spec": "Schildklier en hormonen", "img": "/experts/priya-nair.png" },
+    { "name": "Dr. James Okafor", "role": "Onafhankelijke arts op het platform", "spec": "Interne geneeskunde", "img": "/experts/james-okafor.png" },
+    { "name": "Dr. Sofia Bergman", "role": "Onafhankelijke arts op het platform", "spec": "Cardiovasculaire gezondheid", "img": "/experts/sofia-bergman.png" }
+  ],
+  "metrics": [
+    { "value": 24, "prefix": "−", "suffix": "%", "label": "gemiddeld verloren lichaamsgewicht*" },
+    { "value": 92, "suffix": "%", "label": "bleef bij het plan" },
+    { "value": 50, "suffix": "k+", "label": "patiënten in opvolging" },
+    { "value": 4.9, "suffix": "★", "label": "gemiddelde beoordeling" }
+  ],
+  "footerColumns": [
+    {
+      "title": "Behandeling",
+      "links": [
+        { "label": "Hoe het werkt", "href": "/#product" },
+        { "label": "Plannen en prijzen", "href": "/#planes" },
+        { "label": "Echte verhalen", "href": "/#transform" },
+        { "label": "Afspraak maken", "href": "/#cta" }
+      ]
+    },
+    {
+      "title": "Bronnen",
+      "links": [
+        { "label": "Over ons", "href": "/sobre-nosotros" },
+        { "label": "Redactioneel beleid", "href": "/politica-editorial" },
+        { "label": "Afvallen onder medisch toezicht", "href": "/adelgazar-con-supervision-medica" },
+        { "label": "Medische blog", "href": "/blog" },
+        { "label": "Onze artsen", "href": "/autores" }
+      ]
+    },
+    {
+      "title": "Tools",
+      "links": [
+        { "label": "BMI-calculator", "href": "/herramientas/calculadora-imc" },
+        { "label": "TDEE-calculator", "href": "/herramientas/calculadora-tdee" },
+        { "label": "Calorietekort", "href": "/herramientas/calculadora-deficit-calorico" },
+        { "label": "Dagelijkse eiwitbehoefte", "href": "/herramientas/calculadora-proteina-diaria" }
+      ]
+    },
+    {
+      "title": "Juridisch",
+      "links": [
+        { "label": "Privacybeleid", "href": "/privacidad" },
+        { "label": "Algemene voorwaarden", "href": "/terminos" },
+        { "label": "Cookiebeleid", "href": "/cookies" }
+      ]
+    }
+  ],
+  "quizSteps": [
+    {
+      "key": "objective",
+      "q": "Wat is jouw belangrijkste doel?",
+      "sub": "Zet de eerste stap. Binnen 2 minuten weet je of de GLP‑1-behandeling bij jou past.",
+      "opts": ["Gewicht verliezen en het niet terugkrijgen", "Honger en trek beheersen", "Mijn gezondheid en energie verbeteren", "Me beter voelen in mijn lichaam"]
+    },
+    {
+      "key": "amount",
+      "q": "Hoeveel gewicht zou je willen verliezen?",
+      "sub": "Er zijn geen foute antwoorden. We willen alleen jouw startpunt begrijpen.",
+      "opts": ["Minder dan 5 kg", "Tussen 5 en 10 kg", "Tussen 10 en 20 kg", "Meer dan 20 kg"]
+    },
+    {
+      "key": "tried",
+      "q": "Wat heb je eerder geprobeerd zonder het te kunnen volhouden?",
+      "sub": "Als het gewicht altijd terugkomt, is dat niet jouw schuld: het is jouw biologie die zich verdedigt.",
+      "opts": ["Diëten en calorieën tellen", "Intensief trainen", "Intermittent fasting", "Een beetje van alles… en het komt altijd terug"]
+    },
+    {
+      "key": "frustration",
+      "q": "Wat weegt vandaag het meest op je?",
+      "sub": "Kies wat op dit moment het meest bij je past.",
+      "opts": ["Constante honger en trek", "Terugvallen naar wat me zo veel moeite kostte om te verliezen", "Me niet goed voelen bij mezelf", "Hoe het mijn gezondheid beïnvloedt"]
+    },
+    {
+      "key": "glp1Experience",
+      "q": "Heb je al eens een GLP‑1-behandeling zoals semaglutide geprobeerd?",
+      "sub": "Het is het medicijn dat gewichtsverlies verandert met echte medische opvolging.",
+      "opts": ["Ik gebruik het nu", "Ik heb het eerder gebruikt", "Nee, maar ik ben geïnteresseerd", "Ik weet niet wat dat is"]
+    },
+    {
+      "key": "why",
+      "q": "Waarom wil je nu deze stap zetten?",
+      "sub": "Dit duidelijk hebben is al de helft van de weg.",
+      "opts": ["Voor mijn gezondheid en toekomst", "Ik wil me weer mezelf voelen", "Ik heb een belangrijk moment in het vooruitzicht", "Ik ben het beu om het alleen te proberen"]
+    }
+  ]
+}

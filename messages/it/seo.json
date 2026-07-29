@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "siteUrl": "https://doctorlife-it.com",
+    "brand": "DoctorLife",
+    "contactEmail": "hello@doctorlife.io",
+    "organizationDescription": "Cura del peso e ormonale guidata da medici iscritti all'ordine, con valutazione medica e follow-up reale dall'app.",
+    "knowsAbout": ["Obesità", "Sovrappeso", "Salute metabolica", "Controllo del peso", "Endocrinologia"],
+    "areaServed": "Italia",
+    "countryCode": "IT",
+    "availableLanguage": ["Italian"],
+    "schemaLang": "it-IT",
+    "trustpilotLocale": "it-IT",
+    "dateLocale": "it-IT",
+    "htmlLang": "it",
+    "ogLocale": "it_IT",
+    "sameAs": "https://it.trustpilot.com/review/doctorlife.io"
+  },
+  "medicalReviewer": {
+    "name": "Dra. Laura Méndez",
+    "role": "Medico specialista in Endocrinologia e Nutrizione",
+    "credentials": "Iscritta all'Ordine dei Medici · Milano",
+    "bio": "Endocrinologa iscritta con oltre 12 anni di esperienza in obesità e trattamento con analoghi del GLP‑1. Revisiona i contenuti clinici di DoctorLife."
+  },
+  "priceNote": "In DoctorLife la tua prima visita medica è gratis, senza impegno. Tutto il follow-up si gestisce dalla nostra app interna.",
+  "serviceCta": "In DoctorLife, un endocrinologo iscritto valuta il tuo caso in videoconsultazione e, se il trattamento è adatto a te, te lo prescrive con ricetta elettronica e follow-up dall'app. La prima visita è gratis."
+}

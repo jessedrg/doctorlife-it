@@ -1,0 +1,64 @@
+{
+  "herramientas": {
+    "metaTitle": "Calculadoras gratuitas de saúde e peso | DoctorLife",
+    "metaDescription": "Calculadoras de saúde gratuitas: IMC, gasto calórico (TDEE), défice calórico e proteína diária. Resultados instantâneos e orientação médica da DoctorLife.",
+    "breadcrumbHome": "Início",
+    "breadcrumbTools": "Ferramentas",
+    "badge": "Ferramentas gratuitas",
+    "title": "Calculadoras de",
+    "titleHighlight": "saúde e peso",
+    "description": "Ferramentas com base científica para compreender o seu corpo: IMC, gasto calórico, défice e proteína. São um ponto de partida — para um plano real, uma avaliação médica faz a diferença.",
+    "toolsListHeading": "Lista de calculadoras",
+    "openCalculator": "Abrir calculadora →",
+    "relatedTitle": "Continue a informar-se",
+    "tools": {
+      "bmi": {
+        "title": "Calculadora de IMC",
+        "desc": "Descubra o seu Índice de Massa Corporal e em que categoria de peso se encontra em segundos.",
+        "tag": "Peso"
+      },
+      "tdee": {
+        "title": "Calculadora de TDEE",
+        "desc": "Calcule o seu gasto energético diário total: quantas calorias queima por dia de acordo com a sua atividade.",
+        "tag": "Calorias"
+      },
+      "deficit": {
+        "title": "Calculadora de défice calórico",
+        "desc": "Descubra quantas calorias comer para perder peso a um ritmo saudável e sustentável.",
+        "tag": "Perda de peso"
+      },
+      "protein": {
+        "title": "Calculadora de proteína diária",
+        "desc": "Calcule quanta proteína precisa por dia de acordo com o seu peso, objetivo e nível de atividade.",
+        "tag": "Nutrição"
+      }
+    },
+    "related": [
+      { "href": "/dimagrire-con-supervisione-medica", "label": "Perder peso com acompanhamento médico" },
+      { "href": "/blog/wegovy-prezzo-italia", "label": "Preço do Wegovy" },
+      { "href": "/blog/ozempic-vs-wegovy-vs-mounjaro", "label": "Ozempic vs Wegovy vs Mounjaro" }
+    ],
+    "ctaBadge": "Primeira consulta gratuita",
+    "ctaTitle": "Pronto/a para um plano real?",
+    "ctaDesc": "As calculadoras orientam, mas o seu corpo é único. Marque a sua primeira consulta gratuita e comece com um plano pensado à sua medida.",
+    "ctaButton": "Marcar a primeira consulta"
+  },
+  "blog": {
+    "metaTitle": "Blog DoctorLife — Wegovy, Mounjaro e perda de peso com GLP‑1",
+    "metaDescription": "Guias claros e médicos sobre Wegovy, Mounjaro, semaglutida e tirzepatida: preços, receitas e como iniciar o seu tratamento de perda de peso em Portugal.",
+    "badge": "Blog DoctorLife",
+    "title": "Tudo sobre os",
+    "titleHighlight": "cuidados de peso",
+    "titleSuffix": "com GLP‑1",
+    "subtitle": "Wegovy, Mounjaro, semaglutida, tirzepatida: preços, receitas e como começar com segurança e com acompanhamento médico real.",
+    "noResults": "Não encontrámos guias correspondentes.",
+    "resultsSingular": "guia encontrado",
+    "resultsPlural": "guias encontrados",
+    "inCategory": "em",
+    "forQuery": "para «{query}».",
+    "viewAll": "Ver todos os guias",
+    "pagination": "Paginação do blog",
+    "prev": "← Anterior",
+    "next": "Seguinte →"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "healthServices": {
+    "Lisboa": { "short": "ARSLVT", "long": "Administração Regional de Saúde de Lisboa e Vale do Tejo" },
+    "Norte": { "short": "ARS Norte", "long": "Administração Regional de Saúde do Norte" },
+    "Centro": { "short": "ARS Centro", "long": "Administração Regional de Saúde do Centro" },
+    "Alentejo": { "short": "ARS Alentejo", "long": "Administração Regional de Saúde do Alentejo" },
+    "Algarve": { "short": "ARS Algarve", "long": "Administração Regional de Saúde do Algarve" },
+    "Açores": { "short": "SRS Açores", "long": "Serviço Regional de Saúde dos Açores" },
+    "Madeira": { "short": "SESARAM", "long": "Serviço de Saúde da Região Autónoma da Madeira" }
+  },
+  "regions": [
+    { "name": "Norte", "slug": "norte", "capital": "Porto", "capitalSlug": "porto", "pop": 3570000, "obesity": 21, "provinces": ["Porto", "Braga", "Viana do Castelo"] },
+    { "name": "Lisboa", "slug": "lisboa", "capital": "Lisboa", "capitalSlug": "lisboa", "pop": 2870000, "obesity": 18, "provinces": ["Lisboa", "Sintra", "Cascais"] },
+    { "name": "Centro", "slug": "centro", "capital": "Coimbra", "capitalSlug": "coimbra", "pop": 2220000, "obesity": 22, "provinces": ["Coimbra", "Aveiro", "Leiria"] },
+    { "name": "Alentejo", "slug": "alentejo", "capital": "Évora", "capitalSlug": "evora", "pop": 700000, "obesity": 24, "provinces": ["Évora", "Beja"] },
+    { "name": "Algarve", "slug": "algarve", "capital": "Faro", "capitalSlug": "faro", "pop": 460000, "obesity": 20, "provinces": ["Faro"] },
+    { "name": "Açores", "slug": "acores", "capital": "Ponta Delgada", "capitalSlug": "ponta-delgada", "pop": 240000, "obesity": 26, "provinces": ["Ponta Delgada"] },
+    { "name": "Madeira", "slug": "madeira", "capital": "Funchal", "capitalSlug": "funchal", "pop": 250000, "obesity": 23, "provinces": ["Funchal"] }
+  ]
+}

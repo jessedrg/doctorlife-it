@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "siteUrl": "https://doctorlife.de",
+    "brand": "DoctorLife",
+    "contactEmail": "hello@doctorlife.io",
+    "organizationDescription": "Gewichts- und Hormonbetreuung durch approbierte Ärzte, mit medizinischer Bewertung und echtem Follow-up über die App.",
+    "knowsAbout": ["Obesität", "Übergewicht", "Stoffwechselgesundheit", "Gewichtskontrolle", "Endokrinologie"],
+    "areaServed": "Deutschland",
+    "countryCode": "DE",
+    "availableLanguage": ["German"],
+    "schemaLang": "de-DE",
+    "trustpilotLocale": "de-DE",
+    "dateLocale": "de-DE",
+    "htmlLang": "de",
+    "ogLocale": "de_DE",
+    "sameAs": "https://de.trustpilot.com/review/doctorlife.io"
+  },
+  "medicalReviewer": {
+    "name": "Dr. Laura Méndez",
+    "role": "Fachärztin für Endokrinologie und Ernährung",
+    "credentials": "Approbierte Ärztin",
+    "bio": "Approbierte Endokrinologin mit über 12 Jahren Erfahrung in Adipositas und GLP‑1-Behandlung. Prüft die klinischen Inhalte von DoctorLife."
+  },
+  "priceNote": "Bei DoctorLife ist dein erster Arzttermin kostenlos, ohne Verpflichtung. Das gesamte Follow-up erfolgt über unsere App.",
+  "serviceCta": "Bei DoctorLife bewertet ein approbierter Arzt deinen Fall per Videosprechstunde und verschreibt, falls geeignet, die Behandlung mit E-Rezept und App-Betreuung. Der erste Termin ist kostenlos."
+}

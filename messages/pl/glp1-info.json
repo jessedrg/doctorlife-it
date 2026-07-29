@@ -1,0 +1,27 @@
+{
+  "badge": "Jak działa leczenie",
+  "title": "Czym są terapie",
+  "titleHighlight": "GLP-1",
+  "intro": "Analogi GLP-1 to klasa leków, które imitują naturalny hormon wydzielany przez organizm podczas jedzenia. Pomagają regulować apetyt i sytość, a według badań klinicznych mogą wspierać znaczną utratę wagi w połączeniu ze zbilansowaną dietą, aktywnością fizyczną i opieką lekarską.",
+  "disclaimer": "Informacje mają charakter edukacyjny. Terapie z użyciem analogów GLP-1 to leki na receptę: wymagają recepty i wcześniejszej oceny lekarskiej. Decyzja o przepisaniu i konkretnym leczeniu zawsze należy do lekarza po ocenie każdego przypadku. Ta strona nie zastępuje porady lekarskiej i nie promuje stosowania bez nadzoru.",
+  "principles": [
+    {
+      "activo": "Semaglutyd",
+      "clase": "Analog GLP-1",
+      "desc": "Imituje hormon GLP-1, wydłużając poczucie sytości i redukując apetyt, co pomaga jeść mniej bez odczuwania głodu.",
+      "admin": "Iniekcja tygodniowa"
+    },
+    {
+      "activo": "Tirzepatyd",
+      "clase": "Analog GLP-1 / GIP",
+      "desc": "Działa na dwa hormony (GLP-1 i GIP), które regulują apetyt i sytość, wspierając kontrolę wagi w połączeniu ze zdrowymi nawykami.",
+      "admin": "Iniekcja tygodniowa"
+    },
+    {
+      "activo": "Liraglutyd",
+      "clase": "Analog GLP-1",
+      "desc": "Zwiększa poczucie sytości w podobny sposób, ale z podawaniem dziennym, a nie tygodniowym.",
+      "admin": "Iniekcja dzienna"
+    }
+  ]
+}

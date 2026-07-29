@@ -1,0 +1,82 @@
+{
+  "productCarousel": {
+    "firstVisitTitle": "Twoja pierwsza konsultacja jest",
+    "firstVisitHighlight": "bezpłatna",
+    "firstVisitDesc": "Potem, jeśli zdecydujesz się kontynuować, wybierz swój plan: abonament 599 zł/miesiąc bez zobowiązań, pakiet 5-miesięczny za 1999 zł lub dietetyk + GLP1 za 2799 zł. Cała opieka jest zarządzana z aplikacji DoctorLife.",
+    "firstVisitCta": "Zarezerwuj pierwszą wizytę",
+    "choosePlan": "Wybierz swój plan,",
+    "choosePlanHighlight": "wszystko w cenie",
+    "prev": "Poprzedni",
+    "next": "Następny",
+    "medicalBadge": "Lekarz z uprawnieniami",
+    "comingSoon": "Wkrótce",
+    "startNow": "Zacznij teraz",
+    "disclaimer": "*Pierwsza ocena lekarska jest {free}. Jeśli zdecydujesz się kontynuować, wybierz swój plan: {monthly} bez zobowiązań, {pack} lub {nutritionist}. Zawiera czat z lekarzem, receptę na GLP‑1, jeśli konieczna, oraz opiekę. Usługi medyczne są zwolnione z VAT. Lek jest dostępny tylko na receptę po konsultacji lekarskiej i wymaga aktywnego abonamentu DoctorLife.",
+    "free": "bezpłatna",
+    "monthly": "599 zł/miesiąc",
+    "pack": "pakiet 5-miesięczny za 1999 zł",
+    "nutritionist": "dietetyk + GLP1 za 2799 zł"
+  },
+  "products": {
+    "subscription": {
+      "name": "Abonament miesięczny",
+      "subtitle": "Ciągła opieka lekarska, recepta i jedna konsultacja telefoniczna w miesiącu. Bez zobowiązań.",
+      "price": "599zł",
+      "priceSuffix": "/miesiąc",
+      "tag": "Abonament",
+      "features": [
+        "Pierwsza ocena bezpłatna",
+        "Ciągła opieka lekarska z Twoim lekarzem",
+        "Recepta na GLP-1 (Mounjaro, Ozempic lub Wegovy), jeśli wskazana",
+        "Jedna konsultacja telefoniczna w miesiącu",
+        "Bezpośredni czat z lekarzem w aplikacji",
+        "Bez zobowiązań: zrezygnuj kiedy chcesz"
+      ]
+    },
+    "pack5": {
+      "name": "Pakiet 5-miesięczny",
+      "subtitle": "Pełny program w jednej płatności. Najlepsza relacja jakości do ceny, aby się zaangażować.",
+      "price": "1999zł",
+      "priceSuffix": "· jednorazowa płatność · 5 miesięcy",
+      "tag": "Pakiet oszczędnościowy",
+      "features": [
+        "5 miesięcy opieki lekarskiej",
+        "Recepta na GLP-1, jeśli wskazana",
+        "Jedna konsultacja telefoniczna w miesiącu",
+        "Bezpośredni czat z lekarzem w aplikacji",
+        "Stała cena: znacznie taniej"
+      ]
+    },
+    "nutritionist": {
+      "name": "Dietetyk + GLP1",
+      "subtitle": "5-miesięczny program z opieką lekarską i wsparciem dietetyka.",
+      "price": "2799zł",
+      "priceSuffix": "· jednorazowa płatność · 5 miesięcy",
+      "tag": "Pełny program",
+      "features": [
+        "5 miesięcy opieki lekarskiej",
+        "Wsparcie dietetyka",
+        "Recepta na GLP-1, jeśli wskazana",
+        "Jedna konsultacja telefoniczna w miesiącu",
+        "Bezpośredni czat z zespołem w aplikacji"
+      ]
+    }
+  },
+  "adsProducts": {
+    "subscription": {
+      "name": "Abonament miesięczny",
+      "subtitle": "Wszystko, czego potrzebujesz, aby zająć się swoją wagą z realną opieką lekarską. Pierwsza ocena bezpłatna.",
+      "price": "599zł",
+      "priceSuffix": "/miesiąc",
+      "tag": "Abonament",
+      "features": [
+        "Pierwsza ocena bezpłatna z lekarzem z uprawnieniami",
+        "Recepta online na GLP-1 (Mounjaro, Ozempic lub Wegovy) do odebrania w apotece",
+        "Ciągła opieka i korekty dawki z aplikacji",
+        "Bezpośredni czat z lekarzem, gdy potrzebujesz",
+        "Jedna konsultacja telefoniczna w miesiącu w cenie",
+        "Bez zobowiązań: zrezygnuj kiedy chcesz"
+      ]
+    }
+  }
+}

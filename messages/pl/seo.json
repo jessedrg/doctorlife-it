@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "siteUrl": "https://doctorlife.pl",
+    "brand": "DoctorLife",
+    "contactEmail": "hello@doctorlife.io",
+    "organizationDescription": "Opieka nad wagą i hormonalna prowadzona przez lekarzy z uprawnieniami, z oceną medyczną i realnym monitorowaniem w aplikacji.",
+    "knowsAbout": ["Otyłość", "Nadwaga", "Zdrowie metaboliczne", "Kontrola wagi", "Endokrynologia"],
+    "areaServed": "Polska",
+    "countryCode": "PL",
+    "availableLanguage": ["Polish"],
+    "schemaLang": "pl-PL",
+    "trustpilotLocale": "pl-PL",
+    "dateLocale": "pl-PL",
+    "htmlLang": "pl",
+    "ogLocale": "pl_PL",
+    "sameAs": "https://pl.trustpilot.com/review/doctorlife.io"
+  },
+  "medicalReviewer": {
+    "name": "Dr Laura Méndez",
+    "role": "Lekarz specjalista endokrynologii i dietetyki",
+    "credentials": "Lekarz z prawem wykonywania zawodu",
+    "bio": "Endokrynolog z ponad 12-letnim doświadczeniem w leczeniu otyłości i terapii analogami GLP‑1. Nadzoruje treści kliniczne DoctorLife."
+  },
+  "priceNote": "W DoctorLife pierwsza konsultacja lekarska jest bezpłatna, bez zobowiązań. Całe monitorowanie odbywa się w naszej aplikacji.",
+  "serviceCta": "W DoctorLife lekarz z uprawnieniami ocenia Twój przypadek podczas wideokonsultacji i, jeśli leczenie jest odpowiednie, przepisuje je z e-receptą oraz monitorowaniem w aplikacji. Pierwsza wizyta jest bezpłatna."
+}

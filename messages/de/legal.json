@@ -1,0 +1,163 @@
+{
+  "entity": {
+    "companyName": "DOCTORLIFE HEALTH DEUTSCHLAND GMBH",
+    "vatNumber": "USt-IdNr. wird ergänzt",
+    "healthProviderName": "[GESUNDHEITSDIENSTLEISTER DEUTSCHLAND — WIRD ERGÄNZT]",
+    "healthRegistryNumber": "Ärztekammer-Registernummer: wird ergänzt",
+    "dpoEmail": "hello@doctorlife.io",
+    "supportEmail": "hello@doctorlife.io",
+    "jurisdictionCity": "Berlin",
+    "dataProtectionAuthority": "Bundesbeauftragte für den Datenschutz und die Informationsfreiheit (bfdi.bund.de)",
+    "emergencyNumber": "112"
+  },
+  "privacy": {
+    "metaTitle": "Datenschutzerklärung — DoctorLife",
+    "metaDescription": "Wie DoctorLife ({companyName}) deine personenbezogenen und gesundheitsbezogenen Daten gemäß DSGVO und BDSG verarbeitet.",
+    "badge": "Rechtliches",
+    "titlePrefix": "Datenschutz-",
+    "titleHighlight": "erklärung",
+    "intro": "Die deutsche Version dieses Dokuments ist der rechtlich maßgebliche Text.",
+    "sections": [
+      {
+        "title": "Verantwortlicher",
+        "body": "{companyName} — {supportEmail}. Wir verarbeiten deine Daten gemäß der Verordnung (EU) 2016/679 (DSGVO) und dem Bundesdatenschutzgesetz (BDSG)."
+      },
+      {
+        "title": "Datenschutzbeauftragter",
+        "body": "Du kannst unseren Datenschutzbeauftragten (DSB) unter {dpoEmail} zu jeder Frage bezüglich der Verarbeitung deiner personenbezogenen oder gesundheitsbezogenen Daten kontaktieren."
+      },
+      {
+        "title": "Welche Daten wir verarbeiten",
+        "bullets": [
+          "Identifikationsdaten: Name, E-Mail, Telefon.",
+          "Gesundheitsdaten aus dem Fragebogen.",
+          "Zahlungsdaten (verarbeitet von unserem zertifizierten Zahlungsdienstleister)."
+        ]
+      },
+      {
+        "title": "Zwecke",
+        "bullets": [
+          "Durchführung der ärztlichen Beratung und ggf. Ausstellung eines Rezepts.",
+          "Betriebliche Kommunikation (E-Mail, privater Chat der Plattform).",
+          "Erfüllung gesetzlicher Pflichten."
+        ]
+      },
+      {
+        "title": "Rechtsgrundlage",
+        "body": "Ausdrückliche Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), Vertragserfüllung (lit. b) und Erfüllung rechtlicher Pflichten (lit. c). Für Gesundheitsdaten: Art. 9 Abs. 2 lit. h DSGVO — Verarbeitung durch Gesundheitsfachpersonal."
+      },
+      {
+        "title": "Speicherdauer",
+        "body": "Wir speichern die Daten für die Dauer deines Kontos und bis zu fünf Jahre nach der letzten Beratung aus arzneimittelrechtlichen Aufbewahrungspflichten."
+      },
+      {
+        "title": "Empfänger",
+        "body": "Deine Daten werden nicht zu kommerziellen Zwecken an Dritte weitergegeben. Auftragsverarbeiter (Hosting in der EU, E-Mail-Versand, PCI-DSS-zertifizierter Zahlungsdienstleister) unterliegen Verträgen gemäß Art. 28 DSGVO."
+      },
+      {
+        "title": "Internationale Übermittlungen",
+        "body": "In der Regel werden deine Daten auf Servern innerhalb der Europäischen Union gespeichert. Bei gelegentlicher Nutzung eines Anbieters außerhalb des EWR gelten die Garantien nach Kapitel V der DSGVO (EU-Standardvertragsklauseln)."
+      },
+      {
+        "title": "Sicherheitsmaßnahmen",
+        "body": "Wir wenden die technischen und organisatorischen Maßnahmen nach Art. 32 DSGVO an: Verschlüsselung bei Übertragung und Speicherung, rollenbasierte Zugriffskontrolle, Audit-Logs, verschlüsselte Backups, fortlaufende Mitarbeiterschulung und Vorfallreaktionsverfahren."
+      },
+      {
+        "title": "Rechte",
+        "bullets": [
+          "Auskunft, Berichtigung, Löschung, Widerspruch, Einschränkung, Datenübertragbarkeit.",
+          "Widerruf der Einwilligung zu jedem Zeitpunkt.",
+          "Beschwerde bei der {dataProtectionAuthority}."
+        ]
+      }
+    ],
+    "rightsExerciseTitle": "Ausübung deiner Rechte",
+    "rightsExerciseBody": "Übe deine Rechte aus, indem du an {dpoEmail} schreibst. Wir antworten innerhalb von maximal 30 Tagen."
+  },
+  "terms": {
+    "metaTitle": "AGB — DoctorLife",
+    "metaDescription": "Nutzungsbedingungen des Online-Arztberatungsdienstes von DoctorLife ({companyName}): Eignung, Preis, Haftung und anwendbares Recht.",
+    "badge": "Rechtliches",
+    "titlePrefix": "Allgemeine Geschäfts-",
+    "titleHighlight": "bedingungen",
+    "intro": "Die deutsche Version dieses Dokuments ist der rechtlich maßgebliche Text.",
+    "sections": [
+      {
+        "title": "1. Gegenstand",
+        "body": "DoctorLife ist ein Online-Arztberatungsdienst. Ein approbierter Arzt prüft deinen Fragebogen und entscheidet, ob die Behandlung für dich geeignet ist. Wir verschreiben niemals ohne ärztliche Bewertung."
+      },
+      {
+        "title": "2. Eignung",
+        "body": "Du musst mindestens 18 Jahre alt sein und in der Europäischen Union wohnen. Der Fragebogen ist derzeit für Patient*innen in Deutschland optimiert."
+      },
+      {
+        "title": "3. Preis und Zahlung",
+        "body": "Die erste Bewertung ist kostenlos, ohne Verpflichtung. Wenn der Arzt die Behandlung genehmigt und du fortfährst, wähle deinen Plan: Monatsabo für 139 €/Monat (ohne Mindestlaufzeit, jederzeit kündbar), 5-Monats-Paket für 449 € oder Ernährungsberatung + GLP1 für 649 € (beide als Einmalzahlung, 5 Monate Zugang). Medizinische Leistungen sind umsatzsteuerfrei."
+      },
+      {
+        "title": "4. Einschränkungen des Dienstes",
+        "body": "Dieser Dienst ersetzt keine Notfallmedizin. Wenn du ein Gesundheitsproblem hast, das sofortige Hilfe erfordert, wähle die {emergencyNumber} oder suche die nächste Notaufnahme auf."
+      },
+      {
+        "title": "5. Haftung",
+        "body": "DoctorLife ist eine technologische Vermittlungsplattform, die Patient*innen mit unabhängigen, approbierten Ärzten verbindet. DoctorLife erbringt keine medizinischen Leistungen und stellt keine Diagnosen. Der behandelnde Arzt handelt ausschließlich nach eigenem fachlichem Urteil und ist allein verantwortlich für die ärztliche Handlung. Das Vertragsverhältnis bezüglich der ärztlichen Leistung besteht direkt zwischen Patient und Arzt, nicht mit DoctorLife."
+      },
+      {
+        "title": "6. Erbringer der Gesundheitsdienstleistungen",
+        "body": "Diese Dienste bieten Videoberatungen und Telefonate mit medizinischem Fachpersonal zur Prävention, Diagnose und Behandlung von Erkrankungen sowie zur Gesunderhaltung. Die daraus abgeleiteten medizinischen Einschätzungen basieren auf den vom Kunden bereitgestellten Gesundheitsinformationen. Gesundheitsdienstleistungen erbracht durch {healthProviderName} ({healthRegistryNumber})."
+      },
+      {
+        "title": "7. Geistiges Eigentum",
+        "body": "Die Inhalte von doctorlife.de (Texte, Bilder, Code) sind Eigentum von {companyName}, sofern nicht anders angegeben."
+      },
+      {
+        "title": "8. Widerrufsrecht",
+        "body": "Als ärztlicher Beratungsdienst beginnt die Leistung unmittelbar mit deiner ausdrücklichen Zustimmung zu Beginn des klinischen Fragebogens. Gemäß § 356 Abs. 4 BGB erlischt das Widerrufsrecht daher, sobald die ärztliche Prüfung begonnen hat. Lehnt der Arzt die Behandlung ab, erstatten wir dir den vollen Betrag innerhalb von 48 Stunden."
+      },
+      {
+        "title": "9. Anwendbares Recht",
+        "body": "Diese Bedingungen unterliegen deutschem Recht. Streitigkeiten werden vor dem zuständigen Gericht in {jurisdictionCity} verhandelt, sofern das Gesetz keinen anderen Gerichtsstand vorschreibt."
+      },
+      {
+        "title": "10. Online-Streitbeilegung",
+        "body": "Gemäß Verordnung (EU) 524/2013 hast du als Verbraucher Zugang zur europäischen Plattform für Online-Streitbeilegung unter ec.europa.eu/consumers/odr. Bevor du diese nutzt, bitten wir dich, uns unter {supportEmail} zu kontaktieren, um eine direkte Lösung zu versuchen."
+      }
+    ]
+  },
+  "cookies": {
+    "metaTitle": "Cookie-Richtlinie — DoctorLife",
+    "metaDescription": "Welche Cookies DoctorLife verwendet (technisch, analytisch und Marketing), ihre Dauer und wie du deine Einwilligung verwaltest.",
+    "badge": "Rechtliches",
+    "titlePrefix": "Cookie-",
+    "titleHighlight": "Richtlinie",
+    "intro": "Wir erklären dir, welche Cookies wir verwenden, wofür sie dienen und wie du deine Einwilligung jederzeit verwalten kannst.",
+    "sections": [
+      {
+        "title": "Was sind Cookies",
+        "body": "Kleine Dateien, die in deinem Browser gespeichert werden, um deine Präferenzen zu merken und die Nutzung der Website zu messen."
+      },
+      {
+        "title": "Welche Cookies wir verwenden",
+        "bullets": [
+          "Technische — unerlässlich für den Betrieb der Website (z. B. Speichern deiner Sprache). Erfordern keine Einwilligung.",
+          "Analytische — helfen uns zu verstehen, was funktioniert und was nicht. Nur mit deiner Einwilligung.",
+          "Marketing — nur wenn du zustimmst. Wir teilen niemals Gesundheitsdaten mit Werbenetzwerken."
+        ]
+      },
+      {
+        "title": "Dauer",
+        "body": "Technische Cookies laufen am Ende der Sitzung oder gegebenenfalls nach 12 Monaten ab. Analytische Cookies werden maximal 14 Monate gespeichert. Marketing-Cookies, falls akzeptiert, werden maximal 13 Monate gespeichert und bei Widerruf der Einwilligung gelöscht."
+      },
+      {
+        "title": "Verwaltung",
+        "body": "Du kannst deine Auswahl jederzeit über das Cookie-Banner oder die Browsereinstellungen ändern."
+      }
+    ]
+  },
+  "shared": {
+    "moreInfoBadge": "Brauchst du weitere Informationen?",
+    "moreInfoTitle": "Lass uns darüber sprechen.",
+    "moreInfoBody": "Wenn ein Abschnitt dieses Dokuments unklar ist oder du ein Recht ausüben möchtest, antwortet dir unser Rechts- und Datenschutzteam direkt.",
+    "contactCta": "Team kontaktieren"
+  }
+}

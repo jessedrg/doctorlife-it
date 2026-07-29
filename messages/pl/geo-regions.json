@@ -1,0 +1,28 @@
+{
+  "healthServices": {
+    "Mazowieckie": { "short": "NFZ Mazowsze", "long": "Narodowy Fundusz Zdrowia — Oddział Mazowiecki" },
+    "Śląskie": { "short": "NFZ Śląsk", "long": "Narodowy Fundusz Zdrowia — Oddział Śląski" },
+    "Wielkopolskie": { "short": "NFZ Wielkopolska", "long": "Narodowy Fundusz Zdrowia — Oddział Wielkopolski" },
+    "Małopolskie": { "short": "NFZ Małopolska", "long": "Narodowy Fundusz Zdrowia — Oddział Małopolski" },
+    "Dolnośląskie": { "short": "NFZ Dolny Śląsk", "long": "Narodowy Fundusz Zdrowia — Oddział Dolnośląski" },
+    "Łódzkie": { "short": "NFZ Łódź", "long": "Narodowy Fundusz Zdrowia — Oddział Łódzki" },
+    "Pomorskie": { "short": "NFZ Pomorze", "long": "Narodowy Fundusz Zdrowia — Oddział Pomorski" },
+    "Lubelskie": { "short": "NFZ Lublin", "long": "Narodowy Fundusz Zdrowia — Oddział Lubelski" },
+    "Podkarpackie": { "short": "NFZ Podkarpacie", "long": "Narodowy Fundusz Zdrowia — Oddział Podkarpacki" },
+    "Kujawsko-Pomorskie": { "short": "NFZ Kujawy", "long": "Narodowy Fundusz Zdrowia — Oddział Kujawsko-Pomorski" },
+    "Zachodniopomorskie": { "short": "NFZ Zachodniopomorskie", "long": "Narodowy Fundusz Zdrowia — Oddział Zachodniopomorski" },
+    "Podlaskie": { "short": "NFZ Podlasie", "long": "Narodowy Fundusz Zdrowia — Oddział Podlaski" }
+  },
+  "regions": [
+    { "name": "Mazowieckie", "slug": "mazowieckie", "capital": "Warszawa", "capitalSlug": "warszawa", "pop": 5460000, "obesity": 19, "provinces": ["Warszawa", "Radom", "Płock"] },
+    { "name": "Śląskie", "slug": "slaskie", "capital": "Katowice", "capitalSlug": "katowice", "pop": 4370000, "obesity": 22, "provinces": ["Katowice", "Częstochowa", "Sosnowiec"] },
+    { "name": "Wielkopolskie", "slug": "wielkopolskie", "capital": "Poznań", "capitalSlug": "poznan", "pop": 3500000, "obesity": 20, "provinces": ["Poznań", "Kalisz"] },
+    { "name": "Małopolskie", "slug": "malopolskie", "capital": "Kraków", "capitalSlug": "krakow", "pop": 3400000, "obesity": 18, "provinces": ["Kraków", "Tarnów", "Nowy Sącz"] },
+    { "name": "Dolnośląskie", "slug": "dolnoslaskie", "capital": "Wrocław", "capitalSlug": "wroclaw", "pop": 2900000, "obesity": 21, "provinces": ["Wrocław", "Wałbrzych", "Legnica"] },
+    { "name": "Łódzkie", "slug": "lodzkie", "capital": "Łódź", "capitalSlug": "lodz", "pop": 2400000, "obesity": 21, "provinces": ["Łódź", "Piotrków Trybunalski"] },
+    { "name": "Pomorskie", "slug": "pomorskie", "capital": "Gdańsk", "capitalSlug": "gdansk", "pop": 2350000, "obesity": 19, "provinces": ["Gdańsk", "Gdynia", "Słupsk"] },
+    { "name": "Lubelskie", "slug": "lubelskie", "capital": "Lublin", "capitalSlug": "lublin", "pop": 2080000, "obesity": 22, "provinces": ["Lublin"] },
+    { "name": "Podkarpackie", "slug": "podkarpackie", "capital": "Rzeszów", "capitalSlug": "rzeszow", "pop": 2100000, "obesity": 20, "provinces": ["Rzeszów"] },
+    { "name": "Kujawsko-Pomorskie", "slug": "kujawsko-pomorskie", "capital": "Bydgoszcz", "capitalSlug": "bydgoszcz", "pop": 2020000, "obesity": 21, "provinces": ["Bydgoszcz", "Toruń"] }
+  ]
+}

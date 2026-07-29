@@ -1,0 +1,82 @@
+{
+  "productCarousel": {
+    "firstVisitTitle": "Votre première consultation est",
+    "firstVisitHighlight": "gratuite",
+    "firstVisitDesc": "Ensuite, si vous décidez de continuer, choisissez votre formule : abonnement à 139 €/mois sans engagement, forfait de 5 mois à 449 € ou diététicien + GLP1 à 649 €. Tout votre suivi se gère depuis l'application DoctorLife.",
+    "firstVisitCta": "Réserver la première visite",
+    "choosePlan": "Choisissez votre formule,",
+    "choosePlanHighlight": "tout inclus",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "medicalBadge": "Médecin inscrit",
+    "comingSoon": "Bientôt disponible",
+    "startNow": "Commencer maintenant",
+    "disclaimer": "*La première évaluation médicale est {free}. Si vous décidez de continuer, choisissez votre formule : {monthly} sans engagement, {pack} ou {nutritionist}. Inclut le chat avec votre médecin, l'ordonnance GLP‑1 si nécessaire et le suivi. Les services médicaux sont exonérés de TVA. Le médicament n'est disponible que sur prescription après une consultation médicale et nécessite un abonnement DoctorLife actif.",
+    "free": "gratuite",
+    "monthly": "139 €/mois",
+    "pack": "forfait de 5 mois à 449 €",
+    "nutritionist": "diététicien + GLP1 à 649 €"
+  },
+  "products": {
+    "subscription": {
+      "name": "Abonnement mensuel",
+      "subtitle": "Suivi médical continu, ordonnance et une consultation téléphonique par mois. Sans engagement.",
+      "price": "139€",
+      "priceSuffix": "/mois",
+      "tag": "Abonnement",
+      "features": [
+        "Première évaluation gratuite",
+        "Suivi médical continu avec votre médecin",
+        "Ordonnance GLP-1 (Mounjaro, Ozempic ou Wegovy) si approprié",
+        "Une consultation téléphonique par mois",
+        "Chat direct avec votre médecin depuis l'application",
+        "Sans engagement : annulez quand vous voulez"
+      ]
+    },
+    "pack5": {
+      "name": "Forfait 5 mois",
+      "subtitle": "Le programme complet en un seul paiement. Le meilleur rapport qualité-prix pour vous engager.",
+      "price": "449€",
+      "priceSuffix": "· paiement unique · 5 mois",
+      "tag": "Forfait économique",
+      "features": [
+        "5 mois de suivi médical",
+        "Ordonnance GLP-1 si approprié",
+        "Une consultation téléphonique par mois",
+        "Chat direct avec votre médecin depuis l'application",
+        "Prix fixe : nettement moins cher"
+      ]
+    },
+    "nutritionist": {
+      "name": "Diététicien + GLP1",
+      "subtitle": "Programme de 5 mois avec suivi médical et accompagnement diététique.",
+      "price": "649€",
+      "priceSuffix": "· paiement unique · 5 mois",
+      "tag": "Programme complet",
+      "features": [
+        "5 mois de suivi médical",
+        "Accompagnement diététique",
+        "Ordonnance GLP-1 si approprié",
+        "Une consultation téléphonique par mois",
+        "Chat direct avec votre équipe depuis l'application"
+      ]
+    }
+  },
+  "adsProducts": {
+    "subscription": {
+      "name": "Abonnement mensuel",
+      "subtitle": "Tout ce dont vous avez besoin pour prendre en charge votre poids avec un vrai suivi médical. Première évaluation gratuite.",
+      "price": "139€",
+      "priceSuffix": "/mois",
+      "tag": "Abonnement",
+      "features": [
+        "Première évaluation gratuite avec un médecin inscrit",
+        "Ordonnance en ligne de GLP-1 (Mounjaro, Ozempic ou Wegovy) à retirer en pharmacie",
+        "Suivi continu et ajustements de dose depuis l'application",
+        "Chat direct avec votre médecin quand vous en avez besoin",
+        "Une consultation téléphonique par mois incluse",
+        "Sans engagement : annulez quand vous voulez"
+      ]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "quiz": {
+    "ariaLabel": "Réservez votre première consultation gratuite",
+    "close": "Fermer",
+    "form": {
+      "title": "Votre première consultation, gratuite",
+      "subtitle": "Laissez-nous ces informations et choisissez votre rendez-vous avec le médecin. Sans attente et sans engagement.",
+      "height": "Taille (cm)",
+      "weight": "Poids (kg)",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "namePlaceholder": "Votre nom (facultatif)",
+      "bmiLabel": "Votre IMC",
+      "bmiUnderweight": "Maigreur",
+      "bmiHealthy": "Poids santé",
+      "bmiOverweight": "Surpoids",
+      "bmiObesity": "Obésité",
+      "submit": "Choisir mon rendez-vous gratuit",
+      "submitting": "Recherche de votre rendez-vous…",
+      "errorHeightWeight": "Veuillez indiquer votre taille et votre poids.",
+      "errorPhone": "Veuillez indiquer un numéro de téléphone valide.",
+      "errorEmail": "Veuillez indiquer une adresse e-mail valide.",
+      "privacyText": "En continuant, vous acceptez notre",
+      "privacyLink": "politique de confidentialité",
+      "privacySuffix": ". Première consultation gratuite, sans carte et sans engagement.",
+      "orPrefers": "ou si vous préférez",
+      "whatsappCta": "Contactez-nous sur WhatsApp",
+      "goal": "Perdre du poids",
+      "formatPreference": "Stylo hebdomadaire"
+    },
+    "slot": {
+      "title": "Choisissez votre premier rendez-vous",
+      "subtitle": "Téléconsultation avec un endocrinologue. Votre",
+      "subtitleHighlight": "première consultation est gratuite",
+      "subtitleSuffix": " et nous créerons automatiquement votre compte lors de la confirmation.",
+      "loading": "Recherche des créneaux disponibles…",
+      "noSlotsTitle": "Aucun créneau disponible pour le moment",
+      "noSlotsDesc": "Écrivez-nous sur WhatsApp et nous vous trouverons une disponibilité en moins de 24 heures.",
+      "whatsappCta": "Écrivez-nous sur WhatsApp",
+      "emailText": "Vous pouvez aussi nous écrire à",
+      "confirming": "Confirmation de votre réservation…",
+      "back": "← Retour",
+      "errorCheckout": "Impossible de lancer le paiement. Veuillez réessayer."
+    },
+    "done": {
+      "thanks": "Merci, {name}",
+      "allSet": "Tout est prêt",
+      "message": "Nous avons reçu vos informations. Un médecin inscrit examinera votre dossier et vous écrira à",
+      "messageSuffix": "en moins de 24 heures.",
+      "done": "Terminé"
+    }
+  },
+  "quizSteps": [
+    {
+      "key": "objective",
+      "q": "Quel est votre objectif principal ?",
+      "sub": "Faites le premier pas. En 2 minutes, vous saurez si le traitement GLP‑1 vous convient.",
+      "opts": [
+        "Perdre du poids et ne pas le reprendre",
+        "Contrôler la faim et les envies",
+        "Améliorer ma santé et mon énergie",
+        "Me sentir mieux dans mon corps"
+      ]
+    },
+    {
+      "key": "amount",
+      "q": "Combien de poids souhaitez-vous perdre ?",
+      "sub": "Il n'y a pas de mauvaise réponse. Nous voulons simplement comprendre votre point de départ.",
+      "opts": ["Moins de 5 kg", "Entre 5 et 10 kg", "Entre 10 et 20 kg", "Plus de 20 kg"]
+    },
+    {
+      "key": "tried",
+      "q": "Qu'avez-vous essayé auparavant sans parvenir à le maintenir ?",
+      "sub": "Si le poids revient toujours, ce n'est pas de votre faute : c'est votre biologie qui se défend.",
+      "opts": [
+        "Régimes et comptage des calories",
+        "Exercice intense",
+        "Jeûne intermittent",
+        "Un peu de tout… et ça revient toujours"
+      ]
+    },
+    {
+      "key": "frustration",
+      "q": "Qu'est-ce qui vous pèse le plus aujourd'hui ?",
+      "sub": "Choisissez ce qui vous correspond le plus en ce moment.",
+      "opts": [
+        "La faim constante et les envies",
+        "Reprendre ce qu'il m'a coûté tant d'efforts à perdre",
+        "Ne pas me sentir bien avec moi-même",
+        "L'impact sur ma santé"
+      ]
+    },
+    {
+      "key": "glp1Experience",
+      "q": "Avez-vous déjà essayé un traitement GLP‑1 comme le sémaglutide ?",
+      "sub": "C'est le médicament qui transforme la perte de poids avec un véritable suivi médical.",
+      "opts": ["Je l'utilise actuellement", "Je l'ai utilisé auparavant", "Non, mais ça m'intéresse", "Je ne sais pas ce que c'est"]
+    },
+    {
+      "key": "why",
+      "q": "Pourquoi voulez-vous faire ce pas maintenant ?",
+      "sub": "Le savoir clairement, c'est déjà la moitié du chemin.",
+      "opts": [
+        "Pour ma santé et mon avenir",
+        "Je veux redevenir moi-même",
+        "J'ai un moment important qui approche",
+        "Je suis fatigué(e) d'essayer seul(e)"
+      ]
+    }
+  ]
+}

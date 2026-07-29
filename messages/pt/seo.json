@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "siteUrl": "https://doctorlife.pt",
+    "brand": "DoctorLife",
+    "contactEmail": "hello@doctorlife.io",
+    "organizationDescription": "Cuidados de peso e hormonais orientados por médicos inscritos na Ordem, com avaliação médica e acompanhamento real pela app.",
+    "knowsAbout": ["Obesidade", "Excesso de peso", "Saúde metabólica", "Controlo de peso", "Endocrinologia"],
+    "areaServed": "Portugal",
+    "countryCode": "PT",
+    "availableLanguage": ["Portuguese"],
+    "schemaLang": "pt-PT",
+    "trustpilotLocale": "pt-PT",
+    "dateLocale": "pt-PT",
+    "htmlLang": "pt",
+    "ogLocale": "pt_PT",
+    "sameAs": "https://pt.trustpilot.com/review/doctorlife.io"
+  },
+  "medicalReviewer": {
+    "name": "Dra. Laura Méndez",
+    "role": "Médica especialista em Endocrinologia e Nutrição",
+    "credentials": "Inscrita na Ordem dos Médicos",
+    "bio": "Endocrinologista inscrita na Ordem com mais de 12 anos de experiência em obesidade e tratamento com análogos do GLP‑1. Supervisiona o conteúdo clínico da DoctorLife."
+  },
+  "priceNote": "Na DoctorLife, a sua primeira consulta médica é gratuita, sem compromisso. Todo o acompanhamento é feito através da nossa app.",
+  "serviceCta": "Na DoctorLife, um médico inscrito na Ordem avalia o seu caso por videoconsulta e, se o tratamento for adequado, prescreve-o com receita eletrónica e acompanhamento pela app. A primeira consulta é gratuita."
+}

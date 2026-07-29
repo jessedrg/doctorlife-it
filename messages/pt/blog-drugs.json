@@ -1,0 +1,60 @@
+{
+  "drugs": [
+    {
+      "key": "wegovy", "name": "Wegovy", "inn": "semaglutida 2,4 mg", "category": "Wegovy", "kind": "weight",
+      "frequency": "uma injeção semanal", "cover": "/blog/wegovy-sevilla.png",
+      "rows": [["0,25 mg", "Início (semanas 1–4)", "200–230 €"], ["0,5 mg", "Adaptação", "200–250 €"], ["1 mg", "Aumento", "230–270 €"], ["1,7 mg", "Aumento", "250–290 €"], ["2,4 mg", "Manutenção", "270–300 €"]],
+      "priceLow": "200 €", "priceHigh": "300 €",
+      "pillarBuy": "comprare-wegovy-online", "pillarPrice": "wegovy-prezzo-italia", "compare": "wegovy-vs-mounjaro"
+    },
+    {
+      "key": "mounjaro", "name": "Mounjaro", "inn": "tirzepatida", "category": "Mounjaro", "kind": "weight",
+      "frequency": "uma injeção semanal", "cover": "/blog/mounjaro-valencia.png",
+      "rows": [["2,5 mg", "Início", "200–250 €"], ["5 mg", "Adaptação", "230–280 €"], ["7,5–10 mg", "Aumento", "280–330 €"], ["12,5–15 mg", "Manutenção", "300–350 €"]],
+      "priceLow": "200 €", "priceHigh": "350 €",
+      "pillarBuy": "comprare-mounjaro-online", "pillarPrice": "mounjaro-prezzo-italia", "compare": "wegovy-vs-mounjaro"
+    },
+    {
+      "key": "ozempic", "name": "Ozempic", "inn": "semaglutida", "category": "Ozempic", "kind": "diabetes",
+      "frequency": "uma injeção semanal", "cover": "/blog/ozempic-madrid.png",
+      "rows": [["0,25 mg", "Início", "120–140 €"], ["0,5 mg", "Manutenção", "130–150 €"], ["1 mg", "Manutenção", "150–170 €"]],
+      "priceLow": "120 €", "priceHigh": "170 €",
+      "pillarBuy": "comprare-ozempic-online", "pillarPrice": "ozempic-prezzo-italia", "compare": "ozempic-vs-wegovy-vs-mounjaro"
+    },
+    {
+      "key": "saxenda", "name": "Saxenda", "inn": "liraglutida", "category": "Saxenda", "kind": "weight",
+      "frequency": "uma injeção diária", "cover": "/products/maren-daily.png",
+      "rows": [["Embalagem de canetas", "Tratamento diário", "130–200 €/emb."], ["Custo mensal", "Dose de manutenção (3,0 mg/dia)", "200–300 €/mês"]],
+      "priceLow": "200 €", "priceHigh": "300 €",
+      "pillarBuy": "comprare-saxenda-italia", "pillarPrice": "saxenda-prezzo-italia", "compare": "ozempic-vs-saxenda"
+    },
+    {
+      "key": "rybelsus", "name": "Rybelsus", "inn": "semaglutida oral", "category": "Rybelsus", "kind": "diabetes",
+      "frequency": "um comprimido por dia em jejum", "cover": "/products/maren-oral.png",
+      "rows": [["3 mg", "Início (30 dias)", "120–140 €"], ["7 mg", "Manutenção", "130–160 €"], ["14 mg", "Manutenção (dose alta)", "160–190 €"]],
+      "priceLow": "120 €", "priceHigh": "190 €",
+      "pillarBuy": "comprare-semaglutide-online", "pillarPrice": "wegovy-prezzo-italia", "compare": "ozempic-vs-wegovy-vs-mounjaro"
+    }
+  ],
+  "priceDrugKeys": ["wegovy", "mounjaro", "ozempic", "saxenda", "rybelsus"],
+  "research": [
+    {
+      "key": "retatrutide", "name": "retatrutida", "Name": "Retatrutida", "maker": "Eli Lilly",
+      "klass": "agonista triplo dos receptores GLP‑1, GIP e glucagon", "route": "uma injeção subcutânea semanal",
+      "altKey": "mounjaro",
+      "resultsP": "Nos ensaios clínicos de fase II, as pessoas com obesidade tratadas com as doses mais elevadas de retatrutida alcançaram reduções de peso médias muito notáveis em quase um ano, entre as maiores observadas até agora com um medicamento deste tipo. São, no entanto, dados preliminares: os ensaios de fase III ainda têm de confirmar a sua eficácia e segurança reais."
+    },
+    {
+      "key": "cagrisema", "name": "CagriSema", "Name": "CagriSema", "maker": "Novo Nordisk",
+      "klass": "combinação de cagrilintida (análogo da amilina) e semaglutida", "route": "uma injeção subcutânea semanal",
+      "altKey": "wegovy",
+      "resultsP": "A CagriSema combina dois mecanismos complementares de controlo do apetite e mostrou, nos estudos, reduções de peso relevantes. Os resultados definitivos dependem dos ensaios de fase III em curso."
+    },
+    {
+      "key": "orforglipron", "name": "orforglipron", "Name": "Orforglipron", "maker": "Eli Lilly",
+      "klass": "agonista do receptor GLP‑1 em comprimido (pequena molécula oral)", "route": "um comprimido por dia via oral",
+      "altKey": "mounjaro",
+      "resultsP": "Sendo um comprimido e não uma injeção, o orforglipron poderá facilitar o acesso ao tratamento no futuro. Nos estudos iniciais mostrou perdas de peso relevantes, a confirmar nos ensaios de fase III."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+[
+  { "name": "Amsterdam", "slug": "amsterdam", "capital": "Amsterdam", "capitalSlug": "amsterdam", "region": "Noord-Holland", "pop": 920000, "cities": ["Amstelveen", "Diemen"] },
+  { "name": "Rotterdam", "slug": "rotterdam", "capital": "Rotterdam", "capitalSlug": "rotterdam", "region": "Zuid-Holland", "pop": 655000, "cities": ["Capelle aan den IJssel", "Schiedam"] },
+  { "name": "Den Haag", "slug": "den-haag", "capital": "Den Haag", "capitalSlug": "den-haag", "region": "Zuid-Holland", "pop": 550000, "cities": ["Zoetermeer", "Delft"] },
+  { "name": "Utrecht", "slug": "utrecht", "capital": "Utrecht", "capitalSlug": "utrecht", "region": "Utrecht", "pop": 360000, "cities": ["Nieuwegein", "Zeist"] },
+  { "name": "Eindhoven", "slug": "eindhoven", "capital": "Eindhoven", "capitalSlug": "eindhoven", "region": "Noord-Brabant", "pop": 240000, "cities": ["Veldhoven", "Helmond"] },
+  { "name": "Groningen", "slug": "groningen", "capital": "Groningen", "capitalSlug": "groningen", "region": "Groningen", "pop": 235000, "cities": ["Hoogezand"] },
+  { "name": "Tilburg", "slug": "tilburg", "capital": "Tilburg", "capitalSlug": "tilburg", "region": "Noord-Brabant", "pop": 225000, "cities": ["Oisterwijk"] },
+  { "name": "Breda", "slug": "breda", "capital": "Breda", "capitalSlug": "breda", "region": "Noord-Brabant", "pop": 185000, "cities": ["Etten-Leur"] },
+  { "name": "Nijmegen", "slug": "nijmegen", "capital": "Nijmegen", "capitalSlug": "nijmegen", "region": "Gelderland", "pop": 180000, "cities": ["Wijchen"] },
+  { "name": "Arnhem", "slug": "arnhem", "capital": "Arnhem", "capitalSlug": "arnhem", "region": "Gelderland", "pop": 165000, "cities": ["Velp"] }
+]

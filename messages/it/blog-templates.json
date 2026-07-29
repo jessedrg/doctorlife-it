@@ -1,0 +1,291 @@
+{
+  "priceNote": "In DoctorLife la tua prima visita medica è gratis, senza impegno. Tutto il follow-up si gestisce dalla nostra app interna.",
+  "serviceCta": "In DoctorLife, un medico iscritto all'Ordine valuta il tuo caso in videoconsulto e, se il trattamento è adatto a te, te lo prescrive con ricetta elettronica e follow-up dall'app. La prima visita è gratis.",
+  "illegalNote": "Qualsiasi sito, app o privato che offra questi farmaci 'senza ricetta' in Italia agisce illegalmente e mette a rischio la tua salute. La ricetta richiede sempre una valutazione medica preventiva.",
+
+  "weightIntros": [
+    [
+      "{Drug} ({inn}) viene dispensato nelle farmacie di {City} solo con ricetta medica. È un analogo del GLP‑1 indicato per il controllo del peso: richiede la valutazione preventiva di un medico iscritto all'Ordine, e non è legale né sicuro acquistarlo «senza ricetta» online.",
+      "La via più rapida a {City} è il consulto medico online di {BRAND}: un medico valuta il tuo caso, emette la ricetta elettronica se appropriato, e ritiri {Drug} nella tua farmacia abituale, senza spostamenti né liste d'attesa."
+    ],
+    [
+      "Vuoi comprare {Drug} a {City}? La prima cosa da sapere è che {Drug} ({inn}) richiede ricetta medica in tutta Italia. Qualsiasi sito che te lo offra senza una valutazione medica opera illegalmente e mette a rischio la tua salute.",
+      "Con {BRAND} il processo è semplice e del tutto legale: fai il consulto online da {City}, un medico iscritto all'Ordine esamina la tua anamnesi e, se {Drug} è adatto a te, ricevi la ricetta per ritirarlo in farmacia."
+    ],
+    [
+      "A {City} sempre più persone ricorrono a {Drug} ({inn}) per perdere peso in modo sostenibile. È un trattamento su prescrizione che agisce sull'appetito e sulla sazietà, e va sempre iniziato e adattato sotto controllo medico.",
+      "Non serve andare in una clinica di persona: con il consulto online di {BRAND} ottieni valutazione medica, ricetta elettronica (se appropriata) e follow-up reale, e devi solo ritirare {Drug} in una farmacia di {City}."
+    ]
+  ],
+  "diabIntros": [
+    [
+      "{Drug} ({inn}) si vende nelle farmacie di {City} con ricetta medica. È autorizzato per il diabete di tipo 2, non per perdere peso: serve una valutazione medica che confermi il trattamento più adatto al tuo caso.",
+      "Se il tuo obiettivo è dimagrire, a {City} il medico può valutare Wegovy (semaglutide per il peso) o Mounjaro (tirzepatide) invece di usare {Drug} fuori indicazione."
+    ]
+  ],
+
+  "steps": [
+    [
+      "Prenoti la tua prima visita medica online gratis.",
+      "Completi la tua anamnesi e i tuoi obiettivi dall'app, senza muoverti da {City}.",
+      "Un medico iscritto all'Ordine valuta se {Drug} è adatto e sicuro per te.",
+      "Se appropriato, ricevi la ricetta elettronica e un piano di dosaggio personalizzato.",
+      "Ritiri {Drug} nella tua farmacia di {City} e fai tutto il follow-up dall'app."
+    ],
+    [
+      "Fai il consulto online gratis da qualsiasi punto di {City}.",
+      "Rispondi a un questionario medico sulla tua salute, il tuo peso e i tuoi obiettivi.",
+      "Il medico esamina il tuo caso e decide se {Drug} fa per te.",
+      "Ricevi la prescrizione e il piano di avvio se il trattamento è appropriato.",
+      "Ritiri {Drug} in farmacia a {City} e ti accompagniamo in ogni aggiustamento della dose."
+    ]
+  ],
+
+  "mechWeight": [
+    "{Drug} contiene {inn}, un analogo del GLP‑1 che imita un ormone intestinale che il corpo rilascia naturalmente mangiando. Agisce sui centri dell'appetito del cervello e rallenta lo svuotamento gastrico, così ti senti sazio prima e più a lungo. Il risultato è che mangi meno senza la sensazione costante di fame che fa fallire la maggior parte delle diete.",
+    "Il principio attivo di {Drug} ({inn}) appartiene alla famiglia degli agonisti del recettore GLP‑1. Riduce i segnali di fame, migliora il controllo della glicemia dopo i pasti e rallenta la digestione. Per questo, somministrato con {frequency} e con la dose ben calibrata, aiuta a ridurre l'assunzione calorica in modo naturale e sostenibile a {City}."
+  ],
+  "mechDiab": [
+    "{Drug} ({inn}) è un analogo del GLP‑1 indicato per il diabete di tipo 2. Stimola il rilascio di insulina quando la glicemia è alta, frena la produzione hepatica di glucosio e rallenta lo svuotamento gastrico. Come effetto secondario frequente riduce l'appetito, per cui molti lo associano alla perdita di peso."
+  ],
+
+  "sideIntro": [
+    "Come ogni analogo del GLP‑1, {Drug} può causare effetti secondari, soprattutto digestivi, all'inizio del trattamento e dopo ogni aumento di dose. La maggior parte sono lievi e scompaiono con l'adattamento del corpo; un aumento graduale della dose aiuta a minimizzarli."
+  ],
+  "sideList": [
+    "Nausea, soprattutto nelle prime settimane e dopo ogni aumento di dose.",
+    "Digestione più lenta, sensazione di pienezza o gonfiore addominale.",
+    "Stitichezza o diarrea passeggere.",
+    "Episodi di acidità, eruttazioni o reflusso.",
+    "Stanchezza o leggeri mal di testa nei primi giorni."
+  ],
+  "sideOutro": [
+    "Per ridurli conviene mangiare lentamente e in piccole porzioni, evitare pasti molto grassi o abbondanti e mantenersi ben idratati. Se un sintomo è intenso o persistente, il medico di {BRAND} aggiusta il piano o la dose dall'app, senza che tu debba spostarti a {City}."
+  ],
+
+  "contraP": [
+    "{Drug} non è adatto a tutti. Per questo la valutazione medica preventiva è indispensabile: il medico controlla la tua anamnesi, le tue patologie e i farmaci abituali prima di decidere se puoi iniziare e con quale dose."
+  ],
+  "contraList": [
+    "Anamnesi personale o familiare di carcinoma midollare della tiroide o sindrome MEN2.",
+    "Pancreatite precedente o grave malattia della colecisti.",
+    "Gravidanza, ricerca di gravidanza o allattamento.",
+    "Anamnesi di disturbi alimentari attivi.",
+    "Insufficienza renale o hepatica grave non valutata da un medico."
+  ],
+
+  "storageList": [
+    "Conserva le penne di {Drug} in frigorifero (tra 2 e 8 °C) e non congelarle mai.",
+    "Una volta in uso, molte penne possono essere conservate a temperatura ambiente per un numero limitato di giorni; consulta sempre il foglietto illustrativo.",
+    "Somministra {Drug} con {frequency}, su addome, coscia o braccio, alternando il punto di iniezione.",
+    "Non riutilizzare gli aghi e smaltisci il materiale usato in un contenitore adeguato.",
+    "Se dimentichi una dose, non raddoppiare: segui le istruzioni del foglietto o consulta il tuo medico di {BRAND}."
+  ],
+
+  "resultsWeight": [
+    "Negli studi clinici, i trattamenti con {inn} hanno mostrato perdite di peso medie rilevanti e sostenute nell'arco di diversi mesi se combinati con cambi di abitudini. I primi effetti sull'appetito si notano di solito in poche settimane, ma la perdita di peso è progressiva: costanza e aggiustamento della dose sono la chiave."
+  ],
+
+  "localBuy": [
+    "A {City}, come nel resto d'Italia, {Drug} non si vende in parafarmacie né su siti senza ricetta: solo in farmacia e con prescrizione medica. Il vantaggio di {BRAND} è evitare le liste d'attesa per endocrinologia e gestire tutto — valutazione, ricetta e follow-up — senza spostarti da {City}.",
+    "Molti pazienti di {City} scoprono che {Drug} è esaurito in alcune farmacie o che ottenere un appuntamento con lo specialista richiede settimane. Con il consulto online di {BRAND} ottieni la valutazione medica in poco tempo e, se appropriato, la ricetta elettronica per trovare il trattamento in qualsiasi farmacia di {City}."
+  ],
+  "compareP": [
+    "{Drug} non è l'unica opzione. Secondo il tuo caso, il medico può confrontare diversi analoghi del GLP‑1 e scegliere quello più adatto al tuo obiettivo, alla tua tolleranza e al tuo budget. Questa decisione deve essere individuale e sempre medica, mai basata su ciò che ha funzionato per qualcun altro."
+  ],
+
+  "benefitWeightTitles": [
+    "Perché comprare {Drug} con follow-up medico",
+    "Quali risultati puoi aspettarti con {Drug}"
+  ],
+  "benefitWeightP": [
+    "Comprare {Drug} è solo l'inizio. I migliori risultati arrivano quando la dose si aggiusta gradualmente e si accompagna a abitudini sostenibili. Per questo in {BRAND} non vendiamo un prodotto isolato: offriamo un trattamento con medico iscritto all'Ordine, aggiustamenti di dose e supporto continuo dall'app."
+  ],
+  "benefitDiabTitles": [
+    "{Drug} e perdita di peso: cosa devi sapere"
+  ],
+  "benefitDiabP": [
+    "Anche se molte persone cercano {Drug} per dimagrire, la sua indicazione approvata è il diabete di tipo 2. Per il controllo del peso esistono opzioni specificamente approvate — Wegovy (semaglutide) e Mounjaro (tirzepatide) — che il medico può valutare nel tuo consulto da {City}."
+  ],
+
+  "drugCityIntro": [
+    "Cercare «{drug} a {City}» risponde di solito a una di due cose: vuoi iniziare il trattamento e non sai da dove partire, oppure sei nella fase di ricerca e ti sei scontrato con la carenza in farmacia. In questa guida vedrai come accedere a {Drug} a {City} legalmente e qual è la via più rapida e sicura per iniziare con ricetta e follow-up."
+  ],
+  "drugCityStock": [
+    "{Drug} ha avuto episodi di carenza in tutta Italia, e {City} non è un'eccezione: è comune che una farmacia non abbia la dose specifica ma un'altra sì. La buona notizia è che la ricetta elettronica è valida in qualsiasi farmacia, quindi puoi controllare la disponibilità in diverse farmacie di {City} senza perdere la prescrizione."
+  ],
+
+  "rxCityIntro": [
+    "Per ottenere la ricetta di {Drug} ({inn}) a {City} non devi aspettare settimane per una visita di persona: il consulto medico online di {BRAND} permette a un medico iscritto all'Ordine di valutare il tuo caso lo stesso giorno e, se il trattamento è indicato, emettere la ricetta elettronica valida in qualsiasi farmacia di {City}."
+  ],
+  "rxCityRequirements": [
+    "Il medico valuterà il tuo IMC, la tua anamnesi, i farmaci attuali e i tuoi obiettivi. {Drug} non si prescrive a chiunque: ci sono criteri clinici chiari e controindicazioni (gravidanza, pancreatite precedente, alcuni problemi tiroidei) che il medico esamina con te prima di emettere la ricetta."
+  ],
+  "rxCityValidity": [
+    "La ricetta elettronica emessa online è valida in qualsiasi farmacia di {City} e del resto d'Italia: funziona come quella del tuo medico di base. Devi solo fornire il tuo codice fiscale o il codice della ricetta al banco."
+  ],
+
+  "grayDangers": [
+    "Non c'è alcuna garanzia che il prodotto sia autentico: le contraffazioni di farmaci GLP‑1 sono sempre più frequenti.",
+    "Senza controllo di dose, purezza o conservazione: la catena del freddo può rompersi e il prodotto degradarsi.",
+    "Nessuno valuta le tue controindicazioni, la tua anamnesi o i tuoi farmaci abituali prima dell'uso.",
+    "Senza follow-up medico, gli effetti avversi possono aggravarsi senza che nessuno li rilevi in tempo.",
+    "Comprare un farmaco su prescrizione senza ricetta è illegale in Italia e può comportare sanzioni."
+  ],
+  "legalRedirect": [
+    "La buona notizia è che esistono trattamenti GLP‑1 approvati, sicuri e disponibili oggi in Italia. Un endocrinologo può valutare il tuo caso e, se appropriato, prescriverti un'alternativa con ricetta e follow-up reale."
+  ],
+  "approvalExplain": [
+    "In Europa, un farmaco arriva in farmacia solo dopo l'autorizzazione dell'Agenzia Europea del Medicinale (EMA) e, in Italia, dell'Agenzia Italiana del Farmaco (AIFA). Questo processo richiede il completamento degli studi di fase III e la dimostrazione di efficacia e sicurezza."
+  ],
+
+  "sections": {
+    "whereToBuy": "Dove comprare {Drug} a {City}?",
+    "whatIsAndHow": "Cos'è {Drug} e come funziona?",
+    "priceByDose": "Prezzo di {Drug} a {City} per dose",
+    "howToBuySteps": "Come comprare {Drug} a {City} passo dopo passo",
+    "sideEffects": "Effetti secondari di {Drug}",
+    "whoCanUse": "Chi può usare {Drug}? Controindicazioni",
+    "howToStore": "Come conservare e somministrare {Drug}",
+    "howMuchCost": "Quanto costa {Drug} a {City}?",
+    "priceDepends": "Da cosa dipende il prezzo di {Drug}?",
+    "howToGetRx": "Come ottenere {Drug} con ricetta a {City}",
+    "drugInCity": "{Drug} a {City}: come ottenerlo",
+    "availability": "Disponibilità di {Drug} nelle farmacie di {City}",
+    "howToStartSteps": "Come iniziare con {Drug} a {City} passo dopo passo",
+    "localContext": "{City}: contesto sanitario locale"
+  },
+
+  "faqTemplates": {
+    "noRxWeight": "Non puoi comprare {Drug} senza ricetta a {City}?",
+    "noRxWeightA": "No. {Drug} richiede ricetta medica. La via legale è il consulto medico, la ricetta se appropriata e il ritiro in farmacia. Comprarlo «senza ricetta» online è illegale e rischioso.",
+    "howMuch": "Quanto costa {Drug} a {City}?",
+    "howMuchA": "La penna si situa in modo orientativo tra {low} e {high} al mese secondo la dose. Il consulto e il follow-up si pagano separatamente; in DoctorLife la prima visita è gratis.",
+    "allOnline": "Posso fare tutto online da {City}?",
+    "allOnlineA": "Sì. Il consulto e la ricetta elettronica si gestiscono online; devi solo ritirare {Drug} nella tua farmacia di {City}.",
+    "isSafe": "È sicuro assumere {Drug}?",
+    "isSafeA": "Sì, sotto controllo medico e con la dose aggiustata progressivamente. Gli effetti secondari abituali (nausea, digestione lenta) sono di solito lievi e temporanei.",
+    "howStart": "Come inizio con DoctorLife?",
+    "howStartA": "Prenoti la prima visita gratis. Il medico valuta il tuo caso e, se appropriato, ti prescrive {Drug} con follow-up dall'app."
+  },
+
+  "localContext": {
+    "trait": "{City}, {trait}, conta circa {pop} e fa capo, per la sanità pubblica, al {healthLong} ({healthShort}). L'ospedale di riferimento della zona è il {hospital}.",
+    "waitTimes": "Attraverso il Servizio Sanitario Nazionale l'accesso alla endocrinologia può richiedere tempi di attesa lunghi. Il consulto online di {BRAND} permette di ottenere una valutazione medica rapida senza rinunciare al rigore clinico, ovunque tu sia a {City}."
+  },
+
+  "localFaqs": {
+    "allOnline": "Posso fare tutto online da {City}?",
+    "allOnlineA": "Sì. La visita, la ricetta elettronica (se indicata) e il follow-up si gestiscono online: devi solo ritirare il farmaco in una farmacia di {City}.",
+    "doctorAvailable": "C'è un medico disponibile per i pazienti di {City}?",
+    "doctorAvailableA": "Sì, i medici di {BRAND} sono iscritti all'Ordine e seguono pazienti in tutta Italia, incluso {City}, tramite videoconsulto.",
+    "howLong": "Quanto tempo serve per avere un appuntamento a {City}?",
+    "howLongA": "Con {BRAND} la prima valutazione si può prenotare in pochi giorni, molto più rapido delle liste d'attesa pubbliche per endocrinologia."
+  },
+
+  "region": {
+    "introP1": [
+      "La regione {Name}, con circa {pop} e capoluogo {capital}, registra una domanda crescente di trattamenti medici per perdere peso. Sempre più persone cercano come iniziare con un analogo del GLP‑1 (Wegovy, Mounjaro, Ozempic o Saxenda) in modo legale, sicuro e con follow-up medico reale.",
+      "In {Name} vivono circa {pop}, distribuiti tra {capital} e un ampio insieme di comuni. In tutta la regione è cresciuto l'interesse per i trattamenti GLP‑1 per dimagrire, e con esso la necessità di informazioni affidabili su prezzi, ricette e come iniziarli con garanzie."
+    ],
+    "introP2": [
+      "In {BRAND} seguiamo pazienti di tutta la regione {Name} tramite consulto online: non devi spostarti a {capital} né aspettare settimane per un appuntamento. Un endocrinologo iscritto all'Ordine valuta il tuo caso e, se appropriato, ti prescrive il trattamento con ricetta elettronica valida in qualsiasi farmacia.",
+      "{BRAND} copre tutta la regione {Name} con un modello 100% online. Che tu viva a {capital} o in un altro comune, accedi alla stessa valutazione medica, alla prescrizione se indicata e al follow-up, senza code né spostamenti."
+    ],
+    "introP3": [
+      "Questa guida riunisce ciò che devi sapere in {Name}: quali trattamenti esistono, quanto costano, come ottenere la ricetta e come iniziare passo dopo passo."
+    ],
+    "priceP": [
+      "I prezzi dei GLP‑1 in {Name} sono gli stessi del resto d'Italia, perché dipendono dal farmaco e dalla dose, non dal comune. Quello che cambia tra le opzioni è la potenza, l'indicazione e la frequenza di somministrazione."
+    ],
+    "priceP2": [
+      "Tieni presente che il prezzo del farmaco in farmacia è solo una parte: un trattamento serio include la visita medica, la prescrizione, gli aggiustamenti di dose e il follow-up degli effetti. Senza questo, comprare la penna per conto proprio è rischioso e inefficace."
+    ],
+    "rxP1": [
+      "In {Name} ci sono due vie per ottenere la ricetta di Wegovy, Mounjaro o Ozempic: il Servizio Sanitario Nazionale ({health}) e la medicina privata. Tramite il pubblico, questi farmaci raramente sono rimborsati per perdere peso e l'accesso allo specialista può richiedere settimane o mesi."
+    ],
+    "rxP2": [
+      "Il consulto online di {BRAND} è la via rapida: un endocrinologo valuta il tuo caso in poco tempo e, se il trattamento è indicato, emette una ricetta elettronica valida in qualsiasi farmacia di {Name}. Senza spostamenti né attese infinite."
+    ],
+    "obesityIntro": [
+      "Il sovrappeso e l'obesità sono un problema di salute pubblica in tutta Italia, e {Name} non fa eccezione. Secondo i dati ISTAT disponibili, circa il {obesity}% della popolazione adulta della regione vive con obesità (dato orientativo che non include il sovrappeso, la cui prevalenza è notevolmente maggiore)."
+    ],
+    "obesityP2": [
+      "Questi dati spiegano perché la domanda di trattamenti efficaci è cresciuta tanto in {Name}. L'obesità è una malattia cronica con base biologica, non una questione di forza di volontà, e per questo l'approccio più efficace combina abitudini, supporto medico e, quando indicato, farmaci GLP‑1."
+    ],
+    "sections": {
+      "intro": "Trattamento per dimagrire in {Name}",
+      "price": "Prezzo dei trattamenti GLP‑1 in {Name}",
+      "prescription": "Come ottenere la ricetta in {Name}",
+      "obesity": "L'obesità in {Name}: il contesto",
+      "howToStart": "Come iniziare in {Name} passo dopo passo"
+    },
+    "capitalLinksTitle": "Guide locali di {capital}"
+  },
+
+  "internalLinks": {
+    "nationalHubs": ["roma", "milano", "napoli", "torino", "palermo", "bologna", "firenze", "bari"],
+    "pillars": {
+      "wegovy": [
+        { "label": "Comprare Wegovy online in Italia", "href": "/blog/comprare-wegovy-online" },
+        { "label": "Prezzo di Wegovy in Italia", "href": "/blog/wegovy-prezzo-italia" },
+        { "label": "Wegovy vs Mounjaro: confronto", "href": "/blog/wegovy-vs-mounjaro" }
+      ],
+      "mounjaro": [
+        { "label": "Comprare Mounjaro online in Italia", "href": "/blog/comprare-mounjaro-online" },
+        { "label": "Prezzo di Mounjaro in Italia", "href": "/blog/mounjaro-prezzo-italia" },
+        { "label": "Wegovy vs Mounjaro: confronto", "href": "/blog/wegovy-vs-mounjaro" }
+      ],
+      "ozempic": [
+        { "label": "Comprare Ozempic online in Italia", "href": "/blog/comprare-ozempic-online" },
+        { "label": "Prezzo di Ozempic in Italia", "href": "/blog/ozempic-prezzo-italia" },
+        { "label": "Ozempic vs Wegovy vs Mounjaro: confronto", "href": "/blog/ozempic-vs-wegovy-vs-mounjaro" }
+      ],
+      "saxenda": [
+        { "label": "Comprare Saxenda in Italia", "href": "/blog/comprare-saxenda-italia" },
+        { "label": "Prezzo di Saxenda in Italia", "href": "/blog/saxenda-prezzo-italia" },
+        { "label": "Ozempic vs Saxenda: confronto", "href": "/blog/ozempic-vs-saxenda" }
+      ]
+    },
+    "labels": {
+      "buy": "Comprare {Drug} a {City}",
+      "price": "Prezzo di {Drug} a {City}",
+      "availability": "{Drug} a {City}",
+      "geoGroupTitle": "{Drug} in altre città {scope}",
+      "geoGroupIntro": "Visita medica online e ricetta elettronica per {Drug} anche in queste località.",
+      "localGroupTitle": "Altri trattamenti per dimagrire a {City}",
+      "pillarGroupTitle": "Guide su {Drug} in Italia",
+      "downGroupTitle": "Comprare {Drug} per città",
+      "downGroupIntro": "Prenota il tuo consulto medico online ovunque tu sia. Queste sono le nostre città con più richieste di {Drug}."
+    }
+  },
+
+  "comune": {
+    "introBySize": {
+      "piccolo": "{City} ({province}) conta {pop} e, come la maggior parte dei piccoli comuni italiani, non dispone di una clinica specializzata in obesità: l'ambulatorio di endocrinologia più vicino è spesso a diversi chilometri. Questo non è più un impedimento: con {BRAND} hai un endocrinologo iscritto all'Ordine in videoconsulto da casa, con ricetta elettronica valida in qualsiasi farmacia della provincia di {province}.",
+      "medio": "{City} è un comune di {pop} della provincia di {province}. Sebbene ci siano ambulatori medici privati in zona, pochi sono specializzati nel trattamento farmacologico dell'obesità con GLP‑1. {BRAND} ti collega in videoconsulto con endocrinologi iscritti all'Ordine, senza spostamenti e con ricetta valida nelle farmacie di {City}.",
+      "grande": "Con {pop}, {City} ({province}) dispone di sanità privata, ma le unità specifiche di obesità con prescrizione di GLP‑1 restano scarse e con liste d'attesa. In {BRAND} la valutazione con endocrinologo iscritto all'Ordine è in videoconsulto, senza attese, e la ricetta elettronica funziona in qualsiasi farmacia della città."
+    },
+    "legalNote": [
+      "Il trattamento con analoghi del GLP‑1 (Wegovy, Mounjaro, Ozempic o Saxenda) richiede sempre ricetta medica in Italia. Nessun sito che offra questi farmaci 'senza ricetta' a chi vive a {City} è legale né sicuro."
+    ],
+    "howItWorks": [
+      "Prenoti la prima visita gratis dal cellulare o computer, senza spostarti.",
+      "Videoconsulto con un endocrinologo iscritto all'Ordine: anamnesi, IMC e obiettivi.",
+      "Se appropriato, prescrizione di GLP‑1 con ricetta elettronica valida in qualsiasi farmacia della provincia di {province}.",
+      "Follow-up continuo tramite app: dose, effetti secondari e aggiustamenti senza uscire da {City}."
+    ],
+    "sections": {
+      "clinic": "Clinica per la perdita di peso a {City}: la tua opzione online",
+      "howItWorks": "Come funziona il consulto online da {City}",
+      "prices": "Prezzi del trattamento GLP‑1 (orientativi in farmacia)",
+      "whyOnline": "Perché scegliere una clinica online vivendo a {City}?"
+    },
+    "faqs": {
+      "isThereClinic": "C'è una clinica per la perdita di peso a {City}?",
+      "isThereClinicA": "{City} ({province}) non ha bisogno di una clinica fisica specializzata per accedere al trattamento: con {BRAND} la valutazione con endocrinologo iscritto all'Ordine è in videoconsulto e la ricetta elettronica si dispensa in qualsiasi farmacia. La prima visita è gratis.",
+      "howMuchCost": "Quanto costa il trattamento da {City}?",
+      "howMuchCostA": "Il farmaco costa lo stesso che nel resto d'Italia (Ozempic 120–170 €/mese; Wegovy o Saxenda 200–300 €/mese; Mounjaro 200–350 €/mese, orientativi). In {BRAND}, la prima visita medica è gratis."
+    }
+  }
+}

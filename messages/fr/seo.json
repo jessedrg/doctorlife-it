@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "siteUrl": "https://doctorlife.fr",
+    "brand": "DoctorLife",
+    "contactEmail": "hello@doctorlife.io",
+    "organizationDescription": "Prise en charge du poids et hormonale par des médecins inscrits à l'Ordre, avec évaluation médicale et suivi réel depuis l'application.",
+    "knowsAbout": ["Obésité", "Surpoids", "Santé métabolique", "Contrôle du poids", "Endocrinologie"],
+    "areaServed": "France",
+    "countryCode": "FR",
+    "availableLanguage": ["French"],
+    "schemaLang": "fr-FR",
+    "trustpilotLocale": "fr-FR",
+    "dateLocale": "fr-FR",
+    "htmlLang": "fr",
+    "ogLocale": "fr_FR",
+    "sameAs": "https://fr.trustpilot.com/review/doctorlife.io"
+  },
+  "medicalReviewer": {
+    "name": "Dr Laura Méndez",
+    "role": "Médecin spécialiste en Endocrinologie et Nutrition",
+    "credentials": "Inscrite à l'Ordre des Médecins",
+    "bio": "Endocrinologue inscrite à l'Ordre avec plus de 12 ans d'expérience en obésité et traitement par analogues du GLP‑1. Supervise le contenu clinique de DoctorLife."
+  },
+  "priceNote": "Chez DoctorLife, votre première consultation médicale est gratuite, sans engagement. Tout le suivi se gère depuis notre application.",
+  "serviceCta": "Chez DoctorLife, un médecin inscrit à l'Ordre évalue votre cas en téléconsultation et, si le traitement est adapté, vous le prescrit avec ordonnance électronique et suivi depuis l'application. La première visite est gratuite."
+}

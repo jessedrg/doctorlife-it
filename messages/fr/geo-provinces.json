@@ -1,0 +1,17 @@
+[
+  { "name": "Paris", "slug": "paris", "capital": "Paris", "capitalSlug": "paris", "region": "Île-de-France", "pop": 2100000, "cities": ["Boulogne-Billancourt", "Saint-Denis"] },
+  { "name": "Bouches-du-Rhône", "slug": "bouches-du-rhone", "capital": "Marseille", "capitalSlug": "marseille", "region": "Provence-Alpes-Côte d'Azur", "pop": 2040000, "cities": ["Aix-en-Provence", "Arles"] },
+  { "name": "Rhône", "slug": "rhone", "capital": "Lyon", "capitalSlug": "lyon", "region": "Auvergne-Rhône-Alpes", "pop": 1880000, "cities": ["Villeurbanne", "Vénissieux"] },
+  { "name": "Haute-Garonne", "slug": "haute-garonne", "capital": "Toulouse", "capitalSlug": "toulouse", "region": "Occitanie", "pop": 1400000, "cities": ["Colomiers", "Tournefeuille"] },
+  { "name": "Alpes-Maritimes", "slug": "alpes-maritimes", "capital": "Nice", "capitalSlug": "nice", "region": "Provence-Alpes-Côte d'Azur", "pop": 1090000, "cities": ["Cannes", "Antibes"] },
+  { "name": "Loire-Atlantique", "slug": "loire-atlantique", "capital": "Nantes", "capitalSlug": "nantes", "region": "Pays de la Loire", "pop": 1450000, "cities": ["Saint-Nazaire"] },
+  { "name": "Bas-Rhin", "slug": "bas-rhin", "capital": "Strasbourg", "capitalSlug": "strasbourg", "region": "Grand Est", "pop": 1130000, "cities": ["Haguenau"] },
+  { "name": "Hérault", "slug": "herault", "capital": "Montpellier", "capitalSlug": "montpellier", "region": "Occitanie", "pop": 1175000, "cities": ["Béziers", "Sète"] },
+  { "name": "Gironde", "slug": "gironde", "capital": "Bordeaux", "capitalSlug": "bordeaux", "region": "Nouvelle-Aquitaine", "pop": 1650000, "cities": ["Mérignac", "Pessac"] },
+  { "name": "Nord", "slug": "nord", "capital": "Lille", "capitalSlug": "lille", "region": "Hauts-de-France", "pop": 2600000, "cities": ["Roubaix", "Tourcoing"] },
+  { "name": "Ille-et-Vilaine", "slug": "ille-et-vilaine", "capital": "Rennes", "capitalSlug": "rennes", "region": "Bretagne", "pop": 1090000, "cities": ["Saint-Malo"] },
+  { "name": "Marne", "slug": "marne", "capital": "Reims", "capitalSlug": "reims", "region": "Grand Est", "pop": 565000, "cities": ["Châlons-en-Champagne"] },
+  { "name": "Isère", "slug": "isere", "capital": "Grenoble", "capitalSlug": "grenoble", "region": "Auvergne-Rhône-Alpes", "pop": 1270000, "cities": ["Échirolles"] },
+  { "name": "Côte-d'Or", "slug": "cote-dor", "capital": "Dijon", "capitalSlug": "dijon", "region": "Bourgogne-Franche-Comté", "pop": 535000, "cities": ["Beaune"] },
+  { "name": "Seine-Maritime", "slug": "seine-maritime", "capital": "Rouen", "capitalSlug": "rouen", "region": "Normandie", "pop": 1250000, "cities": ["Le Havre", "Dieppe"] }
+]

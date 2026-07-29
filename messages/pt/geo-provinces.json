@@ -1,0 +1,12 @@
+[
+  { "name": "Lisboa", "slug": "lisboa", "capital": "Lisboa", "capitalSlug": "lisboa", "region": "Lisboa", "pop": 2260000, "cities": ["Sintra", "Amadora", "Odivelas"] },
+  { "name": "Porto", "slug": "porto", "capital": "Porto", "capitalSlug": "porto", "region": "Norte", "pop": 1820000, "cities": ["Vila Nova de Gaia", "Matosinhos", "Gondomar"] },
+  { "name": "Braga", "slug": "braga", "capital": "Braga", "capitalSlug": "braga", "region": "Norte", "pop": 850000, "cities": ["Guimarães", "Barcelos"] },
+  { "name": "Setúbal", "slug": "setubal", "capital": "Setúbal", "capitalSlug": "setubal", "region": "Lisboa", "pop": 850000, "cities": ["Almada", "Barreiro", "Seixal"] },
+  { "name": "Aveiro", "slug": "aveiro", "capital": "Aveiro", "capitalSlug": "aveiro", "region": "Centro", "pop": 720000, "cities": ["Águeda", "Ovar"] },
+  { "name": "Coimbra", "slug": "coimbra", "capital": "Coimbra", "capitalSlug": "coimbra", "region": "Centro", "pop": 425000, "cities": ["Figueira da Foz"] },
+  { "name": "Leiria", "slug": "leiria", "capital": "Leiria", "capitalSlug": "leiria", "region": "Centro", "pop": 465000, "cities": ["Caldas da Rainha"] },
+  { "name": "Faro", "slug": "faro", "capital": "Faro", "capitalSlug": "faro", "region": "Algarve", "pop": 460000, "cities": ["Portimão", "Loulé"] },
+  { "name": "Évora", "slug": "evora", "capital": "Évora", "capitalSlug": "evora", "region": "Alentejo", "pop": 165000, "cities": ["Montemor-o-Novo"] },
+  { "name": "Viseu", "slug": "viseu", "capital": "Viseu", "capitalSlug": "viseu", "region": "Centro", "pop": 375000, "cities": ["Tondela"] }
+]

@@ -1,0 +1,163 @@
+{
+  "entity": {
+    "companyName": "DOCTORLIFE HEALTH NEDERLAND B.V.",
+    "vatNumber": "BTW-nummer aan te vullen",
+    "healthProviderName": "[ZORGAANBIEDER NEDERLAND — AAN TE VULLEN]",
+    "healthRegistryNumber": "BIG-registratienummer: aan te vullen",
+    "dpoEmail": "hello@doctorlife.io",
+    "supportEmail": "hello@doctorlife.io",
+    "jurisdictionCity": "Amsterdam",
+    "dataProtectionAuthority": "Autoriteit Persoonsgegevens (autoriteitpersoonsgegevens.nl)",
+    "emergencyNumber": "112"
+  },
+  "privacy": {
+    "metaTitle": "Privacybeleid — DoctorLife",
+    "metaDescription": "Hoe DoctorLife ({companyName}) jouw persoonlijke en medische gegevens verwerkt in overeenstemming met de AVG.",
+    "badge": "Juridisch",
+    "titlePrefix": "Privacy-",
+    "titleHighlight": "beleid",
+    "intro": "De Nederlandse versie van dit document is de juridisch bindende tekst.",
+    "sections": [
+      {
+        "title": "Verwerkingsverantwoordelijke",
+        "body": "{companyName} — {supportEmail}. Wij verwerken jouw gegevens in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG/GDPR) en de Uitvoeringswet AVG."
+      },
+      {
+        "title": "Functionaris Gegevensbescherming",
+        "body": "Je kunt onze Functionaris Gegevensbescherming (FG/DPO) bereiken op {dpoEmail} voor elke vraag over de verwerking van jouw persoonlijke of medische gegevens."
+      },
+      {
+        "title": "Welke gegevens wij verwerken",
+        "bullets": [
+          "Identificatiegegevens: naam, e-mail, telefoon.",
+          "Medische gegevens uit de vragenlijst.",
+          "Betalingsgegevens (verwerkt door onze gecertificeerde betalingsdienstverlener)."
+        ]
+      },
+      {
+        "title": "Doeleinden",
+        "bullets": [
+          "Het medisch consult uitvoeren en, indien passend, een recept uitschrijven.",
+          "Operationele communicatie (e-mail, privéchat van het platform).",
+          "Voldoen aan wettelijke verplichtingen."
+        ]
+      },
+      {
+        "title": "Rechtsgrondslag",
+        "body": "Expliciete toestemming (art. 6, lid 1, sub a AVG), uitvoering van de overeenkomst (sub b) en naleving van een wettelijke verplichting (sub c). Voor gezondheidsgegevens: art. 9, lid 2, sub h AVG — verwerking door gezondheidszorgprofessionals."
+      },
+      {
+        "title": "Bewaartermijn",
+        "body": "Wij bewaren de gegevens gedurende de looptijd van jouw account en tot vijf jaar na het laatste consult vanwege medisch-juridische verplichtingen."
+      },
+      {
+        "title": "Ontvangers",
+        "body": "Jouw gegevens worden niet met derden gedeeld voor commerciële doeleinden. Verwerkers (hosting binnen de EU, e-mailverzending, PCI DSS-gecertificeerde betalingsdienstverlener) ondertekenen verwerkersovereenkomsten conform art. 28 AVG."
+      },
+      {
+        "title": "Internationale overdrachten",
+        "body": "In de regel worden jouw gegevens gehost op servers binnen de Europese Unie. Bij incidenteel gebruik van een aanbieder buiten de EER gelden de waarborgen van hoofdstuk V van de AVG (Standaardcontractbepalingen goedgekeurd door de Europese Commissie)."
+      },
+      {
+        "title": "Beveiligingsmaatregelen",
+        "body": "Wij passen de technische en organisatorische maatregelen van art. 32 AVG toe: versleuteling tijdens verzending en opslag, roltoegangscontrole, auditlogs, versleutelde backups, doorlopende training van medewerkers en incidentresponsprocedures."
+      },
+      {
+        "title": "Rechten",
+        "bullets": [
+          "Inzage, rectificatie, verwijdering, bezwaar, beperking, overdraagbaarheid.",
+          "Toestemming op elk moment intrekken.",
+          "Een klacht indienen bij de {dataProtectionAuthority}."
+        ]
+      }
+    ],
+    "rightsExerciseTitle": "Jouw rechten uitoefenen",
+    "rightsExerciseBody": "Oefen jouw rechten uit door te schrijven naar {dpoEmail}. Wij reageren binnen maximaal 30 dagen."
+  },
+  "terms": {
+    "metaTitle": "Algemene voorwaarden — DoctorLife",
+    "metaDescription": "Gebruiksvoorwaarden van de online medische consultdienst van DoctorLife ({companyName}): geschiktheid, prijs, aansprakelijkheid en toepasselijk recht.",
+    "badge": "Juridisch",
+    "titlePrefix": "Algemene",
+    "titleHighlight": "voorwaarden",
+    "intro": "De Nederlandse versie van dit document is de juridisch bindende tekst.",
+    "sections": [
+      {
+        "title": "1. Onderwerp",
+        "body": "DoctorLife is een online medische consultdienst. Een geregistreerde arts beoordeelt jouw vragenlijst en besluit of de behandeling geschikt is voor jou. Wij schrijven nooit voor zonder medische beoordeling."
+      },
+      {
+        "title": "2. Geschiktheid",
+        "body": "Je moet minstens 18 jaar oud zijn en in de Europese Unie wonen. De vragenlijst is momenteel geoptimaliseerd voor patiënten in Nederland."
+      },
+      {
+        "title": "3. Prijs en betaling",
+        "body": "De eerste beoordeling is gratis, zonder verplichting. Als de arts de behandeling goedkeurt en je besluit door te gaan, kies je jouw plan: maandabonnement van 139 €/maand (zonder minimale looptijd, op te zeggen wanneer je wilt), pakket van 5 maanden voor 449 € of diëtist + GLP1 voor 649 € (beide eenmalige betaling, 5 maanden toegang). Medische diensten zijn btw-vrij."
+      },
+      {
+        "title": "4. Beperkingen van de dienst",
+        "body": "Deze dienst vervangt geen spoedeisende zorg. Als je een gezondheidsprobleem hebt dat onmiddellijke hulp vereist, bel {emergencyNumber} of ga naar de spoedeisende hulp."
+      },
+      {
+        "title": "5. Aansprakelijkheid",
+        "body": "DoctorLife is een technologisch bemiddelingsplatform dat patiënten verbindt met onafhankelijke, geregistreerde artsen. DoctorLife verleent geen medische diensten en stelt geen diagnoses. De arts die jouw dossier behandelt, handelt uitsluitend naar eigen professioneel oordeel en is als enige verantwoordelijk voor de medische handeling. De contractuele relatie met betrekking tot de medische handeling wordt direct aangegaan tussen patiënt en arts, niet met DoctorLife."
+      },
+      {
+        "title": "6. Aanbieder van de gezondheidsdiensten",
+        "body": "Deze diensten bieden videoconsulten en telefoongesprekken met medisch personeel voor preventie, diagnose en behandeling van aandoeningen, en voor het behoud van gezondheid. De medische adviezen uit deze diensten zijn gebaseerd op de door de klant verstrekte gezondheidsinformatie. Gezondheidsdiensten verleend door {healthProviderName} ({healthRegistryNumber})."
+      },
+      {
+        "title": "7. Intellectueel eigendom",
+        "body": "De inhoud van doctorlife.nl (teksten, afbeeldingen, code) is eigendom van {companyName}, tenzij anders vermeld."
+      },
+      {
+        "title": "8. Herroepingsrecht",
+        "body": "Als medisch consultdienst begint de dienstverlening onmiddellijk met jouw expliciete toestemming aan het begin van de klinische vragenlijst. Daarom, en in overeenstemming met artikel 6:230p van het Burgerlijk Wetboek, vervalt het herroepingsrecht zodra de medische beoordeling is gestart. Als de arts de behandeling afwijst, betalen we het volledige bedrag binnen 48 uur terug."
+      },
+      {
+        "title": "9. Toepasselijk recht",
+        "body": "Deze voorwaarden worden beheerst door Nederlands recht. Geschillen worden voorgelegd aan de bevoegde rechter in {jurisdictionCity}, tenzij de wet een andere rechtbank aanwijst."
+      },
+      {
+        "title": "10. Online geschillenbeslechting",
+        "body": "In overeenstemming met Verordening (EU) 524/2013 heb je als consument toegang tot het Europese platform voor online geschillenbeslechting, beschikbaar op ec.europa.eu/consumers/odr. Voordat je dit gebruikt, vragen we je contact met ons op te nemen via {supportEmail} om de kwestie direct te proberen op te lossen."
+      }
+    ]
+  },
+  "cookies": {
+    "metaTitle": "Cookiebeleid — DoctorLife",
+    "metaDescription": "Welke cookies DoctorLife gebruikt (technisch, analytisch en marketing), hun duur en hoe je jouw toestemming beheert.",
+    "badge": "Juridisch",
+    "titlePrefix": "Cookie-",
+    "titleHighlight": "beleid",
+    "intro": "We leggen uit welke cookies we gebruiken, waarvoor ze dienen en hoe je jouw toestemming op elk moment kunt beheren.",
+    "sections": [
+      {
+        "title": "Wat zijn cookies",
+        "body": "Kleine bestanden die in jouw browser worden opgeslagen om jouw voorkeuren te onthouden en het gebruik van de site te meten."
+      },
+      {
+        "title": "Welke cookies wij gebruiken",
+        "bullets": [
+          "Technische — onmisbaar voor het functioneren van de site (bijvoorbeeld om jouw taal te onthouden). Vereisen geen toestemming.",
+          "Analytische — helpen ons begrijpen wat werkt en wat niet. Alleen met jouw toestemming.",
+          "Marketing — alleen als je akkoord gaat. We delen nooit gezondheidsgegevens met advertentienetwerken."
+        ]
+      },
+      {
+        "title": "Duur",
+        "body": "Technische cookies verlopen bij het sluiten van de sessie of, indien van toepassing, na 12 maanden. Analytische cookies worden maximaal 14 maanden bewaard. Marketingcookies, indien geaccepteerd, worden maximaal 13 maanden bewaard en verwijderd als je jouw toestemming intrekt."
+      },
+      {
+        "title": "Beheer",
+        "body": "Je kunt jouw keuze op elk moment wijzigen via de cookiebanner of de browserinstellingen."
+      }
+    ]
+  },
+  "shared": {
+    "moreInfoBadge": "Heb je meer informatie nodig?",
+    "moreInfoTitle": "Laten we erover praten.",
+    "moreInfoBody": "Als een sectie van dit document onduidelijk is, of je wilt een recht uitoefenen, reageert ons juridisch en privacyteam direct.",
+    "contactCta": "Neem contact op met het team"
+  }
+}

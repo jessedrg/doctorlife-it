@@ -1,0 +1,64 @@
+{
+  "herramientas": {
+    "metaTitle": "Gratis gezondheids- en gewichtscalculators | DoctorLife",
+    "metaDescription": "Gratis gezondheidscalculators: BMI, calorieverbruik (TDEE), calorietekort en dagelijkse eiwitbehoefte. Directe resultaten en medische begeleiding van DoctorLife.",
+    "breadcrumbHome": "Home",
+    "breadcrumbTools": "Tools",
+    "badge": "Gratis tools",
+    "title": "Calculators voor",
+    "titleHighlight": "gezondheid en gewicht",
+    "description": "Wetenschappelijk onderbouwde tools om je lichaam te begrijpen: BMI, calorieverbruik, tekort en eiwit. Het is een startpunt — voor een echt plan maakt een medische beoordeling het verschil.",
+    "toolsListHeading": "Lijst met calculators",
+    "openCalculator": "Calculator openen →",
+    "relatedTitle": "Blijf jezelf informeren",
+    "tools": {
+      "bmi": {
+        "title": "BMI-calculator",
+        "desc": "Ontdek in seconden jouw Body Mass Index en in welke gewichtscategorie je valt.",
+        "tag": "Gewicht"
+      },
+      "tdee": {
+        "title": "TDEE-calculator",
+        "desc": "Berekenen jouw totale dagelijkse energieverbruik: hoeveel calorieën je verbrandt afhankelijk van je activiteit.",
+        "tag": "Calorieën"
+      },
+      "deficit": {
+        "title": "Calorietekort-calculator",
+        "desc": "Ontdek hoeveel calorieën je moet eten om op een gezond en duurzaam tempo af te vallen.",
+        "tag": "Gewichtsverlies"
+      },
+      "protein": {
+        "title": "Calculator dagelijkse eiwitbehoefte",
+        "desc": "Berekenen hoeveel eiwit je per dag nodig hebt op basis van je gewicht, doel en activiteitsniveau.",
+        "tag": "Voeding"
+      }
+    },
+    "related": [
+      { "href": "/dimagrire-con-supervisione-medica", "label": "Afvallen onder medisch toezicht" },
+      { "href": "/blog/wegovy-prezzo-italia", "label": "Prijs van Wegovy" },
+      { "href": "/blog/ozempic-vs-wegovy-vs-mounjaro", "label": "Ozempic vs Wegovy vs Mounjaro" }
+    ],
+    "ctaBadge": "Eerste bezoek gratis",
+    "ctaTitle": "Klaar voor een echt plan?",
+    "ctaDesc": "De calculators geven richting, maar jouw lichaam is uniek. Boek je gratis eerste bezoek en start met een plan dat rond jou is gemaakt.",
+    "ctaButton": "Eerste afspraak boeken"
+  },
+  "blog": {
+    "metaTitle": "DoctorLife Blog — Wegovy, Mounjaro en gewichtsverlies met GLP‑1",
+    "metaDescription": "Duidelijke, medische gidsen over Wegovy, Mounjaro, semaglutide en tirzepatide: prijzen, recepten en hoe je jouw gewichtsbehandeling in Nederland start.",
+    "badge": "DoctorLife Blog",
+    "title": "Alles over",
+    "titleHighlight": "gewichtszorg",
+    "titleSuffix": "met GLP‑1",
+    "subtitle": "Wegovy, Mounjaro, semaglutide, tirzepatide: prijzen, recepten en hoe je veilig start met echte medische opvolging.",
+    "noResults": "We hebben geen bijpassende gidsen gevonden.",
+    "resultsSingular": "gids gevonden",
+    "resultsPlural": "gidsen gevonden",
+    "inCategory": "in",
+    "forQuery": "voor «{query}».",
+    "viewAll": "Alle gidsen bekijken",
+    "pagination": "Blogpaginering",
+    "prev": "← Vorige",
+    "next": "Volgende →"
+  }
+}

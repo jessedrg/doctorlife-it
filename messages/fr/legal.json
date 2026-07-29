@@ -1,0 +1,163 @@
+{
+  "entity": {
+    "companyName": "DOCTORLIFE HEALTH FRANCE SARL",
+    "vatNumber": "N° TVA à compléter",
+    "healthProviderName": "[RAISON SOCIALE DE SANTÉ FRANCE — À COMPLÉTER]",
+    "healthRegistryNumber": "N° RPPS/Ordre : à compléter",
+    "dpoEmail": "hello@doctorlife.io",
+    "supportEmail": "hello@doctorlife.io",
+    "jurisdictionCity": "Paris",
+    "dataProtectionAuthority": "Commission Nationale de l'Informatique et des Libertés — CNIL (cnil.fr)",
+    "emergencyNumber": "112"
+  },
+  "privacy": {
+    "metaTitle": "Politique de confidentialité — DoctorLife",
+    "metaDescription": "Comment DoctorLife ({companyName}) traite vos données personnelles et de santé conformément au RGPD et à la loi Informatique et Libertés.",
+    "badge": "Mentions légales",
+    "titlePrefix": "Politique de",
+    "titleHighlight": "confidentialité",
+    "intro": "La version française de ce document constitue le texte légal de référence.",
+    "sections": [
+      {
+        "title": "Responsable du traitement",
+        "body": "{companyName} — {supportEmail}. Nous traitons vos données conformément au Règlement (UE) 2016/679 (RGPD) et à la loi n° 78-17 du 6 janvier 1978 modifiée relative à l'informatique, aux fichiers et aux libertés."
+      },
+      {
+        "title": "Délégué à la protection des données",
+        "body": "Vous pouvez contacter notre Délégué à la Protection des Données (DPO) à l'adresse {dpoEmail} pour toute question relative au traitement de vos données personnelles ou de santé."
+      },
+      {
+        "title": "Quelles données nous traitons",
+        "bullets": [
+          "Données d'identification : nom, e-mail, téléphone.",
+          "Données de santé fournies dans le questionnaire.",
+          "Données de paiement (traitées par notre prestataire de paiement certifié)."
+        ]
+      },
+      {
+        "title": "Finalités",
+        "bullets": [
+          "Réaliser la consultation médicale et délivrer, si approprié, une ordonnance.",
+          "Communications opérationnelles (e-mail, chat privé de la plateforme).",
+          "Respecter les obligations légales."
+        ]
+      },
+      {
+        "title": "Base légale",
+        "body": "Consentement exprès (art. 6.1.a RGPD), exécution du contrat (6.1.b) et respect d'une obligation légale (6.1.c). Pour les données de santé, art. 9.2.h RGPD — traitement par des professionnels de santé."
+      },
+      {
+        "title": "Conservation",
+        "body": "Nous conservons les données pendant toute la durée de votre compte, et jusqu'à cinq ans après la dernière consultation pour des obligations médico-légales."
+      },
+      {
+        "title": "Destinataires",
+        "body": "Vos données ne sont pas communiquées à des tiers à des fins commerciales. Les sous-traitants (hébergement dans l'UE, envoi d'e-mails, prestataire de paiement certifié PCI DSS) signent des accords de traitement conformes à l'art. 28 du RGPD."
+      },
+      {
+        "title": "Transferts internationaux",
+        "body": "En règle générale, vos données sont hébergées sur des serveurs situés dans l'Union européenne. En cas de recours occasionnel à un prestataire hors EEE, les garanties du chapitre V du RGPD s'appliquent (Clauses Contractuelles Types approuvées par la Commission européenne)."
+      },
+      {
+        "title": "Mesures de sécurité",
+        "body": "Nous appliquons les mesures techniques et organisationnelles prévues à l'art. 32 du RGPD : chiffrement en transit et au repos, contrôle d'accès basé sur les rôles, journaux d'audit, sauvegardes chiffrées, formation continue du personnel et procédures de réponse aux incidents."
+      },
+      {
+        "title": "Droits",
+        "bullets": [
+          "Accès, rectification, effacement, opposition, limitation, portabilité.",
+          "Retrait du consentement à tout moment.",
+          "Réclamation auprès de la {dataProtectionAuthority}."
+        ]
+      }
+    ],
+    "rightsExerciseTitle": "Exercice de vos droits",
+    "rightsExerciseBody": "Exercez vos droits en écrivant à {dpoEmail}. Nous répondons dans un délai maximum de 30 jours."
+  },
+  "terms": {
+    "metaTitle": "Conditions générales — DoctorLife",
+    "metaDescription": "Conditions d'utilisation du service de consultation médicale en ligne de DoctorLife ({companyName}) : éligibilité, prix, responsabilité et loi applicable.",
+    "badge": "Mentions légales",
+    "titlePrefix": "Conditions",
+    "titleHighlight": "générales",
+    "intro": "La version française de ce document constitue le texte légal de référence.",
+    "sections": [
+      {
+        "title": "1. Objet",
+        "body": "DoctorLife est un service de consultation médicale en ligne. Un médecin inscrit à l'Ordre examine votre questionnaire et décide si le traitement vous convient. Nous ne prescrivons jamais sans évaluation médicale."
+      },
+      {
+        "title": "2. Éligibilité",
+        "body": "Vous devez avoir au moins 18 ans et résider dans l'Union européenne. Le questionnaire est actuellement optimisé pour les patients en France."
+      },
+      {
+        "title": "3. Prix et paiement",
+        "body": "La première évaluation est gratuite, sans engagement. Si le médecin approuve le traitement et que vous décidez de continuer, choisissez votre formule : abonnement mensuel à 139 €/mois (sans engagement, annulable à tout moment), forfait de 5 mois à 449 € ou diététicien + GLP1 à 649 € (paiement unique, 5 mois d'accès). Les services médicaux sont exonérés de TVA."
+      },
+      {
+        "title": "4. Limites du service",
+        "body": "Ce service ne remplace pas la médecine d'urgence. En cas de problème de santé nécessitant une prise en charge immédiate, contactez le {emergencyNumber} ou rendez-vous aux urgences."
+      },
+      {
+        "title": "5. Responsabilité",
+        "body": "DoctorLife est une plateforme technologique d'intermédiation qui met en relation des patients avec des médecins inscrits à l'Ordre, indépendants. DoctorLife ne fournit pas de services médicaux et n'émet pas de diagnostics. Le médecin qui suit votre dossier agit exclusivement selon son propre jugement professionnel et est seul responsable de l'acte médical. La relation contractuelle relative à l'acte médical s'établit directement entre le patient et le médecin, et non avec DoctorLife."
+      },
+      {
+        "title": "6. Prestataire des services de santé",
+        "body": "Ces services proposent des téléconsultations et des appels téléphoniques avec des professionnels de santé pour la prévention, le diagnostic et le traitement de pathologies, ainsi que le maintien de la santé. Les avis médicaux issus de ces services se basent sur les informations de santé fournies par le client. Services de santé fournis par {healthProviderName} ({healthRegistryNumber})."
+      },
+      {
+        "title": "7. Propriété intellectuelle",
+        "body": "Les contenus de doctorlife.fr (textes, images, code) sont la propriété de {companyName}, sauf indication contraire."
+      },
+      {
+        "title": "8. Droit de rétractation",
+        "body": "En tant que service de consultation médicale, la prestation commence immédiatement avec votre consentement exprès au début du questionnaire clinique. Ainsi, conformément à l'article L221-28 du Code de la consommation, le droit de rétractation ne s'applique plus une fois la revue médicale entamée. Si le médecin refuse le traitement, nous vous remboursons l'intégralité du montant dans les 48 heures."
+      },
+      {
+        "title": "9. Loi applicable",
+        "body": "Ces conditions sont régies par le droit français. Les litiges seront résolus devant le tribunal de {jurisdictionCity}, sauf disposition légale désignant un autre for."
+      },
+      {
+        "title": "10. Résolution des litiges en ligne",
+        "body": "Conformément au Règlement (UE) 524/2013, en tant que consommateur, vous avez accès à la plateforme européenne de règlement en ligne des litiges disponible sur ec.europa.eu/consumers/odr. Avant d'y recourir, nous vous invitons à nous contacter à {supportEmail} pour tenter de résoudre la question directement."
+      }
+    ]
+  },
+  "cookies": {
+    "metaTitle": "Politique de cookies — DoctorLife",
+    "metaDescription": "Quels cookies utilise DoctorLife (techniques, analytiques et marketing), leur durée et comment gérer votre consentement.",
+    "badge": "Mentions légales",
+    "titlePrefix": "Politique de",
+    "titleHighlight": "cookies",
+    "intro": "Nous vous expliquons quels cookies nous utilisons, à quoi ils servent et comment vous pouvez gérer votre consentement à tout moment.",
+    "sections": [
+      {
+        "title": "Que sont les cookies",
+        "body": "De petits fichiers stockés dans votre navigateur pour mémoriser vos préférences et mesurer l'utilisation du site."
+      },
+      {
+        "title": "Quels cookies nous utilisons",
+        "bullets": [
+          "Techniques — indispensables au fonctionnement du site (par exemple, mémoriser votre langue). Ne nécessitent pas de consentement.",
+          "Analytiques — nous aident à comprendre ce qui fonctionne ou pas. Uniquement avec votre consentement.",
+          "Marketing — uniquement si vous acceptez. Nous ne partageons jamais de données de santé avec des réseaux publicitaires."
+        ]
+      },
+      {
+        "title": "Durée",
+        "body": "Les cookies techniques expirent à la fermeture de la session ou, le cas échéant, après 12 mois. Les cookies analytiques sont conservés au maximum 14 mois. Les cookies marketing, si vous les acceptez, sont conservés au maximum 13 mois et sont supprimés en cas de retrait du consentement."
+      },
+      {
+        "title": "Gestion",
+        "body": "Vous pouvez modifier votre choix à tout moment depuis la bannière de cookies ou les paramètres de votre navigateur."
+      }
+    ]
+  },
+  "shared": {
+    "moreInfoBadge": "Besoin de plus d'informations ?",
+    "moreInfoTitle": "Parlons-en ensemble.",
+    "moreInfoBody": "Si une section de ce document n'est pas claire, ou si vous souhaitez exercer un droit, notre équipe juridique et confidentialité vous répond directement.",
+    "contactCta": "Contacter l'équipe"
+  }
+}

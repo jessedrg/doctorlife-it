@@ -1,0 +1,30 @@
+{
+  "healthServices": {
+    "Noord-Holland": { "short": "GGD NH", "long": "GGD Noord-Holland" },
+    "Zuid-Holland": { "short": "GGD ZH", "long": "GGD Zuid-Holland" },
+    "Utrecht": { "short": "GGD Utrecht", "long": "GGD regio Utrecht" },
+    "Noord-Brabant": { "short": "GGD NB", "long": "GGD Noord-Brabant" },
+    "Gelderland": { "short": "GGD Gelderland", "long": "GGD Gelderland" },
+    "Overijssel": { "short": "GGD Overijssel", "long": "GGD Twente/IJsselland" },
+    "Limburg": { "short": "GGD Limburg", "long": "GGD Limburg-Noord/Zuid" },
+    "Groningen": { "short": "GGD Groningen", "long": "GGD Groningen" },
+    "Friesland": { "short": "GGD Fryslân", "long": "GGD Fryslân" },
+    "Drenthe": { "short": "GGD Drenthe", "long": "GGD Drenthe" },
+    "Zeeland": { "short": "GGD Zeeland", "long": "GGD Zeeland" },
+    "Flevoland": { "short": "GGD Flevoland", "long": "GGD Flevoland" }
+  },
+  "regions": [
+    { "name": "Zuid-Holland", "slug": "zuid-holland", "capital": "Den Haag", "capitalSlug": "den-haag", "pop": 3760000, "obesity": 14, "provinces": ["Rotterdam", "Den Haag", "Leiden"] },
+    { "name": "Noord-Holland", "slug": "noord-holland", "capital": "Haarlem", "capitalSlug": "haarlem", "pop": 2950000, "obesity": 13, "provinces": ["Amsterdam", "Haarlem", "Alkmaar"] },
+    { "name": "Noord-Brabant", "slug": "noord-brabant", "capital": "'s-Hertogenbosch", "capitalSlug": "s-hertogenbosch", "pop": 2600000, "obesity": 15, "provinces": ["Eindhoven", "Tilburg", "Breda"] },
+    { "name": "Gelderland", "slug": "gelderland", "capital": "Arnhem", "capitalSlug": "arnhem", "pop": 2130000, "obesity": 14, "provinces": ["Nijmegen", "Arnhem", "Apeldoorn"] },
+    { "name": "Utrecht", "slug": "utrecht", "capital": "Utrecht", "capitalSlug": "utrecht", "pop": 1400000, "obesity": 12, "provinces": ["Utrecht", "Amersfoort"] },
+    { "name": "Overijssel", "slug": "overijssel", "capital": "Zwolle", "capitalSlug": "zwolle", "pop": 1170000, "obesity": 15, "provinces": ["Enschede", "Zwolle", "Deventer"] },
+    { "name": "Limburg", "slug": "limburg", "capital": "Maastricht", "capitalSlug": "maastricht", "pop": 1120000, "obesity": 17, "provinces": ["Maastricht", "Venlo"] },
+    { "name": "Groningen", "slug": "groningen", "capital": "Groningen", "capitalSlug": "groningen", "pop": 590000, "obesity": 15, "provinces": ["Groningen"] },
+    { "name": "Friesland", "slug": "friesland", "capital": "Leeuwarden", "capitalSlug": "leeuwarden", "pop": 650000, "obesity": 14, "provinces": ["Leeuwarden"] },
+    { "name": "Drenthe", "slug": "drenthe", "capital": "Assen", "capitalSlug": "assen", "pop": 500000, "obesity": 15, "provinces": ["Assen", "Emmen"] },
+    { "name": "Zeeland", "slug": "zeeland", "capital": "Middelburg", "capitalSlug": "middelburg", "pop": 385000, "obesity": 15, "provinces": ["Middelburg", "Vlissingen"] },
+    { "name": "Flevoland", "slug": "flevoland", "capital": "Lelystad", "capitalSlug": "lelystad", "pop": 440000, "obesity": 15, "provinces": ["Almere", "Lelystad"] }
+  ]
+}
