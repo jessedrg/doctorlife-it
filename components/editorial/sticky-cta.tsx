@@ -1,28 +1,23 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Check, X } from "lucide-react";
 import { analytics } from "@/lib/analytics";
 
-const INCLUYE = [
-  "Hasta un 22,5% de pérdida de peso",
-  "Receta médica en 3 horas laborables",
-  "Valoración y seguimiento con médico colegiado",
-  "Sin cita previa ni desplazamientos",
-] as const;
-
 const PHONE = "711267223";
-const WA_URL = `https://wa.me/34${PHONE}?text=${encodeURIComponent(
-  "Me gustaría recibir más información sobre el tratamiento con GLP-1.",
-)}`;
 
-function openWhatsApp(source: string) {
+function openWhatsApp(source: "button" | "tooltip" | "sticky_bar", message: string) {
+  const waUrl = `https://wa.me/34${PHONE}?text=${encodeURIComponent(message)}`;
   analytics.whatsappClicked(source);
-  window.open(WA_URL, "_blank");
+  window.open(waUrl, "_blank");
 }
 
 /** Barra inferior sticky (siempre visible) con vídeo de fondo que abre WhatsApp. */
 export function StickyCTA() {
+  const t = useTranslations("ui.editorialStickyCta");
+  const tWhatsapp = useTranslations("ui.whatsapp");
+  const includes = t.raw("includes") as string[];
   const [dismissed, setDismissed] = useState(false);
 
   if (dismissed) return null;
@@ -51,7 +46,7 @@ export function StickyCTA() {
 
         <button
           type="button"
-          aria-label="Cerrar aviso"
+          aria-label={t("close")}
           onClick={() => setDismissed(true)}
           className="absolute right-2 top-2 z-10 flex h-7 w-7 items-center justify-center rounded-full bg-black/20 text-paper/70 backdrop-blur-sm transition-colors hover:bg-black/40 hover:text-paper"
         >
@@ -62,20 +57,20 @@ export function StickyCTA() {
           <div className="min-w-0 flex-1">
             <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
               <p className="text-[17px] font-semibold leading-tight sm:text-[21px]">
-                Consulta médica online para adelgazar
+                {t("title")}
               </p>
               <span className="rounded-full bg-[#6B774A] px-2.5 py-0.5 text-[14px] font-bold text-white sm:text-[15px]">
-                Gratis
+                {t("freeBadge")}
               </span>
             </div>
             <p className="mt-1 text-[13.5px] leading-snug text-paper/75 sm:text-[14px]">
-              <span className="font-semibold text-[#8fa663]">Pierde peso de forma segura</span>{" "}
-              · primera consulta gratis · respuesta en minutos
+              <span className="font-semibold text-[#8fa663]">{t("subtitleHighlight")}</span>{" "}
+              {t("subtitleSuffix")}
             </p>
 
             {/* Qué incluye — grande en desktop */}
             <ul className="mt-3 hidden gap-x-6 gap-y-2 sm:grid sm:grid-cols-2">
-              {INCLUYE.map((item) => (
+              {includes.map((item) => (
                 <li key={item} className="flex items-center gap-2 text-[15px] font-medium text-paper/95">
                   <span className="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-[#6B774A]">
                     <Check aria-hidden className="h-3.5 w-3.5 text-white" />
@@ -88,16 +83,16 @@ export function StickyCTA() {
 
           <button
             type="button"
-            onClick={() => openWhatsApp("sticky_bar")}
+            onClick={() => openWhatsApp("sticky_bar", tWhatsapp("defaultMessage"))}
             className="flex-shrink-0 rounded-full bg-[#6B774A] px-4 py-3 text-[13.5px] font-semibold text-white shadow-lg shadow-[#6B774A]/30 transition-transform duration-200 hover:scale-[1.03] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6B774A] focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:px-8 sm:py-4 sm:text-[16px]"
           >
-            Empieza ahora
+            {t("cta")}
           </button>
         </div>
 
         {/* Qué incluye — chips en móvil */}
         <ul className="relative flex flex-wrap gap-1.5 px-3 pb-3 sm:hidden">
-          {INCLUYE.map((item) => (
+          {includes.map((item) => (
             <li
               key={item}
               className="flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1.5 text-[13px] font-medium leading-none text-paper/95 backdrop-blur-sm"

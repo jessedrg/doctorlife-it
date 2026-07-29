@@ -167,6 +167,20 @@
   "trustbox": {
     "ariaLabel": "Trustpilot"
   },
+  "editorialStickyCta": {
+    "freeBadge": "Gratis",
+    "title": "Consulto medico online per dimagrire",
+    "subtitleHighlight": "Perdi peso in modo sicuro",
+    "subtitleSuffix": "· prima consulenza gratuita · risposta in minuti",
+    "cta": "Inizia ora",
+    "close": "Chiudi avviso",
+    "includes": [
+      "Fino al 22,5% di perdita di peso",
+      "Ricetta medica entro 3 ore lavorative",
+      "Valutazione e follow-up con medico iscritto all'Ordine",
+      "Senza appuntamento né spostamenti"
+    ]
+  },
   "notFound": {
     "error": "Errore 404",
     "title": "Non abbiamo trovato questa pagina",

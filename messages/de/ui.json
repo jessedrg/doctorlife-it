@@ -167,6 +167,20 @@
   "trustbox": {
     "ariaLabel": "Trustpilot"
   },
+  "editorialStickyCta": {
+    "freeBadge": "Kostenlos",
+    "title": "Online-Arztkonsultation zum Abnehmen",
+    "subtitleHighlight": "Nimm sicher ab",
+    "subtitleSuffix": "· erste Beratung kostenlos · Antwort in Minuten",
+    "cta": "Jetzt starten",
+    "close": "Hinweis schließen",
+    "includes": [
+      "Bis zu 22,5% Gewichtsverlust",
+      "Ärztliches Rezept innerhalb von 3 Werktagsstunden",
+      "Bewertung und Nachsorge durch einen approbierten Arzt",
+      "Ohne Termin und ohne Anfahrt"
+    ]
+  },
   "notFound": {
     "error": "Fehler 404",
     "title": "Diese Seite haben wir nicht gefunden",
