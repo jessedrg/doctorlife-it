@@ -88,3 +88,23 @@ export async function getRequestBaseUrl(): Promise<string> {
   }
   return getBaseUrl()
 }
+
+/**
+ * Host/dominio normalizado (sin www) de la petición actual.
+ * Útil para filtrar médicos/clínicas asignados a un dominio concreto.
+ */
+export async function getRequestDomain(): Promise<string | null> {
+  try {
+    const h = await headers()
+    const host = (h.get("x-forwarded-host") ?? h.get("host") ?? "").toLowerCase()
+    return host.replace(/^www\./, "") || null
+  } catch {
+    // Fuera de contexto de petición (p.ej. cron/webhook): intentar env var.
+  }
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? ""
+  try {
+    return new URL(appUrl).host.replace(/^www\./, "") || null
+  } catch {
+    return null
+  }
+}

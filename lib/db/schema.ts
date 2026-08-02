@@ -112,6 +112,8 @@ export const doctorProfiles = pgTable("doctor_profiles", {
   healthRegistryNumber: text("healthRegistryNumber"),
   /** Contacto de protección de datos (RGPD). */
   dataProtectionContact: text("dataProtectionContact"),
+  /** Dominio asignado a la clínica (p.ej. doctorlife-fr.com). */
+  domain: text("domain"),
   createdAt: timestamp("createdAt").notNull().defaultNow(),
   updatedAt: timestamp("updatedAt").notNull().defaultNow(),
 })
@@ -379,6 +381,8 @@ export const leads = pgTable("leads", {
   contraindications: text("contraindications"), // JSON array de ids
   eligibility: text("eligibility"), // 'eligible' | 'review' | 'blocked'
   eligibilityReason: text("eligibility_reason"), // JSON array de motivos
+  // Fecha/hora de la consulta que el lead eligió en el formulario (si la hubo).
+  appointmentAt: timestamp("appointment_at", { withTimezone: true }),
   source: text("source").default("quiz"),
   domain: text("domain"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),

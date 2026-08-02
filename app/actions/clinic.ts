@@ -5,7 +5,7 @@ import { doctorProfiles } from "@/lib/db/schema"
 import { getSessionUser } from "@/lib/session"
 import { stripe } from "@/lib/stripe"
 import { missingClinicFields, clinicDataComplete } from "@/lib/clinic"
-import { getRequestBaseUrl } from "@/lib/base-url"
+import { getRequestBaseUrl, getRequestDomain } from "@/lib/base-url"
 import { eq } from "drizzle-orm"
 import { revalidatePath } from "next/cache"
 
@@ -28,9 +28,10 @@ async function getMyProfile(userId: string, name: string) {
     .where(eq(doctorProfiles.userId, userId))
     .limit(1)
   if (existing) return existing
+  const domain = await getRequestDomain()
   const [created] = await db
     .insert(doctorProfiles)
-    .values({ userId, fullName: name })
+    .values({ userId, fullName: name, domain })
     .returning()
   return created
 }
@@ -49,6 +50,7 @@ export type ClinicStatus = {
   billingEmail: string | null
   billingPhone: string | null
   dataProtectionContact: string | null
+  domain: string | null
   stripeAccountId: string | null
   stripeOnboarded: boolean
   chargesEnabled: boolean
@@ -81,6 +83,7 @@ export async function getClinicStatus(): Promise<ClinicStatus> {
     billingEmail: p.billingEmail,
     billingPhone: p.billingPhone,
     dataProtectionContact: p.dataProtectionContact,
+    domain: p.domain,
     stripeAccountId: p.stripeAccountId,
     stripeOnboarded: p.stripeOnboarded,
     chargesEnabled: p.chargesEnabled,
@@ -105,6 +108,7 @@ export async function updateClinicDetails(input: {
   billingEmail?: string
   billingPhone?: string
   dataProtectionContact?: string
+  domain?: string
 }): Promise<{ ok: true; dataComplete: boolean } | { error: string }> {
   const me = await requireDoctor()
   const p = await getMyProfile(me.id, me.name)
@@ -125,6 +129,7 @@ export async function updateClinicDetails(input: {
     billingEmail: clean(input.billingEmail),
     billingPhone: clean(input.billingPhone),
     dataProtectionContact: clean(input.dataProtectionContact),
+    domain: clean(input.domain),
   }
   await db
     .update(doctorProfiles)

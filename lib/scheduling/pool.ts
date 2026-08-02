@@ -1,6 +1,6 @@
 import { db } from "@/lib/db"
 import { account, appointments, doctorProfiles, user } from "@/lib/db/schema"
-import { and, eq, exists, gte, lt, ne, or } from "drizzle-orm"
+import { and, eq, exists, gte, isNull, lt, ne, or } from "drizzle-orm"
 import { isProductionRequest } from "@/lib/base-url"
 import { scheduling } from "./index"
 import type { PooledSlot, SlotRange } from "./types"
@@ -13,7 +13,7 @@ const PENDING_TTL_MIN = 30
  * pacientes, deduplicados por instante: el paciente elige una hora y el sistema
  * asigna un médico disponible para ese hueco. Las citas activas se descartan.
  */
-export async function getPooledSlots(range: SlotRange): Promise<PooledSlot[]> {
+export async function getPooledSlots(range: SlotRange, domain?: string): Promise<PooledSlot[]> {
   // En producción (doctorlife.io) excluimos los médicos de desarrollo.
   // En dev/preview/local los médicos de dev SÍ aparecen.
   const isProd = await isProductionRequest()
@@ -36,6 +36,15 @@ export async function getPooledSlots(range: SlotRange): Promise<PooledSlot[]> {
         eq(doctorProfiles.payoutsEnabled, true),
         // En producción, excluir médicos marcados como isDevOnly.
         isProd ? eq(doctorProfiles.isDevOnly, false) : undefined,
+        // Si se indica dominio, solo mostrar médicos asignados a ese dominio
+        // o sin dominio definido, para no romper configuraciones previas.
+        domain
+          ? or(
+              eq(doctorProfiles.domain, domain),
+              isNull(doctorProfiles.domain),
+              eq(doctorProfiles.domain, ""),
+            )
+          : undefined,
         // Cuenta de Google enlazada (proveedor "google" en la tabla account).
         exists(
           db

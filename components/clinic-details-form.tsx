@@ -17,6 +17,7 @@ const FIELD_LABELS: Record<string, string> = {
   medicalDirectorLicense: "Nº colegiado",
   billingEmail: "Email de facturación",
   dataProtectionContact: "Responsable RGPD",
+  domain: "Dominio asignado",
 }
 
 type Fields = {
@@ -32,6 +33,7 @@ type Fields = {
   billingEmail: string
   billingPhone: string
   dataProtectionContact: string
+  domain: string
 }
 
 export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
@@ -48,6 +50,7 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
     billingEmail: status.billingEmail ?? "",
     billingPhone: status.billingPhone ?? "",
     dataProtectionContact: status.dataProtectionContact ?? "",
+    domain: status.domain ?? "",
   })
   const [pending, startTransition] = useTransition()
   const [msg, setMsg] = useState<{ type: "ok" | "error"; text: string } | null>(null)
@@ -158,6 +161,12 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
           onChange={set("dataProtectionContact")}
           className="sm:col-span-2"
           required
+        />
+        <Field
+          label="Dominio asignado (p.ej. doctorlife-fr.com)"
+          value={values.domain}
+          onChange={set("domain")}
+          className="sm:col-span-2"
         />
 
         <div className="flex items-center gap-3 sm:col-span-2">

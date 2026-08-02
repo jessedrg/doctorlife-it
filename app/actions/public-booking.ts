@@ -5,7 +5,7 @@ import { appointments, user, doctorProfiles } from "@/lib/db/schema"
 import { auth } from "@/lib/auth"
 import { stripe, platformFeeCents } from "@/lib/stripe"
 import { getDoctorChargeContext } from "@/lib/clinic"
-import { getRequestBaseUrl } from "@/lib/base-url"
+import { getRequestBaseUrl, getRequestDomain } from "@/lib/base-url"
 import { FIRST_VISIT_CENTS, FIRST_VISIT_LABEL } from "@/lib/plans"
 import { getPooledSlots } from "@/lib/scheduling/pool"
 import { generateTempPassword } from "@/lib/credentials"
@@ -16,11 +16,12 @@ import type { PooledSlot } from "@/lib/scheduling/types"
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-/** Huecos combinados de todos los médicos (público, sin sesión). */
+/** Huecos combinados de los médicos del dominio actual (público, sin sesión). */
 export async function getPublicSlots(days = 14): Promise<PooledSlot[]> {
   const from = new Date()
   const to = new Date(from.getTime() + days * 864e5)
-  return getPooledSlots({ from, to })
+  const domain = await getRequestDomain()
+  return getPooledSlots({ from, to }, domain ?? undefined)
 }
 
 /**
@@ -55,8 +56,9 @@ export async function startPublicCheckout(input: {
     return { error: "Ese horario ya no es válido. Elige otro." }
   }
 
-  // Localizamos el hueco elegido en la agenda combinada y su médico.
-  const slots = await getPooledSlots({ from: new Date(), to: new Date(Date.now() + 30 * 864e5) })
+  // Localizamos el hueco elegido en la agenda del dominio actual y su médico.
+  const domain = await getRequestDomain()
+  const slots = await getPooledSlots({ from: new Date(), to: new Date(Date.now() + 30 * 864e5) }, domain ?? undefined)
   const slot = slots.find((s) => s.startUtc === start.toISOString())
   if (!slot) return { error: "Ese horario ya no está disponible. Elige otro." }
 
