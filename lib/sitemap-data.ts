@@ -1,5 +1,5 @@
 import { posts, SITE_URL } from "@/lib/blog";
-import { articles, authors, PILLAR } from "@/lib/articles";
+import { PILLAR } from "@/lib/articles";
 import { MUNICIPIO_SLUG_PREFIX } from "@/lib/blog-municipios";
 
 /* ───────────────────────────────────────────────────────────
@@ -55,22 +55,6 @@ function staticUrls(now: Date): SitemapUrl[] {
   ];
 }
 
-function articleUrls(now: Date): SitemapUrl[] {
-  const editorial: SitemapUrl[] = articles.map((a) => ({
-    url: `${SITE_URL}/${a.slug}`,
-    lastModified: new Date(a.dateModified),
-    changeFrequency: "monthly",
-    priority: 0.85,
-  }));
-  const authorPages: SitemapUrl[] = authors.map((a) => ({
-    url: `${SITE_URL}/autores/${a.slug}`,
-    lastModified: now,
-    changeFrequency: "yearly",
-    priority: 0.5,
-  }));
-  return [...editorial, ...authorPages];
-}
-
 function toUrl(p: { slug: string; updated: string }): SitemapUrl {
   return {
     url: `${SITE_URL}/blog/${p.slug}`,
@@ -85,7 +69,6 @@ export function getSitemapSegments(): SitemapSegment[] {
   const now = new Date();
   const segments: SitemapSegment[] = [
     { name: "paginas", urls: staticUrls(now) },
-    { name: "articulos", urls: articleUrls(now) },
   ];
 
   // Ogni cluster grande va nel proprio segmento per monitorarlo
