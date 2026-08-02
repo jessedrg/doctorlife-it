@@ -16,6 +16,7 @@ const LOADERS: Record<string, () => Promise<Record<string, unknown>>> = {
     pages: (await import("../messages/it/pages.json")).default,
     seo: (await import("../messages/it/seo.json")).default,
     glp1Info: (await import("../messages/it/glp1-info.json")).default,
+    calculators: (await import("../messages/it/calculators.json")).default,
   }),
   de: async () => ({
     ui: (await import("../messages/de/ui.json")).default,

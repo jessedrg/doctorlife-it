@@ -4,8 +4,7 @@ import { usePathname } from "next/navigation";
 import { WhatsAppBubble } from "./whatsapp-bubble";
 
 const PRIVATE_PREFIXES = ["/clinica", "/admin", "/portal", "/sign-in", "/sign-up"];
-// Funnels de Ads con su propia barra CTA fija: ocultamos la burbuja para no solapar.
-const HIDDEN_PATHS = ["/consulta-medica-online", "/valoracion-medica", "/valoracion-medica-2"];
+const HIDDEN_PATHS: string[] = [];
 
 export function PublicWhatsAppBubble() {
   const pathname = usePathname() ?? "/";

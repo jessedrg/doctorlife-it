@@ -1,14 +1,15 @@
 "use client";
 
 import { useState, useCallback } from "react";
+import { useTranslations } from "next-intl";
 import { QuizTrigger } from "@/components/quiz-trigger";
 
 /* ── BMI category definitions ── */
-const SEGMENTS = [
-  { id: "bajo",      label: "Bajo peso",    range: "< 18.5",      max: 18.5, color: "#5fb3a3" },
-  { id: "normal",    label: "Normopeso",    range: "18.5 – 24.9", max: 25,   color: "#cdd9a0" },
-  { id: "sobre",     label: "Sobrepeso",    range: "25 – 29.9",   max: 30,   color: "#e3b582" },
-  { id: "obesidad",  label: "Obesidad",     range: "> 30",        max: 999,  color: "#c98a4f" },
+const SEGMENT_META = [
+  { id: "bajo",      range: "< 18.5",      max: 18.5, color: "#5fb3a3" },
+  { id: "normal",    range: "18.5 – 24.9", max: 25,   color: "#cdd9a0" },
+  { id: "sobre",     range: "25 – 29.9",   max: 30,   color: "#e3b582" },
+  { id: "obesidad",  range: "> 30",        max: 999,  color: "#c98a4f" },
 ] as const;
 
 /* ── Geometry helpers ── */
@@ -56,14 +57,14 @@ function bmiToArcAngle(bmi: number) {
   return 180 - t * 180;
 }
 
-type SegmentType = (typeof SEGMENTS)[number];
+type SegmentType = (typeof SEGMENT_META)[number];
 
 function getCategory(bmi: number): SegmentType {
-  return (SEGMENTS.find((s) => bmi < s.max) ?? SEGMENTS[SEGMENTS.length - 1]) as SegmentType;
+  return (SEGMENT_META.find((s) => bmi < s.max) ?? SEGMENT_META[SEGMENT_META.length - 1]) as SegmentType;
 }
 
 /* ── Gauge SVG ── */
-function Gauge({ bmi }: { bmi: number | null }) {
+function Gauge({ bmi, yourBmiLabel }: { bmi: number | null; yourBmiLabel: string }) {
   const category = bmi !== null ? getCategory(bmi) : null;
   const needleAngle = bmi !== null ? bmiToAngle(bmi) : 180;
 
@@ -88,7 +89,7 @@ function Gauge({ bmi }: { bmi: number | null }) {
       />
 
       {/* Colored arc segments */}
-      {SEGMENTS.map((seg, i) => {
+      {SEGMENT_META.map((seg, i) => {
         const startA = bmiToArcAngle(bounds[i]);
         const endA   = bmiToArcAngle(bounds[i + 1]);
         const GAP = 1.5;
@@ -160,7 +161,7 @@ function Gauge({ bmi }: { bmi: number | null }) {
         fontFamily="system-ui, sans-serif"
         letterSpacing="0.12em"
       >
-        TU IMC
+        {yourBmiLabel}
       </text>
       <text
         x={CX} y={CY + 68}
@@ -179,6 +180,8 @@ function Gauge({ bmi }: { bmi: number | null }) {
 
 /* ── Main component ── */
 export function BmiHero() {
+  const t = useTranslations("calculators.bmi");
+  const SEGMENTS = SEGMENT_META.map((s) => ({ ...s, label: t(`hero.categories.${s.id}.label`) }));
   const [heightCm, setHeightCm] = useState("");
   const [weightKg, setWeightKg] = useState("");
   const [bmi, setBmi]           = useState<number | null>(null);
@@ -190,7 +193,7 @@ export function BmiHero() {
     const w = parseFloat(weightKg);
     const h = parseFloat(heightCm);
     if (!w || !h || w <= 0 || h <= 0) {
-      setError("Introduce tu altura y peso para calcular.");
+      setError(t("hero.errorMessage"));
       return;
     }
     let val: number;
@@ -203,7 +206,8 @@ export function BmiHero() {
     setBmi(Math.round(val * 10) / 10);
   }, [heightCm, weightKg, unit]);
 
-  const category = bmi !== null ? getCategory(bmi) : null;
+  const rawCategory = bmi !== null ? getCategory(bmi) : null;
+  const category = rawCategory ? { ...rawCategory, label: t(`hero.categories.${rawCategory.id}.label`) } : null;
 
   const reset = () => {
     setHeightCm(""); setWeightKg(""); setBmi(null); setError("");
@@ -227,16 +231,15 @@ export function BmiHero() {
         {/* ── LEFT: form ── */}
         <div>
           <span className="mb-5 inline-block rounded-full border border-sage/30 bg-sage/10 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[.15em] text-sage">
-            Herramienta gratuita
+            {t("hero.badge")}
           </span>
 
           <h1 className="text-balance text-[44px] font-bold leading-[1.05] text-paper md:text-5xl lg:text-[52px]">
-            Calculadora<br className="hidden sm:block" /> de IMC
+            {t("hero.titleLine1")}
           </h1>
 
           <p className="mt-5 max-w-[460px] text-[16.5px] leading-relaxed text-paper/60">
-            El Índice de Masa Corporal usa tu altura y peso para estimar si tu
-            peso está en un rango saludable. Calcula el tuyo en segundos.
+            {t("hero.subtitle")}
           </p>
 
           {/* Unit toggle */}
@@ -252,7 +255,7 @@ export function BmiHero() {
                     : "text-paper/50 hover:text-paper/80"
                 }`}
               >
-                {u === "metric" ? "cm / kg" : "in / lb"}
+                {u === "metric" ? t("hero.unitMetric") : t("hero.unitImperial")}
               </button>
             ))}
           </div>
@@ -261,7 +264,7 @@ export function BmiHero() {
             {/* Height */}
             <div className="flex flex-col gap-2">
               <label htmlFor="height" className="text-[12px] font-semibold uppercase tracking-[.12em] text-paper/45">
-                Altura ({unit === "metric" ? "cm" : "pulgadas"})
+                {t("hero.heightLabel")} ({unit === "metric" ? t("hero.heightUnitCm") : t("hero.heightUnitIn")})
               </label>
               <input
                 id="height"
@@ -278,7 +281,7 @@ export function BmiHero() {
             {/* Weight */}
             <div className="flex flex-col gap-2">
               <label htmlFor="weight" className="text-[12px] font-semibold uppercase tracking-[.12em] text-paper/45">
-                Peso ({unit === "metric" ? "kg" : "libras"})
+                {t("hero.weightLabel")} ({unit === "metric" ? t("hero.weightUnitKg") : t("hero.weightUnitLb")})
               </label>
               <input
                 id="weight"
@@ -302,7 +305,7 @@ export function BmiHero() {
             onClick={calculate}
             className="mt-7 w-full rounded-[16px] bg-sage py-[15px] text-[15.5px] font-semibold text-ink transition-all hover:brightness-[1.06] active:scale-[.985]"
           >
-            Calcular mi IMC
+            {t("hero.calculateButton")}
           </button>
 
           {/* Inline result message */}
@@ -312,17 +315,14 @@ export function BmiHero() {
               style={{ backgroundColor: `${category.color}28`, border: `1px solid ${category.color}55` }}
             >
               <p className="font-semibold" style={{ color: category.color }}>
-                {category.label} — IMC {bmi}
+                {category.label} — BMI {bmi}
               </p>
               <p className="mt-1.5 text-paper/70">
-                {category.id === "bajo"     && "Tu IMC indica bajo peso. Consulta con un profesional de la salud."}
-                {category.id === "normal"   && "Tu peso está en el rango saludable. ¡Sigue con tus buenos hábitos!"}
-                {category.id === "sobre"    && "Tu IMC indica sobrepeso. Un médico puede ayudarte con un plan personalizado."}
-                {category.id === "obesidad" && "Tu IMC indica obesidad. Un especialista puede valorar el tratamiento más adecuado para ti."}
+                {t(`hero.categories.${category.id}.resultText`)}
               </p>
               {(category.id === "sobre" || category.id === "obesidad") && (
                 <QuizTrigger className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-sage py-3 text-[14px] font-semibold text-ink">
-                  Hablar con un médico — primera visita gratis
+                  {t("hero.ctaButton")}
                 </QuizTrigger>
               )}
             </div>
@@ -333,7 +333,7 @@ export function BmiHero() {
         <div className="flex justify-center lg:justify-end">
           <div className="w-full max-w-[380px] rounded-[28px] bg-espresso/80 px-7 pb-8 pt-7 shadow-2xl ring-1 ring-paper/8 backdrop-blur-sm">
 
-            <Gauge bmi={bmi} />
+            <Gauge bmi={bmi} yourBmiLabel={t("hero.yourBmi")} />
 
             {/* Category badge */}
             <div className="mt-1 flex justify-center">
@@ -345,7 +345,7 @@ export function BmiHero() {
                   border: `1px solid ${category ? category.color + "44" : "rgba(246,240,230,0.1)"}`,
                 }}
               >
-                {category?.label ?? "Introduce tus datos"}
+                {category?.label ?? t("hero.enterYourData")}
               </span>
             </div>
 
@@ -372,7 +372,7 @@ export function BmiHero() {
 
       {/* Disclaimer */}
       <p className="relative mx-auto max-w-4xl px-6 pb-10 text-center text-[11.5px] leading-relaxed text-paper/28 lg:px-16">
-        El IMC no mide directamente la composición corporal y puede no reflejar con precisión la salud de personas con alta masa muscular, mujeres embarazadas, menores o adultos mayores. Consulta siempre con un profesional médico.
+        {t("hero.disclaimer")}
       </p>
     </section>
   );

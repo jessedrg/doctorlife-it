@@ -1,0 +1,222 @@
+{
+  "bmi": {
+    "meta": {
+      "title": "Calcolatore IMC gratis",
+      "description": "Calcola il tuo Indice di Massa Corporea in pochi secondi. Scopri se il tuo peso è sano e ottieni raccomandazioni mediche personalizzate di DoctorLife."
+    },
+    "breadcrumb": { "home": "Home", "tools": "Strumenti", "current": "Calcolatore IMC" },
+    "hero": {
+      "badge": "Strumento gratuito",
+      "titleLine1": "Calcolatore IMC",
+      "subtitle": "L'Indice di Massa Corporea usa la tua altezza e il tuo peso per stimare se il tuo peso è in un intervallo sano. Calcola il tuo in pochi secondi.",
+      "unitMetric": "cm / kg",
+      "unitImperial": "in / lb",
+      "heightLabel": "Altezza",
+      "heightUnitCm": "cm",
+      "heightUnitIn": "pollici",
+      "weightLabel": "Peso",
+      "weightUnitKg": "kg",
+      "weightUnitLb": "libbre",
+      "calculateButton": "Calcola il mio IMC",
+      "errorMessage": "Inserisci la tua altezza e il tuo peso per calcolare.",
+      "yourBmi": "IL TUO IMC",
+      "enterYourData": "Inserisci i tuoi dati",
+      "categories": {
+        "bajo": { "label": "Sottopeso", "resultText": "Il tuo IMC indica sottopeso. Consulta un professionista sanitario per escludere cause sottostanti." },
+        "normal": { "label": "Normopeso", "resultText": "Il tuo peso è nell'intervallo sano per la tua altezza. Continua con le tue buone abitudini alimentari e di attività fisica!" },
+        "sobre": { "label": "Sovrappeso", "resultText": "Il tuo IMC indica sovrappeso. Un medico può aiutarti con un piano personalizzato." },
+        "obesidad": { "label": "Obesità", "resultText": "Il tuo IMC indica obesità. Uno specialista può valutare il trattamento medico più adatto per te." }
+      },
+      "ctaButton": "Parla con un medico — 1ª visita gratis",
+      "disclaimer": "L'IMC non misura direttamente la composizione corporea e può risultare impreciso per persone con alta massa muscolare, donne incinte, minori o anziani. Consulta sempre un medico."
+    },
+    "overview": {
+      "title": "Panoramica",
+      "subtitle": "L'IMC è un indicatore pratico, ma conta ciò che fai con esso. Ecco come si interpreta ogni categoria e qual è il prossimo passo consigliato.",
+      "cards": [
+        { "bmi": "< 18,5", "label": "Sottopeso", "color": "#5fb3a3", "text": "Il tuo IMC è sotto l'intervallo sano. Consulta un professionista sanitario per escludere cause sottostanti e ricevere consigli." },
+        { "bmi": "18,5 – 24,9", "label": "Normopeso", "color": "#cdd9a0", "text": "Il tuo peso è nell'intervallo sano per la tua altezza. Continua con le tue abitudini alimentari equilibrate e attività fisica regolare." },
+        { "bmi": "25 – 29,9", "label": "Sovrappeso", "color": "#e3b582", "text": "Il tuo IMC indica sovrappeso. Un piccolo cambiamento nelle abitudini o un piano medico supervisionato può fare una grande differenza." },
+        { "bmi": "> 30", "label": "Obesità", "color": "#c98a4f", "text": "Il tuo IMC indica obesità. Uno specialista può valutare se un trattamento farmacologico supervisionato (come semaglutide o tirzepatide) è adatto a te." }
+      ],
+      "formulaTitle": "Come si calcola l'IMC?",
+      "formulaDesc": "La formula è molto semplice: dividi il tuo peso in chili per il quadrato della tua altezza in metri.",
+      "formulaLabel": "Formula",
+      "formulaText": "IMC = peso (kg) ÷ altezza² (m)",
+      "formulaExample": "Es.: 75 kg ÷ (1,70 × 1,70) =",
+      "formulaResult": "25,95",
+      "formulaNote": "Tieni presente che l'IMC non distingue tra massa muscolare e massa grassa e può sottostimare o sovrastimare il rischio in persone con alta muscolatura, donne incinte, anziani o minori. Usalo sempre come punto di partenza, non come diagnosi definitiva."
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "items": [
+        { "q": "Cosa significa l'IMC?", "a": "L'Indice di Massa Corporea (IMC) è una misura che mette in relazione il tuo peso e la tua altezza. Si calcola dividendo il peso in chilogrammi per il quadrato dell'altezza in metri. È uno strumento di screening utile, anche se non misura direttamente il grasso corporeo." },
+        { "q": "A cosa serve conoscere il mio IMC?", "a": "L'IMC è un indicatore orientativo di se il tuo peso potrebbe rappresentare un rischio per la tua salute. Se è fuori dall'intervallo sano, può essere un punto di partenza per parlare con un medico di possibili miglioramenti." },
+        { "q": "L'IMC è sufficiente per valutare la mia salute?", "a": "No. L'IMC è solo una stima. Non distingue tra massa muscolare e grasso, né tiene conto della distribuzione del grasso corporeo, dell'età, del sesso o della composizione corporea. Un professionista sanitario può eseguire una valutazione più completa." },
+        { "q": "Cosa faccio se il mio IMC indica sovrappeso o obesità?", "a": "Il primo passo è una valutazione medica. In DoctorLife puoi ottenerla gratis per sapere se un piano di perdita di peso con supervisione medica — inclusi trattamenti GLP‑1 come semaglutide o tirzepatide — è adatto al tuo caso." },
+        { "q": "Come si calcola l'IMC?", "a": "La formula è: IMC = peso (kg) ÷ altezza² (m). Ad esempio, se sei alto 1,70 m e pesi 75 kg: IMC = 75 ÷ (1,70 × 1,70) = 25,95." }
+      ]
+    },
+    "cta": {
+      "badge": "Prima visita gratis",
+      "title": "Pronto/a per iniziare?",
+      "subtitle": "Prenota la tua prima visita gratuita e inizia con un piano pensato per te.",
+      "ctaButton": "Prenota la prima visita",
+      "viewPlans": "Vedi i piani"
+    }
+  },
+  "tdee": {
+    "meta": {
+      "title": "Calcolatore TDEE gratis (dispendio calorico)",
+      "description": "Calcola il tuo dispendio energetico totale giornaliero (TDEE): quante calorie bruci al giorno in base alla tua attività. Stima personalizzata di DoctorLife."
+    },
+    "breadcrumb": { "home": "Home", "tools": "Strumenti", "current": "Calcolatore TDEE" },
+    "activity": {
+      "sedentary": { "label": "Sedentario", "desc": "Nessun esercizio o molto poco" },
+      "light": { "label": "Leggero", "desc": "Esercizio 1–3 giorni/settimana" },
+      "moderate": { "label": "Moderato", "desc": "Esercizio 3–5 giorni/settimana" },
+      "active": { "label": "Attivo", "desc": "Esercizio 6–7 giorni/settimana" },
+      "very_active": { "label": "Molto attivo", "desc": "Lavoro fisico intenso + esercizio" }
+    },
+    "hero": {
+      "badge": "Strumento gratuito",
+      "titleLine1": "Calcolatore TDEE",
+      "subtitle": "Il tuo Dispendio Energetico Totale Giornaliero (TDEE) è una stima delle calorie che bruci al giorno. Usalo per sapere quanto dovresti mangiare per perdere, mantenere o aumentare di peso.",
+      "unitMetric": "kg / cm",
+      "unitImperial": "lb / in",
+      "sexLabel": "Sesso biologico",
+      "male": "Uomo",
+      "female": "Donna",
+      "ageLabel": "Età (anni)",
+      "weightLabel": "Peso",
+      "heightLabel": "Altezza",
+      "heightUnitCm": "cm",
+      "heightUnitIn": "pollici",
+      "activityLabel": "Livello di attività",
+      "bodyFatLabel": "% di grasso corporeo",
+      "bodyFatOptional": "opzionale — migliora la precisione",
+      "bodyFatNote": "Se inserisci la tua % di grasso corporeo, usiamo la formula Katch-McArdle (più precisa per sportivi o persone con molta o poca massa muscolare).",
+      "errorMessage": "Inserisci età, peso e altezza validi per calcolare.",
+      "calculateButton": "Calcola il mio TDEE",
+      "yourTdee": "Il tuo TDEE",
+      "toMaintain": "Per mantenere il tuo peso attuale",
+      "kcalDay": "kcal/giorno",
+      "calorieAdjustment": "Regolazione calorica",
+      "perWeek05kg": "0,5 kg/sett",
+      "perWeek1lb": "1 lb/sett",
+      "loseKgPerWeek": "Perdere {amount} a settimana",
+      "tdeeComposition": "Composizione del tuo TDEE",
+      "bmr": "MB",
+      "activity_": "Attività",
+      "digestion": "Digestione",
+      "fillFormToSee": "Compila il modulo per vedere il tuo obiettivo calorico.",
+      "ctaButton": "Ottieni un piano medico personalizzato"
+    },
+    "disclaimer": "Il TDEE è una stima. Il dispendio reale varia in base alla composizione corporea, al metabolismo individuale e allo stato di salute. Consulta sempre un professionista medico prima di apportare cambiamenti dietetici significativi."
+  },
+  "deficit": {
+    "meta": {
+      "title": "Calcolatore deficit calorico gratis",
+      "description": "Scopri quante calorie mangiare per perdere peso a un ritmo sano e sostenibile. Stima personalizzata di DoctorLife."
+    },
+    "breadcrumb": { "home": "Home", "tools": "Strumenti", "current": "Calcolatore deficit calorico" },
+    "activity": [
+      { "label": "Sedentario (poco o nessun esercizio)", "value": 1.2 },
+      { "label": "Leggero (1-3 giorni/settimana)", "value": 1.375 },
+      { "label": "Moderato (3-5 giorni/settimana)", "value": 1.55 },
+      { "label": "Attivo (6-7 giorni/settimana)", "value": 1.725 },
+      { "label": "Molto attivo (lavoro fisico + esercizio)", "value": 1.9 }
+    ],
+    "rates": [
+      { "label": "0,25 kg/settimana (~275 kcal/giorno)", "deficit": 275 },
+      { "label": "0,5 kg/settimana (~550 kcal/giorno)", "deficit": 550 },
+      { "label": "0,75 kg/settimana (~825 kcal/giorno)", "deficit": 825 },
+      { "label": "1 kg/settimana (~1100 kcal/giorno)", "deficit": 1100 }
+    ],
+    "hero": {
+      "titleLine1": "Calcolatore deficit calorico",
+      "subtitle": "Calcola quante calorie devi consumare al giorno per raggiungere il tuo peso obiettivo. Ottieni una stima personalizzata del deficit calorico in base ai tuoi dati e al ritmo di perdita desiderato.",
+      "unitMetric": "Metrico",
+      "unitImperial": "Imperiale",
+      "sexLabel": "Sesso biologico",
+      "male": "Uomo",
+      "female": "Donna",
+      "ageLabel": "Età",
+      "agePlaceholder": "Anni",
+      "weightLabel": "Peso",
+      "heightLabel": "Altezza",
+      "heightPlaceholderFt": "piedi",
+      "heightPlaceholderIn": "pollici",
+      "activityLabel": "Livello di attività",
+      "goalWeightLabel": "Peso obiettivo",
+      "rateLabel": "Ritmo di perdita di peso",
+      "bodyFatLabel": "% grasso corporeo",
+      "bodyFatOptional": "(opzionale)",
+      "bodyFatPlaceholder": "Percentuale",
+      "calculateButton": "Calcola",
+      "yourResult": "Il tuo risultato",
+      "toMaintain": "Per mantenere il peso attuale",
+      "kcalDay": "kcal/giorno",
+      "toLose": "Per perdere",
+      "doubleRate": "×2/settimana",
+      "yourGoal": "Il tuo obiettivo",
+      "reach": "Raggiungere {goal}",
+      "weeks": "settimane",
+      "enterGoalToSee": "Inserisci il tuo peso obiettivo per vedere il tempo stimato.",
+      "ctaText": "Vuoi un piano di dimagrimento supervisionato da medici? Inizia con una valutazione gratuita.",
+      "ctaButton": "Inizia valutazione gratuita"
+    }
+  },
+  "protein": {
+    "meta": {
+      "title": "Calcolatore gratis proteine giornaliere",
+      "description": "Calcola quante proteine ti servono ogni giorno in base al tuo peso, obiettivo e livello di attività. Stima personalizzata di DoctorLife."
+    },
+    "breadcrumb": { "home": "Home", "tools": "Strumenti", "current": "Calcolatore proteine" },
+    "activity": {
+      "sedentario": "Sedentario (nessun esercizio)",
+      "ligero": "Leggero (1–2 giorni/settimana)",
+      "moderado": "Moderato (3–5 giorni/settimana)",
+      "activo": "Attivo (6–7 giorni/settimana)",
+      "muy-activo": "Molto attivo (2× al giorno)"
+    },
+    "goal": {
+      "perder": "Perdere peso",
+      "mantener": "Mantenere il peso",
+      "ganar": "Aumentare massa muscolare",
+      "rendimiento": "Prestazione sportiva"
+    },
+    "hero": {
+      "unitMetric": "Metrico (kg/cm)",
+      "unitImperial": "Imperiale (lb/in)",
+      "titleLine1": "Calcolatore proteine giornaliere",
+      "subtitle": "Calcola quante proteine ti servono ogni giorno in base al tuo peso, obiettivo e livello di attività. Ottieni un intervallo personalizzato basato sull'evidenza scientifica.",
+      "sexLabel": "Sesso biologico",
+      "male": "Uomo",
+      "female": "Donna",
+      "ageLabel": "Età",
+      "agePlaceholder": "Anni",
+      "weightLabel": "Peso",
+      "heightLabel": "Altezza",
+      "heightPlaceholderFt": "Piedi",
+      "heightPlaceholderIn": "Pollici",
+      "activityLabel": "Livello di attività",
+      "goalLabel": "Obiettivo",
+      "bodyFatLabel": "% grasso corporeo",
+      "bodyFatOptional": "(opzionale — migliora la precisione)",
+      "calculateButton": "Calcola proteine",
+      "yourProtein": "Le tue proteine giornaliere",
+      "gDay": "g/giorno",
+      "recommendedRange": "Intervallo raccomandato:",
+      "calculatedOnLeanMass": "Calcolato sulla massa magra:",
+      "meals": "pasti",
+      "fillFormToSee": "Compila il modulo e premi calcola",
+      "referenceMin": { "label": "Raccomandazione minima", "mult": "0,8 g/kg", "desc": "Requisito base OMS" },
+      "referenceLose": { "label": "Per perdere peso", "mult": "1,6–2,0 g/kg", "desc": "Preserva la massa muscolare" },
+      "referenceGain": { "label": "Per aumentare massa muscolare", "mult": "1,8–2,5 g/kg", "desc": "Massima sintesi proteica" },
+      "referenceElite": { "label": "Atleti d'élite", "mult": "2,2–3,1 g/kg", "desc": "Alto volume di allenamento" },
+      "ctaText": "Vuoi un piano personalizzato di nutrizione e peso con supervisione medica?",
+      "ctaButton": "Parla con un medico"
+    }
+  }
+}
