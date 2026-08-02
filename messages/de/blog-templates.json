@@ -1,0 +1,429 @@
+{
+  "priceNote": "Bei DoctorLife ist dein erster Arzttermin kostenlos, ohne Verpflichtung. Das gesamte Follow-up läuft über unsere interne App.",
+  "serviceCta": "Bei DoctorLife bewertet ein approbierter Arzt deinen Fall per Videosprechstunde und verschreibt, falls die Behandlung geeignet ist, ein E-Rezept mit Follow-up über die App. Der erste Termin ist kostenlos.",
+  "illegalNote": "Jede Website, App oder Privatperson, die diese Medikamente in Deutschland 'ohne Rezept' anbietet, handelt illegal und gefährdet deine Gesundheit. Das Rezept erfordert immer eine vorherige ärztliche Bewertung.",
+
+  "weightIntros": [
+    [
+      "{Drug} ({inn}) wird in Apotheken in {City} nur auf Rezept ausgegeben. Es ist ein GLP‑1-Analogon zur Gewichtskontrolle: Es erfordert die vorherige Bewertung durch einen approbierten Arzt, und es ist weder legal noch sicher, es online 'ohne Rezept' zu kaufen.",
+      "Der schnellste Weg in {City} ist die Online-Arztberatung von {BRAND}: Ein Arzt bewertet deinen Fall, stellt bei Bedarf das E-Rezept aus, und du holst {Drug} in deiner Stammapotheke ab — ohne Anfahrt und ohne Wartelisten."
+    ],
+    [
+      "Möchtest du {Drug} in {City} kaufen? Das Wichtigste zuerst: {Drug} ({inn}) erfordert in ganz Deutschland ein ärztliches Rezept. Jede Website, die es dir ohne ärztliche Bewertung anbietet, handelt illegal und gefährdet deine Gesundheit.",
+      "Mit {BRAND} ist der Prozess einfach und vollständig legal: Du machst die Online-Beratung von {City} aus, ein approbierter Arzt prüft deine Krankengeschichte und, falls {Drug} für dich geeignet ist, erhältst du das Rezept zur Abholung in der Apotheke."
+    ],
+    [
+      "In {City} greifen immer mehr Menschen zu {Drug} ({inn}), um nachhaltig Gewicht zu verlieren. Es ist eine verschreibungspflichtige Behandlung, die auf Appetit und Sättigung wirkt und immer unter ärztlicher Aufsicht begonnen und angepasst werden muss.",
+      "Du musst nicht persönlich in eine Klinik gehen: Mit der Online-Beratung von {BRAND} erhältst du ärztliche Bewertung, E-Rezept (falls geeignet) und echtes Follow-up — du musst {Drug} nur in einer Apotheke in {City} abholen."
+    ]
+  ],
+  "diabIntros": [
+    [
+      "{Drug} ({inn}) wird in Apotheken in {City} auf Rezept verkauft. Es ist für Typ-2-Diabetes zugelassen, nicht zum Abnehmen: Es braucht eine ärztliche Bewertung, die die für deinen Fall am besten geeignete Behandlung bestätigt.",
+      "Wenn dein Ziel Gewichtsverlust ist, kann der Arzt in {City} Wegovy (Semaglutid zur Gewichtsreduktion) oder Mounjaro (Tirzepatid) prüfen, anstatt {Drug} off-label zu verwenden."
+    ]
+  ],
+
+  "steps": [
+    [
+      "Buche deinen ersten kostenlosen Arzttermin online.",
+      "Fülle deine Krankengeschichte und deine Ziele über die App aus, ohne {City} zu verlassen.",
+      "Ein approbierter Arzt bewertet, ob {Drug} für dich geeignet und sicher ist.",
+      "Falls geeignet, erhältst du das E-Rezept und einen individuellen Dosierungsplan.",
+      "Du holst {Drug} in deiner Apotheke in {City} ab und erledigst das gesamte Follow-up über die App."
+    ],
+    [
+      "Mach die kostenlose Online-Beratung von überall in {City} aus.",
+      "Beantworte einen medizinischen Fragebogen zu deiner Gesundheit, deinem Gewicht und deinen Zielen.",
+      "Der Arzt prüft deinen Fall und entscheidet, ob {Drug} zu dir passt.",
+      "Du erhältst das Rezept und den Startplan, falls die Behandlung geeignet ist.",
+      "Du holst {Drug} in einer Apotheke in {City} ab, und wir begleiten dich bei jeder Dosisanpassung."
+    ]
+  ],
+
+  "mechWeight": [
+    "{Drug} enthält {inn}, ein GLP‑1-Analogon, das ein Darmhormon nachahmt, das der Körper natürlich beim Essen freisetzt. Es wirkt auf die Appetitzentren im Gehirn und verzögert die Magenentleerung, sodass du dich früher und länger satt fühlst. Das Ergebnis: Du isst weniger, ohne das ständige Hungergefühl, das die meisten Diäten scheitern lässt.",
+    "Der Wirkstoff von {Drug} ({inn}) gehört zur Familie der GLP‑1-Rezeptoragonisten. Er reduziert Hungersignale, verbessert die Blutzuckerkontrolle nach dem Essen und verzögert die Verdauung. Deshalb hilft er, verabreicht mit {frequency} und mit gut angepasster Dosis, die Kalorienaufnahme in {City} auf natürliche und nachhaltige Weise zu reduzieren."
+  ],
+  "mechDiab": [
+    "{Drug} ({inn}) ist ein GLP‑1-Analogon zur Behandlung von Typ-2-Diabetes. Es stimuliert die Insulinausschüttung bei hohem Blutzucker, bremst die Glukoseproduktion in der Leber und verzögert die Magenentleerung. Als häufige Nebenwirkung reduziert es den Appetit, weshalb viele es mit Gewichtsverlust in Verbindung bringen."
+  ],
+
+  "sideIntro": [
+    "Wie jedes GLP‑1-Analogon kann {Drug} Nebenwirkungen verursachen, vor allem im Verdauungstrakt, zu Beginn der Behandlung und nach jeder Dosiserhöhung. Die meisten sind leicht und verschwinden mit der Gewöhnung des Körpers; eine schrittweise Dosiserhöhung hilft, sie zu minimieren."
+  ],
+  "sideList": [
+    "Übelkeit, besonders in den ersten Wochen und nach jeder Dosiserhöhung.",
+    "Langsamere Verdauung, Völlegefühl oder Blähungen.",
+    "Vorübergehende Verstopfung oder Durchfall.",
+    "Episoden von Sodbrennen, Aufstoßen oder Reflux.",
+    "Müdigkeit oder leichte Kopfschmerzen in den ersten Tagen."
+  ],
+  "sideOutro": [
+    "Um diese zu reduzieren, empfiehlt es sich, langsam und in kleinen Portionen zu essen, sehr fettige oder üppige Mahlzeiten zu vermeiden und ausreichend zu trinken. Wenn ein Symptom stark oder anhaltend ist, passt der Arzt von {BRAND} den Plan oder die Dosis über die App an, ohne dass du dich in {City} bewegen musst."
+  ],
+
+  "contraP": [
+    "{Drug} ist nicht für jeden geeignet. Deshalb ist die vorherige ärztliche Bewertung unerlässlich: Der Arzt prüft deine Krankengeschichte, deine Erkrankungen und deine üblichen Medikamente, bevor er entscheidet, ob und mit welcher Dosis du beginnen kannst."
+  ],
+  "contraList": [
+    "Persönliche oder familiäre Vorgeschichte von medullärem Schilddrüsenkarzinom oder MEN2-Syndrom.",
+    "Frühere Pankreatitis oder schwere Gallenblasenerkrankung.",
+    "Schwangerschaft, Kinderwunsch oder Stillzeit.",
+    "Vorgeschichte aktiver Essstörungen.",
+    "Schwere Nieren- oder Leberinsuffizienz, die nicht ärztlich bewertet wurde."
+  ],
+
+  "storageList": [
+    "Bewahre die {Drug}-Pens im Kühlschrank auf (zwischen 2 und 8 °C) und friere sie niemals ein.",
+    "Einmal in Gebrauch, können viele Pens für eine begrenzte Anzahl von Tagen bei Raumtemperatur aufbewahrt werden; lies immer die Packungsbeilage.",
+    "Verabreiche {Drug} mit {frequency}, in Bauch, Oberschenkel oder Arm, mit wechselnder Injektionsstelle.",
+    "Verwende Nadeln nicht wiederholt und entsorge gebrauchtes Material in einem geeigneten Behälter.",
+    "Wenn du eine Dosis vergisst, verdopple sie nicht: Folge den Anweisungen der Packungsbeilage oder wende dich an deinen Arzt bei {BRAND}."
+  ],
+
+  "resultsWeight": [
+    "In klinischen Studien zeigten Behandlungen mit {inn} über mehrere Monate signifikante und anhaltende durchschnittliche Gewichtsverluste, wenn sie mit Verhaltensänderungen kombiniert wurden. Erste Effekte auf den Appetit zeigen sich meist innerhalb weniger Wochen, aber der Gewichtsverlust ist progressiv: Kontinuität und Dosisanpassung sind der Schlüssel."
+  ],
+
+  "localBuy": [
+    "In {City}, wie im Rest Deutschlands, wird {Drug} nicht in Drogerien oder auf Websites ohne Rezept verkauft: nur in Apotheken und mit ärztlicher Verordnung. Der Vorteil von {BRAND} ist, Wartelisten für Endokrinologie zu vermeiden und alles — Bewertung, Rezept und Follow-up — zu erledigen, ohne {City} zu verlassen.",
+    "Viele Patient*innen in {City} stellen fest, dass {Drug} in manchen Apotheken vergriffen ist oder ein Facharzttermin Wochen dauert. Mit der Online-Beratung von {BRAND} erhältst du die ärztliche Bewertung schnell und, falls geeignet, das E-Rezept, um die Behandlung in jeder Apotheke in {City} zu finden."
+  ],
+  "compareP": [
+    "{Drug} ist nicht die einzige Option. Je nach deinem Fall kann der Arzt verschiedene GLP‑1-Analoga vergleichen und das für dein Ziel, deine Verträglichkeit und dein Budget am besten geeignete auswählen. Diese Entscheidung sollte individuell und immer ärztlich sein, niemals basierend darauf, was bei jemand anderem funktioniert hat."
+  ],
+
+  "benefitWeightTitles": [
+    "Warum {Drug} mit ärztlichem Follow-up kaufen",
+    "Welche Ergebnisse du mit {Drug} erwarten kannst"
+  ],
+  "benefitWeightP": [
+    "{Drug} zu kaufen ist nur der Anfang. Die besten Ergebnisse entstehen, wenn die Dosis schrittweise angepasst wird und mit nachhaltigen Gewohnheiten einhergeht. Deshalb verkauft {BRAND} kein isoliertes Produkt: Wir bieten eine Behandlung mit approbiertem Arzt, Dosisanpassungen und kontinuierlicher Unterstützung über die App."
+  ],
+  "benefitDiabTitles": [
+    "{Drug} und Gewichtsverlust: was du wissen musst"
+  ],
+  "benefitDiabP": [
+    "Obwohl viele Menschen {Drug} zum Abnehmen suchen, ist seine zugelassene Indikation Typ-2-Diabetes. Für die Gewichtskontrolle gibt es speziell zugelassene Optionen — Wegovy (Semaglutid) und Mounjaro (Tirzepatid) —, die der Arzt in deiner Beratung von {City} aus prüfen kann."
+  ],
+
+  "drugCityIntro": [
+    "Die Suche nach «{drug} in {City}» hat meist einen von zwei Gründen: Du möchtest die Behandlung beginnen und weißt nicht, wo du anfangen sollst, oder du bist in der Recherchephase auf einen Apothekenengpass gestoßen. In diesem Leitfaden erfährst du, wie du legal Zugang zu {Drug} in {City} erhältst und welcher Weg der schnellste und sicherste ist, um mit Rezept und Follow-up zu beginnen."
+  ],
+  "drugCityStock": [
+    "{Drug} hatte in ganz Deutschland Lieferengpässe, und {City} ist keine Ausnahme: Es ist üblich, dass eine Apotheke eine bestimmte Dosis nicht hat, eine andere aber doch. Die gute Nachricht ist, dass das E-Rezept in jeder Apotheke gültig ist, sodass du die Verfügbarkeit in mehreren Apotheken in {City} prüfen kannst, ohne das Rezept zu verlieren."
+  ],
+
+  "rxCityIntro": [
+    "Um das Rezept für {Drug} ({inn}) in {City} zu erhalten, musst du nicht wochenlang auf einen Präsenztermin warten: Die Online-Arztberatung von {BRAND} ermöglicht es einem approbierten Arzt, deinen Fall am selben Tag zu bewerten und, falls die Behandlung angezeigt ist, ein E-Rezept auszustellen, das in jeder Apotheke in {City} gültig ist."
+  ],
+  "rxCityRequirements": [
+    "Der Arzt bewertet deinen BMI, deine Krankengeschichte, deine aktuellen Medikamente und deine Ziele. {Drug} wird nicht an jeden verschrieben: Es gibt klare klinische Kriterien und Kontraindikationen (Schwangerschaft, frühere Pankreatitis, bestimmte Schilddrüsenprobleme), die der Arzt mit dir vor der Ausstellung des Rezepts prüft."
+  ],
+  "rxCityValidity": [
+    "Das online ausgestellte E-Rezept ist in jeder Apotheke in {City} und im Rest Deutschlands gültig: Es funktioniert wie das deines Hausarztes. Du musst nur deine Versichertendaten oder den Rezeptcode am Tresen vorlegen."
+  ],
+
+  "grayDangers": [
+    "Es gibt keine Garantie, dass das Produkt authentisch ist: Fälschungen von GLP‑1-Medikamenten werden immer häufiger.",
+    "Ohne Kontrolle von Dosis, Reinheit oder Lagerung: Die Kühlkette kann unterbrochen und das Produkt beschädigt sein.",
+    "Niemand bewertet deine Kontraindikationen, deine Krankengeschichte oder deine üblichen Medikamente vor der Anwendung.",
+    "Ohne ärztliches Follow-up können sich Nebenwirkungen verschlimmern, ohne dass jemand sie rechtzeitig erkennt.",
+    "Ein verschreibungspflichtiges Medikament ohne Rezept zu kaufen ist in Deutschland illegal und kann Sanktionen nach sich ziehen."
+  ],
+  "legalRedirect": [
+    "Die gute Nachricht ist, dass es zugelassene, sichere GLP‑1-Behandlungen gibt, die heute in Deutschland verfügbar sind. Ein Endokrinologe kann deinen Fall bewerten und dir bei Bedarf eine Alternative mit Rezept und echtem Follow-up verschreiben."
+  ],
+  "approvalExplain": [
+    "In Europa gelangt ein Medikament erst nach Zulassung durch die Europäische Arzneimittel-Agentur (EMA) und in Deutschland durch das Bundesinstitut für Arzneimittel und Medizinprodukte (BfArM) in die Apotheke. Dieser Prozess erfordert den Abschluss der Phase-III-Studien und den Nachweis von Wirksamkeit und Sicherheit."
+  ],
+
+  "sections": {
+    "whereToBuy": "Wo kann man {Drug} in {City} kaufen?",
+    "whatIsAndHow": "Was ist {Drug} und wie wirkt es?",
+    "priceByDose": "Preis von {Drug} in {City} nach Dosis",
+    "howToBuySteps": "Wie man {Drug} in {City} Schritt für Schritt kauft",
+    "sideEffects": "Nebenwirkungen von {Drug}",
+    "whoCanUse": "Wer kann {Drug} verwenden? Kontraindikationen",
+    "howToStore": "Wie man {Drug} lagert und verabreicht",
+    "howMuchCost": "Wie viel kostet {Drug} in {City}?",
+    "priceDepends": "Von was hängt der Preis von {Drug} ab?",
+    "howToGetRx": "Wie man {Drug} mit Rezept in {City} erhält",
+    "drugInCity": "{Drug} in {City}: wie man es erhält",
+    "availability": "Verfügbarkeit von {Drug} in Apotheken in {City}",
+    "howToStartSteps": "Wie man in {City} Schritt für Schritt mit {Drug} beginnt",
+    "localContext": "{City}: lokaler Gesundheitskontext"
+  },
+
+  "faqTemplates": {
+    "noRxWeight": "Kann man {Drug} nicht ohne Rezept in {City} kaufen?",
+    "noRxWeightA": "Nein. {Drug} erfordert ein ärztliches Rezept. Der legale Weg ist die ärztliche Beratung, das Rezept falls geeignet und die Abholung in der Apotheke. Es online 'ohne Rezept' zu kaufen ist illegal und riskant.",
+    "howMuch": "Wie viel kostet {Drug} in {City}?",
+    "howMuchA": "Der Pen liegt orientierungsweise zwischen {low} und {high} pro Monat je nach Dosis. Beratung und Follow-up werden separat bezahlt; bei DoctorLife ist der erste Termin kostenlos.",
+    "allOnline": "Kann ich alles online von {City} aus machen?",
+    "allOnlineA": "Ja. Die Beratung und das E-Rezept werden online abgewickelt; du musst {Drug} nur in deiner Apotheke in {City} abholen.",
+    "isSafe": "Ist die Einnahme von {Drug} sicher?",
+    "isSafeA": "Ja, unter ärztlicher Aufsicht und mit schrittweise angepasster Dosis. Übliche Nebenwirkungen (Übelkeit, langsame Verdauung) sind meist leicht und vorübergehend.",
+    "howStart": "Wie starte ich bei DoctorLife?",
+    "howStartA": "Buche den ersten kostenlosen Termin. Der Arzt bewertet deinen Fall und verschreibt dir, falls geeignet, {Drug} mit Follow-up über die App."
+  },
+
+  "localContext": {
+    "trait": "{City}, {trait}, hat etwa {pop} Einwohner und ist im öffentlichen Gesundheitswesen der {healthLong} ({healthShort}) zugeordnet. Das zuständige Krankenhaus der Region ist die {hospital}.",
+    "waitTimes": "Über die gesetzliche Krankenversicherung kann der Zugang zur Endokrinologie mit langen Wartezeiten verbunden sein. Die Online-Beratung von {BRAND} ermöglicht eine schnelle ärztliche Bewertung ohne Abstriche bei der klinischen Sorgfalt, egal wo du in {City} bist."
+  },
+
+  "localFaqs": {
+    "allOnline": "Kann ich alles online von {City} aus machen?",
+    "allOnlineA": "Ja. Der Termin, das E-Rezept (falls angezeigt) und das Follow-up werden online abgewickelt: Du musst das Medikament nur in einer Apotheke in {City} abholen.",
+    "doctorAvailable": "Gibt es einen verfügbaren Arzt für Patient*innen in {City}?",
+    "doctorAvailableA": "Ja, die Ärzte von {BRAND} sind approbiert und betreuen Patient*innen in ganz Deutschland, einschließlich {City}, per Videosprechstunde.",
+    "howLong": "Wie lange dauert es, einen Termin in {City} zu bekommen?",
+    "howLongA": "Mit {BRAND} kann die erste Bewertung innerhalb weniger Tage vereinbart werden, viel schneller als die öffentlichen Wartelisten für Endokrinologie."
+  },
+
+  "postMeta": {
+    "buyPost": {
+      "slug": "comprare-{drugKey}-{citySlug}",
+      "title": "{Drug} in {City} kaufen",
+      "h1": "{Drug} in {City} kaufen: Preis, Rezept und wie man beginnt",
+      "metaTitle": "{Drug} in {City} kaufen: Online-Rezept mit Arzt in 24h",
+      "metaDescription": "Erhalte {Drug} in {City} mit einer Online-Beratung: E-Rezept in 24h, ohne Wartelisten oder Anfahrt. Approbierte Ärzte und echtes Follow-up. Erste Beratung gratis!",
+      "excerpt": "Leitfaden zum Kauf von {Drug} in {City} mit ärztlichem Rezept: echter Preis pro Dosis, wie du die Verschreibung online erhältst und mit klinischem Follow-up beginnst.",
+      "coverAlt": "{Drug} mit ärztlichem Rezept für Behandlung in {City}",
+      "keyword": "{drugName} kaufen {cityName}"
+    },
+    "pricePost": {
+      "slug": "precio-{drugKey}-{citySlug}",
+      "title": "Preis von {Drug} in {City}",
+      "h1": "Preis von {Drug} in {City}: wie viel kostet es und wie erhältst du es mit Rezept",
+      "metaTitle": "{Drug} Preis in {City} 2026 | Online-Rezept mit Arzt",
+      "metaDescription": "Preis von {Drug} in {City} pro Dosis und wie du es legal erhältst: Online-Beratung und E-Rezept ohne Wartezeiten. Approbierte Ärzte und Follow-up inklusive. Erste Beratung gratis!",
+      "excerpt": "Wie viel kostet {Drug} in {City} pro Dosis, wovon der Preis abhängt und wie du es legal mit ärztlichem Rezept und echtem Follow-up erhältst.",
+      "coverAlt": "{Drug}-Pen mit Preisetikett in einer Apotheke in {City}",
+      "keyword": "preis {drugName} {cityName}",
+      "category": "Preise",
+      "priceIntro": "Der Preis von {Drug} in den Apotheken von {City} ist reguliert und liegt orientativ zwischen {low} und {high} pro Monat, je nach Dosis. Zu diesen Kosten kommen die ärztliche Beratung und das Follow-up hinzu, die für eine sichere Verschreibung notwendig sind.",
+      "priceDependsList": [
+        "Die Dosis: je höher, desto teurer ist der {Drug}-Pen.",
+        "Ob ärztliche Beratung und Follow-up nötig sind (inklusive bei DoctorLife).",
+        "Die Verfügbarkeit in deiner Apotheke in {City} und die spezifische Packung.",
+        "Ob es für Gewichtsverlust (nicht erstattet) oder für Diabetes (erstattet mit Facharztverschreibung) ist."
+      ]
+    },
+    "drugCityPost": {
+      "slug": "{drugKey}-{citySlug}",
+      "title": "{Drug} in {City}",
+      "h1": "{Drug} in {City}: wo erhältst du es, Preis und Verfügbarkeit",
+      "metaTitle": "{Drug} in {City} | Beratung und Online-Rezept ohne Wartezeiten",
+      "metaDescription": "{Drug} in {City}: erhalte es mit Rezept über eine Online-Beratung, ohne Wartelisten. Preis pro Dosis, Verfügbarkeit und echtes Follow-up. Erste Beratung gratis!",
+      "excerpt": "Alles über {Drug} in {City}: wo du es legal erhältst, orientativer Preis, Verfügbarkeit in der Apotheke und wie du mit Rezept und ärztlichem Follow-up beginnst.",
+      "coverAlt": "{Drug}-Pen verfügbar in einer Apotheke in {City}",
+      "keyword": "{drugName} {cityName}"
+    },
+    "rxCityPost": {
+      "slug": "receta-{drugKey}-online-{citySlug}",
+      "title": "{Drug}-Rezept online in {City}",
+      "h1": "{Drug}-Rezept online in {City}: Voraussetzungen, Preis und Schritte",
+      "metaTitle": "{Drug}-Rezept Online in {City} | Approbierter Arzt Heute",
+      "metaDescription": "Erhalte das {Drug}-Rezept online in {City} mit Bewertung eines approbierten Arztes, noch heute und ohne Wartelisten. E-Rezept gültig in deiner Apotheke. Erste Beratung gratis!",
+      "excerpt": "Wie du das {Drug}-Rezept online in {City} erhältst: klinische Voraussetzungen, Gültigkeit des E-Rezepts, Apothekenpreis und Schritte zum Start heute mit ärztlicher Bewertung.",
+      "coverAlt": "E-Rezept von {Drug} online ausgestellt in {City}",
+      "keyword": "{drugName} rezept online {cityName}",
+      "rxH2": "{Drug}-Rezept online in {City}: wie es funktioniert",
+      "reqH2": "Voraussetzungen für die Verschreibung von {Drug}",
+      "stepsH2": "{Drug}-Rezept in {City} Schritt für Schritt erhalten"
+    },
+    "researchPost": {
+      "slug": "cosa-e-{drugKeyLower}",
+      "title": "Was ist {Name}",
+      "h1": "Was ist {Name} und wofür ist es",
+      "metaTitle": "Was ist {Name}: wofür und ob es verfügbar ist | {BRAND}",
+      "metaDescription": "{Name}: was es ist, wie es funktioniert, was Studien sagen und warum es in Deutschland noch nicht verfügbar ist. Zugelassene Alternativen mit Rezept und ärztlichem Follow-up.",
+      "excerpt": "Alles was man über {Name} weiß: was es ist, wie es wirkt und vor allem, welche zugelassenen Alternativen du heute nutzen kannst, während es kommt.",
+      "coverAlt": "{Name}, Medikament in Forschung von {maker}",
+      "category": "In Forschung",
+      "keyword": "was ist {name}",
+      "whatIsH2": "Was ist {Name}?",
+      "whatIsP1": "{Name} ist ein Medikament in der Forschungsphase, entwickelt von {maker}. Es ist ein {klass}, das mit {route} verabreicht wird und für Gewichtsverlust und Typ-2-Diabetes untersucht wird.",
+      "whatIsP2": "Es gehört zur neuen Generation von Behandlungen auf Basis von Darmhormonen — derselben Familie wie Wegovy, Mounjaro oder Ozempic — hat aber den Zulassungsprozess noch nicht abgeschlossen und ist daher in deutschen Apotheken noch nicht verfügbar.",
+      "studiesH2": "{Name} und Gewichtsverlust: Was Studien sagen",
+      "approvalH2": "Ist {Name} in Deutschland zugelassen?",
+      "approvalP1": "Nein. Bis heute ist {Name} NICHT von der EMA oder dem BfArM zugelassen und wird in Deutschland nicht legal verkauft, weder in der Apotheke noch online. Es ist nur im Rahmen von klinischen Studien verfügbar.",
+      "approvalQuote": "Jede Website, die behauptet, {Name} in Deutschland zu verkaufen, handelt illegal: Das Produkt hat keine Garantien und kann gefährlich für deine Gesundheit sein.",
+      "altH2": "Während du auf {Name} wartest: zugelassene Alternativen",
+      "altP1": "Zum Beispiel ist {Alt} ({altInn}) eine zugelassene und mit Rezept verfügbare Option. Bei DoctorLife bewertet ein approbierter Endokrinologe deinen Fall und verschreibt, falls angemessen, die Behandlung mit Follow-up über die App.",
+      "altLinksTitle": "Heute verfügbare Alternativen",
+      "altLinks": [
+        {"label": "{AltName} online kaufen in Deutschland", "href": "/blog/{altBuy}"},
+        {"label": "{AltName} Preis in Deutschland pro Dosis", "href": "/blog/{altPrice}"},
+        {"label": "Neue GLP‑1 in Forschung", "href": "/blog/glp1-in-ricerca"}
+      ],
+      "faqs": [
+        {"q": "Ist es legal, {Name} in Deutschland zu kaufen?", "a": "Nein, da es nicht von der EMA/BfArM zugelassen ist, ist jeder Verkauf illegal und riskant."},
+        {"q": "Wann wird {Name} in Deutschland verfügbar sein?", "a": "Es hängt vom Abschluss der Phase-III-Studien und der EMA/BfArM-Zulassung ab. Es gibt kein festes Datum."},
+        {"q": "Was kann ich heute tun, wenn ich abnehmen möchte?", "a": "Ein Arzt kann {Alt} bewerten, das bereits zugelassen und mit Rezept und echtem Follow-up verfügbar ist."}
+      ]
+    },
+    "buyLinks": {
+      "title": "Weiter informieren",
+      "priceLabel": "{Drug} Preis in Deutschland pro Dosis",
+      "buyLabel": "{Drug} online kaufen in Deutschland",
+      "compareLabel": "GLP‑1-Vergleich: welches wählen",
+      "cityPriceLabel": "Preis von {Drug} in {City}",
+      "cityPriceHref": "/blog/precio-{drugKey}-{citySlug}"
+    },
+    "priceTable": {
+      "weightHead": ["Dosis", "Phase", "Orientativer Preis/Monat"],
+      "saxendaHead": ["Packung", "Verwendung", "Orientativer Preis"],
+      "caption": "Orientativer Preis von {Drug} pro Dosis in {City}"
+    },
+    "formatPop": {
+      "millions": "{m} Millionen Einwohner",
+      "thousands": "{n}.000 Einwohner ca."
+    },
+    "fallbackHealth": {
+      "short": "GKV",
+      "long": "die gesetzliche Krankenversicherung"
+    }
+  },
+
+  "region": {
+    "introP1": [
+      "Das Bundesland {Name}, mit etwa {pop} Einwohnern und Hauptstadt {capital}, verzeichnet eine wachsende Nachfrage nach medizinischen Behandlungen zur Gewichtsreduktion. Immer mehr Menschen suchen nach einem legalen, sicheren Einstieg in ein GLP‑1-Analogon (Wegovy, Mounjaro, Ozempic oder Saxenda) mit echtem ärztlichem Follow-up.",
+      "In {Name} leben etwa {pop} Menschen, verteilt auf {capital} und eine Vielzahl von Gemeinden. In der gesamten Region ist das Interesse an GLP‑1-Behandlungen zum Abnehmen gestiegen, und damit auch der Bedarf an verlässlichen Informationen zu Preisen, Rezepten und einem sicheren Einstieg."
+    ],
+    "introP2": [
+      "Bei {BRAND} betreuen wir Patient*innen aus ganz {Name} per Online-Beratung: Du musst nicht nach {capital} fahren oder wochenlang auf einen Termin warten. Ein approbierter Endokrinologe bewertet deinen Fall und verschreibt dir bei Bedarf die Behandlung mit einem E-Rezept, das in jeder Apotheke gültig ist.",
+      "{BRAND} deckt ganz {Name} mit einem 100% Online-Modell ab. Egal ob du in {capital} oder in einer anderen Gemeinde lebst, du erhältst die gleiche ärztliche Bewertung, die Verschreibung falls angezeigt und das Follow-up, ohne Warteschlangen oder Anfahrt."
+    ],
+    "introP3": [
+      "Dieser Leitfaden fasst zusammen, was du in {Name} wissen musst: welche Behandlungen es gibt, was sie kosten, wie man das Rezept erhält und wie man Schritt für Schritt beginnt."
+    ],
+    "priceP": [
+      "Die Preise für GLP‑1 in {Name} sind die gleichen wie im Rest Deutschlands, da sie vom Medikament und der Dosis abhängen, nicht von der Gemeinde. Was sich zwischen den Optionen unterscheidet, sind Wirkstärke, Indikation und Verabreichungshäufigkeit."
+    ],
+    "priceP2": [
+      "Beachte, dass der Apothekenpreis des Medikaments nur ein Teil ist: Eine seriöse Behandlung umfasst den Arzttermin, die Verschreibung, die Dosisanpassungen und das Follow-up der Wirkungen. Ohne dies ist der eigenständige Kauf des Pens riskant und wenig wirksam."
+    ],
+    "rxP1": [
+      "In {Name} gibt es zwei Wege, ein Rezept für Wegovy, Mounjaro oder Ozempic zu erhalten: die gesetzliche Krankenversicherung ({health}) und die Privatmedizin. Über die Kassenmedizin werden diese Medikamente zum Abnehmen selten erstattet, und der Zugang zum Facharzt kann Wochen oder Monate dauern."
+    ],
+    "rxP2": [
+      "Die Online-Beratung von {BRAND} ist der schnelle Weg: Ein Endokrinologe bewertet deinen Fall zeitnah und stellt, falls die Behandlung angezeigt ist, ein E-Rezept aus, das in jeder Apotheke in {Name} gültig ist. Ohne Anfahrt und ohne endlose Wartezeiten."
+    ],
+    "obesityIntro": [
+      "Übergewicht und Adipositas sind ein Problem der öffentlichen Gesundheit in ganz Deutschland, und {Name} ist keine Ausnahme. Nach verfügbaren Daten leben etwa {obesity}% der erwachsenen Bevölkerung der Region mit Adipositas (Richtwert, der Übergewicht nicht einschließt, dessen Prävalenz deutlich höher ist)."
+    ],
+    "obesityP2": [
+      "Diese Daten erklären, warum die Nachfrage nach wirksamen Behandlungen in {Name} so stark gestiegen ist. Adipositas ist eine chronische Erkrankung mit biologischer Grundlage, keine Frage der Willenskraft, und deshalb kombiniert der wirksamste Ansatz Gewohnheiten, ärztliche Unterstützung und, wenn angezeigt, GLP‑1-Medikamente."
+    ],
+    "sections": {
+      "intro": "Behandlung zum Abnehmen in {Name}",
+      "price": "Preis der GLP‑1-Behandlungen in {Name}",
+      "prescription": "Wie man das Rezept in {Name} erhält",
+      "obesity": "Adipositas in {Name}: der Kontext",
+      "howToStart": "Wie man in {Name} Schritt für Schritt beginnt"
+    },
+    "capitalLinksTitle": "Lokale Leitfäden für {capital}",
+    "postTitle": "Behandlung zum Abnehmen in {Name}",
+    "postH1": "Behandlung zum Abnehmen in {Name}: Preise, Rezept und wie man beginnt",
+    "postMetaTitle": "Abnehmen in {Name}: GLP‑1-Behandlung mit Online-Rezept",
+    "postMetaDescription": "Vollständiger Leitfaden zur GLP‑1-Behandlung zum Abnehmen in {Name}: Preise, wie du das Rezept erhältst und wie du mit Online-Follow-up beginnst. Erste Beratung gratis!",
+    "postExcerpt": "Alles über die medizinische Behandlung zum Abnehmen in {Name}: GLP‑1-Preise, Online-Rezept und Follow-up mit approbiertem Arzt.",
+    "postCoverAlt": "GLP‑1-Behandlung mit ärztlichem Rezept für das Bundesland {Name}",
+    "postSlug": "behandlung-abnehmen-region-{slug}",
+    "pricingCaption": "Orientative Preise der GLP‑1-Behandlungen in der Apotheke (2026)",
+    "pricingHead": ["Behandlung", "Wirkstoff", "Verabreichung", "Indikation", "Orientativer Preis"],
+    "pricingRows": [
+      ["Wegovy", "Semaglutid 2,4 mg", "Wöchentliche Injektion", "Gewichtsverlust", "200–300 €/Monat"],
+      ["Mounjaro", "Tirzepatid", "Wöchentliche Injektion", "Gewichtsverlust", "200–350 €/Monat"],
+      ["Ozempic", "Semaglutid", "Wöchentliche Injektion", "Typ-2-Diabetes", "120–170 €/Monat"],
+      ["Saxenda", "Liraglutid", "Tägliche Injektion", "Gewichtsverlust", "200–300 €/Monat"]
+    ],
+    "capitalLinks": [
+      {"label": "Wegovy in {capital} kaufen", "href": "/blog/comprare-wegovy-{capitalSlug}"},
+      {"label": "Mounjaro in {capital} kaufen", "href": "/blog/comprare-mounjaro-{capitalSlug}"},
+      {"label": "Ozempic Preis in {capital}", "href": "/blog/precio-ozempic-{capitalSlug}"}
+    ],
+    "howToStartList": [
+      "Du buchst die erste kostenlose Online-Beratung.",
+      "Du vervollständigst deine Anamnese und Ziele in der App, egal wo du in {Name} bist.",
+      "Ein approbierter Endokrinologe bewertet deinen Fall.",
+      "Falls angezeigt, erhältst du das E-Rezept, gültig in jeder Apotheke in {Name}.",
+      "Du machst das Follow-up und die Dosisanpassungen über die App."
+    ],
+    "faqs": [
+      {"q": "Wie viel kosten GLP‑1-Behandlungen in {Name}?", "a": "Die Preise sind die gleichen wie im Rest Deutschlands: Ozempic 120–170 €/Monat, Wegovy oder Saxenda 200–300 €/Monat, Mounjaro 200–350 €/Monat, orientativ. Die erste Beratung bei {BRAND} ist gratis."},
+      {"q": "Kann ich das Rezept erhalten, ohne in {Name} anzufahren?", "a": "Ja. Die Beratung erfolgt online und, wenn die Behandlung angezeigt ist, erhältst du das E-Rezept, gültig in jeder Apotheke der Region."},
+      {"q": "Übernimmt die {health} diese Behandlungen?", "a": "In der Regel werden GLP‑1 für Gewichtsverlust nicht von der GKV erstattet; für Typ-2-Diabetes hingegen können sie mit Facharztverschreibung erstattet werden."}
+    ]
+  },
+
+  "internalLinks": {
+    "nationalHubs": ["berlin", "hamburg", "muenchen", "koeln", "frankfurt", "stuttgart", "duesseldorf", "dortmund"],
+    "pillars": {
+      "wegovy": [
+        { "label": "Wegovy online kaufen in Deutschland", "href": "/blog/comprare-wegovy-online" },
+        { "label": "Preis von Wegovy in Deutschland", "href": "/blog/wegovy-prezzo-italia" },
+        { "label": "Wegovy vs Mounjaro: Vergleich", "href": "/blog/wegovy-vs-mounjaro" }
+      ],
+      "mounjaro": [
+        { "label": "Mounjaro online kaufen in Deutschland", "href": "/blog/comprare-mounjaro-online" },
+        { "label": "Preis von Mounjaro in Deutschland", "href": "/blog/mounjaro-prezzo-italia" },
+        { "label": "Wegovy vs Mounjaro: Vergleich", "href": "/blog/wegovy-vs-mounjaro" }
+      ],
+      "ozempic": [
+        { "label": "Ozempic online kaufen in Deutschland", "href": "/blog/comprare-ozempic-online" },
+        { "label": "Preis von Ozempic in Deutschland", "href": "/blog/ozempic-prezzo-italia" },
+        { "label": "Ozempic vs Wegovy vs Mounjaro: Vergleich", "href": "/blog/ozempic-vs-wegovy-vs-mounjaro" }
+      ],
+      "saxenda": [
+        { "label": "Saxenda kaufen in Deutschland", "href": "/blog/comprare-saxenda-italia" },
+        { "label": "Preis von Saxenda in Deutschland", "href": "/blog/saxenda-prezzo-italia" },
+        { "label": "Ozempic vs Saxenda: Vergleich", "href": "/blog/ozempic-vs-saxenda" }
+      ]
+    },
+    "labels": {
+      "buy": "{Drug} in {City} kaufen",
+      "price": "Preis von {Drug} in {City}",
+      "availability": "{Drug} in {City}",
+      "geoGroupTitle": "{Drug} in anderen Städten {scope}",
+      "geoGroupIntro": "Online-Arztbesuch und E-Rezept für {Drug} auch in diesen Orten.",
+      "localGroupTitle": "Weitere Behandlungen zum Abnehmen in {City}",
+      "pillarGroupTitle": "Leitfäden zu {Drug} in Deutschland",
+      "downGroupTitle": "{Drug} nach Stadt kaufen",
+      "downGroupIntro": "Buche deine Online-Arztberatung von überall aus. Dies sind unsere Städte mit den meisten Anfragen zu {Drug}."
+    }
+  },
+
+  "comune": {
+    "introBySize": {
+      "piccolo": "{City} ({province}) hat {pop} Einwohner und verfügt, wie die meisten kleinen deutschen Gemeinden, über keine spezialisierte Adipositas-Klinik: Die nächste endokrinologische Praxis ist oft mehrere Kilometer entfernt. Das ist kein Hindernis mehr: Mit {BRAND} hast du einen approbierten Endokrinologen per Videosprechstunde von zu Hause aus, mit E-Rezept, das in jeder Apotheke im Landkreis {province} gültig ist.",
+      "medio": "{City} ist eine Gemeinde mit {pop} Einwohnern im Landkreis {province}. Obwohl es private Arztpraxen in der Umgebung gibt, sind nur wenige auf die medikamentöse Behandlung von Adipositas mit GLP‑1 spezialisiert. {BRAND} verbindet dich per Videosprechstunde mit approbierten Endokrinologen, ohne Anfahrt und mit gültigem Rezept in den Apotheken von {City}.",
+      "grande": "Mit {pop} Einwohnern verfügt {City} ({province}) über private Gesundheitsversorgung, aber spezialisierte Adipositas-Einheiten mit GLP‑1-Verschreibung bleiben rar und mit Wartelisten. Bei {BRAND} erfolgt die Bewertung durch einen approbierten Endokrinologen per Videosprechstunde, ohne Wartezeit, und das E-Rezept funktioniert in jeder Apotheke der Stadt."
+    },
+    "legalNote": [
+      "Die Behandlung mit GLP‑1-Analoga (Wegovy, Mounjaro, Ozempic oder Saxenda) erfordert in Deutschland immer ein ärztliches Rezept. Keine Website, die diese Medikamente Menschen in {City} 'ohne Rezept' anbietet, ist legal oder sicher."
+    ],
+    "howItWorks": [
+      "Buche den ersten kostenlosen Termin vom Handy oder Computer, ohne dich zu bewegen.",
+      "Videosprechstunde mit einem approbierten Endokrinologen: Krankengeschichte, BMI und Ziele.",
+      "Falls geeignet, Verschreibung von GLP‑1 mit E-Rezept, gültig in jeder Apotheke im Landkreis {province}.",
+      "Kontinuierliches Follow-up über die App: Dosis, Nebenwirkungen und Anpassungen, ohne {City} zu verlassen."
+    ],
+    "sections": {
+      "clinic": "Klinik zur Gewichtsreduktion in {City}: deine Online-Option",
+      "howItWorks": "Wie die Online-Beratung von {City} aus funktioniert",
+      "prices": "Preise der GLP‑1-Behandlung (Richtwerte in der Apotheke)",
+      "whyOnline": "Warum eine Online-Klinik wählen, wenn du in {City} lebst?"
+    },
+    "faqs": {
+      "isThereClinic": "Gibt es eine Klinik zur Gewichtsreduktion in {City}?",
+      "isThereClinicA": "{City} ({province}) braucht keine physische Spezialklinik für den Zugang zur Behandlung: Bei {BRAND} erfolgt die Bewertung durch einen approbierten Endokrinologen per Videosprechstunde, und das E-Rezept wird in jeder Apotheke eingelöst. Der erste Termin ist kostenlos.",
+      "howMuchCost": "Wie viel kostet die Behandlung von {City} aus?",
+      "howMuchCostA": "Das Medikament kostet genauso viel wie im Rest Deutschlands (Ozempic 120–170 €/Monat; Wegovy oder Saxenda 200–300 €/Monat; Mounjaro 200–350 €/Monat, Richtwerte). Bei {BRAND} ist der erste Arzttermin kostenlos."
+    }
+  }
+}

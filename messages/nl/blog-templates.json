@@ -1,0 +1,429 @@
+{
+  "priceNote": "Bij DoctorLife is je eerste medische consult gratis, zonder verplichting. Alle follow-up verloopt via onze eigen app.",
+  "serviceCta": "Bij DoctorLife beoordeelt een geregistreerde arts jouw situatie via videoconsult en schrijft, als de behandeling geschikt is, een e-recept voor met follow-up via de app. Het eerste bezoek is gratis.",
+  "illegalNote": "Elke website, app of particulier die deze medicijnen in Nederland 'zonder recept' aanbiedt, handelt illegaal en brengt jouw gezondheid in gevaar. Het recept vereist altijd een voorafgaande medische beoordeling.",
+
+  "weightIntros": [
+    [
+      "{Drug} ({inn}) wordt in apotheken in {City} alleen op recept verstrekt. Het is een GLP‑1-analoog voor gewichtsbeheersing: het vereist een voorafgaande beoordeling door een geregistreerde arts, en het is noch legaal noch veilig om het online 'zonder recept' te kopen.",
+      "De snelste weg in {City} is het online medisch consult van {BRAND}: een arts beoordeelt jouw situatie, schrijft indien nodig het e-recept uit, en jij haalt {Drug} op bij je vaste apotheek — zonder reistijd en zonder wachtlijsten."
+    ],
+    [
+      "Wil je {Drug} kopen in {City}? Het belangrijkste om te weten: {Drug} ({inn}) vereist in heel Nederland een medisch recept. Elke website die het je zonder medische beoordeling aanbiedt, handelt illegaal en brengt jouw gezondheid in gevaar.",
+      "Met {BRAND} is het proces eenvoudig en volledig legaal: je doet het online consult vanuit {City}, een geregistreerde arts bekijkt je medische geschiedenis en, als {Drug} geschikt voor je is, ontvang je het recept om af te halen bij de apotheek."
+    ],
+    [
+      "In {City} kiezen steeds meer mensen voor {Drug} ({inn}) om op een duurzame manier af te vallen. Het is een receptplichtige behandeling die werkt op eetlust en verzadiging, en die altijd onder medisch toezicht moet worden gestart en aangepast.",
+      "Je hoeft niet persoonlijk naar een kliniek: met het online consult van {BRAND} krijg je medische beoordeling, e-recept (indien geschikt) en echte follow-up, en hoef je {Drug} alleen op te halen bij een apotheek in {City}."
+    ]
+  ],
+  "diabIntros": [
+    [
+      "{Drug} ({inn}) wordt in apotheken in {City} op recept verkocht. Het is goedgekeurd voor diabetes type 2, niet om af te vallen: er is een medische beoordeling nodig die de meest geschikte behandeling voor jouw situatie bevestigt.",
+      "Als je doel gewichtsverlies is, kan de arts in {City} Wegovy (semaglutide voor gewicht) of Mounjaro (tirzepatide) overwegen in plaats van {Drug} off-label te gebruiken."
+    ]
+  ],
+
+  "steps": [
+    [
+      "Boek je eerste gratis medisch consult online.",
+      "Vul je medische geschiedenis en doelen in via de app, zonder {City} te verlaten.",
+      "Een geregistreerde arts beoordeelt of {Drug} geschikt en veilig voor je is.",
+      "Indien geschikt, ontvang je het e-recept en een persoonlijk doseringsplan.",
+      "Je haalt {Drug} op bij je apotheek in {City} en regelt alle follow-up via de app."
+    ],
+    [
+      "Doe het gratis online consult vanaf elke plek in {City}.",
+      "Beantwoord een medische vragenlijst over je gezondheid, gewicht en doelen.",
+      "De arts beoordeelt jouw situatie en besluit of {Drug} bij je past.",
+      "Je ontvangt het recept en het startplan als de behandeling geschikt is.",
+      "Je haalt {Drug} op bij een apotheek in {City} en wij begeleiden je bij elke dosisaanpassing."
+    ]
+  ],
+
+  "mechWeight": [
+    "{Drug} bevat {inn}, een GLP‑1-analoog dat een darmhormoon nabootst dat het lichaam van nature afgeeft tijdens het eten. Het werkt op de eetlustcentra in de hersenen en vertraagt de maaglediging, waardoor je eerder en langer een verzadigd gevoel hebt. Het resultaat: je eet minder, zonder het constante hongergevoel dat de meeste diëten laat mislukken.",
+    "De werkzame stof van {Drug} ({inn}) behoort tot de familie van GLP‑1-receptoragonisten. Het vermindert hongersignalen, verbetert de bloedsuikercontrole na maaltijden en vertraagt de spijsvertering. Daarom helpt het, toegediend met {frequency} en met een goed afgestemde dosis, de calorie-inname op natuurlijke en duurzame wijze te verminderen in {City}."
+  ],
+  "mechDiab": [
+    "{Drug} ({inn}) is een GLP‑1-analoog geïndiceerd voor diabetes type 2. Het stimuleert de insulineafgifte bij hoge bloedsuiker, remt de glucoseproductie in de lever en vertraagt de maaglediging. Als veelvoorkomend neveneffect vermindert het de eetlust, waardoor velen het associëren met gewichtsverlies."
+  ],
+
+  "sideIntro": [
+    "Zoals elk GLP‑1-analoog kan {Drug} bijwerkingen veroorzaken, vooral spijsverteringsklachten, aan het begin van de behandeling en na elke dosisverhoging. De meeste zijn licht en verdwijnen als het lichaam zich aanpast; een geleidelijke dosisverhoging helpt ze te minimaliseren."
+  ],
+  "sideList": [
+    "Misselijkheid, vooral in de eerste weken en na elke dosisverhoging.",
+    "Langzamere spijsvertering, een vol of opgeblazen gevoel.",
+    "Tijdelijke obstipatie of diarree.",
+    "Episodes van zuurbranden, boeren of reflux.",
+    "Vermoeidheid of lichte hoofdpijn in de eerste dagen."
+  ],
+  "sideOutro": [
+    "Om ze te verminderen is het aan te raden langzaam en in kleine porties te eten, zeer vette of overvloedige maaltijden te vermijden en voldoende te drinken. Als een symptoom sterk of aanhoudend is, past de arts van {BRAND} het plan of de dosis aan via de app, zonder dat je {City} hoeft te verlaten."
+  ],
+
+  "contraP": [
+    "{Drug} is niet voor iedereen geschikt. Daarom is de voorafgaande medische beoordeling essentieel: de arts controleert je medische geschiedenis, aandoeningen en gebruikelijke medicatie voordat wordt besloten of en met welke dosis je kunt starten."
+  ],
+  "contraList": [
+    "Persoonlijke of familiegeschiedenis van medullair schildkliercarcinoom of MEN2-syndroom.",
+    "Eerdere pancreatitis of ernstige galblaasaandoening.",
+    "Zwangerschap, kinderwens of borstvoeding.",
+    "Voorgeschiedenis van actieve eetstoornissen.",
+    "Ernstige nier- of leverinsufficiëntie die niet medisch is beoordeeld."
+  ],
+
+  "storageList": [
+    "Bewaar de {Drug}-pennen in de koelkast (tussen 2 en 8 °C) en vries ze nooit in.",
+    "Eenmaal in gebruik, kunnen veel pennen gedurende een beperkt aantal dagen op kamertemperatuur worden bewaard; raadpleeg altijd de bijsluiter.",
+    "Dien {Drug} toe met {frequency}, in buik, dij of arm, met wisselende injectieplaats.",
+    "Gebruik naalden niet opnieuw en gooi gebruikt materiaal weg in een geschikte container.",
+    "Als je een dosis vergeet, verdubbel deze niet: volg de instructies van de bijsluiter of raadpleeg je arts bij {BRAND}."
+  ],
+
+  "resultsWeight": [
+    "In klinische studies toonden behandelingen met {inn} significante en aanhoudende gemiddelde gewichtsverliezen over meerdere maanden aan, wanneer gecombineerd met gedragsveranderingen. Eerste effecten op de eetlust zijn meestal binnen enkele weken merkbaar, maar het gewichtsverlies is progressief: consistentie en dosisaanpassing zijn essentieel."
+  ],
+
+  "localBuy": [
+    "In {City}, net als in de rest van Nederland, wordt {Drug} niet verkocht in drogisterijen of op websites zonder recept: alleen in apotheken en met medisch voorschrift. Het voordeel van {BRAND} is dat je wachtlijsten voor endocrinologie vermijdt en alles regelt — beoordeling, recept en follow-up — zonder {City} te verlaten.",
+      "Veel patiënten in {City} merken dat {Drug} in sommige apotheken niet op voorraad is of dat een afspraak met de specialist weken duurt. Met het online consult van {BRAND} krijg je de medische beoordeling snel en, indien geschikt, het e-recept om de behandeling te vinden in elke apotheek in {City}."
+  ],
+  "compareP": [
+    "{Drug} is niet de enige optie. Afhankelijk van jouw situatie kan de arts verschillende GLP‑1-analogen vergelijken en het meest geschikte kiezen voor jouw doel, verdraagbaarheid en budget. Deze beslissing moet altijd individueel en medisch zijn, nooit gebaseerd op wat bij iemand anders heeft gewerkt."
+  ],
+
+  "benefitWeightTitles": [
+    "Waarom {Drug} kopen met medische follow-up",
+    "Welke resultaten je kunt verwachten met {Drug}"
+  ],
+  "benefitWeightP": [
+    "{Drug} kopen is slechts het begin. De beste resultaten ontstaan wanneer de dosis geleidelijk wordt aangepast en gecombineerd met duurzame gewoonten. Daarom verkoopt {BRAND} geen los product: wij bieden een behandeling met een geregistreerde arts, dosisaanpassingen en continue ondersteuning via de app."
+  ],
+  "benefitDiabTitles": [
+    "{Drug} en gewichtsverlies: wat je moet weten"
+  ],
+  "benefitDiabP": [
+    "Hoewel veel mensen {Drug} zoeken om af te vallen, is de goedgekeurde indicatie diabetes type 2. Voor gewichtsbeheersing zijn er specifiek goedgekeurde opties — Wegovy (semaglutide) en Mounjaro (tirzepatide) — die de arts kan overwegen in jouw consult vanuit {City}."
+  ],
+
+  "drugCityIntro": [
+    "Zoeken naar «{drug} in {City}» heeft meestal een van twee redenen: je wilt de behandeling starten en weet niet waar te beginnen, of je bent in de onderzoeksfase gestuit op een tekort in de apotheek. In deze gids ontdek je hoe je legaal toegang krijgt tot {Drug} in {City} en wat de snelste en veiligste weg is om te starten met recept en follow-up."
+  ],
+  "drugCityStock": [
+    "{Drug} heeft in heel Nederland tekorten gekend, en {City} is geen uitzondering: het komt vaak voor dat een apotheek een specifieke dosis niet heeft, maar een andere wel. Het goede nieuws is dat het e-recept geldig is in elke apotheek, dus je kunt de beschikbaarheid controleren in verschillende apotheken in {City} zonder het recept te verliezen."
+  ],
+
+  "rxCityIntro": [
+    "Om het recept voor {Drug} ({inn}) in {City} te krijgen, hoef je geen weken te wachten op een fysiek consult: het online medisch consult van {BRAND} stelt een geregistreerde arts in staat jouw situatie dezelfde dag te beoordelen en, indien de behandeling geïndiceerd is, een e-recept uit te schrijven dat geldig is in elke apotheek in {City}."
+  ],
+  "rxCityRequirements": [
+    "De arts beoordeelt jouw BMI, medische geschiedenis, huidige medicatie en doelen. {Drug} wordt niet aan iedereen voorgeschreven: er zijn duidelijke klinische criteria en contra-indicaties (zwangerschap, eerdere pancreatitis, bepaalde schildklierproblemen) die de arts met je doorneemt voordat het recept wordt uitgeschreven."
+  ],
+  "rxCityValidity": [
+    "Het online uitgeschreven e-recept is geldig in elke apotheek in {City} en de rest van Nederland: het werkt net als dat van je huisarts. Je hoeft alleen je verzekeringsgegevens of de receptcode aan de balie te tonen."
+  ],
+
+  "grayDangers": [
+    "Er is geen garantie dat het product authentiek is: vervalsingen van GLP‑1-medicijnen komen steeds vaker voor.",
+    "Zonder controle op dosis, zuiverheid of bewaring: de koelketen kan onderbroken zijn en het product beschadigd.",
+    "Niemand beoordeelt jouw contra-indicaties, medische geschiedenis of gebruikelijke medicatie voor gebruik.",
+    "Zonder medische follow-up kunnen bijwerkingen verergeren zonder dat iemand ze op tijd opmerkt.",
+    "Een receptplichtig medicijn zonder recept kopen is illegaal in Nederland en kan sancties met zich meebrengen."
+  ],
+  "legalRedirect": [
+    "Het goede nieuws is dat er goedgekeurde, veilige GLP‑1-behandelingen bestaan die vandaag beschikbaar zijn in Nederland. Een endocrinoloog kan jouw situatie beoordelen en je indien geschikt een alternatief voorschrijven met recept en echte follow-up."
+  ],
+  "approvalExplain": [
+    "In Europa komt een medicijn pas in de apotheek na goedkeuring door het Europees Geneesmiddelenbureau (EMA) en in Nederland door het College ter Beoordeling van Geneesmiddelen (CBG). Dit proces vereist het afronden van fase III-studies en het aantonen van werkzaamheid en veiligheid."
+  ],
+
+  "sections": {
+    "whereToBuy": "Waar kan je {Drug} kopen in {City}?",
+    "whatIsAndHow": "Wat is {Drug} en hoe werkt het?",
+    "priceByDose": "Prijs van {Drug} in {City} per dosis",
+    "howToBuySteps": "Hoe je {Drug} in {City} stap voor stap koopt",
+    "sideEffects": "Bijwerkingen van {Drug}",
+    "whoCanUse": "Wie kan {Drug} gebruiken? Contra-indicaties",
+    "howToStore": "Hoe je {Drug} bewaart en toedient",
+    "howMuchCost": "Hoeveel kost {Drug} in {City}?",
+    "priceDepends": "Waarvan hangt de prijs van {Drug} af?",
+    "howToGetRx": "Hoe je {Drug} met recept krijgt in {City}",
+    "drugInCity": "{Drug} in {City}: hoe je het krijgt",
+    "availability": "Beschikbaarheid van {Drug} in apotheken in {City}",
+    "howToStartSteps": "Hoe je in {City} stap voor stap start met {Drug}",
+    "localContext": "{City}: lokale gezondheidscontext"
+  },
+
+  "faqTemplates": {
+    "noRxWeight": "Kan je {Drug} niet zonder recept kopen in {City}?",
+    "noRxWeightA": "Nee. {Drug} vereist een medisch recept. De legale weg is het medisch consult, het recept indien geschikt en het afhalen bij de apotheek. Het online 'zonder recept' kopen is illegaal en riskant.",
+    "howMuch": "Hoeveel kost {Drug} in {City}?",
+    "howMuchA": "De pen ligt indicatief tussen {low} en {high} per maand afhankelijk van de dosis. Consult en follow-up worden apart betaald; bij DoctorLife is het eerste bezoek gratis.",
+    "allOnline": "Kan ik alles online doen vanuit {City}?",
+    "allOnlineA": "Ja. Het consult en het e-recept worden online geregeld; je hoeft {Drug} alleen op te halen bij je apotheek in {City}.",
+    "isSafe": "Is het veilig om {Drug} te gebruiken?",
+    "isSafeA": "Ja, onder medisch toezicht en met geleidelijk aangepaste dosis. Gebruikelijke bijwerkingen (misselijkheid, trage spijsvertering) zijn meestal licht en tijdelijk.",
+    "howStart": "Hoe start ik bij DoctorLife?",
+    "howStartA": "Boek de eerste gratis afspraak. De arts beoordeelt jouw situatie en schrijft je, indien geschikt, {Drug} voor met follow-up via de app."
+  },
+
+  "localContext": {
+    "trait": "{City}, {trait}, heeft ongeveer {pop} inwoners en valt voor de publieke gezondheidszorg onder de {healthLong} ({healthShort}). Het referentieziekenhuis van de regio is het {hospital}.",
+    "waitTimes": "Via de reguliere zorgverzekering kan de toegang tot endocrinologie lange wachttijden met zich meebrengen. Het online consult van {BRAND} maakt een snelle medische beoordeling mogelijk zonder concessies aan de klinische zorgvuldigheid, waar je ook bent in {City}."
+  },
+
+  "localFaqs": {
+    "allOnline": "Kan ik alles online doen vanuit {City}?",
+    "allOnlineA": "Ja. De afspraak, het e-recept (indien aangewezen) en de follow-up worden online geregeld: je hoeft het medicijn alleen op te halen bij een apotheek in {City}.",
+    "doctorAvailable": "Is er een arts beschikbaar voor patiënten in {City}?",
+    "doctorAvailableA": "Ja, de artsen van {BRAND} zijn geregistreerd en behandelen patiënten in heel Nederland, inclusief {City}, via videoconsult.",
+    "howLong": "Hoe lang duurt het om een afspraak te krijgen in {City}?",
+    "howLongA": "Met {BRAND} kan de eerste beoordeling binnen enkele dagen worden ingepland, veel sneller dan de publieke wachtlijsten voor endocrinologie."
+  },
+
+  "postMeta": {
+    "buyPost": {
+      "slug": "comprare-{drugKey}-{citySlug}",
+      "title": "{Drug} kopen in {City}",
+      "h1": "{Drug} kopen in {City}: prijs, recept en hoe te beginnen",
+      "metaTitle": "{Drug} kopen in {City}: Online-Recept met Arts in 24u",
+      "metaDescription": "Krijg {Drug} in {City} met een online consult: e-recept in 24u, zonder wachtlijsten of reistijd. Geregistreerde artsen en echte follow-up. Eerste consult gratis!",
+      "excerpt": "Gids voor het kopen van {Drug} in {City} met medisch recept: echte prijs per dosis, hoe je het voorschrift online krijgt en begint met klinische follow-up.",
+      "coverAlt": "{Drug} met medisch recept voor behandeling in {City}",
+      "keyword": "{drugName} kopen {cityName}"
+    },
+    "pricePost": {
+      "slug": "precio-{drugKey}-{citySlug}",
+      "title": "Prijs van {Drug} in {City}",
+      "h1": "Prijs van {Drug} in {City}: hoeveel kost het en hoe krijg je het met recept",
+      "metaTitle": "{Drug} Prijs in {City} 2026 | Online-Recept met Arts",
+      "metaDescription": "Prijs van {Drug} in {City} per dosis en hoe je het legaal krijgt: online consult en e-recept zonder wachttijden. Geregistreerde artsen en follow-up inbegrepen. Eerste consult gratis!",
+      "excerpt": "Hoeveel kost {Drug} in {City} per dosis, waarvan de prijs afhangt en hoe je het legaal krijgt met medisch recept en echte follow-up.",
+      "coverAlt": "{Drug}-pen met prijslabel in een apotheek in {City}",
+      "keyword": "prijs {drugName} {cityName}",
+      "category": "Prijzen",
+      "priceIntro": "De prijs van {Drug} in de apotheken van {City} is gereguleerd en ligt indicatief tussen {low} en {high} per maand, afhankelijk van de dosis. Bij deze kosten komen het medisch consult en de follow-up, die nodig zijn voor een veilig voorschrift.",
+      "priceDependsList": [
+        "De dosis: hoe hoger, hoe duurder de {Drug}-pen.",
+        "Of medisch consult en follow-up nodig zijn (inbegrepen bij DoctorLife).",
+        "De beschikbaarheid in jouw apotheek in {City} en de specifieke verpakking.",
+        "Of het is voor gewichtsverlies (niet vergoed) of voor diabetes (vergoed met specialistvoorschrift)."
+      ]
+    },
+    "drugCityPost": {
+      "slug": "{drugKey}-{citySlug}",
+      "title": "{Drug} in {City}",
+      "h1": "{Drug} in {City}: waar krijg je het, prijs en beschikbaarheid",
+      "metaTitle": "{Drug} in {City} | Consult en Online-Recept zonder Wachttijden",
+      "metaDescription": "{Drug} in {City}: krijg het met recept via een online consult, zonder wachtlijsten. Prijs per dosis, beschikbaarheid en echte follow-up. Eerste consult gratis!",
+      "excerpt": "Alles over {Drug} in {City}: waar je het legaal krijgt, indicatieve prijs, beschikbaarheid in de apotheek en hoe je begint met recept en medische follow-up.",
+      "coverAlt": "{Drug}-pen beschikbaar in een apotheek in {City}",
+      "keyword": "{drugName} {cityName}"
+    },
+    "rxCityPost": {
+      "slug": "receta-{drugKey}-online-{citySlug}",
+      "title": "{Drug}-recept online in {City}",
+      "h1": "{Drug}-recept online in {City}: voorwaarden, prijs en stappen",
+      "metaTitle": "{Drug}-Recept Online in {City} | Geregistreerde Arts Vandaag",
+      "metaDescription": "Krijg het {Drug}-recept online in {City} met beoordeling van een geregistreerde arts, vandaag nog en zonder wachtlijsten. E-recept geldig in jouw apotheek. Eerste consult gratis!",
+      "excerpt": "Hoe je het {Drug}-recept online in {City} krijgt: klinische voorwaarden, geldigheid van het e-recept, apotheekprijs en stappen om vandaag te beginnen met medische beoordeling.",
+      "coverAlt": "E-recept van {Drug} online uitgegeven in {City}",
+      "keyword": "{drugName} recept online {cityName}",
+      "rxH2": "{Drug}-recept online in {City}: hoe het werkt",
+      "reqH2": "Voorwaarden om {Drug} voorgeschreven te krijgen",
+      "stepsH2": "{Drug}-recept in {City} stap voor stap krijgen"
+    },
+    "researchPost": {
+      "slug": "cosa-e-{drugKeyLower}",
+      "title": "Wat is {Name}",
+      "h1": "Wat is {Name} en waarvoor is het",
+      "metaTitle": "Wat is {Name}: waarvoor en of het beschikbaar is | {BRAND}",
+      "metaDescription": "{Name}: wat het is, hoe het werkt, wat studies zeggen en waarom het in Nederland nog niet beschikbaar is. Goedgekeurde alternatieven met recept en medische follow-up.",
+      "excerpt": "Alles wat bekend is over {Name}: wat het is, hoe het werkt en vooral, welke goedgekeurde alternatieven je vandaag kunt gebruiken terwijl je wacht.",
+      "coverAlt": "{Name}, medicijn in onderzoek van {maker}",
+      "category": "In onderzoek",
+      "keyword": "wat is {name}",
+      "whatIsH2": "Wat is {Name}?",
+      "whatIsP1": "{Name} is een medicijn in de onderzoeksfase, ontwikkeld door {maker}. Het is een {klass} dat met {route} wordt toegediend en wordt bestudeerd voor gewichtsverlies en type-2-diabetes.",
+      "whatIsP2": "Het behoort tot de nieuwe generatie van behandelingen op basis van darmhormonen — dezelfde familie als Wegovy, Mounjaro of Ozempic — maar heeft het goedkeuringsproces nog niet voltooid en is daarom nog niet beschikbaar in Nederlandse apotheken.",
+      "studiesH2": "{Name} en gewichtsverlies: wat studies zeggen",
+      "approvalH2": "Is {Name} goedgekeurd in Nederland?",
+      "approvalP1": "Nee. Tot op heden is {Name} NIET goedgekeurd door de EMA of het CBG en wordt het niet legaal verkocht in Nederland, noch in de apotheek noch online. Het is alleen beschikbaar binnen klinische studies.",
+      "approvalQuote": "Elke website die beweert {Name} in Nederland te verkopen, handelt illegaal: het product heeft geen garanties en kan gevaarlijk zijn voor je gezondheid.",
+      "altH2": "Terwijl je wacht op {Name}: goedgekeurde alternatieven",
+      "altP1": "Bijvoorbeeld, {Alt} ({altInn}) is een goedgekeurde en met recept beschikbare optie. Bij DoctorLife beoordeelt een geregistreerde endocrinoloog jouw geval en schrijft, indien passend, de behandeling voor met follow-up via de app.",
+      "altLinksTitle": "Vandaag beschikbare alternatieven",
+      "altLinks": [
+        {"label": "{AltName} online kopen in Nederland", "href": "/blog/{altBuy}"},
+        {"label": "{AltName} prijs in Nederland per dosis", "href": "/blog/{altPrice}"},
+        {"label": "Nieuwe GLP‑1 in onderzoek", "href": "/blog/glp1-in-ricerca"}
+      ],
+      "faqs": [
+        {"q": "Is het legaal om {Name} in Nederland te kopen?", "a": "Nee, aangezien het niet is goedgekeurd door de EMA/CBG, is elke verkoop illegaal en riskant."},
+        {"q": "Wanneer zal {Name} beschikbaar zijn in Nederland?", "a": "Het hangt af van de afronding van fase-III-studies en de EMA/CBG-goedkeuring. Er is geen vaste datum."},
+        {"q": "Wat kan ik vandaag doen als ik wil afvallen?", "a": "Een arts kan {Alt} beoordelen, dat al goedgekeurd is en beschikbaar is met recept en echte follow-up."}
+      ]
+    },
+    "buyLinks": {
+      "title": "Verder informeren",
+      "priceLabel": "{Drug} prijs in Nederland per dosis",
+      "buyLabel": "{Drug} online kopen in Nederland",
+      "compareLabel": "GLP‑1-vergelijking: welke kiezen",
+      "cityPriceLabel": "Prijs van {Drug} in {City}",
+      "cityPriceHref": "/blog/precio-{drugKey}-{citySlug}"
+    },
+    "priceTable": {
+      "weightHead": ["Dosis", "Fase", "Indicatieve prijs/maand"],
+      "saxendaHead": ["Verpakking", "Gebruik", "Indicatieve prijs"],
+      "caption": "Indicatieve prijs van {Drug} per dosis in {City}"
+    },
+    "formatPop": {
+      "millions": "{m} miljoen inwoners",
+      "thousands": "{n}.000 inwoners ca."
+    },
+    "fallbackHealth": {
+      "short": "GVS",
+      "long": "de geneeskundige verzorgingsstructuur"
+    }
+  },
+
+  "region": {
+    "introP1": [
+      "De provincie {Name}, met ongeveer {pop} inwoners en hoofdstad {capital}, ziet een groeiende vraag naar medische behandelingen om af te vallen. Steeds meer mensen zoeken hoe ze legaal en veilig kunnen starten met een GLP‑1-analoog (Wegovy, Mounjaro, Ozempic of Saxenda), met echte medische follow-up.",
+      "In {Name} wonen ongeveer {pop} mensen, verspreid over {capital} en een groot aantal gemeenten. In de hele provincie is de interesse in GLP‑1-behandelingen om af te vallen gegroeid, en daarmee de behoefte aan betrouwbare informatie over prijzen, recepten en een veilige start."
+    ],
+    "introP2": [
+      "Bij {BRAND} begeleiden we patiënten uit heel {Name} via online consult: je hoeft niet naar {capital} te reizen of wekenlang te wachten op een afspraak. Een geregistreerde endocrinoloog beoordeelt jouw situatie en schrijft, indien geschikt, de behandeling voor met een e-recept dat geldig is in elke apotheek.",
+      "{BRAND} bedient heel {Name} met een 100% online model. Of je nu in {capital} of in een andere gemeente woont, je krijgt dezelfde medische beoordeling, het voorschrift indien aangewezen en de follow-up, zonder wachtrijen of reistijd."
+    ],
+    "introP3": [
+      "Deze gids bundelt wat je moet weten in {Name}: welke behandelingen er bestaan, wat ze kosten, hoe je het recept krijgt en hoe je stap voor stap begint."
+    ],
+    "priceP": [
+      "De prijzen van GLP‑1 in {Name} zijn hetzelfde als in de rest van Nederland, omdat ze afhangen van het medicijn en de dosis, niet van de gemeente. Wat verschilt tussen de opties zijn de werkzaamheid, de indicatie en de toedieningsfrequentie."
+    ],
+    "priceP2": [
+      "Houd er rekening mee dat de apotheekprijs van het medicijn maar een deel is: een serieuze behandeling omvat het medisch consult, het voorschrift, de dosisaanpassingen en de follow-up van de effecten. Zonder dit is het op eigen initiatief kopen van de pen riskant en weinig effectief."
+    ],
+    "rxP1": [
+      "In {Name} zijn er twee manieren om een recept te krijgen voor Wegovy, Mounjaro of Ozempic: de reguliere zorgverzekering ({health}) en de particuliere zorg. Via de zorgverzekering worden deze medicijnen zelden vergoed om af te vallen, en toegang tot de specialist kan weken of maanden duren."
+    ],
+    "rxP2": [
+      "Het online consult van {BRAND} is de snelle weg: een endocrinoloog beoordeelt jouw situatie snel en schrijft, indien de behandeling geïndiceerd is, een e-recept uit dat geldig is in elke apotheek in {Name}. Zonder reistijd en zonder eindeloos wachten."
+    ],
+    "obesityIntro": [
+      "Overgewicht en obesitas zijn een probleem van volksgezondheid in heel Nederland, en {Name} is geen uitzondering. Volgens beschikbare gegevens leeft ongeveer {obesity}% van de volwassen bevolking van de regio met obesitas (indicatief cijfer dat overgewicht niet meerekent, waarvan de prevalentie aanzienlijk hoger is)."
+    ],
+    "obesityP2": [
+      "Deze gegevens verklaren waarom de vraag naar effectieve behandelingen in {Name} zo sterk is gegroeid. Obesitas is een chronische aandoening met een biologische basis, geen kwestie van wilskracht, en daarom combineert de meest effectieve aanpak gewoonten, medische ondersteuning en, indien aangewezen, GLP‑1-medicijnen."
+    ],
+    "sections": {
+      "intro": "Behandeling om af te vallen in {Name}",
+      "price": "Prijs van GLP‑1-behandelingen in {Name}",
+      "prescription": "Hoe je het recept krijgt in {Name}",
+      "obesity": "Obesitas in {Name}: de context",
+      "howToStart": "Hoe je in {Name} stap voor stap begint"
+    },
+    "capitalLinksTitle": "Lokale gidsen voor {capital}",
+    "postTitle": "Behandeling om af te vallen in {Name}",
+    "postH1": "Behandeling om af te vallen in {Name}: prijzen, recept en hoe te beginnen",
+    "postMetaTitle": "Afvallen in {Name}: GLP‑1-behandeling met Online-Recept",
+    "postMetaDescription": "Volledige gids voor GLP‑1-behandeling om af te vallen in {Name}: prijzen, hoe je het recept krijgt en hoe je begint met online follow-up. Eerste consult gratis!",
+    "postExcerpt": "Alles over de medische behandeling om af te vallen in {Name}: GLP‑1-prijzen, online recept en follow-up met geregistreerde arts.",
+    "postCoverAlt": "GLP‑1-behandeling met medisch recept voor de provincie {Name}",
+    "postSlug": "behandeling-afvallen-provincie-{slug}",
+    "pricingCaption": "Indicatieve prijzen van GLP‑1-behandelingen in de apotheek (2026)",
+    "pricingHead": ["Behandeling", "Werkzame stof", "Toediening", "Indicatie", "Indicatieve prijs"],
+    "pricingRows": [
+      ["Wegovy", "semaglutide 2,4 mg", "Wekelijkse injectie", "Gewichtsverlies", "200–300 €/maand"],
+      ["Mounjaro", "tirzepatide", "Wekelijkse injectie", "Gewichtsverlies", "200–350 €/maand"],
+      ["Ozempic", "semaglutide", "Wekelijkse injectie", "Type-2-diabetes", "120–170 €/maand"],
+      ["Saxenda", "liraglutide", "Dagelijkse injectie", "Gewichtsverlies", "200–300 €/maand"]
+    ],
+    "capitalLinks": [
+      {"label": "Wegovy kopen in {capital}", "href": "/blog/comprare-wegovy-{capitalSlug}"},
+      {"label": "Mounjaro kopen in {capital}", "href": "/blog/comprare-mounjaro-{capitalSlug}"},
+      {"label": "Ozempic prijs in {capital}", "href": "/blog/precio-ozempic-{capitalSlug}"}
+    ],
+    "howToStartList": [
+      "Je boekt de eerste gratis online-consult.",
+      "Je vult je anamnese en doelen in via de app, waar je ook bent in {Name}.",
+      "Een geregistreerde endocrinoloog beoordeelt jouw geval.",
+      "Indien aangewezen, ontvang je het e-recept, geldig in elke apotheek in {Name}.",
+      "Je doet de follow-up en dosisaanpassingen via de app."
+    ],
+    "faqs": [
+      {"q": "Hoeveel kosten GLP‑1-behandelingen in {Name}?", "a": "De prijzen zijn hetzelfde als in de rest van Nederland: Ozempic 120–170 €/maand, Wegovy of Saxenda 200–300 €/maand, Mounjaro 200–350 €/maand, indicatief. Het eerste consult bij {BRAND} is gratis."},
+      {"q": "Kan ik het recept krijgen zonder naar {Name} te reizen?", "a": "Ja. Het consult is online en, als de behandeling is aangewezen, ontvang je het e-recept, geldig in elke apotheek van de provincie."},
+      {"q": "Vergoedt de {health} deze behandelingen?", "a": "In de regel worden GLP‑1 voor gewichtsverlies niet vergoed door de verzekering; voor type-2-diabetes kunnen ze wel worden vergoed met specialistvoorschrift."}
+    ]
+  },
+
+  "internalLinks": {
+    "nationalHubs": ["amsterdam", "rotterdam", "den-haag", "utrecht", "eindhoven", "groningen", "tilburg", "almere"],
+    "pillars": {
+      "wegovy": [
+        { "label": "Wegovy online kopen in Nederland", "href": "/blog/comprare-wegovy-online" },
+        { "label": "Prijs van Wegovy in Nederland", "href": "/blog/wegovy-prezzo-italia" },
+        { "label": "Wegovy vs Mounjaro: vergelijking", "href": "/blog/wegovy-vs-mounjaro" }
+      ],
+      "mounjaro": [
+        { "label": "Mounjaro online kopen in Nederland", "href": "/blog/comprare-mounjaro-online" },
+        { "label": "Prijs van Mounjaro in Nederland", "href": "/blog/mounjaro-prezzo-italia" },
+        { "label": "Wegovy vs Mounjaro: vergelijking", "href": "/blog/wegovy-vs-mounjaro" }
+      ],
+      "ozempic": [
+        { "label": "Ozempic online kopen in Nederland", "href": "/blog/comprare-ozempic-online" },
+        { "label": "Prijs van Ozempic in Nederland", "href": "/blog/ozempic-prezzo-italia" },
+        { "label": "Ozempic vs Wegovy vs Mounjaro: vergelijking", "href": "/blog/ozempic-vs-wegovy-vs-mounjaro" }
+      ],
+      "saxenda": [
+        { "label": "Saxenda kopen in Nederland", "href": "/blog/comprare-saxenda-italia" },
+        { "label": "Prijs van Saxenda in Nederland", "href": "/blog/saxenda-prezzo-italia" },
+        { "label": "Ozempic vs Saxenda: vergelijking", "href": "/blog/ozempic-vs-saxenda" }
+      ]
+    },
+    "labels": {
+      "buy": "{Drug} kopen in {City}",
+      "price": "Prijs van {Drug} in {City}",
+      "availability": "{Drug} in {City}",
+      "geoGroupTitle": "{Drug} in andere steden {scope}",
+      "geoGroupIntro": "Online medisch consult en e-recept voor {Drug} ook in deze plaatsen.",
+      "localGroupTitle": "Andere behandelingen om af te vallen in {City}",
+      "pillarGroupTitle": "Gidsen over {Drug} in Nederland",
+      "downGroupTitle": "{Drug} kopen per stad",
+      "downGroupIntro": "Boek je online medisch consult waar je ook bent. Dit zijn onze steden met de meeste aanvragen voor {Drug}."
+    }
+  },
+
+  "comune": {
+    "introBySize": {
+      "piccolo": "{City} ({province}) heeft {pop} inwoners en heeft, zoals de meeste kleine Nederlandse gemeenten, geen gespecialiseerde obesitaskliniek: de dichtstbijzijnde endocrinologiepraktijk is vaak enkele kilometers verderop. Dit is geen belemmering meer: met {BRAND} heb je een geregistreerde endocrinoloog via videoconsult vanuit huis, met een e-recept dat geldig is in elke apotheek in de provincie {province}.",
+      "medio": "{City} is een gemeente met {pop} inwoners in de provincie {province}. Hoewel er particuliere huisartsenpraktijken in de omgeving zijn, zijn er weinig gespecialiseerd in de medicamenteuze behandeling van obesitas met GLP‑1. {BRAND} verbindt je via videoconsult met geregistreerde endocrinologen, zonder reistijd en met een geldig recept in de apotheken van {City}.",
+      "grande": "Met {pop} inwoners heeft {City} ({province}) particuliere zorgvoorzieningen, maar specifieke obesitaseenheden met GLP‑1-voorschrift blijven schaars en met wachtlijsten. Bij {BRAND} vindt de beoordeling door een geregistreerde endocrinoloog plaats via videoconsult, zonder wachttijd, en werkt het e-recept in elke apotheek van de stad."
+    },
+    "legalNote": [
+      "De behandeling met GLP‑1-analogen (Wegovy, Mounjaro, Ozempic of Saxenda) vereist in Nederland altijd een medisch recept. Geen website die deze medicijnen 'zonder recept' aanbiedt aan mensen in {City} is legaal of veilig."
+    ],
+    "howItWorks": [
+      "Boek de eerste gratis afspraak vanaf je telefoon of computer, zonder te reizen.",
+      "Videoconsult met een geregistreerde endocrinoloog: medische geschiedenis, BMI en doelen.",
+      "Indien geschikt, voorschrift van GLP‑1 met e-recept, geldig in elke apotheek in de provincie {province}.",
+      "Continue follow-up via de app: dosis, bijwerkingen en aanpassingen, zonder {City} te verlaten."
+    ],
+    "sections": {
+      "clinic": "Kliniek voor gewichtsverlies in {City}: jouw online optie",
+      "howItWorks": "Hoe het online consult vanuit {City} werkt",
+      "prices": "Prijzen van de GLP‑1-behandeling (indicatief in de apotheek)",
+      "whyOnline": "Waarom kiezen voor een online kliniek als je in {City} woont?"
+    },
+    "faqs": {
+      "isThereClinic": "Is er een kliniek voor gewichtsverlies in {City}?",
+      "isThereClinicA": "{City} ({province}) heeft geen fysieke gespecialiseerde kliniek nodig voor toegang tot de behandeling: bij {BRAND} vindt de beoordeling door een geregistreerde endocrinoloog plaats via videoconsult en wordt het e-recept in elke apotheek verstrekt. Het eerste bezoek is gratis.",
+      "howMuchCost": "Hoeveel kost de behandeling vanuit {City}?",
+      "howMuchCostA": "Het medicijn kost evenveel als in de rest van Nederland (Ozempic 120–170 €/maand; Wegovy of Saxenda 200–300 €/maand; Mounjaro 200–350 €/maand, indicatief). Bij {BRAND} is het eerste medisch consult gratis."
+    }
+  }
+}

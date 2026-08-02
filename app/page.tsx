@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { QuizProvider } from "@/components/quiz-context";
 import { Announcement } from "@/components/announcement";
 import { Navbar } from "@/components/navbar";
@@ -11,21 +12,22 @@ import { MobileFollowup } from "@/components/mobile-followup";
 import { FinalCta } from "@/components/final-cta";
 import { Footer } from "@/components/footer";
 
-export const metadata: Metadata = {
-  title: "DoctorLife — Il tuo corpo, finalmente compreso",
-  description:
-    "Cura del peso e ormonale con supervisione medica in Italia, con follow-up reale dall'app. Senza liste d'attesa e senza permanenza.",
-  alternates: { canonical: "/" },
-  openGraph: {
-    title: "DoctorLife — Il tuo corpo, finalmente compreso",
-    description:
-      "Cura del peso e ormonale con supervisione medica in Italia, con follow-up reale dall'app.",
-    url: "/",
-    type: "website",
-    locale: "it_IT",
-    siteName: "DoctorLife",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("ui.metadata");
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: { canonical: "/" },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      url: "/",
+      type: "website",
+      locale: t("locale"),
+      siteName: t("siteName"),
+    },
+  };
+}
 
 export default function Home() {
   return (

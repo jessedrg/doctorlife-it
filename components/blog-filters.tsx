@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useTransition } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 /**
  * Controles de búsqueda y filtrado por categoría del blog.
@@ -17,6 +18,8 @@ export function BlogFilters({
   activeCat: string;
   query: string;
 }) {
+  const t = useTranslations("ui.blogFilters");
+  const ALL = "__all__";
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
@@ -33,7 +36,7 @@ export function BlogFilters({
       else sp.delete("q");
     }
     if (next.cat !== undefined) {
-      if (next.cat && next.cat !== "Todos") sp.set("cat", next.cat);
+      if (next.cat && next.cat !== ALL) sp.set("cat", next.cat);
       else sp.delete("cat");
     }
     sp.delete("page"); // cualquier cambio de filtro vuelve a la página 1
@@ -51,7 +54,7 @@ export function BlogFilters({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
-  const chips = ["Todos", ...categories];
+  const chips = [ALL, ...categories];
 
   return (
     <div className={`flex flex-col gap-5 ${isPending ? "opacity-70" : ""} transition-opacity`}>
@@ -64,7 +67,7 @@ export function BlogFilters({
         className="relative mx-auto w-full max-w-[520px]"
       >
         <label htmlFor="blog-search" className="sr-only">
-          Buscar guías del blog
+          {t("searchLabel")}
         </label>
         <svg
           aria-hidden
@@ -84,14 +87,14 @@ export function BlogFilters({
           type="search"
           value={value}
           onChange={(e) => setValue(e.target.value)}
-          placeholder="Busca por tratamiento o ciudad: «Wegovy Madrid»…"
+          placeholder={t("searchPlaceholder")}
           className="w-full rounded-full border border-ink/12 bg-warm py-[14px] pl-12 pr-5 text-[15px] text-ink outline-none ring-clay/30 transition focus:border-clay/50 focus:ring-2"
         />
       </form>
 
       <div className="flex flex-wrap items-center justify-center gap-2">
         {chips.map((c) => {
-          const isActive = c === activeCat || (c === "Todos" && !activeCat);
+          const isActive = c === activeCat || (c === ALL && !activeCat);
           return (
             <button
               key={c}
@@ -104,7 +107,7 @@ export function BlogFilters({
                   : "border border-ink/12 bg-warm text-ink-soft hover:border-ink/25 hover:text-ink"
               }`}
             >
-              {c}
+              {c === ALL ? t("allLabel") : c}
             </button>
           );
         })}

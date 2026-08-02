@@ -6,25 +6,30 @@
    ─────────────────────────────────────────────────────────── */
 
 import { CITY_FACTS, HEALTH_SERVICES, type CityFacts, type HealthService } from "./geo-i18n";
+import { blogTemplates } from "./blog-i18n";
+
+const M = blogTemplates.postMeta;
 
 export { CITY_FACTS, HEALTH_SERVICES };
 export type { CityFacts, HealthService };
 
-/** Servizio sanitario regionale per una città (dalla sua regione). */
+function tpl(s: string, vars: Record<string, string>): string {
+  return s.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? `{${k}}`);
+}
+
 export function healthServiceFor(citySlug: string): HealthService {
   const facts = CITY_FACTS[citySlug];
-  const fallback: HealthService = { short: "SSR", long: "il servizio sanitario regionale" };
+  const fallback: HealthService = { short: M.fallbackHealth.short, long: M.fallbackHealth.long };
   if (!facts) return fallback;
   return HEALTH_SERVICES[facts.region] ?? fallback;
 }
 
-/** Formatta la popolazione di una città in italiano. */
 export function formatCityPop(pop: number): string {
   if (pop >= 1000000) {
     const m = (pop / 1000000).toFixed(1).replace(".", ",");
-    return `${m} milioni di abitanti`;
+    return tpl(M.formatPop.millions, { m });
   }
-  return `${Math.round(pop / 1000)}.000 abitanti circa`;
+  return tpl(M.formatPop.thousands, { n: String(Math.round(pop / 1000)) });
 }
 
 /** Città extra oltre alle principali (per ora vuoto: CITY_FACTS è già la fonte unica). */

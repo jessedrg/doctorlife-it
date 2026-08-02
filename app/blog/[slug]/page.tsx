@@ -139,8 +139,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   const related = getRelated(slug);
   const internalLinks = getInternalLinks(slug);
   const url = `${SITE_URL}/blog/${post.slug}`;
+  const t = await getTranslations("ui.blogSlugPage");
   const fmt = (d: string) =>
-    new Date(d).toLocaleDateString("es-ES", { day: "numeric", month: "long", year: "numeric" });
+    new Date(d).toLocaleDateString(t("dateLocale"), { day: "numeric", month: "long", year: "numeric" });
 
   // Inserta el funnel tras la segunda sección
   const insertAt = Math.min(2, post.sections.length);
@@ -210,9 +211,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           <article className="mx-auto max-w-[760px] px-5 pb-6 pt-10 lg:max-w-[820px] 2xl:max-w-[900px]">
             {/* breadcrumb */}
             <nav className="mb-8 flex items-center gap-2 text-[13px] text-ink-mute">
-              <a href="/" className="no-underline hover:text-ink">Inicio</a>
+              <a href="/" className="no-underline hover:text-ink">{t("home")}</a>
               <span aria-hidden>/</span>
-              <a href="/blog" className="no-underline hover:text-ink">Blog</a>
+              <a href="/blog" className="no-underline hover:text-ink">{t("blog")}</a>
               <span aria-hidden>/</span>
               <span className="text-ink-soft">{post.category}</span>
             </nav>
@@ -224,9 +225,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               {post.h1}
             </h1>
             <div className="mt-5 flex flex-wrap items-center gap-3 text-[13.5px] text-ink-mute">
-              <span>Actualizado el {fmt(post.updated)}</span>
+              <span>{t("updatedOn")} {fmt(post.updated)}</span>
               <span aria-hidden>·</span>
-              <span>{post.readMins} min de lectura</span>
+              <span>{t("readMins", { mins: post.readMins })}</span>
             </div>
             <div className="mt-6 flex items-start gap-3 rounded-[16px] border border-ink/10 bg-warm px-5 py-4">
               <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-ink font-serif text-[15px] font-bold text-paper">
@@ -234,7 +235,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               </span>
               <div className="text-[13.5px] leading-snug">
                 <p className="font-medium text-ink">
-                  Revisado médicamente por {MEDICAL_REVIEWER.name}
+                  {t("reviewedBy")} {MEDICAL_REVIEWER.name}
                 </p>
                 <p className="text-ink-mute">{MEDICAL_REVIEWER.role}</p>
                 <p className="text-ink-mute">{MEDICAL_REVIEWER.credentials}</p>
@@ -264,11 +265,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {/* Casos reales antes / después */}
             <section className="mt-14 rounded-[28px] border border-ink/10 bg-warm px-5 py-8 sm:px-8">
               <h2 className="text-balance text-center text-[clamp(22px,2.8vw,30px)] font-normal leading-[1.15] text-ink">
-                Casos reales con tratamiento GLP-1
+                {t("realCasesTitle")}
               </h2>
               <p className="mx-auto mt-3 max-w-[440px] text-center text-[15px] leading-relaxed text-ink-soft">
-                Personas que empezaron su plan con supervisión médica. Desliza para
-                ver más casos.
+                {t("realCasesSubtitle")}
               </p>
               <div className="mx-auto mt-6 max-w-[460px]">
                 <BeforeAfterCarousel variant="light" />
@@ -281,7 +281,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             {/* FAQ */}
             <section>
               <h2 className="mt-14 text-[clamp(22px,2.8vw,30px)] font-normal text-ink">
-                Preguntas frecuentes
+                {t("faqTitle")}
               </h2>
               <div className="mt-6 flex flex-col gap-3">
                 {post.faqs.map((f) => (
@@ -299,11 +299,10 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               </div>
             </section>
 
-            <BlogFunnel title="¿List@ para empezar?" subtitle="Reserva tu primera visita gratis y empieza con un plan diseñado en torno a ti." image="/testimonials/daniel.png" imageAlt="Daniel, paciente de DoctorLife, sonriendo" />
+            <BlogFunnel title={t("finalCtaTitle")} subtitle={t("finalCtaSubtitle")} image="/testimonials/daniel.png" imageAlt={t("finalCtaImageAlt")} />
 
             <p className="mt-8 rounded-[16px] bg-cream/50 px-5 py-4 text-[13px] leading-relaxed text-ink-mute">
-              Este contenido es informativo y no sustituye el consejo médico. Los tratamientos GLP‑1 requieren
-              valoración y receta de un profesional colegiado. Contenido revisado por {MEDICAL_REVIEWER.name} ({MEDICAL_REVIEWER.credentials}).
+              {t("disclaimer", { reviewer: MEDICAL_REVIEWER.name, credentials: MEDICAL_REVIEWER.credentials })}
             </p>
           </article>
 
@@ -314,7 +313,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           {related.length > 0 && (
             <section className="mx-auto max-w-none px-3 pb-6 pt-10 sm:px-4 lg:px-5">
               <h2 className="mb-7 text-[clamp(22px,2.6vw,30px)] font-light text-ink">
-                Sigue leyendo
+                {t("keepReading")}
               </h2>
               <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {related.map((p) => (

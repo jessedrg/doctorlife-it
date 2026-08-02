@@ -183,6 +183,112 @@
     "howLongA": "Con {BRAND} la prima valutazione si può prenotare in pochi giorni, molto più rapido delle liste d'attesa pubbliche per endocrinologia."
   },
 
+  "postMeta": {
+    "buyPost": {
+      "slug": "comprare-{drugKey}-{citySlug}",
+      "title": "Comprare {Drug} a {City}",
+      "h1": "Comprare {Drug} a {City}: prezzo, ricetta e come iniziare",
+      "metaTitle": "Comprare {Drug} a {City}: Ricetta Online con Medico in 24h",
+      "metaDescription": "Ottieni {Drug} a {City} con una visita medica online: ricetta elettronica in 24h, senza liste d'attesa né spostamenti. Medici iscritti all'Ordine e follow-up reale. Prima visita gratis!",
+      "excerpt": "Guida per comprare {Drug} a {City} con ricetta medica: prezzo reale per dose, come ottenere la prescrizione online senza spostarti e iniziare con follow-up clinico.",
+      "coverAlt": "{Drug} con ricetta medica per trattamento a {City}",
+      "keyword": "comprare {drugName} {cityName}"
+    },
+    "pricePost": {
+      "slug": "precio-{drugKey}-{citySlug}",
+      "title": "Prezzo di {Drug} a {City}",
+      "h1": "Prezzo di {Drug} a {City}: quanto costa e come ottenerlo con ricetta",
+      "metaTitle": "{Drug} Prezzo a {City} 2026 | Ricetta Online con Medico",
+      "metaDescription": "Prezzo di {Drug} a {City} per dose e come ottenerlo legalmente: visita medica online e ricetta elettronica senza attese. Medici iscritti all'Ordine e follow-up incluso. Prima visita gratis!",
+      "excerpt": "Quanto costa {Drug} a {City} per dose, da cosa dipende il prezzo e come ottenerlo legalmente con ricetta medica e follow-up reale.",
+      "coverAlt": "Penna di {Drug} con etichetta di prezzo in una farmacia di {City}",
+      "keyword": "prezzo {drugName} {cityName}",
+      "category": "Prezzi",
+      "priceIntro": "Il prezzo di {Drug} nelle farmacie di {City} è regolato e si situa in modo orientativo tra {low} e {high} al mese, secondo la dose. A questo costo si aggiunge la visita e il follow-up medico, necessari per una prescrizione sicura.",
+      "priceDependsList": [
+        "La dose: man mano che aumenta, il prezzo della penna di {Drug} sale.",
+        "Se serve visita e follow-up medico (incluso nel trattamento DoctorLife).",
+        "La disponibilità nella tua farmacia di {City} e la confezione specifica.",
+        "Se è per il controllo del peso (non rimborsato) o per il diabete (rimborsato con ricetta dello specialista)."
+      ]
+    },
+    "drugCityPost": {
+      "slug": "{drugKey}-{citySlug}",
+      "title": "{Drug} a {City}",
+      "h1": "{Drug} a {City}: dove ottenerlo, prezzo e disponibilità",
+      "metaTitle": "{Drug} a {City} | Visita e Ricetta Online senza Attese",
+      "metaDescription": "{Drug} a {City}: ottienilo con ricetta tramite una visita medica online, senza liste d'attesa. Prezzo per dose, disponibilità e follow-up reale. Prima visita gratis!",
+      "excerpt": "Tutto su {Drug} a {City}: dove ottenerlo legalmente, prezzo orientativo, disponibilità in farmacia e come iniziare con ricetta e follow-up medico.",
+      "coverAlt": "Penna di {Drug} disponibile in una farmacia di {City}",
+      "keyword": "{drugName} {cityName}"
+    },
+    "rxCityPost": {
+      "slug": "receta-{drugKey}-online-{citySlug}",
+      "title": "Ricetta di {Drug} online a {City}",
+      "h1": "Ricetta di {Drug} online a {City}: requisiti, prezzo e passi",
+      "metaTitle": "Ricetta {Drug} Online a {City} | Medico Iscritto Oggi",
+      "metaDescription": "Ottieni la ricetta di {Drug} online a {City} con valutazione di un medico iscritto all'Ordine, oggi stesso e senza liste d'attesa. Ricetta elettronica valida nella tua farmacia. Prima visita gratis!",
+      "excerpt": "Come ottenere la ricetta di {Drug} online a {City}: requisiti clinici, validità della ricetta elettronica, prezzo in farmacia e passi per iniziare oggi con valutazione medica.",
+      "coverAlt": "Ricetta elettronica di {Drug} emessa online a {City}",
+      "keyword": "ricetta {drugName} online {cityName}",
+      "rxH2": "Ricetta di {Drug} online a {City}: come funziona",
+      "reqH2": "Requisiti perché ti venga prescritto {Drug}",
+      "stepsH2": "Ottenere la ricetta di {Drug} a {City} passo dopo passo"
+    },
+    "researchPost": {
+      "slug": "cosa-e-{drugKeyLower}",
+      "title": "Cos'è {Name}",
+      "h1": "Cos'è {Name} e a cosa serve",
+      "metaTitle": "Cos'è {Name}: a cosa serve e se è disponibile | {BRAND}",
+      "metaDescription": "{Name}: cos'è, come funziona, cosa dicono gli studi e perché non è ancora disponibile in Italia. Alternative approvate con ricetta e follow-up medico.",
+      "excerpt": "Tutto quello che si sa su {Name}: cos'è, come agisce e, soprattutto, quali alternative approvate puoi usare oggi mentre arriva.",
+      "coverAlt": "{Name}, farmaco in fase di ricerca di {maker}",
+      "category": "In ricerca",
+      "keyword": "cosa è {name}",
+      "whatIsH2": "Cos'è {Name}?",
+      "whatIsP1": "{Name} è un farmaco in fase di ricerca sviluppato da {maker}. È un {klass} che si somministra con {route} e viene studiato per il controllo del peso e del diabete di tipo 2.",
+      "whatIsP2": "Appartiene alla nuova generazione di trattamenti basati su ormoni intestinali — la stessa famiglia di Wegovy, Mounjaro o Ozempic — ma non ha ancora completato il processo di approvazione, quindi non è ancora disponibile nelle farmacie italiane.",
+      "studiesH2": "{Name} e la perdita di peso: cosa dicono gli studi",
+      "approvalH2": "È approvato {Name} in Italia?",
+      "approvalP1": "No. Ad oggi {Name} NON è approvato dall'EMA né dall'AIFA e non si vende legalmente in Italia, né in farmacia né online. È disponibile solo all'interno di studi clinici.",
+      "approvalQuote": "Qualsiasi sito che dica di venderti {Name} in Italia opera fuori dalla legge: il prodotto non ha garanzie e può essere pericoloso per la tua salute.",
+      "altH2": "Nell'attesa di {Name}: alternative approvate",
+      "altP1": "Ad esempio, {Alt} ({altInn}) è un'opzione approvata e disponibile con ricetta. In DoctorLife, un endocrinologo iscritto all'Ordine valuta il tuo caso e, se appropriato, ti prescrive il trattamento con follow-up dall'app.",
+      "altLinksTitle": "Alternative disponibili oggi",
+      "altLinks": [
+        {"label": "Comprare {AltName} online in Italia", "href": "/blog/{altBuy}"},
+        {"label": "{AltName} prezzo in Italia per dose", "href": "/blog/{altPrice}"},
+        {"label": "Nuovi GLP‑1 in ricerca", "href": "/blog/glp1-in-ricerca"}
+      ],
+      "faqs": [
+        {"q": "È legale comprare {Name} in Italia?", "a": "No, non essendo approvata dall'EMA/AIFA, qualsiasi vendita è illegale e rischiosa."},
+        {"q": "Quando sarà disponibile {Name} in Italia?", "a": "Dipende dal completamento degli studi di fase III e dall'approvazione EMA/AIFA. Non c'è una data certa."},
+        {"q": "Cosa posso fare oggi se voglio perdere peso?", "a": "Un medico può valutare {Alt}, già approvato e disponibile con ricetta e follow-up reale."}
+      ]
+    },
+    "buyLinks": {
+      "title": "Continua a informarti",
+      "priceLabel": "{Drug} prezzo in Italia per dose",
+      "buyLabel": "Comprare {Drug} online in Italia",
+      "compareLabel": "Confronto GLP‑1: quale scegliere",
+      "cityPriceLabel": "Prezzo di {Drug} a {City}",
+      "cityPriceHref": "/blog/precio-{drugKey}-{citySlug}"
+    },
+    "priceTable": {
+      "weightHead": ["Dose", "Fase", "Prezzo orientativo/mese"],
+      "saxendaHead": ["Confezione", "Uso", "Prezzo orientativo"],
+      "caption": "Prezzo orientativo di {Drug} per dose a {City}"
+    },
+    "formatPop": {
+      "millions": "{m} milioni di abitanti",
+      "thousands": "{n}.000 abitanti circa"
+    },
+    "fallbackHealth": {
+      "short": "SSR",
+      "long": "il servizio sanitario regionale"
+    }
+  },
+
   "region": {
     "introP1": [
       "La regione {Name}, con circa {pop} e capoluogo {capital}, registra una domanda crescente di trattamenti medici per perdere peso. Sempre più persone cercano come iniziare con un analogo del GLP‑1 (Wegovy, Mounjaro, Ozempic o Saxenda) in modo legale, sicuro e con follow-up medico reale.",
@@ -220,7 +326,39 @@
       "obesity": "L'obesità in {Name}: il contesto",
       "howToStart": "Come iniziare in {Name} passo dopo passo"
     },
-    "capitalLinksTitle": "Guide locali di {capital}"
+    "capitalLinksTitle": "Guide locali di {capital}",
+    "postTitle": "Trattamento per dimagrire in {Name}",
+    "postH1": "Trattamento per dimagrire in {Name}: prezzi, ricetta e come iniziare",
+    "postMetaTitle": "Dimagrire in {Name}: Trattamento GLP‑1 con Ricetta Online",
+    "postMetaDescription": "Guida completa al trattamento GLP‑1 per dimagrire in {Name}: prezzi, come ottenere la ricetta e come iniziare con follow-up medico online. Prima visita gratis!",
+    "postExcerpt": "Tutto sul trattamento medico per dimagrire in {Name}: prezzi dei GLP‑1, ricetta online e follow-up con medico iscritto all'Ordine.",
+    "postCoverAlt": "Trattamento GLP‑1 con ricetta medica per la regione {Name}",
+    "postSlug": "trattamento-dimagrire-regione-{slug}",
+    "pricingCaption": "Prezzi orientativi dei trattamenti GLP‑1 in farmacia (2026)",
+    "pricingHead": ["Trattamento", "Principio attivo", "Somministrazione", "Indicazione", "Prezzo orientativo"],
+    "pricingRows": [
+      ["Wegovy", "semaglutide 2,4 mg", "Iniezione settimanale", "Perdita di peso", "200–300 €/mese"],
+      ["Mounjaro", "tirzepatide", "Iniezione settimanale", "Perdita di peso", "200–350 €/mese"],
+      ["Ozempic", "semaglutide", "Iniezione settimanale", "Diabete tipo 2", "120–170 €/mese"],
+      ["Saxenda", "liraglutide", "Iniezione giornaliera", "Perdita di peso", "200–300 €/mese"]
+    ],
+    "capitalLinks": [
+      {"label": "Comprare Wegovy a {capital}", "href": "/blog/comprare-wegovy-{capitalSlug}"},
+      {"label": "Comprare Mounjaro a {capital}", "href": "/blog/comprare-mounjaro-{capitalSlug}"},
+      {"label": "Prezzo Ozempic a {capital}", "href": "/blog/precio-ozempic-{capitalSlug}"}
+    ],
+    "howToStartList": [
+      "Prenoti la prima visita medica online gratis.",
+      "Completi la tua anamnesi e i tuoi obiettivi dall'app, ovunque tu sia in {Name}.",
+      "Un endocrinologo iscritto all'Ordine valuta il tuo caso.",
+      "Se appropriato, ricevi la ricetta elettronica valida in qualsiasi farmacia di {Name}.",
+      "Fai il follow-up e gli aggiustamenti di dose dall'app."
+    ],
+    "faqs": [
+      {"q": "Quanto costano i trattamenti GLP‑1 in {Name}?", "a": "I prezzi sono gli stessi del resto d'Italia: Ozempic 120–170 €/mese, Wegovy o Saxenda 200–300 €/mese, Mounjaro 200–350 €/mese, orientativi. La prima visita con {BRAND} è gratis."},
+      {"q": "Posso ottenere la ricetta senza spostarmi in {Name}?", "a": "Sì. Il consulto è online e, se il trattamento è indicato, ricevi la ricetta elettronica valida in qualsiasi farmacia della regione."},
+      {"q": "Il {health} finanzia questi trattamenti?", "a": "Di norma i GLP‑1 per la perdita di peso non sono rimborsati dal SSN; sono invece rimborsabili per il diabete di tipo 2 su prescrizione dello specialista."}
+    ]
   },
 
   "internalLinks": {
@@ -286,6 +424,31 @@
       "isThereClinicA": "{City} ({province}) non ha bisogno di una clinica fisica specializzata per accedere al trattamento: con {BRAND} la valutazione con endocrinologo iscritto all'Ordine è in videoconsulto e la ricetta elettronica si dispensa in qualsiasi farmacia. La prima visita è gratis.",
       "howMuchCost": "Quanto costa il trattamento da {City}?",
       "howMuchCostA": "Il farmaco costa lo stesso che nel resto d'Italia (Ozempic 120–170 €/mese; Wegovy o Saxenda 200–300 €/mese; Mounjaro 200–350 €/mese, orientativi). In {BRAND}, la prima visita medica è gratis."
+    },
+    "postMeta": {
+      "slugPrefix": "clinica-perdita-di-peso-",
+      "title": "Clinica per la perdita di peso a {City}",
+      "h1": "Clinica per la perdita di peso a {City}: GLP‑1 con medico online",
+      "metaTitle": "Clinica Perdita di Peso a {City} ({province}): GLP‑1 Online",
+      "metaDescription": "Clinica online per la perdita di peso a {City} ({province}): endocrinologo iscritto all'Ordine, ricetta di Wegovy, Ozempic o Mounjaro e follow-up tramite app. Prima visita gratis!",
+      "excerpt": "Trattamento medico per dimagrire a {City} senza spostarti: valutazione in videoconsulto, ricetta elettronica valida in farmacia e follow-up clinico continuo.",
+      "category": "Clinica",
+      "keyword": "clinica perdita di peso {City}",
+      "coverAlt": "Clinica online per la perdita di peso con GLP‑1 a {City} ({province})",
+      "pricingCaption": "Prezzi orientativi in farmacia nella provincia di {province}",
+      "pricingHead": ["Farmaco", "Principio attivo", "Somministrazione", "Prezzo/mese"],
+      "pricingRows": [
+        ["Wegovy", "semaglutide 2,4 mg", "Iniezione settimanale", "200–300 €"],
+        ["Mounjaro", "tirzepatide", "Iniezione settimanale", "200–350 €"],
+        ["Ozempic", "semaglutide", "Iniezione settimanale", "120–170 €"],
+        ["Saxenda", "liraglutide", "Iniezione giornaliera", "200–300 €"]
+      ],
+      "whyOnlineSmall": "Senza spostamenti: non dipendi dalla distanza tra {City} e il capoluogo di provincia per vedere uno specialista.",
+      "whyOnlineLarge": "Senza sale d'attesa: il videoconsulto si adatta al tuo orario, non il contrario.",
+      "doctorsLine": "Endocrinologi iscritti all'Ordine in Italia, specializzati in obesità e GLP‑1.",
+      "rxLine": "Ricetta elettronica valida in qualsiasi farmacia, anche nella tua a {City}.",
+      "followUpLine": "Follow-up settimanale tramite app: aderenza, effetti secondari e aggiustamento della dose.",
+      "popSuffix": "abitanti"
     }
   }
 }

@@ -87,6 +87,45 @@ export type BlogTemplatesData = {
   faqTemplates: Record<string, string>;
   localContext: Record<string, string>;
   localFaqs: Record<string, string>;
+  postMeta: {
+    buyPost: {
+      slug: string; title: string; h1: string; metaTitle: string;
+      metaDescription: string; excerpt: string; coverAlt: string; keyword: string;
+    };
+    pricePost: {
+      slug: string; title: string; h1: string; metaTitle: string;
+      metaDescription: string; excerpt: string; coverAlt: string; keyword: string;
+      category: string; priceIntro: string; priceDependsList: string[];
+    };
+    drugCityPost: {
+      slug: string; title: string; h1: string; metaTitle: string;
+      metaDescription: string; excerpt: string; coverAlt: string; keyword: string;
+    };
+    rxCityPost: {
+      slug: string; title: string; h1: string; metaTitle: string;
+      metaDescription: string; excerpt: string; coverAlt: string; keyword: string;
+      rxH2: string; reqH2: string; stepsH2: string;
+    };
+    researchPost: {
+      slug: string; title: string; h1: string; metaTitle: string;
+      metaDescription: string; excerpt: string; coverAlt: string;
+      category: string; keyword: string;
+      whatIsH2: string; whatIsP1: string; whatIsP2: string;
+      studiesH2: string; approvalH2: string; approvalP1: string; approvalQuote: string;
+      altH2: string; altP1: string; altLinksTitle: string;
+      altLinks: { label: string; href: string }[];
+      faqs: { q: string; a: string }[];
+    };
+    buyLinks: {
+      title: string; priceLabel: string; buyLabel: string;
+      compareLabel: string; cityPriceLabel: string; cityPriceHref: string;
+    };
+    priceTable: {
+      weightHead: string[]; saxendaHead: string[]; caption: string;
+    };
+    formatPop: { millions: string; thousands: string };
+    fallbackHealth: { short: string; long: string };
+  };
   region: {
     introP1: string[];
     introP2: string[];
@@ -99,6 +138,19 @@ export type BlogTemplatesData = {
     obesityP2: string[];
     sections: Record<string, string>;
     capitalLinksTitle: string;
+    postTitle: string;
+    postH1: string;
+    postMetaTitle: string;
+    postMetaDescription: string;
+    postExcerpt: string;
+    postCoverAlt: string;
+    postSlug: string;
+    pricingCaption: string;
+    pricingHead: string[];
+    pricingRows: string[][];
+    capitalLinks: { label: string; href: string }[];
+    howToStartList: string[];
+    faqs: { q: string; a: string }[];
   };
   comune: {
     introBySize: Record<string, string>;

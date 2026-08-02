@@ -18,6 +18,7 @@ import { CITY_FACTS, healthServiceFor, formatCityPop } from "./blog-city-facts";
 import { blogDrugsData, blogTemplates, type DrugRaw, type ResearchDrugRaw } from "./blog-i18n";
 
 const T = blogTemplates;
+const M = blogTemplates.postMeta;
 const BRAND = "DoctorLife";
 const PRICE_NOTE = T.priceNote;
 
@@ -96,25 +97,27 @@ function getDrug(key: string): Drug {
 
 /* ── blocchi riutilizzabili ── */
 function buyLinks(drug: Drug, city: City, hasPrice: boolean): Block {
+  const vars = { Drug: cap(drug.name), City: city.name, drugKey: drug.key, citySlug: city.slug };
   const items = [
-    { label: `${cap(drug.name)} prezzo in Italia per dose`, href: `/blog/${drug.pillarPrice}` },
-    { label: `Comprare ${cap(drug.name)} online in Italia`, href: `/blog/${drug.pillarBuy}` },
-    { label: "Confronto GLP‑1: quale scegliere", href: `/blog/${drug.compare}` },
+    { label: tpl(M.buyLinks.priceLabel, vars), href: `/blog/${drug.pillarPrice}` },
+    { label: tpl(M.buyLinks.buyLabel, vars), href: `/blog/${drug.pillarBuy}` },
+    { label: M.buyLinks.compareLabel, href: `/blog/${drug.compare}` },
   ];
   if (hasPrice) {
     items.unshift({
-      label: `Prezzo di ${cap(drug.name)} a ${city.name}`,
-      href: `/blog/precio-${drug.key}-${city.slug}`,
+      label: tpl(M.buyLinks.cityPriceLabel, vars),
+      href: tpl(M.buyLinks.cityPriceHref, vars),
     });
   }
-  return { type: "links", title: "Continua a informarti", items: items.slice(0, 4) };
+  return { type: "links", title: M.buyLinks.title, items: items.slice(0, 4) };
 }
 
 function priceTable(drug: Drug, city: City): Block {
+  const vars = { Drug: cap(drug.name), City: city.name };
   return {
     type: "table",
-    caption: `Prezzo orientativo di ${cap(drug.name)} per dose a ${city.name}`,
-    head: drug.key === "saxenda" ? ["Confezione", "Uso", "Prezzo orientativo"] : ["Dose", "Fase", "Prezzo orientativo/mese"],
+    caption: tpl(M.priceTable.caption, vars),
+    head: drug.key === "saxenda" ? M.priceTable.saxendaHead : M.priceTable.weightHead,
     rows: drug.rows,
   };
 }
@@ -206,24 +209,18 @@ function buildBuyPost(drug: Drug, city: City, index: number, hasPrice: boolean):
 
   return {
     slug,
-    title: tpl("Comprare {Drug} a {City}", vars),
-    h1: tpl("Comprare {Drug} a {City}: prezzo, ricetta e come iniziare", vars),
-    metaTitle: tpl("Comprare {Drug} a {City}: Ricetta Online con Medico in 24h", vars),
-    metaDescription: tpl(
-      "Ottieni {Drug} a {City} con una visita medica online: ricetta elettronica in 24h, senza liste d'attesa né spostamenti. Medici iscritti all'Ordine e follow-up reale. Prima visita gratis!",
-      vars,
-    ),
-    excerpt: tpl(
-      "Guida per comprare {Drug} a {City} con ricetta medica: prezzo reale per dose, come ottenere la prescrizione online senza spostarti e iniziare con follow-up clinico.",
-      vars,
-    ),
+    title: tpl(M.buyPost.title, vars),
+    h1: tpl(M.buyPost.h1, vars),
+    metaTitle: tpl(M.buyPost.metaTitle, vars),
+    metaDescription: tpl(M.buyPost.metaDescription, vars),
+    excerpt: tpl(M.buyPost.excerpt, vars),
     category: drug.category,
-    keyword: `comprare ${drug.name.toLowerCase()} ${city.name.toLowerCase()}`,
+    keyword: tpl(M.buyPost.keyword, { drugName: drug.name.toLowerCase(), cityName: city.name.toLowerCase() }),
     readMins: 5 + (hash(slug) % 4),
     date: isoDate(index),
     updated: "2026-06-18",
     cover: drug.cover,
-    coverAlt: tpl("{Drug} con ricetta medica per trattamento a {City}", vars),
+    coverAlt: tpl(M.buyPost.coverAlt, vars),
     sections,
     faqs,
   };
@@ -241,10 +238,7 @@ function buildPricePost(drug: Drug, city: City, index: number): Post {
       blocks: [
         {
           type: "p",
-          text: tpl(
-            "Il prezzo di {Drug} nelle farmacie di {City} è regolato e si situa in modo orientativo tra {low} e {high} al mese, secondo la dose. A questo costo si aggiunge la visita e il follow-up medico, necessari per una prescrizione sicura.",
-            { ...vars, low: drug.priceLow, high: drug.priceHigh },
-          ),
+          text: tpl(M.pricePost.priceIntro, { ...vars, low: drug.priceLow, high: drug.priceHigh }),
         },
         priceTable(drug, city),
         { type: "quote", text: PRICE_NOTE },
@@ -255,12 +249,7 @@ function buildPricePost(drug: Drug, city: City, index: number): Post {
       blocks: [
         {
           type: "list",
-          items: [
-            tpl("La dose: man mano che aumenta, il prezzo della penna di {Drug} sale.", vars),
-            "Se serve visita e follow-up medico (incluso nel trattamento DoctorLife).",
-            tpl("La disponibilità nella tua farmacia di {City} e la confezione specifica.", vars),
-            "Se è per il controllo del peso (non rimborsato) o per il diabete (rimborsato con ricetta dello specialista).",
-          ],
+          items: M.pricePost.priceDependsList.map((s) => tpl(s, vars)),
         },
       ],
     },
@@ -293,24 +282,18 @@ function buildPricePost(drug: Drug, city: City, index: number): Post {
 
   return {
     slug,
-    title: tpl("Prezzo di {Drug} a {City}", vars),
-    h1: tpl("Prezzo di {Drug} a {City}: quanto costa e come ottenerlo con ricetta", vars),
-    metaTitle: tpl("{Drug} Prezzo a {City} 2026 | Ricetta Online con Medico", vars),
-    metaDescription: tpl(
-      "Prezzo di {Drug} a {City} per dose e come ottenerlo legalmente: visita medica online e ricetta elettronica senza attese. Medici iscritti all'Ordine e follow-up incluso. Prima visita gratis!",
-      vars,
-    ),
-    excerpt: tpl(
-      "Quanto costa {Drug} a {City} per dose, da cosa dipende il prezzo e come ottenerlo legalmente con ricetta medica e follow-up reale.",
-      vars,
-    ),
-    category: "Prezzi",
-    keyword: `prezzo ${drug.name.toLowerCase()} ${city.name.toLowerCase()}`,
+    title: tpl(M.pricePost.title, vars),
+    h1: tpl(M.pricePost.h1, vars),
+    metaTitle: tpl(M.pricePost.metaTitle, vars),
+    metaDescription: tpl(M.pricePost.metaDescription, vars),
+    excerpt: tpl(M.pricePost.excerpt, vars),
+    category: M.pricePost.category,
+    keyword: tpl(M.pricePost.keyword, { drugName: drug.name.toLowerCase(), cityName: city.name.toLowerCase() }),
     readMins: 5 + (hash(slug) % 3),
     date: isoDate(index),
     updated: "2026-06-18",
     cover: drug.cover,
-    coverAlt: tpl("Penna di {Drug} con etichetta di prezzo in una farmacia di {City}", vars),
+    coverAlt: tpl(M.pricePost.coverAlt, vars),
     sections,
     faqs,
   };
@@ -361,24 +344,18 @@ function buildDrugCityPost(drug: Drug, city: City, index: number): Post {
 
   return {
     slug,
-    title: tpl("{Drug} a {City}", vars),
-    h1: tpl("{Drug} a {City}: dove ottenerlo, prezzo e disponibilità", vars),
-    metaTitle: tpl("{Drug} a {City} | Visita e Ricetta Online senza Attese", vars),
-    metaDescription: tpl(
-      "{Drug} a {City}: ottienilo con ricetta tramite una visita medica online, senza liste d'attesa. Prezzo per dose, disponibilità e follow-up reale. Prima visita gratis!",
-      vars,
-    ),
-    excerpt: tpl(
-      "Tutto su {Drug} a {City}: dove ottenerlo legalmente, prezzo orientativo, disponibilità in farmacia e come iniziare con ricetta e follow-up medico.",
-      vars,
-    ),
+    title: tpl(M.drugCityPost.title, vars),
+    h1: tpl(M.drugCityPost.h1, vars),
+    metaTitle: tpl(M.drugCityPost.metaTitle, vars),
+    metaDescription: tpl(M.drugCityPost.metaDescription, vars),
+    excerpt: tpl(M.drugCityPost.excerpt, vars),
     category: drug.category,
-    keyword: `${drug.name.toLowerCase()} ${city.name.toLowerCase()}`,
+    keyword: tpl(M.drugCityPost.keyword, { drugName: drug.name.toLowerCase(), cityName: city.name.toLowerCase() }),
     readMins: 5 + (hash(slug) % 4),
     date: isoDate(index),
     updated: "2026-06-18",
     cover: drug.cover,
-    coverAlt: tpl("Penna di {Drug} disponibile in una farmacia di {City}", vars),
+    coverAlt: tpl(M.drugCityPost.coverAlt, vars),
     sections,
     faqs,
   };
@@ -393,7 +370,7 @@ function buildRxCityPost(drug: Drug, city: City, index: number): Post {
 
   const sections: Section[] = [
     {
-      h2: tpl("Ricetta di {Drug} online a {City}: come funziona", vars),
+      h2: tpl(M.rxCityPost.rxH2, vars),
       blocks: [
         { type: "p", text: tpl(pick(T.rxCityIntro, slug + "intro"), vars) },
         { type: "p", text: tpl(pick(T.rxCityValidity, slug + "valid"), vars) },
@@ -401,7 +378,7 @@ function buildRxCityPost(drug: Drug, city: City, index: number): Post {
     },
     localContextSection(city),
     {
-      h2: tpl("Requisiti perché ti venga prescritto {Drug}", vars),
+      h2: tpl(M.rxCityPost.reqH2, vars),
       blocks: [
         { type: "p", text: tpl(pick(T.rxCityRequirements, slug + "req"), vars) },
         { type: "p", text: tpl(pick(mech, slug + "mech"), vars) },
@@ -412,7 +389,7 @@ function buildRxCityPost(drug: Drug, city: City, index: number): Post {
       blocks: [priceTable(drug, city), { type: "quote", text: PRICE_NOTE }],
     },
     {
-      h2: tpl("Ottenere la ricetta di {Drug} a {City} passo dopo passo", vars),
+      h2: tpl(M.rxCityPost.stepsH2, vars),
       blocks: [{ type: "list", items: steps }, buyLinks(drug, city, true)],
     },
   ];
@@ -425,24 +402,18 @@ function buildRxCityPost(drug: Drug, city: City, index: number): Post {
 
   return {
     slug,
-    title: tpl("Ricetta di {Drug} online a {City}", vars),
-    h1: tpl("Ricetta di {Drug} online a {City}: requisiti, prezzo e passi", vars),
-    metaTitle: tpl("Ricetta {Drug} Online a {City} | Medico Iscritto Oggi", vars),
-    metaDescription: tpl(
-      "Ottieni la ricetta di {Drug} online a {City} con valutazione di un medico iscritto all'Ordine, oggi stesso e senza liste d'attesa. Ricetta elettronica valida nella tua farmacia. Prima visita gratis!",
-      vars,
-    ),
-    excerpt: tpl(
-      "Come ottenere la ricetta di {Drug} online a {City}: requisiti clinici, validità della ricetta elettronica, prezzo in farmacia e passi per iniziare oggi con valutazione medica.",
-      vars,
-    ),
+    title: tpl(M.rxCityPost.title, vars),
+    h1: tpl(M.rxCityPost.h1, vars),
+    metaTitle: tpl(M.rxCityPost.metaTitle, vars),
+    metaDescription: tpl(M.rxCityPost.metaDescription, vars),
+    excerpt: tpl(M.rxCityPost.excerpt, vars),
     category: drug.category,
-    keyword: `ricetta ${drug.name.toLowerCase()} online ${city.name.toLowerCase()}`,
+    keyword: tpl(M.rxCityPost.keyword, { drugName: drug.name.toLowerCase(), cityName: city.name.toLowerCase() }),
     readMins: 5 + (hash(slug) % 4),
     date: isoDate(index),
     updated: "2026-06-18",
     cover: drug.cover,
-    coverAlt: tpl("Ricetta elettronica di {Drug} emessa online a {City}", vars),
+    coverAlt: tpl(M.rxCityPost.coverAlt, vars),
     sections,
     faqs,
   };
@@ -451,14 +422,14 @@ function buildRxCityPost(drug: Drug, city: City, index: number): Post {
 /* ── cluster "in ricerca" (farmaci non approvati) ── */
 function researchLinks(drug: ResearchDrugRaw): Block {
   const alt = getDrug(drug.altKey);
+  const vars = { AltName: cap(alt.name), altBuy: alt.pillarBuy, altPrice: alt.pillarPrice };
   return {
     type: "links",
-    title: "Alternative disponibili oggi",
-    items: [
-      { label: `Comprare ${cap(alt.name)} online in Italia`, href: `/blog/${alt.pillarBuy}` },
-      { label: `${cap(alt.name)} prezzo in Italia per dose`, href: `/blog/${alt.pillarPrice}` },
-      { label: "Nuovi GLP‑1 in ricerca", href: "/blog/glp1-in-ricerca" },
-    ],
+    title: M.researchPost.altLinksTitle,
+    items: M.researchPost.altLinks.map((l) => ({
+      label: tpl(l.label, vars),
+      href: tpl(l.href, vars),
+    })),
   };
 }
 
@@ -472,51 +443,50 @@ function buildResearchPost(drug: ResearchDrugRaw, index: number): Post {
 
   const sections: Section[] = [
     {
-      h2: tpl("Cos'è {Name}?", vars),
+      h2: tpl(M.researchPost.whatIsH2, vars),
       blocks: [
-        { type: "p", text: tpl("{Name} è un farmaco in fase di ricerca sviluppato da {maker}. È un {klass} che si somministra con {route} e viene studiato per il controllo del peso e del diabete di tipo 2.", vars) },
-        { type: "p", text: tpl("Appartiene alla nuova generazione di trattamenti basati su ormoni intestinali — la stessa famiglia di Wegovy, Mounjaro o Ozempic — ma non ha ancora completato il processo di approvazione, quindi non è ancora disponibile nelle farmacie italiane.", vars) },
+        { type: "p", text: tpl(M.researchPost.whatIsP1, vars) },
+        { type: "p", text: tpl(M.researchPost.whatIsP2, vars) },
       ],
     },
-    { h2: tpl("{Name} e la perdita di peso: cosa dicono gli studi", vars), blocks: [{ type: "p", text: drug.resultsP }] },
+    { h2: tpl(M.researchPost.studiesH2, vars), blocks: [{ type: "p", text: drug.resultsP }] },
     {
-      h2: tpl("È approvato {Name} in Italia?", vars),
+      h2: tpl(M.researchPost.approvalH2, vars),
       blocks: [
-        { type: "p", text: tpl("No. Ad oggi {Name} NON è approvato dall'EMA né dall'AIFA e non si vende legalmente in Italia, né in farmacia né online. È disponibile solo all'interno di studi clinici.", vars) },
+        { type: "p", text: tpl(M.researchPost.approvalP1, vars) },
         { type: "p", text: tpl(pick(T.approvalExplain, slug + "ap"), vars) },
-        { type: "quote", text: tpl("Qualsiasi sito che dica di venderti {Name} in Italia opera fuori dalla legge: il prodotto non ha garanzie e può essere pericoloso per la tua salute.", vars) },
+        { type: "quote", text: tpl(M.researchPost.approvalQuote, vars) },
       ],
     },
     {
-      h2: tpl("Nell'attesa di {Name}: alternative approvate", vars),
+      h2: tpl(M.researchPost.altH2, vars),
       blocks: [
         { type: "p", text: tpl(pick(T.legalRedirect, slug + "rd"), vars) },
-        { type: "p", text: tpl("Ad esempio, {Alt} ({altInn}) è un'opzione approvata e disponibile con ricetta. In DoctorLife, un endocrinologo iscritto all'Ordine valuta il tuo caso e, se appropriato, ti prescrive il trattamento con follow-up dall'app.", vars) },
+        { type: "p", text: tpl(M.researchPost.altP1, vars) },
         researchLinks(drug),
       ],
     },
   ];
 
-  const faqs: Faq[] = [
-    { q: tpl("È legale comprare {Name} in Italia?", vars), a: tpl("No, non essendo approvata dall'EMA/AIFA, qualsiasi vendita è illegale e rischiosa.", vars) },
-    { q: tpl("Quando sarà disponibile {Name} in Italia?", vars), a: tpl("Dipende dal completamento degli studi di fase III e dall'approvazione EMA/AIFA. Non c'è una data certa.", vars) },
-    { q: "Cosa posso fare oggi se voglio perdere peso?", a: tpl("Un medico può valutare {Alt}, già approvato e disponibile con ricetta e follow-up reale.", vars) },
-  ];
+  const faqs: Faq[] = M.researchPost.faqs.map((f) => ({
+    q: tpl(f.q, vars),
+    a: tpl(f.a, vars),
+  }));
 
   return {
     slug,
-    title: tpl("Cos'è {Name}", vars),
-    h1: tpl("Cos'è {Name} e a cosa serve", vars),
-    metaTitle: tpl("Cos'è {Name}: a cosa serve e se è disponibile | {BRAND}", vars),
-    metaDescription: tpl("{Name}: cos'è, come funziona, cosa dicono gli studi e perché non è ancora disponibile in Italia. Alternative approvate con ricetta e follow-up medico.", vars),
-    excerpt: tpl("Tutto quello che si sa su {Name}: cos'è, come agisce e, soprattutto, quali alternative approvate puoi usare oggi mentre arriva.", vars),
-    category: "In ricerca",
-    keyword: tpl("cosa è {name}", vars),
+    title: tpl(M.researchPost.title, vars),
+    h1: tpl(M.researchPost.h1, vars),
+    metaTitle: tpl(M.researchPost.metaTitle, vars),
+    metaDescription: tpl(M.researchPost.metaDescription, vars),
+    excerpt: tpl(M.researchPost.excerpt, vars),
+    category: M.researchPost.category,
+    keyword: tpl(M.researchPost.keyword, vars),
     readMins: 5 + (hash(slug) % 3),
     date: isoDate(index),
     updated: "2026-06-18",
     cover: "/products/maren-lineup.png",
-    coverAlt: tpl("{Name}, farmaco in fase di ricerca di {maker}", vars),
+    coverAlt: tpl(M.researchPost.coverAlt, vars),
     sections,
     faqs,
   };

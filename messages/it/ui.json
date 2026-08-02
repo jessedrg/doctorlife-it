@@ -27,6 +27,83 @@
     "subtitle": "Cura guidata da medici, progettata intorno al tuo corpo.",
     "altImage": "Paziente di DoctorLife sorridente"
   },
+  "blogFunnel": {
+    "badge": "Prima visita gratis",
+    "title": "Inizia il tuo trattamento con un endocrinologo iscritto all'Ordine",
+    "subtitle": "Prima valutazione gratuita. Se continui, scegli il tuo piano: 139 €/mese senza impegno, pacchetto di 5 mesi a 449 € o nutrizionista + GLP1 a 649 €, con chat con il tuo medico, ricetta GLP‑1 se necessaria e follow-up.",
+    "ctaButton": "Prenota la prima visita",
+    "secondaryButton": "Cosa è incluso",
+    "imageAlt": "Paziente DoctorLife che sorride"
+  },
+  "blogPopup": {
+    "closeAriaLabel": "Chiudi",
+    "dialogAriaLabel": "Inizia il tuo trattamento con DoctorLife",
+    "closeButtonAriaLabel": "Chiudi avviso",
+    "badge": "Prima visita gratis",
+    "title": "Il tuo piano di perdita di peso, progettato da medici",
+    "subtitle": "Nessun protocollo generico. A partire da 139 €/mese senza impegno, o pacchetto di 5 mesi a 449 €.",
+    "includes": [
+      "Consulto con endocrinologo iscritto all'Ordine",
+      "Ricetta GLP‑1 se necessaria",
+      "Chat diretta con il tuo medico",
+      "Follow-up e aggiustamenti mensili"
+    ],
+    "ctaButton": "Prenota la mia prima visita",
+    "footer": "Prima visita gratis · Senza impegno",
+    "imageAlt": "Maria, paziente DoctorLife, sorridente"
+  },
+  "ctaBlock": {
+    "badge": "Prima visita gratis",
+    "titleDefault": "Pronto per iniziare?",
+    "subtitleCompactDefault": "Prenota la tua prima valutazione gratuita. Se continui, scegli il tuo piano: 139 €/mese senza impegno, pacchetto di 5 mesi a 449 € o nutrizionista + GLP1 a 649 €, con chat con il tuo medico, ricetta GLP‑1 se necessaria e follow-up.",
+    "subtitleFormDefault": "Prenota la tua prima valutazione gratuita. Se continui, a partire da 139 €/mese senza impegno, o pacchetto di 5 mesi a 449 €.",
+    "ctaButton": "Prenota la prima visita",
+    "viewPlans": "Vedi i piani",
+    "bullet1": "Medici davvero iscritti all'Ordine",
+    "bullet2": "100% online, da casa",
+    "bullet3": "Senza impegno né vincoli",
+    "imageAlt": "Paziente DoctorLife che sorride"
+  },
+  "blogDoctorCard": {
+    "kicker": "Conosci il nostro medico",
+    "doctorName": "Dr. Miguel A. Guirola",
+    "doctorTitle": "Medico specialista in obesità · Medico di DoctorLife",
+    "bio": "In DoctorLife il tuo trattamento viene valutato e supervisionato dal nostro medico specialista in obesità, che ti accompagna durante tutto il follow-up.",
+    "imageAlt": "Dr. Miguel A. Guirola, medico specialista in obesità di DoctorLife"
+  },
+  "blogFilters": {
+    "allLabel": "Tutti",
+    "searchLabel": "Cerca nelle guide del blog",
+    "searchPlaceholder": "Cerca per trattamento o città: «Wegovy Milano»…"
+  },
+  "blogInternalLinks": {
+    "ariaLabel": "Link correlati per città e trattamento",
+    "heading": "Esplora per posizione"
+  },
+  "blogSlugPage": {
+    "home": "Home",
+    "blog": "Blog",
+    "updatedOn": "Aggiornato il",
+    "readMins": "{mins} min di lettura",
+    "realCasesTitle": "Casi reali con trattamento GLP-1",
+    "realCasesSubtitle": "Persone che hanno iniziato il loro piano con supervisione medica. Scorri per vedere altri casi.",
+    "faqTitle": "Domande frequenti",
+    "finalCtaTitle": "Pronto per iniziare?",
+    "finalCtaSubtitle": "Prenota la tua prima visita gratuita e inizia con un piano pensato per te.",
+    "finalCtaImageAlt": "Daniel, paziente DoctorLife, sorridente",
+    "disclaimer": "Questo contenuto è informativo e non sostituisce il consiglio medico. I trattamenti GLP‑1 richiedono valutazione e ricetta di un professionista iscritto all'Ordine. Contenuto rivisto da {reviewer} ({credentials}).",
+    "dateLocale": "it-IT",
+    "keepReading": "Continua a leggere"
+  },
+  "authorCard": {
+    "writtenBy": "Scritto da",
+    "reviewedBy": "Revisionato dal punto di vista medico da"
+  },
+  "medicalDisclaimer": {
+    "ariaLabel": "Avviso medico",
+    "text": "Questo contenuto ha finalità informative e non sostituisce il consiglio, la diagnosi o il trattamento di un professionista sanitario. Non iniziare, modificare o interrompere alcun trattamento senza una valutazione medica. I trattamenti con analoghi del GLP‑1 richiedono ricetta e follow-up di un professionista iscritto all'Ordine.",
+    "reviewedBySuffix": "Contenuto rivisto da {reviewer}."
+  },
   "immersiveProduct": {
     "titleLine1": "Una nuova era per la",
     "titleLine2": "cura del peso",

@@ -10,6 +10,7 @@ import { REGIONS, HEALTH_SERVICES, type Region } from "./geo-i18n";
 import { blogTemplates } from "./blog-i18n";
 
 const T = blogTemplates.region;
+const M = blogTemplates.postMeta;
 const BRAND = "DoctorLife";
 
 function hash(s: string): number {
@@ -31,35 +32,30 @@ function isoDate(offset: number): string {
 function formatPop(n: number): string {
   if (n >= 1000000) {
     const m = (n / 1000000).toFixed(1).replace(".", ",");
-    return `${m} milioni di abitanti`;
+    return tpl(M.formatPop.millions, { m });
   }
-  return `${Math.round(n / 1000)}.000 abitanti circa`;
+  return tpl(M.formatPop.thousands, { n: String(Math.round(n / 1000)) });
 }
 
 function pricingTable(): Block {
   return {
     type: "table",
-    caption: "Prezzi orientativi dei trattamenti GLP‑1 in farmacia (2026)",
-    head: ["Trattamento", "Principio attivo", "Somministrazione", "Indicazione", "Prezzo orientativo"],
-    rows: [
-      ["Wegovy", "semaglutide 2,4 mg", "Iniezione settimanale", "Perdita di peso", "200–300 €/mese"],
-      ["Mounjaro", "tirzepatide", "Iniezione settimanale", "Perdita di peso", "200–350 €/mese"],
-      ["Ozempic", "semaglutide", "Iniezione settimanale", "Diabete tipo 2", "120–170 €/mese"],
-      ["Saxenda", "liraglutide", "Iniezione giornaliera", "Perdita di peso", "200–300 €/mese"],
-    ],
+    caption: T.pricingCaption,
+    head: T.pricingHead,
+    rows: T.pricingRows,
   };
 }
 
 function capitalLinks(r: Region): Block | null {
   if (!r.capitalSlug) return null;
+  const vars = { capital: r.capital, capitalSlug: r.capitalSlug };
   return {
     type: "links",
     title: tpl(T.capitalLinksTitle, { capital: r.capital }),
-    items: [
-      { label: `Comprare Wegovy a ${r.capital}`, href: `/blog/comprare-wegovy-${r.capitalSlug}` },
-      { label: `Comprare Mounjaro a ${r.capital}`, href: `/blog/comprare-mounjaro-${r.capitalSlug}` },
-      { label: `Prezzo Ozempic a ${r.capital}`, href: `/blog/precio-ozempic-${r.capitalSlug}` },
-    ],
+    items: T.capitalLinks.map((l) => ({
+      label: tpl(l.label, vars),
+      href: tpl(l.href, vars),
+    })),
   };
 }
 
@@ -112,51 +108,32 @@ function buildRegionPost(r: Region, index: number): Post {
       blocks: [
         {
           type: "list",
-          items: [
-            "Prenoti la prima visita medica online gratis.",
-            tpl("Completi la tua anamnesi e i tuoi obiettivi dall'app, ovunque tu sia in {Name}.", vars),
-            "Un endocrinologo iscritto all'Ordine valuta il tuo caso.",
-            tpl("Se appropriato, ricevi la ricetta elettronica valida in qualsiasi farmacia di {Name}.", vars),
-            "Fai il follow-up e gli aggiustamenti di dose dall'app.",
-          ],
+          items: T.howToStartList.map((s) => tpl(s, vars)),
         },
         ...(capitalLinks(r) ? [capitalLinks(r) as Block] : []),
       ],
     },
   ];
 
-  const faqs: Faq[] = [
-    {
-      q: tpl("Quanto costano i trattamenti GLP‑1 in {Name}?", vars),
-      a: tpl("I prezzi sono gli stessi del resto d'Italia: Ozempic 120–170 €/mese, Wegovy o Saxenda 200–300 €/mese, Mounjaro 200–350 €/mese, orientativi. La prima visita con {BRAND} è gratis.", vars),
-    },
-    {
-      q: tpl("Posso ottenere la ricetta senza spostarmi in {Name}?", vars),
-      a: tpl("Sì. Il consulto è online e, se il trattamento è indicato, ricevi la ricetta elettronica valida in qualsiasi farmacia della regione.", vars),
-    },
-    {
-      q: tpl("Il {health} finanzia questi trattamenti?", vars),
-      a: "Di norma i GLP‑1 per la perdita di peso non sono rimborsati dal SSN; sono invece rimborsabili per il diabete di tipo 2 su prescrizione dello specialista.",
-    },
-  ];
+  const faqs: Faq[] = T.faqs.map((f) => ({
+    q: tpl(f.q, vars),
+    a: tpl(f.a, vars),
+  }));
 
   return {
     slug,
-    title: tpl("Trattamento per dimagrire in {Name}", vars),
-    h1: tpl("Trattamento per dimagrire in {Name}: prezzi, ricetta e come iniziare", vars),
-    metaTitle: tpl("Dimagrire in {Name}: Trattamento GLP‑1 con Ricetta Online", vars),
-    metaDescription: tpl(
-      "Guida completa al trattamento GLP‑1 per dimagrire in {Name}: prezzi, come ottenere la ricetta e come iniziare con follow-up medico online. Prima visita gratis!",
-      vars,
-    ),
-    excerpt: tpl("Tutto sul trattamento medico per dimagrire in {Name}: prezzi dei GLP‑1, ricetta online e follow-up con medico iscritto all'Ordine.", vars),
+    title: tpl(T.postTitle, vars),
+    h1: tpl(T.postH1, vars),
+    metaTitle: tpl(T.postMetaTitle, vars),
+    metaDescription: tpl(T.postMetaDescription, vars),
+    excerpt: tpl(T.postExcerpt, vars),
     category: "Guide",
     keyword: `dimagrire ${r.name.toLowerCase()}`,
     readMins: 6 + (hash(slug) % 3),
     date: isoDate(index),
     updated: "2026-06-20",
     cover: "/products/maren-lineup.png",
-    coverAlt: tpl("Trattamento GLP‑1 con ricetta medica per la regione {Name}", vars),
+    coverAlt: tpl(T.postCoverAlt, vars),
     place: r.name,
     sections,
     faqs,

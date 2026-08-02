@@ -1,3 +1,4 @@
+import { getTranslations } from "next-intl/server";
 import type { Author } from "@/lib/articles";
 import { ShieldCheck } from "lucide-react";
 
@@ -11,13 +12,14 @@ function initials(name: string) {
  * variant "byline": compacta para la cabecera del artículo.
  * variant "review": destacado "Revisado médicamente por".
  */
-export function AuthorCard({
+export async function AuthorCard({
   author,
   reviewer,
 }: {
   author: Author;
   reviewer: Author;
 }) {
+  const t = await getTranslations("ui.authorCard");
   return (
     <div className="mt-6 flex flex-col gap-4 rounded-[18px] border border-ink/10 bg-warm px-5 py-5 sm:flex-row sm:items-center sm:justify-between">
       <div className="flex items-start gap-3">
@@ -25,7 +27,7 @@ export function AuthorCard({
           {initials(author.name)}
         </span>
         <div className="text-[13.5px] leading-snug">
-          <p className="text-ink-mute">Escrito por</p>
+          <p className="text-ink-mute">{t("writtenBy")}</p>
           <a
             href={`/autores/${author.slug}`}
             className="font-medium text-ink underline decoration-ink/20 underline-offset-2 hover:decoration-ink"
@@ -40,7 +42,7 @@ export function AuthorCard({
       <div className="flex items-start gap-2 border-t border-ink/10 pt-4 text-[13.5px] leading-snug sm:max-w-[240px] sm:border-l sm:border-t-0 sm:pl-5 sm:pt-0">
         <ShieldCheck aria-hidden className="mt-0.5 h-4 w-4 flex-shrink-0 text-olive" />
         <div>
-          <p className="text-ink-mute">Revisado médicamente por</p>
+          <p className="text-ink-mute">{t("reviewedBy")}</p>
           <a
             href={`/autores/${reviewer.slug}`}
             className="font-medium text-ink underline decoration-ink/20 underline-offset-2 hover:decoration-ink"
