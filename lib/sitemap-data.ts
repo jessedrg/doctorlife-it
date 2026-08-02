@@ -52,8 +52,6 @@ function staticUrls(now: Date): SitemapUrl[] {
     { url: `${SITE_URL}/cookies`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/herramientas/calculadora-imc`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${SITE_URL}/herramientas/calculadora-tdee`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${SITE_URL}/herramientas/calculadora-deficit-calorico`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${SITE_URL}/herramientas/calculadora-proteina-diaria`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
   ];
 }
 
