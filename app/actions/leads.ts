@@ -1,5 +1,6 @@
 "use server"
 
+import { headers } from "next/headers"
 import { db } from "@/lib/db"
 import { leads } from "@/lib/db/schema"
 import { sendLeadNotification } from "@/lib/email"
@@ -22,12 +23,17 @@ export type SaveLeadResult = { ok: true } | { ok: false; error: string }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-export async function saveLead(input: LeadInput): Promise<SaveLeadResult> {
+export async function saveLead(input: LeadInput & { domain?: string }): Promise<SaveLeadResult> {
   const email = (input.email ?? "").trim().toLowerCase()
 
   if (!email || !EMAIL_RE.test(email)) {
     return { ok: false, error: "Introduce un correo electrónico válido." }
   }
+
+  const h = await headers()
+  const host = h.get("x-forwarded-host") ?? h.get("host") ?? ""
+  const proto = h.get("x-forwarded-proto") ?? "https"
+  const domain = input.domain ?? (host ? `${proto}://${host}` : null)
 
   const heightCm = input.heightCm && input.heightCm > 0 ? Math.round(input.heightCm) : null
   const weightKg = input.weightKg && input.weightKg > 0 ? Math.round(input.weightKg) : null
@@ -49,6 +55,7 @@ export async function saveLead(input: LeadInput): Promise<SaveLeadResult> {
     age,
     bmi,
     source: "quiz",
+    domain,
   }
 
   try {

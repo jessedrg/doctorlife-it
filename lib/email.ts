@@ -391,6 +391,7 @@ type LeadEmailData = {
   age?: number | null
   bmi?: string | null
   source?: string | null
+  domain?: string | null
 }
 
 function leadRow(label: string, value: unknown): string {
@@ -421,6 +422,7 @@ export async function sendLeadNotification(lead: LeadEmailData): Promise<SendRes
     leadRow("Edad", lead.age),
     leadRow("IMC", lead.bmi),
     leadRow("Origen", lead.source),
+    leadRow("Dominio", lead.domain),
   ].join("")
 
   const html = `<!doctype html>

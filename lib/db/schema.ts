@@ -380,6 +380,7 @@ export const leads = pgTable("leads", {
   eligibility: text("eligibility"), // 'eligible' | 'review' | 'blocked'
   eligibilityReason: text("eligibility_reason"), // JSON array de motivos
   source: text("source").default("quiz"),
+  domain: text("domain"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 })
 
