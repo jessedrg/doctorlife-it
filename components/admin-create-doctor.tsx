@@ -9,6 +9,7 @@ export function AdminCreateDoctor() {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [specialty, setSpecialty] = useState("")
+  const [domain, setDomain] = useState("")
   const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null)
   const [pending, startTransition] = useTransition()
 
@@ -16,12 +17,13 @@ export function AdminCreateDoctor() {
     e.preventDefault()
     setMsg(null)
     startTransition(async () => {
-      const res = await createDoctor({ name, email, specialty })
+      const res = await createDoctor({ name, email, specialty, domain })
       if (res.ok) {
         setMsg({ ok: true, text: `Cuenta creada. Enviamos las credenciales a ${email}.` })
         setName("")
         setEmail("")
         setSpecialty("")
+        setDomain("")
         router.refresh()
       } else {
         setMsg({ ok: false, text: res.error ?? "No se pudo completar." })
@@ -59,6 +61,12 @@ export function AdminCreateDoctor() {
             value={specialty}
             onChange={(e) => setSpecialty(e.target.value)}
             placeholder="Especialidad (p. ej. Endocrinología)"
+            className="flex-1 rounded-full border border-ink/15 bg-paper px-4 py-2.5 text-[14px] text-ink outline-none placeholder:text-ink-mute focus:border-ink/35"
+          />
+          <input
+            value={domain}
+            onChange={(e) => setDomain(e.target.value)}
+            placeholder="Dominio asignado (p. ej. doctorlife-fr.com)"
             className="flex-1 rounded-full border border-ink/15 bg-paper px-4 py-2.5 text-[14px] text-ink outline-none placeholder:text-ink-mute focus:border-ink/35"
           />
           <button

@@ -1,9 +1,10 @@
 "use server"
 
 import { db } from "@/lib/db"
-import { user as userTable, doctorProfiles, appointments, leads, subscriptions, conversations, messages, session, account, notifications, prescriptions } from "@/lib/db/schema"
+import { user as userTable, doctorProfiles, doctorAvailability, availabilityExceptions, appointments, leads, subscriptions, conversations, messages, session, account, notifications, prescriptions, planOffers, commissions, doctorNotes, verificationRequests } from "@/lib/db/schema"
 import { getSessionUser } from "@/lib/session"
-import { count, desc, eq, inArray, notInArray, sql, sum } from "drizzle-orm"
+import { missingClinicFields } from "@/lib/clinic"
+import { and, count, desc, eq, inArray, notInArray, sql, sum } from "drizzle-orm"
 import { revalidatePath } from "next/cache"
 import { auth } from "@/lib/auth"
 import { generateTempPassword } from "@/lib/credentials"
@@ -26,11 +27,13 @@ export async function createDoctor(input: {
   name: string
   email: string
   specialty?: string
+  domain?: string
 }) {
   await requireAdmin()
   const name = input.name.trim()
   const email = input.email.trim().toLowerCase()
   const specialty = input.specialty?.trim() || null
+  const domain = input.domain?.trim() || null
 
   if (!name) return { ok: false, error: "Introduce el nombre de la clínica." }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -63,7 +66,7 @@ export async function createDoctor(input: {
 
   await db
     .insert(doctorProfiles)
-    .values({ userId, fullName: name, specialty, isDevOnly })
+    .values({ userId, fullName: name, specialty, isDevOnly, domain })
     .onConflictDoNothing({ target: doctorProfiles.userId })
 
   await sendDoctorWelcomeEmail({ to: email, name, tempPassword })
@@ -163,11 +166,94 @@ export async function listDoctors() {
       isDevOnly: doctorProfiles.isDevOnly,
       createdAt: userTable.createdAt,
     })
-    .from(userTable)
-    .leftJoin(doctorProfiles, eq(doctorProfiles.userId, userTable.id))
-    .where(eq(userTable.role, "doctor"))
-    .orderBy(userTable.createdAt)
-}
+  .from(userTable)
+  .leftJoin(doctorProfiles, eq(doctorProfiles.userId, userTable.id))
+  .where(eq(userTable.role, "doctor"))
+  .orderBy(userTable.createdAt)
+  }
+
+  /**
+   * Clínicas con el detalle de su progreso de activación y las franjas de
+   * disponibilidad que han marcado. Para el panel de admin.
+   */
+  export async function listClinicsWithStatus() {
+  await requireAdmin()
+
+  const rows = await db
+  .select({ user: userTable, profile: doctorProfiles })
+  .from(userTable)
+  .leftJoin(doctorProfiles, eq(doctorProfiles.userId, userTable.id))
+  .where(eq(userTable.role, "doctor"))
+  .orderBy(userTable.createdAt)
+
+  const rules = await db
+  .select({
+  userId: doctorAvailability.userId,
+  dayOfWeek: doctorAvailability.dayOfWeek,
+  startMinute: doctorAvailability.startMinute,
+  endMinute: doctorAvailability.endMinute,
+  })
+  .from(doctorAvailability)
+
+  const rulesByUser = new Map<string, { dayOfWeek: number; startMinute: number; endMinute: number }[]>()
+  for (const r of rules) {
+  const list = rulesByUser.get(r.userId) ?? []
+  list.push({ dayOfWeek: r.dayOfWeek, startMinute: r.startMinute, endMinute: r.endMinute })
+  rulesByUser.set(r.userId, list)
+  }
+
+  return rows.map(({ user: u, profile: p }) => {
+  const profileComplete = Boolean(p?.fullName?.trim() && p?.specialty?.trim() && p?.licenseNumber?.trim())
+  const missingFiscal = p ? missingClinicFields(p) : []
+  const fiscalComplete = Boolean(p) && missingFiscal.length === 0
+  const stripeReady = Boolean(p?.stripeAccountId && p?.chargesEnabled)
+  const availabilityRules = (rulesByUser.get(u.id) ?? []).sort(
+  (a, b) => a.dayOfWeek - b.dayOfWeek || a.startMinute - b.startMinute,
+  )
+  const availabilitySet = availabilityRules.length > 0
+
+  const steps = [
+  { key: "profile", done: profileComplete },
+  { key: "fiscal", done: fiscalComplete },
+  { key: "stripe", done: stripeReady },
+  { key: "availability", done: availabilitySet },
+  ]
+  const completed = steps.filter((s) => s.done).length
+
+  return {
+  id: u.id,
+  name: u.name,
+  email: u.email,
+  specialty: p?.specialty ?? null,
+  acceptingPatients: p?.acceptingPatients ?? false,
+  isDevOnly: p?.isDevOnly ?? false,
+  chargesEnabled: p?.chargesEnabled ?? false,
+  stripeOnboarded: p?.stripeOnboarded ?? false,
+  profileComplete,
+  fiscalComplete,
+  missingFiscalCount: missingFiscal.length,
+  fiscal: {
+  clinicName: p?.clinicName ?? null,
+  taxId: p?.taxId ?? null,
+  addressLine: p?.addressLine ?? null,
+  city: p?.city ?? null,
+  postalCode: p?.postalCode ?? null,
+  province: p?.province ?? null,
+  healthRegistryNumber: p?.healthRegistryNumber ?? null,
+  medicalDirectorName: p?.medicalDirectorName ?? null,
+  medicalDirectorLicense: p?.medicalDirectorLicense ?? null,
+  billingEmail: p?.billingEmail ?? null,
+  dataProtectionContact: p?.dataProtectionContact ?? null,
+  },
+  stripeReady,
+  availabilitySet,
+  availabilityRules,
+  completedSteps: completed,
+  totalSteps: steps.length,
+  fullyActive: completed === steps.length,
+  }
+  })
+  }
 
 /** Pacientes con su número de citas. */
 export async function listPatients() {
@@ -192,6 +278,7 @@ export async function listLeads() {
       id: leads.id,
       name: leads.name,
       email: leads.email,
+      phone: leads.phone,
       goal: leads.goal,
       plan: leads.plan,
       bmi: leads.bmi,
@@ -293,6 +380,70 @@ export async function setDoctorAccepting(doctorId: string, accepting: boolean) {
     .update(doctorProfiles)
     .set({ acceptingPatients: accepting, updatedAt: new Date() })
     .where(eq(doctorProfiles.userId, doctorId))
+  revalidatePath("/admin/clinicas")
+  return { ok: true }
+}
+
+/**
+ * Elimina por completo una clínica (usuario con rol doctor) y todos sus datos
+ * asociados. Bloquea el borrado si tiene suscripciones activas para no dejar
+ * pacientes de pago sin médico. Acción irreversible.
+ */
+export async function deleteClinic(doctorId: string) {
+  await requireAdmin()
+
+  // Verificar que es efectivamente una clínica/médico.
+  const [target] = await db
+    .select({ id: userTable.id, role: userTable.role })
+    .from(userTable)
+    .where(eq(userTable.id, doctorId))
+    .limit(1)
+  if (!target || target.role !== "doctor") {
+    return { ok: false, error: "La cuenta no existe o no es una clínica." }
+  }
+
+  // Salvaguarda: no borrar si tiene suscripciones de pacientes activas.
+  const [{ value: activeSubs } = { value: 0 }] = await db
+    .select({ value: count() })
+    .from(subscriptions)
+    .where(and(eq(subscriptions.doctorId, doctorId), inArray(subscriptions.status, ACTIVE_SUB_STATES)))
+  if (Number(activeSubs) > 0) {
+    return {
+      ok: false,
+      error:
+        "No se puede eliminar: la clínica tiene suscripciones de pacientes activas. Cancélalas o reasígnalas primero.",
+    }
+  }
+
+  // Borrar mensajes de sus conversaciones (por conversationId).
+  const convs = await db
+    .select({ id: conversations.id })
+    .from(conversations)
+    .where(eq(conversations.doctorId, doctorId))
+  const convIds = convs.map((c) => c.id)
+  if (convIds.length > 0) {
+    await db.delete(messages).where(inArray(messages.conversationId, convIds))
+  }
+
+  // Borrar el resto de datos asociados a la clínica.
+  await db.delete(conversations).where(eq(conversations.doctorId, doctorId))
+  await db.delete(appointments).where(eq(appointments.doctorId, doctorId))
+  await db.delete(prescriptions).where(eq(prescriptions.doctorId, doctorId))
+  await db.delete(subscriptions).where(eq(subscriptions.doctorId, doctorId))
+  await db.delete(planOffers).where(eq(planOffers.doctorId, doctorId))
+  await db.delete(commissions).where(eq(commissions.doctorId, doctorId))
+  await db.delete(doctorNotes).where(eq(doctorNotes.doctorId, doctorId))
+  await db.delete(verificationRequests).where(eq(verificationRequests.doctorId, doctorId))
+  await db.delete(doctorAvailability).where(eq(doctorAvailability.userId, doctorId))
+  await db.delete(availabilityExceptions).where(eq(availabilityExceptions.userId, doctorId))
+  await db.delete(notifications).where(eq(notifications.userId, doctorId))
+  await db.delete(doctorProfiles).where(eq(doctorProfiles.userId, doctorId))
+
+  // Borrar credenciales/sesiones y, por último, el usuario.
+  await db.delete(session).where(eq(session.userId, doctorId))
+  await db.delete(account).where(eq(account.userId, doctorId))
+  await db.delete(userTable).where(eq(userTable.id, doctorId))
+
   revalidatePath("/admin/clinicas")
   return { ok: true }
 }
