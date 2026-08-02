@@ -27,6 +27,83 @@
     "subtitle": "Opieka prowadzona przez lekarzy, dopasowana do Twojego ciała.",
     "altImage": "Uśmiechnięty pacjent DoctorLife"
   },
+  "blogFunnel": {
+    "badge": "Pierwsza konsultacja gratis",
+    "title": "Rozpocznij leczenie z licencjonowanym endokrynologiem",
+    "subtitle": "Pierwsza bezpłatna ocena. Jeśli zdecydujesz się kontynuować, wybierasz swój plan: 139 €/miesiąc bez zobowiązań, pakiet 5-miesięczny za 449 € lub dietetyk + GLP1 za 649 €, z czatem z lekarzem, receptą na GLP‑1 w razie potrzeby i opieką kontrolną.",
+    "ctaButton": "Zarezerwuj pierwszą wizytę",
+    "secondaryButton": "Zobacz, co jest wliczone",
+    "imageAlt": "Uśmiechnięty pacjent DoctorLife"
+  },
+  "blogPopup": {
+    "closeAriaLabel": "Zamknij",
+    "dialogAriaLabel": "Rozpocznij leczenie z DoctorLife",
+    "closeButtonAriaLabel": "Zamknij powiadomienie",
+    "badge": "Pierwsza konsultacja gratis",
+    "title": "Twój plan odchudzania, zaprojektowany przez lekarzy",
+    "subtitle": "Bez ogólnych protokołów. Już od 139 €/miesiąc bez zobowiązań, lub pakiet 5-miesięczny za 449 €.",
+    "includes": [
+      "Konsultacja z licencjonowanym endokrynologiem",
+      "Recepta na GLP‑1, jeśli konieczna",
+      "Bezpośredni czat z lekarzem",
+      "Comiesięczna kontrola i dostosowania"
+    ],
+    "ctaButton": "Zarezerwuj moją pierwszą wizytę",
+    "footer": "Pierwsza konsultacja gratis · Bez zobowiązań",
+    "imageAlt": "Maria, pacjentka DoctorLife, uśmiechnięta"
+  },
+  "ctaBlock": {
+    "badge": "Pierwsza konsultacja gratis",
+    "titleDefault": "Gotowy, aby zacząć?",
+    "subtitleCompactDefault": "Zarezerwuj swoją pierwszą bezpłatną ocenę. Jeśli zdecydujesz się kontynuować, wybierasz swój plan: 139 €/miesiąc bez zobowiązań, pakiet 5-miesięczny za 449 € lub dietetyk + GLP1 za 649 €, z czatem z lekarzem, receptą na GLP‑1 w razie potrzeby i opieką kontrolną.",
+    "subtitleFormDefault": "Zarezerwuj swoją pierwszą bezpłatną ocenę. Jeśli zdecydujesz się kontynuować, już od 139 €/miesiąc bez zobowiązań, lub pakiet 5-miesięczny za 449 €.",
+    "ctaButton": "Zarezerwuj pierwszą wizytę",
+    "viewPlans": "Zobacz plany",
+    "bullet1": "Prawdziwi licencjonowani lekarze",
+    "bullet2": "100% online, z domu",
+    "bullet3": "Bez zobowiązań i minimalnego okresu",
+    "imageAlt": "Uśmiechnięty pacjent DoctorLife"
+  },
+  "blogDoctorCard": {
+    "kicker": "Poznaj naszego lekarza",
+    "doctorName": "Dr. Miguel A. Guirola",
+    "doctorTitle": "Lekarz specjalista w dziedzinie otyłości · Lekarz DoctorLife",
+    "bio": "W DoctorLife Twoje leczenie jest oceniane i nadzorowane przez naszego lekarza specjalistę w dziedzinie otyłości, który towarzyszy Ci przez cały okres kontroli.",
+    "imageAlt": "Dr. Miguel A. Guirola, lekarz specjalista w dziedzinie otyłości w DoctorLife"
+  },
+  "blogFilters": {
+    "allLabel": "Wszystkie",
+    "searchLabel": "Szukaj w poradnikach na blogu",
+    "searchPlaceholder": "Szukaj według leczenia lub miasta: «Wegovy Warszawa»…"
+  },
+  "blogInternalLinks": {
+    "ariaLabel": "Powiązane linki według miasta i leczenia",
+    "heading": "Przeglądaj według lokalizacji"
+  },
+  "blogSlugPage": {
+    "home": "Strona główna",
+    "blog": "Blog",
+    "updatedOn": "Zaktualizowano",
+    "readMins": "{mins} min czytania",
+    "realCasesTitle": "Prawdziwe przypadki z leczeniem GLP-1",
+    "realCasesSubtitle": "Osoby, które rozpoczęły swój plan pod opieką lekarską. Przesuń, aby zobaczyć więcej przypadków.",
+    "faqTitle": "Najczęściej zadawane pytania",
+    "finalCtaTitle": "Gotowy, aby zacząć?",
+    "finalCtaSubtitle": "Zarezerwuj swoją pierwszą bezpłatną konsultację i zacznij z planem stworzonym dla Ciebie.",
+    "finalCtaImageAlt": "Daniel, pacjent DoctorLife, uśmiechnięty",
+    "disclaimer": "Ta treść ma charakter informacyjny i nie zastępuje porady lekarskiej. Leczenie GLP‑1 wymaga oceny i recepty od licencjonowanego specjalisty. Treść sprawdzona przez {reviewer} ({credentials}).",
+    "dateLocale": "pl-PL",
+    "keepReading": "Czytaj dalej"
+  },
+  "authorCard": {
+    "writtenBy": "Napisane przez",
+    "reviewedBy": "Sprawdzone medycznie przez"
+  },
+  "medicalDisclaimer": {
+    "ariaLabel": "Informacja medyczna",
+    "text": "Ta treść ma charakter wyłącznie informacyjny i nie zastępuje porady, diagnozy ani leczenia przez specjalistę ochrony zdrowia. Nie rozpoczynaj, nie zmieniaj ani nie przerywaj żadnego leczenia bez oceny lekarskiej. Leczenie analogami GLP‑1 wymaga recepty i opieki licencjonowanego specjalisty.",
+    "reviewedBySuffix": "Treść sprawdzona przez {reviewer}."
+  },
   "immersiveProduct": {
     "titleLine1": "Nowa era w opiece",
     "titleLine2": "nad wagą",

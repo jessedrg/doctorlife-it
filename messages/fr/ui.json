@@ -27,6 +27,83 @@
     "subtitle": "Un suivi guidé par des médecins, conçu autour de votre corps.",
     "altImage": "Patient DoctorLife souriant"
   },
+  "blogFunnel": {
+    "badge": "Première consultation gratuite",
+    "title": "Commencez votre traitement avec un endocrinologue agréé",
+    "subtitle": "Première évaluation gratuite. Si vous continuez, vous choisissez votre formule : 139 €/mois sans engagement, forfait de 5 mois à 449 € ou nutritionniste + GLP1 à 649 €, avec chat avec votre médecin, ordonnance GLP‑1 si nécessaire et suivi.",
+    "ctaButton": "Réserver la première consultation",
+    "secondaryButton": "Voir ce qui est inclus",
+    "imageAlt": "Patient DoctorLife souriant"
+  },
+  "blogPopup": {
+    "closeAriaLabel": "Fermer",
+    "dialogAriaLabel": "Commencez votre traitement avec DoctorLife",
+    "closeButtonAriaLabel": "Fermer l'avis",
+    "badge": "Première consultation gratuite",
+    "title": "Votre plan de perte de poids, conçu par des médecins",
+    "subtitle": "Aucun protocole générique. À partir de 139 €/mois sans engagement, ou forfait de 5 mois à 449 €.",
+    "includes": [
+      "Consultation avec endocrinologue agréé",
+      "Ordonnance GLP‑1 si nécessaire",
+      "Chat direct avec votre médecin",
+      "Suivi et ajustements mensuels"
+    ],
+    "ctaButton": "Réserver ma première consultation",
+    "footer": "Première consultation gratuite · Sans engagement",
+    "imageAlt": "Maria, patiente DoctorLife, souriante"
+  },
+  "ctaBlock": {
+    "badge": "Première consultation gratuite",
+    "titleDefault": "Prêt à commencer ?",
+    "subtitleCompactDefault": "Réservez votre première évaluation gratuite. Si vous continuez, vous choisissez votre formule : 139 €/mois sans engagement, forfait de 5 mois à 449 € ou nutritionniste + GLP1 à 649 €, avec chat avec votre médecin, ordonnance GLP‑1 si nécessaire et suivi.",
+    "subtitleFormDefault": "Réservez votre première évaluation gratuite. Si vous continuez, à partir de 139 €/mois sans engagement, ou forfait de 5 mois à 449 €.",
+    "ctaButton": "Réserver la première consultation",
+    "viewPlans": "Voir les formules",
+    "bullet1": "De vrais médecins agréés",
+    "bullet2": "100% en ligne, depuis chez vous",
+    "bullet3": "Sans engagement ni durée minimale",
+    "imageAlt": "Patient DoctorLife souriant"
+  },
+  "blogDoctorCard": {
+    "kicker": "Découvrez notre médecin",
+    "doctorName": "Dr. Miguel A. Guirola",
+    "doctorTitle": "Médecin spécialiste en obésité · Médecin chez DoctorLife",
+    "bio": "Chez DoctorLife, votre traitement est évalué et supervisé par notre médecin spécialiste en obésité, qui vous accompagne pendant tout le suivi.",
+    "imageAlt": "Dr. Miguel A. Guirola, médecin spécialiste en obésité chez DoctorLife"
+  },
+  "blogFilters": {
+    "allLabel": "Tous",
+    "searchLabel": "Rechercher dans les guides du blog",
+    "searchPlaceholder": "Recherchez par traitement ou ville : «Wegovy Paris»…"
+  },
+  "blogInternalLinks": {
+    "ariaLabel": "Liens associés par ville et traitement",
+    "heading": "Explorer par localisation"
+  },
+  "blogSlugPage": {
+    "home": "Accueil",
+    "blog": "Blog",
+    "updatedOn": "Mis à jour le",
+    "readMins": "{mins} min de lecture",
+    "realCasesTitle": "Cas réels avec traitement GLP-1",
+    "realCasesSubtitle": "Des personnes qui ont commencé leur plan avec un accompagnement médical. Faites défiler pour voir plus de cas.",
+    "faqTitle": "Questions fréquentes",
+    "finalCtaTitle": "Prêt à commencer ?",
+    "finalCtaSubtitle": "Réservez votre première consultation gratuite et commencez avec un plan conçu pour vous.",
+    "finalCtaImageAlt": "Daniel, patient DoctorLife, souriant",
+    "disclaimer": "Ce contenu est informatif et ne remplace pas l'avis médical. Les traitements GLP‑1 nécessitent une évaluation et une ordonnance d'un professionnel agréé. Contenu relu par {reviewer} ({credentials}).",
+    "dateLocale": "fr-FR",
+    "keepReading": "Continuer la lecture"
+  },
+  "authorCard": {
+    "writtenBy": "Écrit par",
+    "reviewedBy": "Relu médicalement par"
+  },
+  "medicalDisclaimer": {
+    "ariaLabel": "Avis médical",
+    "text": "Ce contenu est fourni à titre informatif et ne remplace pas l'avis, le diagnostic ou le traitement d'un professionnel de santé. Ne commencez, ne modifiez ni n'interrompez aucun traitement sans évaluation médicale. Les traitements par analogues du GLP‑1 nécessitent une ordonnance et le suivi d'un professionnel agréé.",
+    "reviewedBySuffix": "Contenu relu par {reviewer}."
+  },
   "immersiveProduct": {
     "titleLine1": "Une nouvelle ère pour la",
     "titleLine2": "prise en charge du poids",
