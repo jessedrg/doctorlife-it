@@ -60,8 +60,8 @@ function capitalLinks(r: Region): Block | null {
 }
 
 function buildRegionPost(r: Region, index: number): Post {
-  const slug = `trattamento-dimagrire-regione-${r.slug}`;
-  const health = HEALTH_SERVICES[r.name] ?? { short: "SSR", long: "il servizio sanitario regionale" };
+  const slug = tpl(T.postSlug, { slug: r.slug });
+  const health = HEALTH_SERVICES[r.name] ?? { short: T.healthFallbackShort, long: T.healthFallbackLong };
   const popText = formatPop(r.pop);
   const vars: Record<string, string> = {
     Name: r.name,
@@ -127,8 +127,8 @@ function buildRegionPost(r: Region, index: number): Post {
     metaTitle: tpl(T.postMetaTitle, vars),
     metaDescription: tpl(T.postMetaDescription, vars),
     excerpt: tpl(T.postExcerpt, vars),
-    category: "Guide",
-    keyword: `dimagrire ${r.name.toLowerCase()}`,
+    category: T.category,
+    keyword: `${T.keywordVerb} ${r.name.toLowerCase()}`,
     readMins: 6 + (hash(slug) % 3),
     date: isoDate(index),
     updated: "2026-06-20",

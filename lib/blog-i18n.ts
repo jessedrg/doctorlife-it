@@ -145,6 +145,10 @@ export type BlogTemplatesData = {
     postExcerpt: string;
     postCoverAlt: string;
     postSlug: string;
+    category: string;
+    keywordVerb: string;
+    healthFallbackShort: string;
+    healthFallbackLong: string;
     pricingCaption: string;
     pricingHead: string[];
     pricingRows: string[][];

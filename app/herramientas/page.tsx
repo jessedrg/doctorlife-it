@@ -28,10 +28,8 @@ export async function generateMetadata(): Promise<Metadata> {
 const TOOL_HREFS = [
   "/herramientas/calculadora-imc",
   "/herramientas/calculadora-tdee",
-  "/herramientas/calculadora-deficit-calorico",
-  "/herramientas/calculadora-proteina-diaria",
 ];
-const TOOL_KEYS = ["bmi", "tdee", "deficit", "protein"] as const;
+const TOOL_KEYS = ["bmi", "tdee"] as const;
 
 export default async function HerramientasPage() {
   const t = await getTranslations("pages.herramientas");

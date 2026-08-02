@@ -334,6 +334,10 @@
     "postExcerpt": "Tutto sul trattamento medico per dimagrire in {Name}: prezzi dei GLP‑1, ricetta online e follow-up con medico iscritto all'Ordine.",
     "postCoverAlt": "Trattamento GLP‑1 con ricetta medica per la regione {Name}",
     "postSlug": "trattamento-dimagrire-regione-{slug}",
+    "category": "Guida",
+    "keywordVerb": "dimagrire",
+    "healthFallbackShort": "SSR",
+    "healthFallbackLong": "il servizio sanitario regionale",
     "pricingCaption": "Prezzi orientativi dei trattamenti GLP‑1 in farmacia (2026)",
     "pricingHead": ["Trattamento", "Principio attivo", "Somministrazione", "Indicazione", "Prezzo orientativo"],
     "pricingRows": [

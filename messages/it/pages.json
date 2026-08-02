@@ -1,13 +1,13 @@
 {
   "herramientas": {
     "metaTitle": "Calcolatori di salute e peso gratis | DoctorLife",
-    "metaDescription": "Calcolatori gratuiti di salute: IMC, dispendio calorico (TDEE), déficit calorico e proteine giornaliere. Risultati istantanei e orientamento medico di DoctorLife.",
+    "metaDescription": "Calcolatori gratuiti di salute: IMC e dispendio calorico (TDEE). Risultati istantanei e orientamento medico di DoctorLife.",
     "breadcrumbHome": "Home",
     "breadcrumbTools": "Strumenti",
     "badge": "Strumenti gratuiti",
     "title": "Calcolatori di",
     "titleHighlight": "salute e peso",
-    "description": "Strumenti con base scientifica per capire il tuo corpo: IMC, dispendio calorico, déficit e proteine. Sono un punto di partenza — per un piano reale, una valutazione medica fa la differenza.",
+    "description": "Strumenti con base scientifica per capire il tuo corpo: IMC e dispendio calorico. Sono un punto di partenza — per un piano reale, una valutazione medica fa la differenza.",
     "toolsListHeading": "Elenco dei calcolatori",
     "openCalculator": "Apri calcolatore →",
     "relatedTitle": "Continua a informarti",
@@ -21,16 +21,6 @@
         "title": "Calcolatore TDEE",
         "desc": "Calcola il tuo dispendio energetico giornaliero totale: quante calorie bruci al giorno secondo la tua attività.",
         "tag": "Calorie"
-      },
-      "deficit": {
-        "title": "Calcolatore déficit calorico",
-        "desc": "Scopri quante calorie mangiare per perdere peso a un ritmo sano e sostenibile.",
-        "tag": "Perdita di peso"
-      },
-      "protein": {
-        "title": "Calcolatore proteine giornaliere",
-        "desc": "Calcola quante proteine ti servono al giorno secondo il tuo peso, obiettivo e livello di attività.",
-        "tag": "Nutrizione"
       }
     },
     "related": [
