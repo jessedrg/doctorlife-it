@@ -361,6 +361,27 @@
     ]
   },
 
+  "seoMeta": {
+    "valueSuffix": "Visita + Ricetta Online",
+    "rxTitleSuffix": "con Medico Iscritto in 24h",
+    "comparisonTitleSuffix": "· Quale Scegliere con Ricetta",
+    "checks": ["✓ Ricetta medica online", "✓ Medici iscritti all'Ordine", "✓ Senza liste d'attesa", "✓ 1ª visita gratis", "✓ Follow-up nella nostra app"],
+    "comparisonLead": "{compareName}: quale scegliere e inizia con valutazione medica.",
+    "priceLead": "{drug}{where}: prezzo aggiornato e come ottenerlo legalmente.",
+    "rxLead": "Ottieni la tua ricetta di {drug} online, rapido e legale.",
+    "clinicLead": "Trattamento medico per dimagrire{where} con {drug}.",
+    "buyLead": "Inizia il tuo trattamento con {drug}{where} oggi stesso.",
+    "defaultLead": "Trattamento con {drug}{where} supervisionato da medici.",
+    "whereConnector": " a {city}",
+    "comparisonMarker": "-vs-",
+    "priceKeywords": ["prezzo", "quanto-costa", "costo"],
+    "rxKeywords": ["ricetta"],
+    "clinicKeywords": ["clinica", "perdere-peso", "piano", "dimagrire", "iniezione"],
+    "buyKeywords": ["comprare"],
+    "comparisonCategory": "Confronti",
+    "cityMarker": " a ",
+    "countryName": "Italia"
+  },
   "internalLinks": {
     "nationalHubs": ["roma", "milano", "napoli", "torino", "palermo", "bologna", "firenze", "bari"],
     "pillars": {

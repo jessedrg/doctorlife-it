@@ -10,7 +10,9 @@
 
 import { generatePosts } from "./blog-content";
 import { generateMunicipioPosts } from "./blog-municipios";
-import { blogArticles } from "./blog-i18n";
+import { blogArticles, blogTemplates } from "./blog-i18n";
+
+const SEO = blogTemplates.seoMeta;
 
 export type InlineLink = { label: string; href: string };
 
@@ -101,7 +103,7 @@ export function getPost(slug: string): Post | undefined {
 /* ───────────────────────────────────────────────────────────
    Ottimizzazione del titolo per Google (SERP).
    ─────────────────────────────────────────────────────────── */
-const VALUE_SUFFIX = "Visita + Ricetta Online";
+const VALUE_SUFFIX = SEO.valueSuffix;
 const MAX_TITLE = 62;
 
 export function seoTitle(post: Post): string {
@@ -114,15 +116,15 @@ export function seoTitle(post: Post): string {
 
   const fit = (s: string) => (s.length <= MAX_TITLE ? s : null);
 
-  const isComparison = /(?:-vs-|\bvs\b)/i.test(post.slug) || post.category === "Confronti";
+  const isComparison = post.slug.includes(SEO.comparisonMarker) || post.category === SEO.comparisonCategory;
   if (isComparison) {
-    return fit(`${core} · Quale Scegliere con Ricetta`) ?? fit(core) ?? core.slice(0, MAX_TITLE);
+    return fit(`${core} ${SEO.comparisonTitleSuffix}`) ?? fit(core) ?? core.slice(0, MAX_TITLE);
   }
 
-  if (/ricetta/i.test(core)) {
+  const isRx = SEO.rxKeywords.some((k) => post.slug.toLowerCase().includes(k));
+  if (isRx) {
     return (
-      fit(`${core} con Medico Iscritto in 24h`) ??
-      fit(`${core} con Medico in 24h`) ??
+      fit(`${core} ${SEO.rxTitleSuffix}`) ??
       fit(core) ??
       core.slice(0, MAX_TITLE)
     );
@@ -130,7 +132,6 @@ export function seoTitle(post: Post): string {
 
   return (
     fit(`${core} · ${VALUE_SUFFIX}`) ??
-    fit(`${core} · Ricetta Online`) ??
     fit(core) ??
     core.slice(0, MAX_TITLE).replace(/\s+\S*$/, "").trim()
   );
@@ -169,17 +170,17 @@ export function drugInfo(post: Post): { name: string; inn?: string } | null {
 }
 
 function detectCity(post: Post): string | null {
-  if (!/\ba\s+/i.test(post.title)) return null;
+  if (!post.title.includes(SEO.cityMarker)) return null;
   const city = post.title
-    .split(/\ba\s+/i)
+    .split(SEO.cityMarker)
     .pop()!
     .replace(/[.:·|(].*$/, "")
     .trim();
   if (!city) return null;
-  if (/^Itali/i.test(city)) return null;
+  if (city === SEO.countryName) return null;
   if (/\d/.test(city)) return null;
   if (city.length > 40) return null;
-  if (!/^[A-ZÀÈÉÌÍÒÓÙÚ]/.test(city)) return null;
+  if (!/^\p{Lu}/u.test(city)) return null;
   return city;
 }
 
@@ -193,35 +194,34 @@ function joinUnderLimit(lead: string, checks: string[], max: number): string {
   return out;
 }
 
+function tplSeo(s: string, vars: Record<string, string>): string {
+  return s.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? "");
+}
+
 export function seoDescription(post: Post): string {
   const drug = detectDrug(post);
   const city = detectCity(post);
   const slug = post.slug.toLowerCase();
 
-  const checks = [
-    "✓ Ricetta medica online",
-    "✓ Medici iscritti all'Ordine",
-    "✓ Senza liste d'attesa",
-    "✓ 1ª visita gratis",
-    "✓ Follow-up nella nostra app",
-  ];
+  const checks = SEO.checks;
 
   let lead: string;
-  const where = city ? ` a ${city}` : "";
+  const where = city ? tplSeo(SEO.whereConnector, { city }) : "";
+  const drugName = drug ?? "GLP‑1";
 
-  if (/(?:-vs-|\bvs\b)/.test(slug) || post.category === "Confronti") {
+  if (slug.includes(SEO.comparisonMarker) || post.category === SEO.comparisonCategory) {
     const compareName = post.title.split(/[:|]/)[0].replace(/\s+/g, " ").trim();
-    lead = `➤ ${compareName}: quale scegliere e inizia con valutazione medica.`;
-  } else if (/prezzo|quanto-costa|costo/.test(slug)) {
-    lead = `➤ ${drug ?? "Trattamento GLP‑1"}${where}: prezzo aggiornato e come ottenerlo legalmente.`;
-  } else if (/ricetta/.test(slug)) {
-    lead = `➤ Ottieni la tua ricetta di ${drug ?? "GLP‑1"} online, rapido e legale.`;
-  } else if (/clinica|perdere-peso|piano|dimagrire|iniezione/.test(slug)) {
-    lead = `➤ Trattamento medico per dimagrire${where} con ${drug ?? "GLP‑1"}.`;
-  } else if (/comprare/.test(slug)) {
-    lead = `➤ Inizia il tuo trattamento con ${drug ?? "GLP‑1"}${where} oggi stesso.`;
+    lead = `➤ ${tplSeo(SEO.comparisonLead, { compareName })}`;
+  } else if (SEO.priceKeywords.some((k) => slug.includes(k))) {
+    lead = `➤ ${tplSeo(SEO.priceLead, { drug: drugName, where })}`;
+  } else if (SEO.rxKeywords.some((k) => slug.includes(k))) {
+    lead = `➤ ${tplSeo(SEO.rxLead, { drug: drugName, where })}`;
+  } else if (SEO.clinicKeywords.some((k) => slug.includes(k))) {
+    lead = `➤ ${tplSeo(SEO.clinicLead, { drug: drugName, where })}`;
+  } else if (SEO.buyKeywords.some((k) => slug.includes(k))) {
+    lead = `➤ ${tplSeo(SEO.buyLead, { drug: drugName, where })}`;
   } else {
-    lead = `➤ Trattamento con ${drug ?? "GLP‑1"}${where} supervisionato da medici.`;
+    lead = `➤ ${tplSeo(SEO.defaultLead, { drug: drugName, where })}`;
   }
 
   const built = joinUnderLimit(lead, checks, MAX_DESC);

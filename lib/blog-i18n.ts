@@ -158,11 +158,28 @@ export type BlogTemplatesData = {
     howItWorks: string[];
     sections: Record<string, string>;
     faqs: Record<string, string>;
+    postMeta: {
+      slugPrefix: string;
+      title: string; h1: string; metaTitle: string; metaDescription: string;
+      excerpt: string; category: string; keyword: string; coverAlt: string;
+      pricingCaption: string; pricingHead: string[]; pricingRows: string[][];
+      whyOnlineSmall: string; whyOnlineLarge: string; doctorsLine: string;
+      rxLine: string; followUpLine: string; popSuffix: string;
+    };
   };
   internalLinks: {
     nationalHubs: string[];
     pillars: Record<string, { label: string; href: string }[]>;
     labels: Record<string, string>;
+  };
+  seoMeta: {
+    valueSuffix: string; rxTitleSuffix: string; comparisonTitleSuffix: string;
+    checks: string[];
+    comparisonLead: string; priceLead: string; rxLead: string;
+    clinicLead: string; buyLead: string; defaultLead: string;
+    whereConnector: string; comparisonMarker: string;
+    priceKeywords: string[]; rxKeywords: string[]; clinicKeywords: string[]; buyKeywords: string[];
+    comparisonCategory: string; cityMarker: string; countryName: string;
   };
 };
 

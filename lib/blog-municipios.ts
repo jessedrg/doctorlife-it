@@ -37,7 +37,7 @@ function slugify(s: string): string {
     .replace(/^-+|-+$/g, "");
 }
 function fmtPop(n: number): string {
-  return `${n.toLocaleString("it-IT")} abitanti`;
+  return `${n.toLocaleString()} ${T.postMeta.popSuffix}`;
 }
 
 type Comune = { name: string; slug: string; province: string; pop: number };
@@ -84,14 +84,9 @@ function buildSections(c: Comune, size: SizeKey): Section[] {
       blocks: [
         {
           type: "table",
-          caption: `Prezzi orientativi in farmacia nella provincia di ${c.province}`,
-          head: ["Farmaco", "Principio attivo", "Somministrazione", "Prezzo/mese"],
-          rows: [
-            ["Wegovy", "semaglutide 2,4 mg", "Iniezione settimanale", "200–300 €"],
-            ["Mounjaro", "tirzepatide", "Iniezione settimanale", "200–350 €"],
-            ["Ozempic", "semaglutide", "Iniezione settimanale", "120–170 €"],
-            ["Saxenda", "liraglutide", "Iniezione giornaliera", "200–300 €"],
-          ],
+          caption: tpl(T.postMeta.pricingCaption, vars),
+          head: T.postMeta.pricingHead,
+          rows: T.postMeta.pricingRows,
         },
       ],
     },
@@ -101,12 +96,10 @@ function buildSections(c: Comune, size: SizeKey): Section[] {
         {
           type: "list",
           items: [
-            size === "piccolo"
-              ? tpl("Senza spostamenti: non dipendi dalla distanza tra {City} e il capoluogo di provincia per vedere uno specialista.", vars)
-              : "Senza sale d'attesa: il videoconsulto si adatta al tuo orario, non il contrario.",
-            "Endocrinologi iscritti all'Ordine in Italia, specializzati in obesità e GLP‑1.",
-            tpl("Ricetta elettronica valida in qualsiasi farmacia, anche nella tua a {City}.", vars),
-            "Follow-up settimanale tramite app: aderenza, effetti secondari e aggiustamento della dose.",
+            size === "piccolo" ? tpl(T.postMeta.whyOnlineSmall, vars) : T.postMeta.whyOnlineLarge,
+            T.postMeta.doctorsLine,
+            tpl(T.postMeta.rxLine, vars),
+            T.postMeta.followUpLine,
           ],
         },
       ],
@@ -127,28 +120,25 @@ function buildComunePost(c: Comune, index: number, slug: string): Post {
   const vars = { City: c.name, province: c.province };
   return {
     slug,
-    title: tpl("Clinica per la perdita di peso a {City}", vars),
-    h1: tpl("Clinica per la perdita di peso a {City}: GLP‑1 con medico online", vars),
-    metaTitle: tpl("Clinica Perdita di Peso a {City} ({province}): GLP‑1 Online", vars),
-    metaDescription: tpl(
-      "Clinica online per la perdita di peso a {City} ({province}): endocrinologo iscritto all'Ordine, ricetta di Wegovy, Ozempic o Mounjaro e follow-up tramite app. Prima visita gratis!",
-      vars,
-    ),
-    excerpt: tpl("Trattamento medico per dimagrire a {City} senza spostarti: valutazione in videoconsulto, ricetta elettronica valida in farmacia e follow-up clinico continuo.", vars),
-    category: "Clinica",
-    keyword: tpl("clinica perdita di peso {City}", vars).toLowerCase(),
+    title: tpl(T.postMeta.title, vars),
+    h1: tpl(T.postMeta.h1, vars),
+    metaTitle: tpl(T.postMeta.metaTitle, vars),
+    metaDescription: tpl(T.postMeta.metaDescription, vars),
+    excerpt: tpl(T.postMeta.excerpt, vars),
+    category: T.postMeta.category,
+    keyword: tpl(T.postMeta.keyword, vars).toLowerCase(),
     readMins: 6 + (hash(slug) % 3),
     date: isoDate(index),
     updated: "2026-07-01",
     cover: "/products/maren-lineup.png",
-    coverAlt: tpl("Clinica online per la perdita di peso con GLP‑1 a {City} ({province})", vars),
+    coverAlt: tpl(T.postMeta.coverAlt, vars),
     place: c.name,
     sections: buildSections(c, size),
     faqs: buildFaqs(c),
   };
 }
 
-export const MUNICIPIO_SLUG_PREFIX = "clinica-perdita-di-peso-";
+export const MUNICIPIO_SLUG_PREFIX = T.postMeta.slugPrefix;
 
 export function generateMunicipioPosts(existing: Set<string>): Post[] {
   const out: Post[] = [];
