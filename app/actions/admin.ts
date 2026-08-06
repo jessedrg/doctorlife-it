@@ -9,7 +9,7 @@ import { revalidatePath } from "next/cache"
 import { auth } from "@/lib/auth"
 import { generateTempPassword } from "@/lib/credentials"
 import { sendDoctorWelcomeEmail } from "@/lib/email"
-import { isProductionRequest } from "@/lib/base-url"
+import { isProductionRequest, getRequestDomain } from "@/lib/base-url"
 
 const ACTIVE_SUB_STATES = ["active", "trialing", "past_due"]
 
@@ -33,7 +33,9 @@ export async function createDoctor(input: {
   const name = input.name.trim()
   const email = input.email.trim().toLowerCase()
   const specialty = input.specialty?.trim() || null
-  const domain = input.domain?.trim() || null
+  // Si el admin no indica un dominio, el médico queda asignado al dominio de
+  // ESTE proyecto (doctorlife-it.com), para que solo atienda a sus pacientes.
+  const domain = input.domain?.trim() || (await getRequestDomain())
 
   if (!name) return { ok: false, error: "Introduce el nombre de la clínica." }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {

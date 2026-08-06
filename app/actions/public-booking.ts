@@ -10,7 +10,7 @@ import { FIRST_VISIT_CENTS, FIRST_VISIT_LABEL } from "@/lib/plans"
 import { getPooledSlots } from "@/lib/scheduling/pool"
 import { generateTempPassword } from "@/lib/credentials"
 import { sendCredentialsEmail, sendBookingConfirmationEmail } from "@/lib/email"
-import { maybeCreateMeeting } from "@/lib/google/calendar"
+import { maybeCreateMeeting } from "@/lib/video/daily"
 import { eq } from "drizzle-orm"
 import type { PooledSlot } from "@/lib/scheduling/types"
 

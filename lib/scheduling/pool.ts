@@ -1,6 +1,6 @@
 import { db } from "@/lib/db"
-import { account, appointments, doctorProfiles, user } from "@/lib/db/schema"
-import { and, eq, exists, gte, isNull, lt, ne, or } from "drizzle-orm"
+import { appointments, doctorProfiles, user } from "@/lib/db/schema"
+import { and, eq, gte, isNull, lt, ne, or } from "drizzle-orm"
 import { isProductionRequest } from "@/lib/base-url"
 import { scheduling } from "./index"
 import type { PooledSlot, SlotRange } from "./types"
@@ -19,9 +19,10 @@ export async function getPooledSlots(range: SlotRange, domain?: string): Promise
   const isProd = await isProductionRequest()
 
   // Médicos elegibles: solo aparecen quienes cumplen TODOS los requisitos para
-  // poder atender — aceptan pacientes, tienen Stripe Connect operativo (cobros
-  // y transferencias) y han enlazado Google (Calendar/Meet) para las
-  // videollamadas. La disponibilidad se filtra después al generar los huecos.
+  // poder atender — aceptan pacientes y tienen Stripe Connect operativo (cobros
+  // y transferencias). Las videollamadas se crean automáticamente con Daily.co,
+  // así que ya NO se exige que el médico conecte ninguna cuenta de Google.
+  // La disponibilidad se filtra después al generar los huecos.
   const doctors = await db
     .select({
       userId: doctorProfiles.userId,
@@ -45,13 +46,6 @@ export async function getPooledSlots(range: SlotRange, domain?: string): Promise
               eq(doctorProfiles.domain, ""),
             )
           : undefined,
-        // Cuenta de Google enlazada (proveedor "google" en la tabla account).
-        exists(
-          db
-            .select({ id: account.id })
-            .from(account)
-            .where(and(eq(account.userId, doctorProfiles.userId), eq(account.providerId, "google"))),
-        ),
       ),
     )
 

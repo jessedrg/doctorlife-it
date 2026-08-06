@@ -4,7 +4,7 @@ import { db } from "@/lib/db"
 import { appointments, conversations, messages, user } from "@/lib/db/schema"
 import { getSessionUser } from "@/lib/session"
 import { hasActiveSubscription } from "@/app/actions/subscription"
-import { maybeCreateMeeting, isGoogleConfigured } from "@/lib/google/calendar"
+import { maybeCreateMeeting, isVideoConfigured } from "@/lib/video/daily"
 import { CALL_PREFIX } from "@/lib/chat-constants"
 import { sendNewMessageEmail } from "@/lib/email"
 import { and, asc, desc, eq, gt, ne, or } from "drizzle-orm"
@@ -297,7 +297,7 @@ export async function createInstantCall(conversationId: number) {
   const conv = await requireParticipant(conversationId, me.id)
   if (conv.doctorId !== me.id) return { ok: false as const, error: "No autorizado" }
 
-  if (!isGoogleConfigured()) {
+  if (!isVideoConfigured()) {
     return { ok: false as const, error: "Las videollamadas no están configuradas." }
   }
 
@@ -328,7 +328,7 @@ export async function createInstantCall(conversationId: number) {
   if (!meetingUrl) {
     return {
       ok: false as const,
-      error: "No se pudo crear la llamada. Conecta tu Google Calendar en Mi cuenta e inténtalo de nuevo.",
+      error: "No se pudo crear la videollamada. Inténtalo de nuevo en unos segundos.",
     }
   }
 

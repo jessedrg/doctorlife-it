@@ -1,24 +1,34 @@
 import { headers } from "next/headers"
+import { DOMAIN, LOCALE } from "@/i18n/config"
 
-/** Host canónico de producción. */
-const PROD_HOST = "doctorlife.io"
+/**
+ * Host canónico de producción de ESTE proyecto (p.ej. doctorlife-it.com).
+ * Se deriva del locale activo para que cada país use su propio dominio.
+ */
+const PROD_HOST = DOMAIN[LOCALE]
+/**
+ * Hosts adicionales que también se consideran producción. Incluye el dominio
+ * histórico (doctorlife.io) para no romper despliegues previos.
+ */
+const PROD_HOSTS = [PROD_HOST, "doctorlife.io"]
 /** Host de desarrollo/staging. */
 const DEV_HOST = "dev.doctorlife.io"
 
 /**
- * Devuelve true si la petición actual viene del dominio de producción
- * (doctorlife.io). Los médicos marcados como isDevOnly NO aparecen en prod.
+ * Devuelve true si la petición actual viene del dominio de producción de este
+ * proyecto (doctorlife-it.com). Los médicos marcados como isDevOnly NO aparecen
+ * en prod.
  */
 export async function isProductionRequest(): Promise<boolean> {
   try {
     const h = await headers()
     const host = (h.get("x-forwarded-host") ?? h.get("host") ?? "").toLowerCase()
-    return host === PROD_HOST || host.endsWith(`.${PROD_HOST}`)
+    return PROD_HOSTS.some((d) => host === d || host.endsWith(`.${d}`))
   } catch {
     // Fuera de contexto de petición (p.ej. cron/webhook): decidir por env var.
   }
   const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? ""
-  return appUrl.includes(PROD_HOST)
+  return PROD_HOSTS.some((d) => appUrl.includes(d))
 }
 
 /**

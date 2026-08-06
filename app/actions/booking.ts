@@ -8,7 +8,7 @@ import { getDoctorChargeContext } from "@/lib/clinic"
 import { getRequestBaseUrl } from "@/lib/base-url"
 import { getPooledSlots, isSlotFree } from "@/lib/scheduling/pool"
 import { scheduling } from "@/lib/scheduling"
-import { maybeCreateMeeting, maybeCancelMeeting } from "@/lib/google/calendar"
+import { maybeCreateMeeting, maybeCancelMeeting } from "@/lib/video/daily"
 import {
   sendAppointmentCancelledEmail,
   sendRescheduleConfirmedEmail,
