@@ -12,22 +12,20 @@ import type { Slot, WeeklyRule } from "@/lib/scheduling"
 import { Clock, Globe, Plus, X, CalendarOff, Check, Eye, CalendarRange } from "lucide-react"
 
 const DAYS = [
-  { dow: 1, label: "Lunes" },
-  { dow: 2, label: "Martes" },
-  { dow: 3, label: "Miércoles" },
-  { dow: 4, label: "Jueves" },
-  { dow: 5, label: "Viernes" },
-  { dow: 6, label: "Sábado" },
-  { dow: 0, label: "Domingo" },
+  { dow: 1, label: "Lunedì" },
+  { dow: 2, label: "Martedì" },
+  { dow: 3, label: "Mercoledì" },
+  { dow: 4, label: "Giovedì" },
+  { dow: 5, label: "Venerdì" },
+  { dow: 6, label: "Sabato" },
+  { dow: 0, label: "Domenica" },
 ]
 
 const TIMEZONES = [
-  "Europe/Madrid",
-  "Atlantic/Canary",
-  "Europe/Lisbon",
+  "Europe/Rome",
   "Europe/London",
-  "America/Mexico_City",
-  "America/Argentina/Buenos_Aires",
+  "Europe/Madrid",
+  "Europe/Lisbon",
 ]
 
 type Window = { start: string; end: string }
@@ -180,12 +178,12 @@ export function AvailabilityEditor({
       {/* Ajustes generales */}
       <section className="overflow-hidden rounded-2xl border border-ink/10 bg-warm">
         <div className="border-b border-ink/10 px-5 py-3.5">
-          <h2 className="text-[15.5px] font-medium text-ink">Ajustes</h2>
+          <h2 className="text-[15.5px] font-medium text-ink">Impostazioni</h2>
         </div>
         <div className="grid gap-4 p-5 sm:grid-cols-2">
           <label className="flex flex-col gap-1.5 text-[13px] font-medium text-ink-soft">
             <span className="flex items-center gap-1.5">
-              <Clock className="size-4 text-ink-mute" aria-hidden /> Duración de cita
+              <Clock className="size-4 text-ink-mute" aria-hidden /> Durata appuntamento
             </span>
             <select
               value={slotMinutes}
@@ -197,14 +195,14 @@ export function AvailabilityEditor({
             >
               {[15, 20, 30, 45, 60].map((m) => (
                 <option key={m} value={m}>
-                  {m} minutos
+                  {m} minuti
                 </option>
               ))}
             </select>
           </label>
           <label className="flex flex-col gap-1.5 text-[13px] font-medium text-ink-soft">
             <span className="flex items-center gap-1.5">
-              <Globe className="size-4 text-ink-mute" aria-hidden /> Zona horaria
+              <Globe className="size-4 text-ink-mute" aria-hidden /> Fuso orario
             </span>
             <select
               value={timezone}
@@ -228,10 +226,10 @@ export function AvailabilityEditor({
       <section className="overflow-hidden rounded-2xl border border-ink/10 bg-warm">
         <div className="flex items-center justify-between border-b border-ink/10 px-5 py-3.5">
           <h2 className="flex items-center gap-2 text-[15.5px] font-medium text-ink">
-            <CalendarRange className="size-4.5 text-amber" aria-hidden /> Horario semanal
+            <CalendarRange className="size-4.5 text-amber" aria-hidden /> Orario settimanale
           </h2>
           <span className="rounded-full bg-sage/30 px-2.5 py-1 text-[12px] font-medium text-ink">
-            {activeDays} {activeDays === 1 ? "día activo" : "días activos"}
+            {activeDays} {activeDays === 1 ? "giorno attivo" : "giorni attivi"}
           </span>
         </div>
         <div className="flex flex-col divide-y divide-ink/8">
@@ -290,7 +288,7 @@ export function AvailabilityEditor({
                         <button
                           type="button"
                           onClick={() => removeWindow(dow, i)}
-                          aria-label={`Quitar franja ${i + 1} de ${label}`}
+                          aria-label={`Rimuovi fascia ${i + 1} di ${label}`}
                           className="flex size-9 items-center justify-center rounded-xl border border-ink/12 text-ink-soft transition-colors hover:bg-clay/10 hover:text-clay"
                         >
                           <X className="size-4" aria-hidden />
@@ -302,11 +300,11 @@ export function AvailabilityEditor({
                       onClick={() => addWindow(dow)}
                       className="flex w-fit items-center gap-1.5 rounded-lg px-1 py-1 text-[13.5px] font-medium text-olive transition-colors hover:text-ink"
                     >
-                      <Plus className="size-4" aria-hidden /> Añadir franja
+                      <Plus className="size-4" aria-hidden /> Aggiungi fascia
                     </button>
                   </div>
                 ) : (
-                  <span className="flex-1 pt-0.5 text-[13.5px] text-ink-mute">No disponible</span>
+                  <span className="flex-1 pt-0.5 text-[13.5px] text-ink-mute">Non disponibile</span>
                 )}
               </div>
             )
@@ -318,9 +316,9 @@ export function AvailabilityEditor({
       <section className="overflow-hidden rounded-2xl border border-ink/10 bg-warm">
         <div className="border-b border-ink/10 px-5 py-3.5">
           <h2 className="flex items-center gap-2 text-[15.5px] font-medium text-ink">
-            <CalendarOff className="size-4.5 text-clay" aria-hidden /> Días bloqueados
+            <CalendarOff className="size-4.5 text-clay" aria-hidden /> Giorni bloccati
           </h2>
-          <p className="mt-0.5 text-[13px] text-ink-soft">Vacaciones o festivos en los que no atiendes.</p>
+          <p className="mt-0.5 text-[13px] text-ink-soft">Ferie o festività in cui non ricevi.</p>
         </div>
         <div className="p-5">
           <div className="flex items-center gap-2">
@@ -336,7 +334,7 @@ export function AvailabilityEditor({
               disabled={pending || !newDate}
               className="rounded-xl bg-ink px-4 py-2.5 text-[14px] font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-50"
             >
-              Bloquear
+              Blocca
             </button>
           </div>
           {exceptions.length > 0 && (
@@ -350,7 +348,7 @@ export function AvailabilityEditor({
                   <button
                     type="button"
                     onClick={() => handleRemoveDate(date)}
-                    aria-label={`Quitar ${date}`}
+                    aria-label={`Rimuovi ${date}`}
                     className="text-clay transition-colors hover:text-ink"
                   >
                     <X className="size-3.5" aria-hidden />
@@ -370,7 +368,7 @@ export function AvailabilityEditor({
           disabled={pending}
           className="rounded-xl bg-olive px-6 py-3 text-[14px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-50"
         >
-          {pending ? "Guardando…" : "Guardar disponibilidad"}
+          {pending ? "Salvataggio…" : "Salva disponibilità"}
         </button>
         <button
           type="button"
@@ -378,11 +376,11 @@ export function AvailabilityEditor({
           disabled={pending}
           className="inline-flex items-center gap-2 rounded-xl border border-ink/15 px-6 py-3 text-[14px] font-medium text-ink transition-colors hover:bg-warm disabled:opacity-50"
         >
-          <Eye className="size-4" aria-hidden /> Previsualizar huecos
+          <Eye className="size-4" aria-hidden /> Anteprima slot
         </button>
         {saved && (
           <span className="inline-flex items-center gap-1.5 text-[14px] font-medium text-olive">
-            <Check className="size-4" aria-hidden /> Guardado
+            <Check className="size-4" aria-hidden /> Salvato
           </span>
         )}
       </div>
@@ -391,12 +389,12 @@ export function AvailabilityEditor({
       {slots && (
         <section className="overflow-hidden rounded-2xl border border-ink/10 bg-warm">
           <div className="border-b border-ink/10 px-5 py-3.5">
-            <h2 className="text-[15.5px] font-medium text-ink">Próximos huecos ({slots.length})</h2>
+            <h2 className="text-[15.5px] font-medium text-ink">Prossimi slot ({slots.length})</h2>
           </div>
           <div className="p-5">
             {slots.length === 0 ? (
               <p className="text-[14px] text-ink-soft">
-                No hay huecos en los próximos 14 días. Revisa tu horario y guárdalo.
+                Non ci sono slot nei prossimi 14 giorni. Controlla il tuo orario e salvalo.
               </p>
             ) : (
               <div className="flex flex-col gap-4">

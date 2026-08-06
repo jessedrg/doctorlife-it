@@ -5,19 +5,19 @@ import { updateClinicDetails, type ClinicStatus } from "@/app/actions/clinic"
 import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react"
 
 const FIELD_LABELS: Record<string, string> = {
-  clinicName: "Nombre de la clínica",
-  name: "Nombre de la clínica",
-  taxId: "CIF/NIF",
-  addressLine: "Dirección",
-  city: "Municipio",
-  postalCode: "Código postal",
+  clinicName: "Nome della clinica",
+  name: "Nome della clinica",
+  taxId: "Partita IVA / Codice Fiscale",
+  addressLine: "Indirizzo",
+  city: "Comune",
+  postalCode: "CAP",
   province: "Provincia",
-  healthRegistryNumber: "Nº registro sanitario",
-  medicalDirectorName: "Director médico",
-  medicalDirectorLicense: "Nº colegiado",
-  billingEmail: "Email de facturación",
-  dataProtectionContact: "Responsable RGPD",
-  domain: "Dominio asignado",
+  healthRegistryNumber: "N. registro sanitario",
+  medicalDirectorName: "Direttore sanitario",
+  medicalDirectorLicense: "N. iscrizione albo",
+  billingEmail: "Email di fatturazione",
+  dataProtectionContact: "Responsabile GDPR",
+  domain: "Dominio assegnato",
 }
 
 type Fields = {
@@ -69,8 +69,8 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
         setMsg({
           type: "ok",
           text: res.dataComplete
-            ? "Datos guardados. La clínica ya cumple los requisitos para operar."
-            : "Datos guardados. Faltan campos obligatorios para poder cobrar.",
+            ? "Dati salvati. La clinica soddisfa ora i requisiti per operare."
+            : "Dati salvati. Mancano campi obbligatori per poter incassare.",
         })
       }
     })
@@ -80,9 +80,9 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
     <section className="rounded-[18px] border border-ink/10 bg-warm p-5">
       <div className="flex items-center justify-between gap-3">
         <div>
-          <h2 className="text-[17px] font-medium text-ink">Datos de la clínica</h2>
+          <h2 className="text-[17px] font-medium text-ink">Dati della clinica</h2>
           <p className="mt-0.5 text-[13.5px] leading-relaxed text-ink-soft">
-            Información fiscal y sanitaria necesaria para operar y facturar como centro sanitario.
+            Informazioni fiscali e sanitarie necessarie per operare e fatturare come struttura sanitaria.
           </p>
         </div>
         {status.dataComplete ? (
@@ -98,7 +98,7 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
 
       {!status.dataComplete && status.missingFields.length > 0 && (
         <p className="mt-3 rounded-xl bg-amber-50 px-4 py-3 text-[13.5px] leading-relaxed text-amber-900">
-          Faltan por completar:{" "}
+          Da completare:{" "}
           <span className="font-medium">
             {status.missingFields.map((f) => FIELD_LABELS[f] ?? f).join(", ")}
           </span>

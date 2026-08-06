@@ -10,8 +10,8 @@ import {
 } from "@/app/actions/progress"
 import { EmptyState } from "@/components/empty-state"
 
-const dateFmt = new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "short", year: "numeric" })
-const shortFmt = new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "short" })
+const dateFmt = new Intl.DateTimeFormat("it-IT", { day: "numeric", month: "short", year: "numeric" })
+const shortFmt = new Intl.DateTimeFormat("it-IT", { day: "numeric", month: "short" })
 
 export function ProgressTracker({
   initialEntries,
@@ -84,10 +84,10 @@ export function ProgressTracker({
         <div className="rounded-[20px] border border-ink/10 bg-cream p-5">
           <h2 className="flex items-center gap-2 text-[16px] font-medium text-ink">
             <Plus className="size-[18px] text-clay" aria-hidden />
-            Nuevo registro
+            Nuovo dato
           </h2>
           <p className="mt-1 text-[13.5px] leading-relaxed text-ink-soft">
-            Anota tu evolución. Tu médico podrá verlo en tu ficha.
+            Annota la tua evoluzione. Il tuo medico potrà vederla nella tua scheda.
           </p>
 
           <div className="mt-4 grid grid-cols-2 gap-3">
@@ -102,7 +102,7 @@ export function ProgressTracker({
               />
             </label>
             <label className="flex flex-col gap-1.5 text-[12.5px] font-medium text-ink-soft">
-              Cintura (cm)
+              Vita (cm)
               <input
                 value={waist}
                 onChange={(e) => setWaist(e.target.value.replace(/[^0-9.,]/g, ""))}
@@ -114,21 +114,21 @@ export function ProgressTracker({
           </div>
 
           <label className="mt-3 flex flex-col gap-1.5 text-[12.5px] font-medium text-ink-soft">
-            Dosis actual
+            Dose attuale
             <input
               value={dose}
               onChange={(e) => setDose(e.target.value)}
-              placeholder="p. ej. Semaglutida 0,5 mg"
+              placeholder="es. Semaglutide 0,5 mg"
               className="rounded-[12px] border border-ink/15 bg-warm px-3.5 py-3 text-[15px] text-ink outline-none transition-colors focus:border-amber"
             />
           </label>
 
           <label className="mt-3 flex flex-col gap-1.5 text-[12.5px] font-medium text-ink-soft">
-            Efectos secundarios
+            Effetti collaterali
             <input
               value={sideEffects}
               onChange={(e) => setSideEffects(e.target.value)}
-              placeholder="p. ej. náuseas leves"
+              placeholder="es. lievi nausee"
               className="rounded-[12px] border border-ink/15 bg-warm px-3.5 py-3 text-[15px] text-ink outline-none transition-colors focus:border-amber"
             />
           </label>
@@ -139,7 +139,7 @@ export function ProgressTracker({
               value={note}
               onChange={(e) => setNote(e.target.value)}
               rows={2}
-              placeholder="Cómo te sientes, energía, apetito…"
+              placeholder="Come ti senti, energia, appetito…"
               className="resize-none rounded-[12px] border border-ink/15 bg-warm px-3.5 py-3 text-[15px] text-ink outline-none transition-colors focus:border-amber"
             />
           </label>
@@ -152,16 +152,16 @@ export function ProgressTracker({
             disabled={pending}
             className="mt-4 w-full rounded-full bg-ink py-3 text-[14px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
           >
-            {pending ? "Guardando…" : "Guardar registro"}
+            {pending ? "Salvataggio…" : "Salva dato"}
           </button>
         </div>
 
         {/* Notas compartidas por el médico */}
         <div className="mt-5 rounded-[20px] border border-ink/10 bg-cream p-5">
-          <h2 className="text-[16px] font-medium text-ink">Notas de tu médico</h2>
+          <h2 className="text-[16px] font-medium text-ink">Note del tuo medico</h2>
           {sharedNotes.length === 0 ? (
             <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink-soft">
-              Aquí verás las indicaciones que tu médico decida compartir contigo.
+              Qui vedrai le indicazioni che il tuo medico deciderà di condividere con te.
             </p>
           ) : (
             <ul className="mt-3 flex flex-col gap-3">
@@ -180,10 +180,10 @@ export function ProgressTracker({
       <section className="lg:col-span-3">
         {/* Resumen */}
         <div className="grid grid-cols-3 gap-3">
-          <StatCard label="Peso inicial" value={first != null ? `${first} kg` : "—"} />
-          <StatCard label="Peso actual" value={latest != null ? `${latest} kg` : "—"} />
+          <StatCard label="Peso iniziale" value={first != null ? `${first} kg` : "—"} />
+          <StatCard label="Peso attuale" value={latest != null ? `${latest} kg` : "—"} />
           <StatCard
-            label="Variación"
+            label="Variazione"
             value={totalChange != null ? `${totalChange > 0 ? "+" : ""}${totalChange.toFixed(1)} kg` : "—"}
             tone={totalChange != null && totalChange < 0 ? "good" : "neutral"}
           />
@@ -193,11 +193,11 @@ export function ProgressTracker({
         <div className="mt-4 rounded-[20px] border border-ink/10 bg-cream p-5">
           <h2 className="flex items-center gap-2 text-[16px] font-medium text-ink">
             <TrendingDown className="size-[18px] text-olive" aria-hidden />
-            Evolución del peso
+            Andamento del peso
           </h2>
           {weights.length < 2 ? (
             <p className="mt-2 text-[13.5px] leading-relaxed text-ink-soft">
-              Registra tu peso al menos dos veces para ver tu gráfico de evolución.
+              Registra il tuo peso almeno due volte per vedere il grafico dell'andamento.
             </p>
           ) : (
             <WeightChart points={weights.map((e) => ({ x: e.createdAt, y: e.weightKg as number }))} />
@@ -208,14 +208,14 @@ export function ProgressTracker({
         <div className="mt-4 rounded-[20px] border border-ink/10 bg-cream p-5">
           <h2 className="flex items-center gap-2 text-[16px] font-medium text-ink">
             <Activity className="size-[18px] text-clay" aria-hidden />
-            Historial
+            Cronologia
           </h2>
           {entries.length === 0 ? (
             <div className="mt-3">
               <EmptyState
                 icon={Activity}
-                title="Aún no hay registros"
-                description="Empieza a anotar tu peso, dosis y cómo te sientes. Verás tu progreso reflejado aquí."
+                title="Non ci sono ancora dati"
+                description="Inizia ad annotare il tuo peso, la dose e come ti senti. Vedrai i tuoi progressi qui."
               />
             </div>
           ) : (
@@ -231,7 +231,7 @@ export function ProgressTracker({
                         <span className="text-[15px] font-semibold text-ink">{e.weightKg} kg</span>
                       )}
                       {e.waistCm != null && (
-                        <span className="text-[13px] text-ink-soft">Cintura {e.waistCm} cm</span>
+                        <span className="text-[13px] text-ink-soft">Vita {e.waistCm} cm</span>
                       )}
                       <span className="text-[12px] text-ink-mute">{dateFmt.format(new Date(e.createdAt))}</span>
                     </div>
@@ -239,12 +239,12 @@ export function ProgressTracker({
                       <div className="mt-1.5 flex flex-col gap-1 text-[13px] leading-snug text-ink-soft">
                         {e.dose && (
                           <span>
-                            <span className="text-ink-mute">Dosis:</span> {e.dose}
+                            <span className="text-ink-mute">Dose:</span> {e.dose}
                           </span>
                         )}
                         {e.sideEffects && (
                           <span>
-                            <span className="text-ink-mute">Efectos:</span> {e.sideEffects}
+                            <span className="text-ink-mute">Effetti:</span> {e.sideEffects}
                           </span>
                         )}
                         {e.note && <span className="italic">“{e.note}”</span>}
@@ -255,7 +255,7 @@ export function ProgressTracker({
                     type="button"
                     onClick={() => remove(e.id)}
                     disabled={pending}
-                    aria-label="Eliminar registro"
+                    aria-label="Elimina dato"
                     className="flex size-8 shrink-0 items-center justify-center rounded-full text-ink-mute transition-colors hover:bg-clay/10 hover:text-clay disabled:opacity-50"
                   >
                     <Trash2 className="size-4" aria-hidden />
@@ -320,7 +320,7 @@ function WeightChart({ points }: { points: { x: Date; y: number }[] }) {
         viewBox={`0 0 ${W} ${H}`}
         className="h-[200px] w-full min-w-[420px]"
         role="img"
-        aria-label="Gráfico de evolución del peso"
+        aria-label="Grafico dell'andamento del peso"
       >
         {/* Eje Y de referencia */}
         {[maxY, (maxY + minY) / 2, minY].map((v, i) => (
