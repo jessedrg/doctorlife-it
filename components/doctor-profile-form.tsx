@@ -107,7 +107,7 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
       </div>
 
       <label className={labelCls}>
-        Nombre completo
+        Nome completo
         <input
           value={fullName}
           onChange={(e) => setFullName(e.target.value)}
@@ -118,16 +118,16 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <label className={labelCls}>
-          Especialidad
+          Specializzazione
           <input
             value={specialty}
             onChange={(e) => setSpecialty(e.target.value)}
-            placeholder="Medicina general"
+            placeholder="Medicina generale"
             className={inputCls}
           />
         </label>
         <label className={labelCls}>
-          Nº de colegiado
+          N. iscrizione all&apos;Ordine
           <input
             value={licenseNumber}
             onChange={(e) => setLicenseNumber(e.target.value)}
@@ -138,21 +138,21 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
       </div>
 
       <label className={labelCls}>
-        Sobre ti
+        Su di te
         <textarea
           value={bio}
           onChange={(e) => setBio(e.target.value)}
           rows={4}
-          placeholder="Una breve presentación que verán tus pacientes."
+          placeholder="Una breve presentazione che vedranno i tuoi pazienti."
           className={`${inputCls} resize-none`}
         />
       </label>
 
       <label className="flex cursor-pointer items-center justify-between gap-4 rounded-[13px] border border-ink/15 bg-warm px-[16px] py-3.5">
         <span>
-          <span className="block text-[14.5px] font-medium text-ink">Acepto nuevos pacientes</span>
+          <span className="block text-[14.5px] font-medium text-ink">Accetto nuovi pazienti</span>
           <span className="block text-[12.5px] text-ink-soft">
-            Controla si apareces disponible para nuevas reservas.
+            Controlla se compari come disponibile per nuove prenotazioni.
           </span>
         </span>
         <input
@@ -169,11 +169,11 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
           <Users className="mt-0.5 size-[18px] shrink-0 text-ink-soft" aria-hidden />
           <div className="flex-1 min-w-0">
             <span className="block text-[14.5px] font-medium text-ink">
-              Límite de pacientes activos
+              Limite di pazienti attivi
             </span>
             <span className="mt-0.5 block text-[12.5px] text-ink-soft">
-              Cuando alcances este número, se dejará de mostrarte como disponible para nuevas
-              suscripciones. Déjalo en «Sin límite» para no restringir.
+              Quando raggiungi questo numero, smetterai di essere mostrato come disponibile per nuovi
+              abbonamenti. Lascia «Nessun limite» per non applicare restrizioni.
             </span>
 
             {/* Presets */}
@@ -201,7 +201,7 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
                     : "border border-ink/20 bg-paper text-ink hover:bg-ink/5"
                 }`}
               >
-                Sin límite
+                Nessun limite
               </button>
             </div>
 
@@ -217,11 +217,11 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
                   const v = parseInt(e.target.value, 10)
                   setMaxPatients(isNaN(v) || v <= 0 ? null : v)
                 }}
-                placeholder="Número personalizado…"
+                placeholder="Numero personalizzato…"
                 className="w-[190px] rounded-[10px] border border-ink/15 bg-paper px-3 py-2 text-[13.5px] text-ink outline-none transition-colors focus:border-amber"
               />
               {maxPatients !== null && (
-                <span className="text-[13px] text-ink-soft">pacientes máximo</span>
+                <span className="text-[13px] text-ink-soft">pazienti al massimo</span>
               )}
             </div>
           </div>
@@ -238,7 +238,7 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
         className="mt-1 inline-flex w-full items-center justify-center gap-2 rounded-[13px] bg-ink py-3.5 text-[15px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-60 sm:w-auto sm:px-8 sm:self-start"
       >
         {pending && <Loader2 className="size-4 animate-spin" aria-hidden />}
-        {pending ? "Guardando…" : "Guardar perfil"}
+        {pending ? "Salvataggio…" : "Salva profilo"}
       </button>
     </form>
   )

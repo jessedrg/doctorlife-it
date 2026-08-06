@@ -17,12 +17,12 @@ import {
   type VerificationRow,
 } from "@/app/actions/verification"
 
-const dateFmt = new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "short", year: "numeric" })
+const dateFmt = new Intl.DateTimeFormat("it-IT", { day: "numeric", month: "short", year: "numeric" })
 
 const ELIGIBILITY_META: Record<string, { label: string; cls: string }> = {
-  eligible: { label: "Candidato", cls: "bg-olive/15 text-olive" },
-  review: { label: "Requiere revisión", cls: "bg-amber/15 text-amber" },
-  blocked: { label: "No recomendado", cls: "bg-clay/15 text-clay" },
+  eligible: { label: "Idoneo", cls: "bg-olive/15 text-olive" },
+  review: { label: "Richiede revisione", cls: "bg-amber/15 text-amber" },
+  blocked: { label: "Non consigliato", cls: "bg-clay/15 text-clay" },
 }
 
 export function PatientDetailPanel({ patientId }: { patientId: string }) {
@@ -46,7 +46,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
         setDetail(d)
         setNotes(d.notes)
       })
-      .catch(() => setError("No se pudo cargar la información del paciente."))
+      .catch(() => setError("Impossibile caricare le informazioni del paziente."))
       .finally(() => setLoading(false))
     getPatientVerifications(patientId)
       .then(setVerifications)
@@ -61,7 +61,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
     setVerifyError(null)
     const message = verifyMsg.trim()
     if (!message) {
-      setVerifyError("Describe qué necesitas que envíe el paciente.")
+      setVerifyError("Descrivi cosa deve inviare il paziente.")
       return
     }
     startTransition(async () => {
@@ -79,7 +79,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
     startTransition(async () => {
       const note =
         decision === "rejected"
-          ? window.prompt("Motivo del rechazo (opcional, lo verá el paciente):") ?? undefined
+          ? window.prompt("Motivo del rifiuto (facoltativo, lo vedrà il paziente):") ?? undefined
           : undefined
       const res = await reviewVerification({ id, decision, note })
       if (res.ok) reloadVerifications()
@@ -94,7 +94,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
     setError(null)
     const body = noteBody.trim()
     if (!body) {
-      setError("Escribe una nota.")
+      setError("Scrivi una nota.")
       return
     }
     startTransition(async () => {
@@ -122,7 +122,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
     return (
       <div className="flex items-center justify-center py-8 text-[13.5px] text-ink-soft">
         <span className="mr-2 inline-block size-4 animate-spin rounded-full border-2 border-ink/20 border-t-ink/60" />
-        Cargando ficha…
+        Caricamento scheda…
       </div>
     )
   }
@@ -139,7 +139,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
       {/* Información clínica */}
       <section className="rounded-[16px] border border-ink/10 bg-warm p-4">
         <h3 className="text-[13px] font-semibold uppercase tracking-[.05em] text-ink-mute">
-          Información clínica
+          Informazioni cliniche
         </h3>
         {clinical ? (
           <>
@@ -153,23 +153,23 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
               </span>
             )}
             <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2 text-[13.5px]">
-              <Row label="Edad" value={clinical.age != null ? `${clinical.age} años` : "—"} />
-              <Row label="Sexo" value={sexLabel(clinical.sex)} />
-              <Row label="Altura" value={clinical.heightCm != null ? `${clinical.heightCm} cm` : "—"} />
+              <Row label="Età" value={clinical.age != null ? `${clinical.age} anni` : "—"} />
+              <Row label="Sesso" value={sexLabel(clinical.sex)} />
+              <Row label="Altezza" value={clinical.heightCm != null ? `${clinical.heightCm} cm` : "—"} />
               <Row label="Peso" value={clinical.weightKg != null ? `${clinical.weightKg} kg` : "—"} />
               <Row label="IMC" value={clinical.bmi ?? "—"} />
-              <Row label="Experiencia GLP‑1" value={clinical.glp1Experience ?? "—"} />
+              <Row label="Esperienza GLP‑1" value={clinical.glp1Experience ?? "—"} />
             </dl>
 
             {clinical.comorbidities.length > 0 && (
-              <Tags title="Comorbilidades" items={clinical.comorbidities} tone="amber" />
+              <Tags title="Comorbilità" items={clinical.comorbidities} tone="amber" />
             )}
             {clinical.contraindications.length > 0 && (
-              <Tags title="Antecedentes" items={clinical.contraindications} tone="clay" />
+              <Tags title="Anamnesi" items={clinical.contraindications} tone="clay" />
             )}
             {clinical.eligibilityReasons.length > 0 && (
               <div className="mt-3">
-                <p className="text-[11.5px] uppercase tracking-[.04em] text-ink-mute">Valoración</p>
+                <p className="text-[11.5px] uppercase tracking-[.04em] text-ink-mute">Valutazione</p>
                 <ul className="mt-1 flex flex-col gap-1 text-[12.5px] leading-snug text-ink-soft">
                   {clinical.eligibilityReasons.map((r, i) => (
                     <li key={i}>• {r}</li>
@@ -180,7 +180,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
           </>
         ) : (
           <p className="mt-2 text-[13.5px] leading-relaxed text-ink-soft">
-            Este paciente no completó el cuestionario clínico, o lo hizo con otro correo.
+            Questo paziente non ha completato il questionario clinico, o l&apos;ha fatto con un&apos;altra email.
           </p>
         )}
       </section>
@@ -188,20 +188,20 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
       {/* Progreso */}
       <section className="rounded-[16px] border border-ink/10 bg-warm p-4">
         <h3 className="text-[13px] font-semibold uppercase tracking-[.05em] text-ink-mute">
-          Progreso del paciente
+          Progressi del paziente
         </h3>
         {progress.length === 0 ? (
           <p className="mt-2 text-[13.5px] leading-relaxed text-ink-soft">
-            El paciente aún no ha registrado ningún dato de seguimiento.
+            Il paziente non ha ancora registrato alcun dato di monitoraggio.
           </p>
         ) : (
           <>
             <div className="mt-2 flex flex-wrap gap-2 text-[12.5px]">
               {firstW != null && (
-                <span className="rounded-full bg-ink/[.06] px-2.5 py-1 text-ink-soft">Inicio {firstW} kg</span>
+                <span className="rounded-full bg-ink/[.06] px-2.5 py-1 text-ink-soft">Inizio {firstW} kg</span>
               )}
               {lastW != null && (
-                <span className="rounded-full bg-ink/[.06] px-2.5 py-1 text-ink-soft">Actual {lastW} kg</span>
+                <span className="rounded-full bg-ink/[.06] px-2.5 py-1 text-ink-soft">Attuale {lastW} kg</span>
               )}
               {change != null && (
                 <span
@@ -219,13 +219,13 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
                 <li key={e.id} className="rounded-[12px] border border-ink/10 bg-cream px-3 py-2">
                   <div className="flex flex-wrap items-center gap-x-2.5 gap-y-0.5 text-[13px]">
                     {e.weightKg != null && <span className="font-semibold text-ink">{e.weightKg} kg</span>}
-                    {e.waistCm != null && <span className="text-ink-soft">Cintura {e.waistCm} cm</span>}
+                    {e.waistCm != null && <span className="text-ink-soft">Vita {e.waistCm} cm</span>}
                     <span className="text-[11.5px] text-ink-mute">{dateFmt.format(new Date(e.createdAt))}</span>
                   </div>
                   {(e.dose || e.sideEffects || e.note) && (
                     <div className="mt-1 text-[12.5px] leading-snug text-ink-soft">
-                      {e.dose && <span className="mr-2">Dosis: {e.dose}</span>}
-                      {e.sideEffects && <span className="mr-2">Efectos: {e.sideEffects}</span>}
+                      {e.dose && <span className="mr-2">Dose: {e.dose}</span>}
+                      {e.sideEffects && <span className="mr-2">Effetti: {e.sideEffects}</span>}
                       {e.note && <span className="italic">“{e.note}”</span>}
                     </div>
                   )}
@@ -241,12 +241,12 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
         <div className="flex items-center gap-2">
           <Pill className="size-4 text-ink-mute" aria-hidden />
           <h3 className="text-[13px] font-semibold uppercase tracking-[.05em] text-ink-mute">
-            Recetas anteriores
+            Ricette precedenti
           </h3>
         </div>
         {(detail?.prescriptions ?? []).length === 0 ? (
           <p className="mt-2 text-[13.5px] leading-relaxed text-ink-soft">
-            Aún no has emitido recetas a este paciente.
+            Non hai ancora emesso ricette per questo paziente.
           </p>
         ) : (
           <ul className="mt-3 flex flex-col gap-2">
@@ -258,7 +258,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
                     {dateFmt.format(new Date(rx.issuedAt))}
                   </span>
                 </div>
-                <p className="mt-0.5 text-[13px] text-ink-soft">Posología: {rx.dosage}</p>
+                <p className="mt-0.5 text-[13px] text-ink-soft">Posologia: {rx.dosage}</p>
                 {rx.instructions && (
                   <p className="mt-0.5 text-[12.5px] leading-snug text-ink-soft">{rx.instructions}</p>
                 )}
@@ -273,13 +273,13 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
         <div className="flex items-center gap-2">
           <Send className="size-4 text-ink-mute" aria-hidden />
           <h3 className="text-[13px] font-semibold uppercase tracking-[.05em] text-ink-mute">
-            Enviar plan al paciente
+            Invia piano al paziente
           </h3>
         </div>
         <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-soft">
-          Envía por correo el plan que acordasteis en la consulta. El paciente lo paga desde su
-          panel y, al confirmarse el pago, se activa automáticamente su tratamiento, su receta y el
-          seguimiento.
+          Invia via email il piano concordato durante la visita. Il paziente lo paga dal suo
+          pannello e, alla conferma del pagamento, si attivano automaticamente il suo trattamento, la
+          sua ricetta e il monitoraggio.
         </p>
         <div className="mt-3">
           <SendPlanForm patientId={patientId} />
@@ -291,13 +291,13 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
         <div className="flex items-center gap-2">
           <ShieldCheck className="size-4 text-ink-mute" aria-hidden />
           <h3 className="text-[13px] font-semibold uppercase tracking-[.05em] text-ink-mute">
-            Verificación adicional
+            Verifica aggiuntiva
           </h3>
         </div>
         <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-soft">
-          Si sospechas que los datos del paciente no son veraces, pídele una prueba (un vídeo, una
-          analítica, una foto…). Mientras esté pendiente, el paciente{" "}
-          <span className="font-medium">no podrá activar su suscripción</span> hasta que tú la apruebes.
+          Se sospetti che i dati del paziente non siano veritieri, chiedigli una prova (un video, un
+          esame, una foto…). Finché è in sospeso, il paziente{" "}
+          <span className="font-medium">non potrà attivare il suo abbonamento</span> finché non la approvi.
         </p>
 
         {!hasOpenVerification && (
@@ -306,7 +306,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
               value={verifyMsg}
               onChange={(e) => setVerifyMsg(e.target.value)}
               rows={2}
-              placeholder="Ej.: Necesito un vídeo corto sosteniendo tu DNI junto a tu rostro, o una analítica reciente."
+              placeholder="Es.: Ho bisogno di un breve video con la tua carta d'identità accanto al viso, o di un esame recente."
               className="resize-none rounded-[12px] border border-ink/15 bg-cream px-3.5 py-2.5 text-[14px] text-ink outline-none transition-colors focus:border-amber"
             />
             <button
@@ -316,7 +316,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
               className="ml-auto flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
             >
               <ShieldCheck className="size-4" aria-hidden />
-              Solicitar verificación
+              Richiedi verifica
             </button>
             {verifyError && <p className="text-[13px] text-clay">{verifyError}</p>}
           </div>
@@ -345,7 +345,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
                       className="flex shrink-0 items-center gap-1.5 rounded-full border border-ink/15 px-3 py-1.5 text-[12.5px] font-medium text-ink transition-colors hover:bg-ink/5"
                     >
                       <FileCheck2 className="size-3.5" aria-hidden />
-                      Ver archivo
+                      Vedi file
                     </a>
                   )}
                 </div>
@@ -358,7 +358,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
                       className="flex items-center gap-1.5 rounded-full bg-olive px-3.5 py-1.5 text-[12.5px] font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
                     >
                       <Check className="size-3.5" aria-hidden />
-                      Aprobar
+                      Approva
                     </button>
                     <button
                       type="button"
@@ -367,7 +367,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
                       className="flex items-center gap-1.5 rounded-full border border-clay/30 px-3.5 py-1.5 text-[12.5px] font-medium text-clay transition-colors hover:bg-clay/10 disabled:opacity-60"
                     >
                       <X className="size-3.5" aria-hidden />
-                      Rechazar
+                      Rifiuta
                     </button>
                   </div>
                 )}
@@ -380,7 +380,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
       {/* Notas del médico */}
       <section className="rounded-[16px] border border-ink/10 bg-warm p-4 lg:col-span-2">
         <h3 className="text-[13px] font-semibold uppercase tracking-[.05em] text-ink-mute">
-          Notas del médico
+          Note del medico
         </h3>
 
         <div className="mt-3 flex flex-col gap-2">
@@ -388,7 +388,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
             value={noteBody}
             onChange={(e) => setNoteBody(e.target.value)}
             rows={2}
-            placeholder="Escribe una nota sobre este paciente…"
+            placeholder="Scrivi una nota su questo paziente…"
             className="resize-none rounded-[12px] border border-ink/15 bg-cream px-3.5 py-2.5 text-[14px] text-ink outline-none transition-colors focus:border-amber"
           />
           <div className="flex flex-wrap items-center gap-2">
@@ -411,7 +411,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
                 }`}
               >
                 <Eye className="size-3.5" aria-hidden />
-                Compartida
+                Condivisa
               </button>
             </div>
             <button
@@ -421,12 +421,12 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
               className="ml-auto flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
             >
               <Plus className="size-4" aria-hidden />
-              Añadir nota
+              Aggiungi nota
             </button>
           </div>
           <p className="text-[11.5px] leading-snug text-ink-mute">
-            Las notas <span className="font-medium">internas</span> solo las ve el equipo médico. Las{" "}
-            <span className="font-medium">compartidas</span> aparecen en el portal del paciente.
+            Le note <span className="font-medium">interne</span> le vede solo il team medico. Le{" "}
+            <span className="font-medium">condivise</span> appaiono nel portale del paziente.
           </p>
           {error && <p className="text-[13px] text-clay">{error}</p>}
         </div>
@@ -446,7 +446,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
                   >
                     {n.visibility === "shared" ? (
                       <>
-                        <Eye className="size-3" aria-hidden /> Compartida
+                        <Eye className="size-3" aria-hidden /> Condivisa
                       </>
                     ) : (
                       <>
@@ -461,7 +461,7 @@ export function PatientDetailPanel({ patientId }: { patientId: string }) {
                   type="button"
                   onClick={() => removeNote(n.id)}
                   disabled={pending}
-                  aria-label="Eliminar nota"
+                  aria-label="Elimina nota"
                   className="flex size-8 shrink-0 items-center justify-center rounded-full text-ink-mute transition-colors hover:bg-clay/10 hover:text-clay disabled:opacity-50"
                 >
                   <Trash2 className="size-4" aria-hidden />
@@ -501,18 +501,18 @@ function Tags({ title, items, tone }: { title: string; items: string[]; tone: "a
 }
 
 function sexLabel(sex: string | null) {
-  if (sex === "female") return "Mujer"
-  if (sex === "male") return "Hombre"
-  if (sex === "other") return "No especificado"
+  if (sex === "female") return "Donna"
+  if (sex === "male") return "Uomo"
+  if (sex === "other") return "Non specificato"
   return "—"
 }
 
 function VerificationBadge({ status }: { status: string }) {
   const meta: Record<string, { label: string; cls: string; icon: typeof Clock3 }> = {
-    pending: { label: "Esperando al paciente", cls: "bg-amber/15 text-amber", icon: Clock3 },
-    submitted: { label: "Pendiente de revisar", cls: "bg-ink/[.08] text-ink-soft", icon: FileCheck2 },
-    approved: { label: "Aprobada", cls: "bg-olive/15 text-olive", icon: Check },
-    rejected: { label: "Rechazada", cls: "bg-clay/15 text-clay", icon: X },
+    pending: { label: "In attesa del paziente", cls: "bg-amber/15 text-amber", icon: Clock3 },
+    submitted: { label: "Da esaminare", cls: "bg-ink/[.08] text-ink-soft", icon: FileCheck2 },
+    approved: { label: "Approvata", cls: "bg-olive/15 text-olive", icon: Check },
+    rejected: { label: "Rifiutata", cls: "bg-clay/15 text-clay", icon: X },
   }
   const m = meta[status] ?? meta.pending
   const Icon = m.icon
