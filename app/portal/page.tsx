@@ -10,7 +10,7 @@ import { SubscriptionCard } from "@/components/subscription-card"
 import { FollowupReminder } from "@/components/followup-reminder"
 import { Clock, FileText, CheckCircle2, CalendarClock, CalendarCheck } from "lucide-react"
 
-export const metadata = { title: "Mi portal — DoctorLife" }
+export const metadata = { title: "Il mio portale — DoctorLife" }
 
 export default async function PortalHome({
   searchParams,
@@ -40,11 +40,11 @@ export default async function PortalHome({
   return (
     <div>
       <h1 className="text-[30px] font-light leading-tight tracking-[-.02em] text-ink text-balance">
-        Hola, {firstName}
+        Ciao, {firstName}
       </h1>
       <p className="mt-1.5 max-w-[60ch] text-[15.5px] leading-relaxed text-ink-soft">
-        Este es tu portal de paciente. Aquí verás tu próxima cita, tu plan de tratamiento y podrás
-        hablar con tu equipo médico.
+        Questo è il tuo portale paziente. Qui trovi il tuo prossimo appuntamento, il tuo piano di
+        trattamento e puoi parlare con il tuo team medico.
       </p>
 
       {followupPending ? (
@@ -63,27 +63,27 @@ export default async function PortalHome({
           </div>
         ) : (
           <div className="lg:col-span-2 rounded-[20px] border border-ink/10 bg-cream p-5">
-            <h2 className="text-[16px] font-medium text-ink">Tu próxima cita</h2>
+            <h2 className="text-[16px] font-medium text-ink">Il tuo prossimo appuntamento</h2>
             {status === "pending_appointment" ? (
               <p className="mt-1.5 text-[14px] leading-relaxed text-ink-soft">
-                Tu médico está valorando tu solicitud y te asignará una cita en breve. Recibirás
-                una notificación por correo cuando esté lista.
+                Il tuo medico sta valutando la tua richiesta e ti assegnerà un appuntamento a breve.
+                Riceverai una notifica via email quando sarà pronto.
               </p>
             ) : status === "followup_available" ? (
               <>
                 <p className="mt-1.5 text-[14px] leading-relaxed text-ink-soft">
-                  Tu suscripción se ha renovado. Reserva tu próxima videollamada de seguimiento.
+                  Il tuo abbonamento è stato rinnovato. Prenota la tua prossima videochiamata di follow-up.
                 </p>
                 <Link
                   href="/portal/reservar"
                   className="mt-4 inline-flex rounded-full bg-ink px-4 py-2 text-[13.5px] font-medium text-paper transition-opacity hover:opacity-90"
                 >
-                  Reservar seguimiento
+                  Prenota follow-up
                 </Link>
               </>
             ) : (
               <p className="mt-1.5 text-[14px] leading-relaxed text-ink-soft">
-                Una vez se renueve tu suscripción podrás reservar tu próxima videollamada aquí.
+                Una volta rinnovato il tuo abbonamento potrai prenotare qui la tua prossima videochiamata.
               </p>
             )}
           </div>
@@ -104,18 +104,18 @@ export default async function PortalHome({
       <div className="mt-4 grid gap-4 sm:grid-cols-3">
         <QuickLink
           href="/portal/progreso"
-          title="Mi progreso"
-          body="Registra tu peso y dosis, y sigue tu evolución."
+          title="I miei progressi"
+          body="Registra il tuo peso e la dose, e monitora la tua evoluzione."
         />
         <QuickLink
           href="/portal/chat"
-          title="Chat médico"
-          body="Habla con tu equipo médico de forma segura entre citas."
+          title="Chat medica"
+          body="Parla con il tuo team medico in modo sicuro tra un appuntamento e l'altro."
         />
         <QuickLink
           href="/portal/recetas"
-          title="Recetas"
-          body="Consulta y descarga las recetas emitidas por tu médico."
+          title="Ricette"
+          body="Consulta e scarica le ricette emesse dal tuo medico."
         />
       </div>
     </div>
@@ -126,32 +126,32 @@ const STATUS_STEPS = [
   {
     key: "pending_appointment",
     icon: Clock,
-    label: "Solicitud recibida",
-    description: "Tu médico está valorando tu caso.",
+    label: "Richiesta ricevuta",
+    description: "Il tuo medico sta valutando il tuo caso.",
   },
   {
     key: "pending_prescription",
     icon: CalendarCheck,
-    label: "Primera cita",
-    description: "Cita confirmada con tu médico.",
+    label: "Primo appuntamento",
+    description: "Appuntamento confermato con il tuo medico.",
   },
   {
     key: "can_activate",
     icon: FileText,
-    label: "Plan listo",
-    description: "Tu receta está preparada.",
+    label: "Piano pronto",
+    description: "La tua ricetta è pronta.",
   },
   {
     key: "active",
     icon: CheckCircle2,
-    label: "Tratamiento activo",
-    description: "Suscripción mensual activa.",
+    label: "Trattamento attivo",
+    description: "Abbonamento mensile attivo.",
   },
   {
     key: "followup_available",
     icon: CalendarClock,
-    label: "Seguimiento",
-    description: "Videollamada de seguimiento disponible.",
+    label: "Follow-up",
+    description: "Videochiamata di follow-up disponibile.",
   },
 ] as const
 
@@ -168,7 +168,7 @@ function TreatmentStatusBar({ status }: { status: string }) {
 
   return (
     <div className="mt-7 rounded-[20px] border border-ink/10 bg-cream p-5">
-      <h2 className="mb-4 text-[15px] font-medium text-ink">Tu progreso en el tratamiento</h2>
+      <h2 className="mb-4 text-[15px] font-medium text-ink">I tuoi progressi nel trattamento</h2>
       <div className="flex items-start gap-0">
         {STATUS_STEPS.map((step, i) => {
           const done = i < currentIdx
@@ -223,17 +223,17 @@ function TreatmentStatusBar({ status }: { status: string }) {
 function PlanCard({ plan }: { plan: Awaited<ReturnType<typeof getMyPlan>> }) {
   return (
     <div className="rounded-[20px] border border-ink/10 bg-cream p-5">
-      <h2 className="text-[16px] font-medium text-ink">Tu plan</h2>
+      <h2 className="text-[16px] font-medium text-ink">Il tuo piano</h2>
       {plan ? (
         <dl className="mt-3 space-y-2 text-[14px]">
-          {plan.plan ? <Row label="Plan" value={plan.plan} /> : null}
-          {plan.goal ? <Row label="Objetivo" value={plan.goal} /> : null}
+          {plan.plan ? <Row label="Piano" value={plan.plan} /> : null}
+          {plan.goal ? <Row label="Obiettivo" value={plan.goal} /> : null}
           {plan.formatPreference ? <Row label="Formato" value={plan.formatPreference} /> : null}
           {plan.bmi ? <Row label="IMC" value={String(plan.bmi)} /> : null}
         </dl>
       ) : (
         <p className="mt-1.5 text-[14px] leading-relaxed text-ink-soft">
-          Tu plan de tratamiento aparecerá aquí cuando tu médico lo configure.
+          Il tuo piano di trattamento apparirà qui quando il tuo medico lo configurerà.
         </p>
       )}
     </div>

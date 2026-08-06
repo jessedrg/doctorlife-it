@@ -14,7 +14,7 @@ export function ChangePasswordForm() {
     e.preventDefault()
     setMsg(null)
     if (next !== confirm) {
-      setMsg({ ok: false, text: "Las contraseñas nuevas no coinciden." })
+      setMsg({ ok: false, text: "Le nuove password non coincidono." })
       return
     }
     setLoading(true)
@@ -25,10 +25,10 @@ export function ChangePasswordForm() {
     })
     setLoading(false)
     if (error) {
-      setMsg({ ok: false, text: error.message ?? "No se pudo cambiar la contraseña." })
+      setMsg({ ok: false, text: error.message ?? "Impossibile cambiare la password." })
       return
     }
-    setMsg({ ok: true, text: "Contraseña actualizada correctamente." })
+    setMsg({ ok: true, text: "Password aggiornata correttamente." })
     setCurrent("")
     setNext("")
     setConfirm("")
@@ -40,7 +40,7 @@ export function ChangePasswordForm() {
   return (
     <form onSubmit={handleSubmit} className="flex max-w-[440px] flex-col gap-4">
       <label className="flex flex-col gap-1.5 text-[13px] font-medium text-ink-soft">
-        Contraseña actual
+        Password attuale
         <input
           type="password"
           value={current}

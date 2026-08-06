@@ -5,7 +5,7 @@ import { getDoctorReadiness } from "@/lib/doctor/readiness"
 import { DoctorOnboardingChecklist } from "@/components/doctor-onboarding-checklist"
 import { DoctorMetricsGrid } from "@/components/doctor-metrics"
 
-export const metadata = { title: "Panel de la clínica — DoctorLife" }
+export const metadata = { title: "Pannello della clinica — DoctorLife" }
 
 export default async function MedicoHome() {
   const user = await requireRole("doctor")
@@ -24,35 +24,35 @@ export default async function MedicoHome() {
         Dr. {firstName}
       </h1>
       <p className="mt-1.5 max-w-[60ch] text-[15.5px] leading-relaxed text-ink-soft">
-        Gestiona tu disponibilidad, tus pacientes, recetas y pagos desde aquí.
+        Gestisci la tua disponibilità, i tuoi pazienti, le ricette e i pagamenti da qui.
       </p>
 
       {/* Aviso de capacidad */}
       {capacity.atCapacity && (
         <div className="mt-5 flex items-center justify-between gap-4 rounded-[14px] border border-clay/30 bg-clay/8 px-5 py-3.5">
           <p className="text-[14px] leading-snug text-clay">
-            <span className="font-semibold">Límite de pacientes alcanzado.</span>{" "}
-            Tienes {capacity.activeCount}/{capacity.maxPatients} pacientes activos. No apareces disponible para nuevas suscripciones.
+            <span className="font-semibold">Limite di pazienti raggiunto.</span>{" "}
+            Hai {capacity.activeCount}/{capacity.maxPatients} pazienti attivi. Non appari disponibile per nuovi abbonamenti.
           </p>
           <Link
             href="/clinica/cuenta"
             className="shrink-0 rounded-full border border-clay/40 px-3 py-1.5 text-[12.5px] font-medium text-clay no-underline hover:bg-clay/10 transition-colors"
           >
-            Ajustar
+            Modifica
           </Link>
         </div>
       )}
       {!capacity.atCapacity && capacity.nearCapacity && (
         <div className="mt-5 flex items-center justify-between gap-4 rounded-[14px] border border-amber/40 bg-amber/8 px-5 py-3.5">
           <p className="text-[14px] leading-snug text-ink">
-            <span className="font-semibold">Casi al límite.</span>{" "}
-            Tienes {capacity.activeCount}/{capacity.maxPatients} pacientes activos.
+            <span className="font-semibold">Quasi al limite.</span>{" "}
+            Hai {capacity.activeCount}/{capacity.maxPatients} pazienti attivi.
           </p>
           <Link
             href="/clinica/cuenta"
             className="shrink-0 rounded-full border border-ink/20 px-3 py-1.5 text-[12.5px] font-medium text-ink no-underline hover:bg-ink/5 transition-colors"
           >
-            Ajustar
+            Modifica
           </Link>
         </div>
       )}

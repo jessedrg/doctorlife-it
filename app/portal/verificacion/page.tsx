@@ -1,7 +1,7 @@
 import { getMyVerifications } from "@/app/actions/verification"
 import { PatientVerification } from "@/components/patient-verification"
 
-export const metadata = { title: "Verificación — DoctorLife" }
+export const metadata = { title: "Verifica — DoctorLife" }
 
 export default async function VerificacionPage() {
   const verifications = await getMyVerifications()
@@ -9,11 +9,11 @@ export default async function VerificacionPage() {
   return (
     <div>
       <h1 className="text-[30px] font-light leading-tight tracking-[-.02em] text-ink text-balance">
-        Verificación
+        Verifica
       </h1>
       <p className="mt-1.5 max-w-[60ch] text-[15.5px] leading-relaxed text-ink-soft">
-        Por tu seguridad, tu médico puede pedirte una prueba adicional antes de activar el
-        tratamiento. Así nos aseguramos de que la indicación es correcta y segura para ti.
+        Per la tua sicurezza, il tuo medico può chiederti un controllo aggiuntivo prima di attivare
+        il trattamento. Così ci assicuriamo che l'indicazione sia corretta e sicura per te.
       </p>
 
       <div className="mt-7">

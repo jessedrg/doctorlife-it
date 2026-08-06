@@ -49,15 +49,15 @@ export default async function RecetasPage({
   return (
     <div className="flex flex-col gap-6">
       <header>
-        <h1 className="text-2xl font-semibold text-ink">Mis recetas</h1>
+        <h1 className="text-2xl font-semibold text-ink">Le mie ricette</h1>
         <p className="mt-1 text-sm text-muted">
           {isActive
-            ? "Descarga las recetas emitidas por tu médico en formato PDF."
+            ? "Scarica le ricette emesse dal tuo medico in formato PDF."
             : status === "can_activate"
-            ? "Tu médico ha preparado tu receta. Activa el tratamiento para descargarla."
+            ? "Il tuo medico ha preparato la tua ricetta. Attiva il trattamento per scaricarla."
             : status === "pending_prescription"
-            ? "Tu médico está preparando tu plan de tratamiento. Aparecerá aquí en cuanto esté listo."
-            : "Tu médico te enviará aquí las recetas cuando valore tu caso."}
+            ? "Il tuo medico sta preparando il tuo piano di trattamento. Apparirà qui non appena sarà pronto."
+            : "Il tuo medico ti invierà qui le ricette dopo aver valutato il tuo caso."}
         </p>
       </header>
 

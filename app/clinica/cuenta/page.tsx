@@ -5,7 +5,7 @@ import { GoogleCalendarConnect } from "@/components/google-calendar-connect"
 import { getGoogleConnectionStatus } from "@/app/actions/google-connection"
 import { getMyDoctorProfileWithImage } from "@/app/actions/doctor"
 
-export const metadata = { title: "Mi cuenta — DoctorLife" }
+export const metadata = { title: "Il mio account — DoctorLife" }
 
 function Section({
   title,
@@ -37,17 +37,17 @@ export default async function MedicoAccountPage() {
   return (
     <div>
       <h1 className="text-[30px] font-light leading-tight tracking-[-.02em] text-ink text-balance">
-        Mi cuenta
+        Il mio account
       </h1>
       <p className="mt-1.5 max-w-[60ch] text-[15.5px] leading-relaxed text-ink-soft">
-        Tu usuario es <span className="font-medium text-ink">{profile.email}</span>. Gestiona tu
-        perfil público, calendario y contraseña.
+        Il tuo utente è <span className="font-medium text-ink">{profile.email}</span>. Gestisci il tuo
+        profilo pubblico, il calendario e la password.
       </p>
 
       <div className="mt-7 flex flex-col gap-5">
         <Section
-          title="Perfil"
-          description="Esta información y tu foto se muestran a tus pacientes, incluido el chat."
+          title="Profilo"
+          description="Queste informazioni e la tua foto vengono mostrate ai tuoi pazienti, anche nella chat."
         >
           <DoctorProfileForm
             profile={{
@@ -62,11 +62,11 @@ export default async function MedicoAccountPage() {
           />
         </Section>
 
-        <Section title="Videollamadas" description="Conecta tu calendario para generar enlaces de videollamada.">
+        <Section title="Videochiamate" description="Collega il tuo calendario per generare i link delle videochiamate.">
           <GoogleCalendarConnect status={googleStatus} />
         </Section>
 
-        <Section title="Cambiar contraseña">
+        <Section title="Cambia password">
           <ChangePasswordForm />
         </Section>
       </div>

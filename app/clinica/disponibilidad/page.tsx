@@ -7,10 +7,10 @@ export default async function DisponibilidadPage() {
   return (
     <div className="mx-auto w-full max-w-3xl">
       <header className="mb-8">
-        <h1 className="text-2xl font-medium text-ink text-pretty">Disponibilidad</h1>
+        <h1 className="text-2xl font-medium text-ink text-pretty">Disponibilità</h1>
         <p className="mt-1 text-sm text-ink-soft">
-          Define tu horario semanal. A partir de aquí se generan los huecos que tus pacientes verán
-          al reservar su primera cita.
+          Definisci il tuo orario settimanale. Da qui vengono generati gli slot che i tuoi pazienti
+          vedranno al momento di prenotare il primo appuntamento.
         </p>
       </header>
 
