@@ -1,4 +1,10 @@
-import { pgTable, serial, text, integer, numeric, timestamp, boolean, date } from "drizzle-orm/pg-core"
+import { pgTable, pgSchema, serial, text, integer, numeric, timestamp, boolean, date } from "drizzle-orm/pg-core"
+
+/* ------------------------------------------------------------------ */
+/* Schema "it" — aísla las tablas de ESTE proyecto (médicos y leads)   */
+/* de los demás proyectos que comparten la misma base Neon.            */
+/* ------------------------------------------------------------------ */
+export const itSchema = pgSchema("it")
 
 /* ------------------------------------------------------------------ */
 /* Better Auth tables (do not rename columns — camelCase is required)  */
@@ -66,7 +72,7 @@ export type User = typeof user.$inferSelect
  * Perfil de cada médico + estado de su cuenta de Stripe Connect.
  * Se escala por `userId` en cada query (no hay RLS en Neon).
  */
-export const doctorProfiles = pgTable("doctor_profiles", {
+export const doctorProfiles = itSchema.table("doctor_profiles", {
   id: serial("id").primaryKey(),
   userId: text("userId").notNull().unique(),
   fullName: text("fullName").notNull(),
@@ -360,7 +366,7 @@ export type NewNotification = typeof notifications.$inferInsert
  * Leads capturados desde el quiz "Comenzar".
  * Son envíos públicos (sin cuenta de usuario), por eso no hay userId.
  */
-export const leads = pgTable("leads", {
+export const leads = itSchema.table("leads", {
   id: serial("id").primaryKey(),
   name: text("name"),
   email: text("email").notNull(),
