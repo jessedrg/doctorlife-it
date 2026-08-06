@@ -107,63 +107,63 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
       )}
 
       <form onSubmit={onSubmit} className="mt-4 grid gap-4 sm:grid-cols-2">
-        <Field label="Nombre de la clínica *" value={values.name} onChange={set("name")} required />
-        <Field label="CIF/NIF *" value={values.taxId} onChange={set("taxId")} required />
+        <Field label="Nome della clinica *" value={values.name} onChange={set("name")} required />
+        <Field label="Partita IVA / Codice Fiscale *" value={values.taxId} onChange={set("taxId")} required />
 
         <Field
-          label="Dirección *"
+          label="Indirizzo *"
           value={values.addressLine}
           onChange={set("addressLine")}
           className="sm:col-span-2"
           required
         />
-        <Field label="Municipio *" value={values.city} onChange={set("city")} required />
+        <Field label="Comune *" value={values.city} onChange={set("city")} required />
         <div className="grid grid-cols-2 gap-4">
-          <Field label="C. Postal *" value={values.postalCode} onChange={set("postalCode")} required />
+          <Field label="CAP *" value={values.postalCode} onChange={set("postalCode")} required />
           <Field label="Provincia *" value={values.province} onChange={set("province")} required />
         </div>
 
         <Field
-          label="Nº registro sanitario (NICA/autorización) *"
+          label="N. registro sanitario (autorizzazione) *"
           value={values.healthRegistryNumber}
           onChange={set("healthRegistryNumber")}
           className="sm:col-span-2"
           required
         />
         <Field
-          label="Director médico *"
+          label="Direttore sanitario *"
           value={values.medicalDirectorName}
           onChange={set("medicalDirectorName")}
           required
         />
         <Field
-          label="Nº colegiado del director *"
+          label="N. iscrizione albo del direttore *"
           value={values.medicalDirectorLicense}
           onChange={set("medicalDirectorLicense")}
           required
         />
 
         <Field
-          label="Email de facturación *"
+          label="Email di fatturazione *"
           type="email"
           value={values.billingEmail}
           onChange={set("billingEmail")}
           required
         />
         <Field
-          label="Teléfono de facturación"
+          label="Telefono di fatturazione"
           value={values.billingPhone}
           onChange={set("billingPhone")}
         />
         <Field
-          label="Responsable de protección de datos (RGPD) *"
+          label="Responsabile della protezione dei dati (GDPR) *"
           value={values.dataProtectionContact}
           onChange={set("dataProtectionContact")}
           className="sm:col-span-2"
           required
         />
         <Field
-          label="Dominio asignado (p.ej. doctorlife-fr.com)"
+          label="Dominio assegnato (es. doctorlife-it.com)"
           value={values.domain}
           onChange={set("domain")}
           className="sm:col-span-2"
@@ -176,7 +176,7 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
             className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-ink px-5 text-[14.5px] font-medium text-cream transition hover:opacity-90 disabled:opacity-60"
           >
             {pending && <Loader2 className="size-4 animate-spin" aria-hidden />}
-            {pending ? "Guardando…" : "Guardar datos"}
+            {pending ? "Salvataggio…" : "Salva dati"}
           </button>
           {msg && (
             <p
@@ -190,7 +190,7 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
           )}
         </div>
       </form>
-      <p className="mt-3 text-[12px] leading-relaxed text-ink-mute">* Campos obligatorios para poder cobrar.</p>
+      <p className="mt-3 text-[12px] leading-relaxed text-ink-mute">* Campi obbligatori per poter incassare.</p>
     </section>
   )
 }

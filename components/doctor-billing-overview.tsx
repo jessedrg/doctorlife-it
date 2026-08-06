@@ -4,24 +4,24 @@ import type { DoctorBilling } from "@/app/actions/doctor"
 import { CreditCard, CheckCircle2, CalendarClock, Clock } from "lucide-react"
 
 function fmtMoney(cents: number, currency = "eur") {
-  return new Intl.NumberFormat("es-ES", {
+  return new Intl.NumberFormat("it-IT", {
     style: "currency",
     currency: currency.toUpperCase(),
   }).format(cents / 100)
 }
 
-const dateFmt = new Intl.DateTimeFormat("es-ES", {
+const dateFmt = new Intl.DateTimeFormat("it-IT", {
   day: "numeric",
   month: "long",
   year: "numeric",
 })
 
 const STATUS_META: Record<string, { label: string; cls: string }> = {
-  active: { label: "Activa", cls: "bg-olive/15 text-olive" },
-  trialing: { label: "En prueba", cls: "bg-olive/15 text-olive" },
-  past_due: { label: "Pago pendiente", cls: "bg-amber/15 text-amber" },
-  incomplete: { label: "Incompleta", cls: "bg-amber/15 text-amber" },
-  canceled: { label: "Cancelada", cls: "bg-ink/[.08] text-ink-soft" },
+  active: { label: "Attivo", cls: "bg-olive/15 text-olive" },
+  trialing: { label: "In prova", cls: "bg-olive/15 text-olive" },
+  past_due: { label: "Pagamento in sospeso", cls: "bg-amber/15 text-amber" },
+  incomplete: { label: "Incompleto", cls: "bg-amber/15 text-amber" },
+  canceled: { label: "Annullato", cls: "bg-ink/[.08] text-ink-soft" },
 }
 
 export function DoctorBillingOverview({ billing }: { billing: DoctorBilling }) {
