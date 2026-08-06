@@ -17,11 +17,11 @@ export function FollowupReminder() {
         </span>
         <div className="min-w-0">
           <h2 className="text-[16px] font-medium text-ink text-balance">
-            Has renovado tu tratamiento
+            Hai rinnovato il tuo trattamento
           </h2>
           <p className="mt-1 text-[14px] leading-relaxed text-ink-soft text-pretty">
-            Tu videollamada de seguimiento de este mes está incluida. Elige la hora que mejor te
-            venga y te asignaremos a tu médico.
+            La tua videochiamata di follow-up di questo mese è inclusa. Scegli l'orario che
+            preferisci e ti assegneremo il tuo medico.
           </p>
         </div>
       </div>
@@ -29,7 +29,7 @@ export function FollowupReminder() {
         href="/portal/reservar"
         className="inline-flex shrink-0 items-center justify-center rounded-full bg-ink px-4 py-2 text-[13.5px] font-medium text-paper transition-opacity hover:opacity-90"
       >
-        Reservar videollamada
+        Prenota videochiamata
       </Link>
     </div>
   )

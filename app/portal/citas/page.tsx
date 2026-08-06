@@ -6,20 +6,20 @@ import { requireRole } from "@/lib/session"
 import { EmptyState } from "@/components/empty-state"
 
 const STATUS_LABEL: Record<string, { label: string; cls: string }> = {
-  confirmed: { label: "Confirmada", cls: "bg-sage/15 text-sage" },
-  pending_payment: { label: "Pago pendiente", cls: "bg-amber/20 text-ink" },
-  cancelled: { label: "Cancelada", cls: "bg-clay/15 text-clay" },
+  confirmed: { label: "Confermato", cls: "bg-sage/15 text-sage" },
+  pending_payment: { label: "Pagamento in sospeso", cls: "bg-amber/20 text-ink" },
+  cancelled: { label: "Annullato", cls: "bg-clay/15 text-clay" },
 }
 
 function formatWhen(startsAt: Date | string) {
   const d = new Date(startsAt)
-  return new Intl.DateTimeFormat("es-ES", {
+  return new Intl.DateTimeFormat("it-IT", {
     weekday: "long",
     day: "numeric",
     month: "long",
     hour: "2-digit",
     minute: "2-digit",
-    timeZone: "Europe/Madrid",
+    timeZone: "Europe/Rome",
   }).format(d)
 }
 
@@ -50,29 +50,29 @@ export default async function CitasPage({
   return (
     <div className="mx-auto w-full max-w-3xl">
       <header className="mb-6 flex items-center justify-between gap-4">
-        <h1 className="text-balance text-2xl font-semibold text-ink">Mis citas</h1>
+        <h1 className="text-balance text-2xl font-semibold text-ink">I miei appuntamenti</h1>
         {canBook && (
           <Link
             href="/portal/reservar"
             className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-opacity hover:opacity-90"
           >
-            {status === "followup_available" ? "Reservar seguimiento" : "Reservar"}
+            {status === "followup_available" ? "Prenota follow-up" : "Prenota"}
           </Link>
         )}
       </header>
 
       {reprogramada ? (
         <div className="mb-5 rounded-2xl border border-sage/30 bg-sage/10 p-4 text-sm text-ink">
-          Tu cita se ha reprogramado correctamente. Encontrarás el enlace de la videollamada aquí abajo.
+          Il tuo appuntamento è stato riprogrammato correttamente. Troverai il link della videochiamata qui sotto.
         </div>
       ) : null}
 
       {appointments.length === 0 ? (
         <EmptyState
           icon={CalendarCheck}
-          title="Todavía no tienes citas"
-          description="Reserva tu primera consulta y aquí verás tus videollamadas, su estado y el enlace para unirte."
-          action={{ href: "/portal/reservar", label: "Reservar mi primera cita" }}
+          title="Non hai ancora appuntamenti"
+          description="Prenota la tua prima visita e qui vedrai le tue videochiamate, il loro stato e il link per partecipare."
+          action={{ href: "/portal/reservar", label: "Prenota il mio primo appuntamento" }}
         />
       ) : (
         <ul className="flex flex-col gap-3">
@@ -86,7 +86,7 @@ export default async function CitasPage({
                 <div>
                   <p className="font-medium capitalize text-ink">{formatWhen(a.startsAt)}</p>
                   <p className="text-sm text-ink/60">
-                    {a.doctorName ? `Con ${a.doctorName}` : "Médico por asignar"} ·{" "}
+                    {a.doctorName ? `Con ${a.doctorName}` : "Medico da assegnare"} ·{" "}
                     {(a.amountCents / 100).toFixed(2)}&nbsp;€
                   </p>
                 </div>
@@ -99,7 +99,7 @@ export default async function CitasPage({
                       href={`/portal/reprogramar/${a.id}`}
                       className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition-opacity hover:opacity-90"
                     >
-                      Reprogramar
+                      Riprogramma
                     </Link>
                   ) : null}
                   {a.status === "confirmed" && a.meetingUrl ? (
@@ -109,7 +109,7 @@ export default async function CitasPage({
                       rel="noopener noreferrer"
                       className="rounded-full bg-sage px-4 py-2 text-sm font-medium text-paper transition-opacity hover:opacity-90"
                     >
-                      Unirse
+                      Partecipa
                     </a>
                   ) : null}
                 </div>

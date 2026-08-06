@@ -4,12 +4,12 @@ import { getCanonicalBaseUrl } from "@/lib/base-url"
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null
 
 /**
- * Remitente. El dominio doctorlife.io está verificado en Resend. Se puede
- * sobreescribir con RESEND_FROM_EMAIL.
+ * Mittente. Il dominio doctorlife.io è verificato su Resend. Si può
+ * sovrascrivere con RESEND_FROM_EMAIL.
  */
 const FROM = process.env.RESEND_FROM_EMAIL ?? "DoctorLife <hola@doctorlife.io>"
 
-/* ── Paleta de la app (Maren) ── */
+/* ── Palette dell'app (Maren) ── */
 const PAPER = "#f6f0e6"
 const WARM = "#fffdf8"
 const INK = "#221d17"
@@ -22,9 +22,21 @@ const FONT =
   "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif"
 const SERIF = "'Iowan Old Style','Palatino Linotype',Georgia,'Times New Roman',serif"
 
-/** Cabecera, tarjeta y pie minimalistas con la estética cálida de la app. */
+/** Formatta una data/ora nel fuso italiano. */
+function formatWhen(date: Date) {
+  return new Intl.DateTimeFormat("it-IT", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Europe/Rome",
+  }).format(date)
+}
+
+/** Intestazione, scheda e piè di pagina minimalisti con l'estetica calda dell'app. */
 function shell(opts: { title: string; body: string; preheader?: string }) {
-  return `<!doctype html><html lang="es"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+  return `<!doctype html><html lang="it"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
 <body style="margin:0;padding:0;background:${PAPER};font-family:${FONT};color:${INK};">
   ${opts.preheader ? `<div style="display:none;max-height:0;overflow:hidden;opacity:0;">${opts.preheader}</div>` : ""}
   <div style="max-width:512px;margin:0 auto;padding:40px 20px;">
@@ -37,7 +49,7 @@ function shell(opts: { title: string; body: string; preheader?: string }) {
       ${opts.body}
     </div>
     <p style="margin:18px 6px 0;font-size:12px;line-height:1.6;color:${INK_MUTE};">
-      DoctorLife · Salud y bienestar con médicos colegiados. Si no esperabas este correo, puedes ignorarlo.
+      DoctorLife · Salute e benessere con medici iscritti all'albo. Se non ti aspettavi questa email, puoi ignorarla.
     </p>
   </div>
 </body></html>`
@@ -51,7 +63,7 @@ function button(href: string, label: string) {
   return `<a href="${href}" style="display:inline-block;background:${INK};color:${PAPER};text-decoration:none;font-weight:600;font-size:15px;padding:13px 24px;border-radius:999px;">${label}</a>`
 }
 
-/** Caja de datos (etiqueta + valor) sobre fondo papel. */
+/** Box dati (etichetta + valore) su sfondo carta. */
 function dataBox(rows: { label: string; value: string; mono?: boolean }[]) {
   const inner = rows
     .map(
@@ -63,64 +75,64 @@ function dataBox(rows: { label: string; value: string; mono?: boolean }[]) {
   return `<div style="background:${PAPER};border:1px solid ${LINE};border-radius:14px;padding:18px;margin:0 0 18px;">${inner}</div>`
 }
 
-/** El médico solicita una verificación adicional antes de activar el tratamiento. */
+/** Il medico richiede una verifica aggiuntiva prima di attivare il trattamento. */
 export async function sendVerificationRequestedEmail(opts: {
   to: string
   name: string
   doctorName?: string | null
   message: string
 }) {
-  const firstName = opts.name.split(" ")[0] || "hola"
-  const doc = opts.doctorName ? `Dr. ${opts.doctorName}` : "tu médico"
+  const firstName = opts.name.split(" ")[0] || "ciao"
+  const doc = opts.doctorName ? `Dr. ${opts.doctorName}` : "il tuo medico"
   const url = `${getCanonicalBaseUrl()}/portal/verificacion`
   const body = `
-    ${p(`Hola ${firstName}, ${doc} necesita una verificación adicional antes de activar tu tratamiento.`)}
-    ${dataBox([{ label: "Lo que te pide tu médico", value: opts.message }])}
-    ${p("Sube lo solicitado desde tu panel. Tu médico lo revisará y, una vez aprobado, podrás activar el tratamiento.")}
-    ${p("<strong>Confidencial:</strong> lo que envíes solo lo verá tu médico asignado. Nadie más tiene acceso.")}
-    <div style="margin:22px 0 4px;">${button(url, "Completar verificación")}</div>
+    ${p(`Ciao ${firstName}, ${doc} ha bisogno di una verifica aggiuntiva prima di attivare il tuo trattamento.`)}
+    ${dataBox([{ label: "Cosa ti chiede il tuo medico", value: opts.message }])}
+    ${p("Carica quanto richiesto dal tuo pannello. Il tuo medico lo esaminerà e, una volta approvato, potrai attivare il trattamento.")}
+    ${p("<strong>Riservato:</strong> ciò che invii lo vedrà solo il tuo medico assegnato. Nessun altro vi ha accesso.")}
+    <div style="margin:22px 0 4px;">${button(url, "Completa la verifica")}</div>
   `
   return send(
     opts.to,
-    "Verificación necesaria para activar tu tratamiento",
-    shell({ title: "Verificación necesaria", body, preheader: "Tu médico necesita un dato adicional." }),
+    "Verifica necessaria per attivare il tuo trattamento",
+    shell({ title: "Verifica necessaria", body, preheader: "Il tuo medico ha bisogno di un dato aggiuntivo." }),
   )
 }
 
 async function send(to: string, subject: string, html: string) {
   if (!resend) {
-    console.log("[v0] RESEND_API_KEY ausente; email no enviado:", subject, "->", to)
+    console.log("[v0] RESEND_API_KEY assente; email non inviata:", subject, "->", to)
     return { skipped: true as const }
   }
   const { data, error } = await resend.emails.send({ from: FROM, to, subject, html })
   if (error) {
-    console.log("[v0] Error enviando email:", subject, error)
-    throw new Error(error.message ?? "No se pudo enviar el correo")
+    console.log("[v0] Errore invio email:", subject, error)
+    throw new Error(error.message ?? "Impossibile inviare l'email")
   }
   return { id: data?.id }
 }
 
-/** Credenciales de acceso tras reservar la primera visita (gratis). */
+/** Credenziali di accesso dopo aver prenotato la prima visita (gratis). */
 export async function sendCredentialsEmail(opts: { to: string; name: string; tempPassword: string }) {
   const loginUrl = `${getCanonicalBaseUrl()}/sign-in`
-  const firstName = opts.name.split(" ")[0] || "hola"
+  const firstName = opts.name.split(" ")[0] || "ciao"
   const body = `
-    ${p(`Hola ${firstName}, gracias por reservar tu primera visita. Hemos creado tu cuenta para acceder a tu panel privado, donde tendrás tu cita, el chat con tu médico y tus recetas.`)}
+    ${p(`Ciao ${firstName}, grazie per aver prenotato la tua prima visita. Abbiamo creato il tuo account per accedere al tuo pannello privato, dove troverai il tuo appuntamento, la chat con il tuo medico e le tue ricette.`)}
     ${dataBox([
-      { label: "Usuario (tu email)", value: opts.to },
-      { label: "Contraseña temporal", value: opts.tempPassword, mono: true },
+      { label: "Utente (la tua email)", value: opts.to },
+      { label: "Password temporanea", value: opts.tempPassword, mono: true },
     ])}
-    ${p("Por seguridad, cámbiala desde <strong>Mi cuenta</strong> la primera vez que entres.")}
-    <div style="margin:22px 0 4px;">${button(loginUrl, "Entrar a mi panel")}</div>
+    ${p("Per sicurezza, cambiala da <strong>Il mio account</strong> al primo accesso.")}
+    <div style="margin:22px 0 4px;">${button(loginUrl, "Accedi al mio pannello")}</div>
   `
   return send(
     opts.to,
-    "Tus credenciales de acceso a DoctorLife",
-    shell({ title: "Tu cuenta está lista", body, preheader: "Accede a tu panel privado de DoctorLife." }),
+    "Le tue credenziali di accesso a DoctorLife",
+    shell({ title: "Il tuo account è pronto", body, preheader: "Accedi al tuo pannello privato di DoctorLife." }),
   )
 }
 
-/** Confirmación de la primera visita y del pago único. */
+/** Conferma della prima visita e del pagamento unico. */
 export async function sendBookingConfirmationEmail(opts: {
   to: string
   name: string
@@ -128,32 +140,25 @@ export async function sendBookingConfirmationEmail(opts: {
   startsAt: Date
   amountLabel: string
 }) {
-  const firstName = opts.name.split(" ")[0] || "hola"
-  const when = new Intl.DateTimeFormat("es-ES", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: "Europe/Madrid",
-  }).format(opts.startsAt)
-  const rows = [{ label: "Tu primera visita", value: when }]
-  if (opts.doctorName) rows.push({ label: "Endocrino", value: opts.doctorName })
-  rows.push({ label: "Importe", value: opts.amountLabel })
+  const firstName = opts.name.split(" ")[0] || "ciao"
+  const when = formatWhen(opts.startsAt)
+  const rows = [{ label: "La tua prima visita", value: when }]
+  if (opts.doctorName) rows.push({ label: "Endocrinologo", value: opts.doctorName })
+  rows.push({ label: "Importo", value: opts.amountLabel })
   const body = `
-    ${p(`Hola ${firstName}, hemos recibido tu pago correctamente y tu primera visita está reservada.`)}
+    ${p(`Ciao ${firstName}, abbiamo ricevuto correttamente il tuo pagamento e la tua prima visita è prenotata.`)}
     ${dataBox(rows)}
-    ${p("Encontrarás el enlace de la videollamada y tu chat con el médico en tu panel. Tras la consulta, si tu médico te receta tratamiento, podrás activarlo desde ahí.")}
-    <div style="margin:22px 0 4px;">${button(`${getCanonicalBaseUrl()}/portal`, "Ir a mi panel")}</div>
+    ${p("Troverai il link della videochiamata e la chat con il medico nel tuo pannello. Dopo la visita, se il tuo medico ti prescrive un trattamento, potrai attivarlo da lì.")}
+    <div style="margin:22px 0 4px;">${button(`${getCanonicalBaseUrl()}/portal`, "Vai al mio pannello")}</div>
   `
   return send(
     opts.to,
-    "Confirmación de tu primera visita — DoctorLife",
-    shell({ title: "Pago confirmado", body, preheader: "Tu primera visita está reservada." }),
+    "Conferma della tua prima visita — DoctorLife",
+    shell({ title: "Pagamento confermato", body, preheader: "La tua prima visita è prenotata." }),
   )
 }
 
-/** Aviso al paciente de que su médico canceló la cita y debe reprogramar. */
+/** Avviso al paziente che il suo medico ha annullato l'appuntamento e deve riprogrammare. */
 export async function sendAppointmentCancelledEmail(opts: {
   to: string
   name: string
@@ -162,98 +167,88 @@ export async function sendAppointmentCancelledEmail(opts: {
   rescheduleId: number
   isFollowup: boolean
 }) {
-  const firstName = opts.name.split(" ")[0] || "hola"
-  const doc = opts.doctorName ? `Dr. ${opts.doctorName}` : "tu médico"
-  const when = new Intl.DateTimeFormat("es-ES", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: "Europe/Madrid",
-  }).format(opts.startsAt)
+  const firstName = opts.name.split(" ")[0] || "ciao"
+  const doc = opts.doctorName ? `Dr. ${opts.doctorName}` : "il tuo medico"
+  const when = formatWhen(opts.startsAt)
   const url = `${getCanonicalBaseUrl()}/portal/reprogramar/${opts.rescheduleId}`
   const note = opts.isFollowup
-    ? "Podrás elegir una nueva hora con tu mismo médico."
-    : "Podrás elegir una nueva hora; te asignaremos un médico disponible para ese horario."
+    ? "Potrai scegliere un nuovo orario con lo stesso medico."
+    : "Potrai scegliere un nuovo orario; ti assegneremo un medico disponibile per quella fascia."
   const body = `
-    ${p(`Hola ${firstName}, ${doc} ha tenido que cancelar tu cita del <strong>${when}</strong>. Lamentamos las molestias.`)}
+    ${p(`Ciao ${firstName}, ${doc} ha dovuto annullare il tuo appuntamento del <strong>${when}</strong>. Ci scusiamo per il disagio.`)}
     ${p(note)}
-    <div style="margin:22px 0 4px;">${button(url, "Elegir nueva hora")}</div>
+    <div style="margin:22px 0 4px;">${button(url, "Scegli un nuovo orario")}</div>
   `
   return send(
     opts.to,
-    "Tu cita se ha cancelado — reprograma fácilmente",
-    shell({ title: "Tu cita se canceló", body, preheader: "Elige una nueva hora para tu consulta." }),
+    "Il tuo appuntamento è stato annullato — riprogramma facilmente",
+    shell({ title: "Il tuo appuntamento è stato annullato", body, preheader: "Scegli un nuovo orario per la tua visita." }),
   )
 }
 
-/** Confirmación al paciente de que su cita reprogramada está lista. */
+/** Conferma al paziente che il suo appuntamento riprogrammato è pronto. */
 export async function sendRescheduleConfirmedEmail(opts: {
   to: string
   name: string
   doctorName?: string | null
   startsAt: Date
   reassigned: boolean
+  byDoctor?: boolean
 }) {
-  const firstName = opts.name.split(" ")[0] || "hola"
-  const when = new Intl.DateTimeFormat("es-ES", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    hour: "2-digit",
-    minute: "2-digit",
-    timeZone: "Europe/Madrid",
-  }).format(opts.startsAt)
-  const rows = [{ label: "Nueva cita", value: when }]
-  if (opts.doctorName) rows.push({ label: "Médico", value: opts.doctorName })
+  const firstName = opts.name.split(" ")[0] || "ciao"
+  const when = formatWhen(opts.startsAt)
+  const rows = [{ label: "Nuovo appuntamento", value: when }]
+  if (opts.doctorName) rows.push({ label: "Medico", value: opts.doctorName })
+  const intro = opts.byDoctor
+    ? `Ciao ${firstName}, il tuo medico ha riprogrammato il tuo appuntamento. Il nuovo orario è già confermato: non devi fare nulla.`
+    : `Ciao ${firstName}, il tuo appuntamento è stato riprogrammato correttamente.`
   const body = `
-    ${p(`Hola ${firstName}, tu cita ha quedado reprogramada correctamente.`)}
-    ${opts.reassigned ? p("Para ese horario te hemos asignado un médico disponible.") : ""}
+    ${p(intro)}
+    ${opts.reassigned ? p("Per quell'orario ti abbiamo assegnato un medico disponibile.") : ""}
     ${dataBox(rows)}
-    ${p("Encontrarás el enlace de la videollamada en tu panel.")}
-    <div style="margin:22px 0 4px;">${button(`${getCanonicalBaseUrl()}/portal/citas`, "Ver mis citas")}</div>
+    ${p("Troverai il link della videochiamata nel tuo pannello.")}
+    <div style="margin:22px 0 4px;">${button(`${getCanonicalBaseUrl()}/portal/citas`, "Vedi i miei appuntamenti")}</div>
   `
   return send(
     opts.to,
-    "Tu cita reprogramada está confirmada — DoctorLife",
-    shell({ title: "Cita reprogramada", body, preheader: "Tu nueva cita está confirmada." }),
+    "Il tuo appuntamento riprogrammato è confermato — DoctorLife",
+    shell({ title: "Appuntamento riprogrammato", body, preheader: "Il tuo nuovo appuntamento è confermato." }),
   )
 }
 
-/** Aviso al paciente de que su médico ha emitido una receta. */
+/** Avviso al paziente che il suo medico ha emesso una ricetta. */
 export async function sendPrescriptionReadyEmail(opts: {
   to: string
   name: string
   doctorName?: string | null
   locked: boolean
 }) {
-  const firstName = opts.name.split(" ")[0] || "hola"
-  const doc = opts.doctorName ? `Dr. ${opts.doctorName}` : "tu médico"
+  const firstName = opts.name.split(" ")[0] || "ciao"
+  const doc = opts.doctorName ? `Dr. ${opts.doctorName}` : "il tuo medico"
   const body = opts.locked
     ? `
-      ${p(`Hola ${firstName}, ${doc} ha preparado tu tratamiento. Para ver los detalles y descargar tu receta en PDF, activa tu suscripción mensual.`)}
-      ${p("Incluye endocrino asignado, videollamada mensual y chat en vivo con tu médico. Puedes cancelar cuando quieras.")}
-      <div style="margin:22px 0 4px;">${button(`${getCanonicalBaseUrl()}/portal/recetas`, "Desbloquear mi receta")}</div>
+      ${p(`Ciao ${firstName}, ${doc} ha preparato il tuo trattamento. Per vedere i dettagli e scaricare la tua ricetta in PDF, attiva il tuo abbonamento mensile.`)}
+      ${p("Include l'endocrinologo assegnato, la videochiamata mensile e la chat dal vivo con il tuo medico. Puoi disdire quando vuoi.")}
+      <div style="margin:22px 0 4px;">${button(`${getCanonicalBaseUrl()}/portal/recetas`, "Sblocca la mia ricetta")}</div>
     `
     : `
-      ${p(`Hola ${firstName}, ${doc} ha emitido una nueva receta. Ya está disponible en tu panel para descargar en PDF.`)}
-      <div style="margin:22px 0 4px;">${button(`${getCanonicalBaseUrl()}/portal/recetas`, "Ver mi receta")}</div>
+      ${p(`Ciao ${firstName}, ${doc} ha emesso una nuova ricetta. È già disponibile nel tuo pannello per il download in PDF.`)}
+      <div style="margin:22px 0 4px;">${button(`${getCanonicalBaseUrl()}/portal/recetas`, "Vedi la mia ricetta")}</div>
     `
   return send(
     opts.to,
-    "Tu receta está lista — DoctorLife",
+    "La tua ricetta è pronta — DoctorLife",
     shell({
-      title: "Tienes una nueva receta",
+      title: "Hai una nuova ricetta",
       body,
-      preheader: opts.locked ? "Actívala para verla y descargarla." : "Ya disponible en tu panel.",
+      preheader: opts.locked ? "Attivala per vederla e scaricarla." : "Già disponibile nel tuo pannello.",
     }),
   )
 }
 
 /**
- * La clínica envía al paciente el plan/suscripción acordado tras la primera
- * consulta. El paciente entra a su portal, paga y se le activa el tratamiento.
+ * La clinica invia al paziente il piano/abbonamento concordato dopo la prima
+ * visita. Il paziente entra nel suo portale, paga e gli viene attivato il trattamento.
  */
 export async function sendPlanOfferEmail(opts: {
   to: string
@@ -264,65 +259,65 @@ export async function sendPlanOfferEmail(opts: {
   firstPeriodLabel?: string | null
   note?: string | null
 }) {
-  const firstName = opts.name.split(" ")[0] || "hola"
-  const doc = opts.doctorName ? `Dr. ${opts.doctorName}` : "tu médico"
+  const firstName = opts.name.split(" ")[0] || "ciao"
+  const doc = opts.doctorName ? `Dr. ${opts.doctorName}` : "il tuo medico"
   const url = `${getCanonicalBaseUrl()}/portal/recetas?plan=oferta`
-  const rows = [{ label: "Plan recomendado", value: opts.planName }]
-  if (opts.firstPeriodLabel) rows.push({ label: "Primer pago", value: opts.firstPeriodLabel })
-  rows.push({ label: opts.firstPeriodLabel ? "Después" : "Importe", value: opts.priceLabel })
+  const rows = [{ label: "Piano consigliato", value: opts.planName }]
+  if (opts.firstPeriodLabel) rows.push({ label: "Primo pagamento", value: opts.firstPeriodLabel })
+  rows.push({ label: opts.firstPeriodLabel ? "In seguito" : "Importo", value: opts.priceLabel })
   const body = `
-    ${p(`Hola ${firstName}, ${doc} te ha preparado el plan que acordasteis en tu consulta. Cuando quieras, actívalo desde tu panel y tendrás acceso completo al tratamiento y al seguimiento.`)}
+    ${p(`Ciao ${firstName}, ${doc} ti ha preparato il piano concordato durante la tua visita. Quando vuoi, attivalo dal tuo pannello e avrai accesso completo al trattamento e al monitoraggio.`)}
     ${dataBox(rows)}
-    ${opts.note ? p(`<strong>Nota de tu médico:</strong> ${opts.note}`) : ""}
-    ${p("Al confirmar el pago se activa automáticamente tu suscripción, tu receta y el chat con tu médico. Puedes cancelar cuando quieras.")}
-    <div style="margin:22px 0 4px;">${button(url, "Ver y activar mi plan")}</div>
+    ${opts.note ? p(`<strong>Nota del tuo medico:</strong> ${opts.note}`) : ""}
+    ${p("Confermando il pagamento si attivano automaticamente il tuo abbonamento, la tua ricetta e la chat con il tuo medico. Puoi disdire quando vuoi.")}
+    <div style="margin:22px 0 4px;">${button(url, "Vedi e attiva il mio piano")}</div>
   `
   return send(
     opts.to,
-    "Tu plan de tratamiento está listo — DoctorLife",
-    shell({ title: "Tu plan está listo", body, preheader: "Actívalo desde tu panel para empezar." }),
+    "Il tuo piano di trattamento è pronto — DoctorLife",
+    shell({ title: "Il tuo piano è pronto", body, preheader: "Attivalo dal tuo pannello per iniziare." }),
   )
 }
 
-/** Credenciales de acceso para un médico creado por el admin. */
+/** Credenziali di accesso per un medico creato dall'admin. */
 export async function sendDoctorWelcomeEmail(opts: { to: string; name: string; tempPassword: string }) {
   const loginUrl = `${getCanonicalBaseUrl()}/sign-in`
-  const firstName = opts.name.split(" ")[0] || "hola"
+  const firstName = opts.name.split(" ")[0] || "ciao"
   const body = `
-    ${p(`Hola ${firstName}, el equipo de DoctorLife ha creado la cuenta de tu clínica. Desde tu panel podrás gestionar tu agenda, tus pacientes, el chat y las recetas, además de conectar tu Stripe y completar tus datos fiscales para poder cobrar.`)}
+    ${p(`Ciao ${firstName}, il team di DoctorLife ha creato l'account della tua clinica. Dal tuo pannello potrai gestire la tua agenda, i tuoi pazienti, la chat e le ricette, oltre a collegare il tuo Stripe e completare i tuoi dati fiscali per poter incassare.`)}
     ${dataBox([
-      { label: "Usuario (tu email)", value: opts.to },
-      { label: "Contraseña temporal", value: opts.tempPassword, mono: true },
+      { label: "Utente (la tua email)", value: opts.to },
+      { label: "Password temporanea", value: opts.tempPassword, mono: true },
     ])}
-    ${p("Por seguridad, cámbiala desde <strong>Mi cuenta</strong> la primera vez que entres.")}
-    <div style="margin:22px 0 4px;">${button(loginUrl, "Entrar a mi panel")}</div>
+    ${p("Per sicurezza, cambiala da <strong>Il mio account</strong> al primo accesso.")}
+    <div style="margin:22px 0 4px;">${button(loginUrl, "Accedi al mio pannello")}</div>
   `
   return send(
     opts.to,
-    "El acceso de tu clínica en DoctorLife",
-    shell({ title: "La cuenta de tu clínica está lista", body, preheader: "Gestiona tu agenda, pacientes y cobros." }),
+    "L'accesso della tua clinica su DoctorLife",
+    shell({ title: "L'account della tua clinica è pronto", body, preheader: "Gestisci la tua agenda, i pazienti e gli incassi." }),
   )
 }
 
 /**
- * Notificación de mensaje nuevo en el chat.
+ * Notifica di nuovo messaggio nella chat.
  *
- * Se envía cuando el otro participante (doctor o paciente) escribe y el
- * destinatario lleva más de 5 minutos sin recibir un aviso para esa misma
- * conversación (cooldown gestionado en sendMessage).
+ * Si invia quando l'altro partecipante (medico o paziente) scrive e il
+ * destinatario non riceve un avviso per la stessa conversazione da più di
+ * 5 minuti (cooldown gestito in sendMessage).
  */
 export async function sendNewMessageEmail(opts: {
   to: string
-  /** Nombre del destinatario (quien recibe el correo). */
+  /** Nome del destinatario (chi riceve l'email). */
   recipientName: string
-  /** Nombre de quien escribió el mensaje. */
+  /** Nome di chi ha scritto il messaggio. */
   senderName: string
-  /** Fragmento del último mensaje (hasta 120 chars). */
+  /** Estratto dell'ultimo messaggio (fino a 120 caratteri). */
   preview: string
-  /** Rol del destinatario: 'patient' → enlace al portal; 'doctor' → enlace al panel. */
+  /** Ruolo del destinatario: 'patient' → link al portale; 'doctor' → link al pannello. */
   recipientRole: "patient" | "doctor"
 }) {
-  const firstName = opts.recipientName.split(" ")[0] || "hola"
+  const firstName = opts.recipientName.split(" ")[0] || "ciao"
   const chatUrl =
     opts.recipientRole === "doctor"
       ? `${getCanonicalBaseUrl()}/clinica/chat`
@@ -332,49 +327,49 @@ export async function sendNewMessageEmail(opts: {
     opts.preview.length > 120 ? opts.preview.slice(0, 120) + "…" : opts.preview
 
   const body = `
-    ${p(`Hola ${firstName}, tienes un mensaje nuevo de <strong>${opts.senderName}</strong>.`)}
+    ${p(`Ciao ${firstName}, hai un nuovo messaggio da <strong>${opts.senderName}</strong>.`)}
     <div style="background:${PAPER};border-left:3px solid ${AMBER};border-radius:0 10px 10px 0;padding:12px 16px;margin:0 0 18px;">
       <p style="margin:0;font-size:14px;line-height:1.6;color:${INK_SOFT};font-style:italic;">"${previewText}"</p>
     </div>
-    ${p("Responde desde tu panel para mantener la conversación en un solo lugar seguro.")}
-    <div style="margin:22px 0 4px;">${button(chatUrl, "Ver el mensaje")}</div>
+    ${p("Rispondi dal tuo pannello per mantenere la conversazione in un unico posto sicuro.")}
+    <div style="margin:22px 0 4px;">${button(chatUrl, "Vedi il messaggio")}</div>
   `
 
   return send(
     opts.to,
-    `${opts.senderName} te ha escrito — DoctorLife`,
+    `${opts.senderName} ti ha scritto — DoctorLife`,
     shell({
-      title: "Tienes un mensaje nuevo",
+      title: "Hai un nuovo messaggio",
       body,
       preheader: `${opts.senderName}: ${previewText}`,
     }),
   )
 }
 
-/** Restablecer contraseña (usado por Better Auth). */
+/** Reimposta password (usato da Better Auth). */
 export async function sendResetPasswordEmail(opts: { to: string; name?: string; url: string }) {
-  const firstName = opts.name?.split(" ")[0] || "hola"
+  const firstName = opts.name?.split(" ")[0] || "ciao"
   const body = `
-    ${p(`Hola ${firstName}, recibimos una solicitud para restablecer tu contraseña.`)}
-    ${p("Pulsa el botón para crear una nueva. El enlace caduca en 1 hora.")}
-    <div style="margin:18px 0 8px;">${button(opts.url, "Restablecer contraseña")}</div>
-    ${p("Si no fuiste tú, ignora este correo y tu contraseña seguirá igual.")}
+    ${p(`Ciao ${firstName}, abbiamo ricevuto una richiesta per reimpostare la tua password.`)}
+    ${p("Premi il pulsante per crearne una nuova. Il link scade tra 1 ora.")}
+    <div style="margin:18px 0 8px;">${button(opts.url, "Reimposta password")}</div>
+    ${p("Se non sei stato tu, ignora questa email e la tua password resterà invariata.")}
   `
   return send(
     opts.to,
-    "Restablece tu contraseña — DoctorLife",
-    shell({ title: "Restablecer contraseña", body, preheader: "Crea una contraseña nueva." }),
+    "Reimposta la tua password — DoctorLife",
+    shell({ title: "Reimposta password", body, preheader: "Crea una nuova password." }),
   )
 }
 
 /* ───────────────────────────────────────────────────────────
-   Notificación interna de nuevos leads (captados desde landing/blog).
+   Notifica interna di nuovi lead (acquisiti da landing/blog).
    ─────────────────────────────────────────────────────────── */
 
-// Destinatarios de las notificaciones de nuevos leads.
+// Destinatari delle notifiche di nuovi lead.
 export const LEAD_NOTIFICATION_RECIPIENTS = ["hello@doctorlife.io"]
 
-// Remitente para los avisos de leads (dominio verificado en Resend).
+// Mittente per gli avvisi di lead (dominio verificato su Resend).
 const LEAD_FROM = "DoctorLife <leads@doctorlife.io>"
 
 type LeadEmailData = {
@@ -405,40 +400,40 @@ function leadRow(label: string, value: unknown): string {
 export type SendResult = { ok: true; id?: string } | { ok: false; error: string }
 
 export async function sendLeadNotification(lead: LeadEmailData): Promise<SendResult> {
-  if (!resend) return { ok: false, error: "RESEND_API_KEY no configurada" }
+  if (!resend) return { ok: false, error: "RESEND_API_KEY non configurata" }
 
-  const title = lead.name ? `Nuevo lead: ${lead.name}` : "Nuevo lead en DoctorLife"
+  const title = lead.name ? `Nuovo lead: ${lead.name}` : "Nuovo lead su DoctorLife"
   const rows = [
-    leadRow("Nombre", lead.name),
+    leadRow("Nome", lead.name),
     leadRow("Email", lead.email),
-    leadRow("Teléfono", lead.phone),
-    leadRow("Objetivo", lead.goal),
-    leadRow("Experiencia GLP-1", lead.glp1Experience),
-    leadRow("Formato preferido", lead.formatPreference),
-    leadRow("Plazo", lead.timeline),
-    leadRow("Plan", lead.plan),
-    leadRow("Altura (cm)", lead.heightCm),
+    leadRow("Telefono", lead.phone),
+    leadRow("Obiettivo", lead.goal),
+    leadRow("Esperienza GLP-1", lead.glp1Experience),
+    leadRow("Formato preferito", lead.formatPreference),
+    leadRow("Tempistica", lead.timeline),
+    leadRow("Piano", lead.plan),
+    leadRow("Altezza (cm)", lead.heightCm),
     leadRow("Peso (kg)", lead.weightKg),
-    leadRow("Edad", lead.age),
+    leadRow("Età", lead.age),
     leadRow("IMC", lead.bmi),
-    leadRow("Origen", lead.source),
+    leadRow("Origine", lead.source),
     leadRow("Dominio", lead.domain),
   ].join("")
 
   const html = `<!doctype html>
-<html lang="es">
+<html lang="it">
 <body style="margin:0;background:#f6f6f4;font-family:Arial,Helvetica,sans-serif;">
   <div style="max-width:560px;margin:0 auto;padding:24px;">
     <div style="background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid #ececec;">
       <div style="background:#111827;padding:20px 24px;">
         <h1 style="margin:0;color:#ffffff;font-size:18px;">${title}</h1>
-        <p style="margin:4px 0 0;color:#9ca3af;font-size:13px;">DoctorLife · notificación de lead</p>
+        <p style="margin:4px 0 0;color:#9ca3af;font-size:13px;">DoctorLife · notifica di lead</p>
       </div>
       <table style="width:100%;border-collapse:collapse;">
         ${rows}
       </table>
       <div style="padding:16px 24px;background:#fafafa;">
-        <a href="mailto:${lead.email}" style="display:inline-block;background:#111827;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;">Responder al lead</a>
+        <a href="mailto:${lead.email}" style="display:inline-block;background:#111827;color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:10px 18px;border-radius:8px;">Rispondi al lead</a>
       </div>
     </div>
   </div>
@@ -455,11 +450,11 @@ export async function sendLeadNotification(lead: LeadEmailData): Promise<SendRes
     })
     if (error) {
       console.log("[v0] sendLeadNotification error:", error.message ?? error)
-      return { ok: false, error: error.message ?? "Error al enviar el email" }
+      return { ok: false, error: error.message ?? "Errore durante l'invio dell'email" }
     }
     return { ok: true, id: data?.id }
   } catch (err) {
-    const message = err instanceof Error ? err.message : "Error desconocido al enviar el email"
+    const message = err instanceof Error ? err.message : "Errore sconosciuto durante l'invio dell'email"
     console.log("[v0] sendLeadNotification exception:", message)
     return { ok: false, error: message }
   }

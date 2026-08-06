@@ -10,18 +10,18 @@ import {
   type DoctorConversationStatus,
 } from "@/app/actions/chat"
 
-const dateFmt = new Intl.DateTimeFormat("es-ES", { day: "2-digit", month: "short" })
+const dateFmt = new Intl.DateTimeFormat("it-IT", { day: "2-digit", month: "short" })
 
 const STATUS_TABS: { key: DoctorConversationStatus; label: string; icon: typeof Inbox }[] = [
-  { key: "active", label: "Activos", icon: Inbox },
-  { key: "pending", label: "Pendientes", icon: Clock3 },
-  { key: "archived", label: "Archivados", icon: Archive },
+  { key: "active", label: "Attivi", icon: Inbox },
+  { key: "pending", label: "In sospeso", icon: Clock3 },
+  { key: "archived", label: "Archiviati", icon: Archive },
 ]
 
 const STATUS_LABEL: Record<DoctorConversationStatus, string> = {
-  active: "Activo",
-  pending: "Pendiente",
-  archived: "Archivado",
+  active: "Attivo",
+  pending: "In sospeso",
+  archived: "Archiviato",
 }
 
 export function ChatWorkspace({
@@ -86,7 +86,7 @@ export function ChatWorkspace({
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Buscar paciente…"
+              placeholder="Cerca paziente…"
               className="w-full bg-transparent text-[14px] text-ink outline-none placeholder:text-ink-soft"
             />
           </div>
@@ -121,10 +121,10 @@ export function ChatWorkspace({
           {filtered.length === 0 ? (
             <li className="px-3 py-6 text-center text-[13.5px] text-ink-soft">
               {conversations.length === 0
-                ? "Aún no tienes conversaciones."
+                ? "Non hai ancora conversazioni."
                 : isDoctor
-                  ? `No hay conversaciones en "${STATUS_TABS.find((t) => t.key === tab)?.label}".`
-                  : "Sin resultados para tu búsqueda."}
+                  ? `Nessuna conversazione in "${STATUS_TABS.find((t) => t.key === tab)?.label}".`
+                  : "Nessun risultato per la tua ricerca."}
             </li>
           ) : (
             filtered.map((c) => {

@@ -6,18 +6,18 @@ export default async function ClinicaLayout({ children }: { children: React.Reac
   return (
     <PortalShell
       user={user}
-      badge="Clínica"
+      badge="Clinica"
       homeHref="/clinica"
       showNotifications
       nav={[
-        { href: "/clinica", label: "Inicio", icon: "home" },
+        { href: "/clinica", label: "Home", icon: "home" },
         { href: "/clinica/agenda", label: "Agenda", icon: "agenda" },
-        { href: "/clinica/pacientes", label: "Pacientes", icon: "pacientes" },
-        { href: "/clinica/disponibilidad", label: "Disponibilidad", icon: "disponibilidad" },
-        { href: "/clinica/chat", label: "Mensajes", icon: "mensajes" },
-        { href: "/clinica/recetas", label: "Recetas", icon: "recetas" },
-        { href: "/clinica/pagos", label: "Cobros", icon: "pagos" },
-        { href: "/clinica/cuenta", label: "Mi cuenta", icon: "cuenta" },
+        { href: "/clinica/pacientes", label: "Pazienti", icon: "pacientes" },
+        { href: "/clinica/disponibilidad", label: "Disponibilità", icon: "disponibilidad" },
+        { href: "/clinica/chat", label: "Messaggi", icon: "mensajes" },
+        { href: "/clinica/recetas", label: "Ricette", icon: "recetas" },
+        { href: "/clinica/pagos", label: "Pagamenti", icon: "pagos" },
+        { href: "/clinica/cuenta", label: "Il mio account", icon: "cuenta" },
       ]}
     >
       {children}

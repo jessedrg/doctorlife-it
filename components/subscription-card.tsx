@@ -19,15 +19,15 @@ interface SubscriptionView {
 }
 
 const STATUS_LABELS: Record<string, string> = {
-  active: "Activa",
-  trialing: "En prueba",
-  past_due: "Pago pendiente",
-  incomplete: "Sin completar",
-  canceled: "Cancelada",
+  active: "Attivo",
+  trialing: "In prova",
+  past_due: "Pagamento in sospeso",
+  incomplete: "Incompleto",
+  canceled: "Annullato",
 }
 
 function eur(cents: number) {
-  return new Intl.NumberFormat("es-ES", { style: "currency", currency: "EUR" }).format(cents / 100)
+  return new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR" }).format(cents / 100)
 }
 
 export function SubscriptionCard({
@@ -66,7 +66,7 @@ export function SubscriptionCard({
     const res = await cancelMySubscription()
     setLoading(false)
     if (!res.ok) {
-      setError(res.error ?? "No se pudo cancelar.")
+      setError(res.error ?? "Impossibile annullare.")
       return
     }
     router.refresh()
@@ -74,17 +74,17 @@ export function SubscriptionCard({
 
   return (
     <div className="rounded-[20px] border border-ink/10 bg-cream p-5">
-      <h2 className="text-[16px] font-medium text-ink">Suscripción de tratamiento</h2>
+      <h2 className="text-[16px] font-medium text-ink">Abbonamento al trattamento</h2>
 
       {/* ── Estado 1: sin cita todavía ── */}
       {patientStatus === "pending_appointment" && (
         <div className="mt-3 flex items-start gap-3">
           <Clock className="mt-0.5 size-4 shrink-0 text-ink-soft" aria-hidden />
           <div>
-            <p className="text-[14px] font-medium text-ink">Tu médico está valorando tu solicitud</p>
+            <p className="text-[14px] font-medium text-ink">Il tuo medico sta valutando la tua richiesta</p>
             <p className="mt-1 text-[13.5px] leading-relaxed text-ink-soft">
-              Recibirás una notificación cuando te envíe una cita. Una vez confirmada, tu médico
-              preparará tu plan de tratamiento.
+              Riceverai una notifica quando ti invierà un appuntamento. Una volta confermato, il tuo
+              medico preparerà il tuo piano di trattamento.
             </p>
           </div>
         </div>
@@ -95,10 +95,10 @@ export function SubscriptionCard({
         <div className="mt-3 flex items-start gap-3">
           <FileText className="mt-0.5 size-4 shrink-0 text-ink-soft" aria-hidden />
           <div>
-            <p className="text-[14px] font-medium text-ink">Esperando tu plan de tratamiento</p>
+            <p className="text-[14px] font-medium text-ink">In attesa del tuo piano di trattamento</p>
             <p className="mt-1 text-[13.5px] leading-relaxed text-ink-soft">
-              Tu cita está confirmada. Cuando tu médico termine la valoración te enviará la receta
-              y podrás activar el tratamiento.
+              Il tuo appuntamento è confermato. Quando il tuo medico completerà la valutazione ti
+              invierà la ricetta e potrai attivare il trattamento.
             </p>
           </div>
         </div>
@@ -112,13 +112,13 @@ export function SubscriptionCard({
             <div>
               <p className="text-[13.5px] font-medium text-ink">
                 {offer
-                  ? `${offer.doctorName ? `Dr. ${offer.doctorName}` : "Tu médico"} te ha enviado tu plan`
-                  : "Tu plan de tratamiento ya está listo"}
+                  ? `${offer.doctorName ? `Dr. ${offer.doctorName}` : "Il tuo medico"} ti ha inviato il tuo piano`
+                  : "Il tuo piano di trattamento è pronto"}
               </p>
               <p className="mt-1 text-[13px] leading-relaxed text-ink-soft">
                 {offer?.oneTime
-                  ? "Tu médico ha preparado tu receta. Realiza el pago del programa para descargarla y empezar el tratamiento."
-                  : "Tu médico ha preparado tu receta. Activa la suscripción mensual para descargarla y empezar el tratamiento."}
+                  ? "Il tuo medico ha preparato la tua ricetta. Effettua il pagamento del programma per scaricarla e iniziare il trattamento."
+                  : "Il tuo medico ha preparato la tua ricetta. Attiva l'abbonamento mensile per scaricarla e iniziare il trattamento."}
               </p>
             </div>
           </div>
@@ -130,7 +130,7 @@ export function SubscriptionCard({
                   {offer.product.name}
                   {offer.oneTime && (
                     <span className="ml-2 rounded-full bg-ink/10 px-2 py-0.5 text-[11px] font-medium text-ink-soft align-middle">
-                      Pago único
+                      Pagamento unico
                     </span>
                   )}
                 </p>
@@ -138,16 +138,16 @@ export function SubscriptionCard({
               </div>
               {offer.oneTime && offer.product.accessMonths ? (
                 <p className="mt-0.5 text-[12.5px] text-ink-mute">
-                  Un solo pago con {offer.product.accessMonths} meses de acceso al tratamiento.
+                  Un unico pagamento con {offer.product.accessMonths} mesi di accesso al trattamento.
                 </p>
               ) : (
                 <p className="mt-0.5 text-[12.5px] text-ink-mute">
-                  Sin permanencia: cancela cuando quieras.
+                  Nessun vincolo: disdici quando vuoi.
                 </p>
               )}
               {offer.note ? (
                 <p className="mt-2 border-t border-ink/10 pt-2 text-[13px] leading-relaxed text-ink-soft">
-                  <span className="font-medium text-ink">Nota de tu médico:</span> {offer.note}
+                  <span className="font-medium text-ink">Nota del tuo medico:</span> {offer.note}
                 </p>
               ) : null}
             </div>
@@ -155,8 +155,8 @@ export function SubscriptionCard({
 
           <p className="text-[14px] leading-relaxed text-ink-soft">
             {offer?.oneTime
-              ? "Incluye seguimiento médico, receta cuando proceda y una consulta por llamada al mes durante todo el programa."
-              : "Incluye seguimiento con tu médico, una consulta por llamada al mes y chat en vivo. Puedes cancelar cuando quieras."}
+              ? "Include monitoraggio medico, ricetta quando necessario e una consulenza telefonica al mese per tutta la durata del programma."
+              : "Include monitoraggio con il tuo medico, una consulenza telefonica al mese e chat dal vivo. Puoi disdire quando vuoi."}
           </p>
 
           {verificationPending ? (
@@ -164,16 +164,16 @@ export function SubscriptionCard({
               <ShieldAlert className="mt-0.5 size-4 shrink-0 text-amber" aria-hidden />
               <div>
                 <p className="text-[13.5px] font-medium text-ink">
-                  Tu médico necesita una verificación antes de activar el tratamiento
+                  Il tuo medico ha bisogno di una verifica prima di attivare il trattamento
                 </p>
                 <p className="mt-1 text-[13px] leading-relaxed text-ink-soft">
-                  Complétala para poder continuar. Es confidencial: solo la verá tu médico.
+                  Completala per poter continuare. È riservata: la vedrà solo il tuo medico.
                 </p>
                 <Link
                   href="/portal/verificacion"
                   className="mt-2.5 inline-flex rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-paper transition-opacity hover:opacity-90"
                 >
-                  Completar verificación
+                  Completa la verifica
                 </Link>
               </div>
             </div>
@@ -184,16 +184,16 @@ export function SubscriptionCard({
               className="mt-4 inline-flex rounded-full bg-ink px-4 py-2 text-[13.5px] font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
             >
               {loading
-                ? "Redirigiendo…"
+                ? "Reindirizzamento…"
                 : offer?.oneTime
-                  ? "Pagar programa — ver mi receta"
-                  : "Activar suscripción — ver mi receta"}
+                  ? "Paga il programma — vedi la mia ricetta"
+                  : "Attiva l'abbonamento — vedi la mia ricetta"}
             </button>
           )}
         </div>
       )}
 
-      {/* ── Estado 4 y 5: suscripción activa ── */}
+      {/* ��─ Estado 4 y 5: suscripción activa ── */}
       {(patientStatus === "active" || patientStatus === "followup_available") && isActive && (
         <div className="mt-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
@@ -203,13 +203,13 @@ export function SubscriptionCard({
             </span>
           </div>
           <p className="mt-1 text-[14px] text-ink-soft">
-            {eur(subscription!.priceCents)} al mes
+            {eur(subscription!.priceCents)} al mese
             {subscription!.doctorName ? ` · ${subscription!.doctorName}` : ""}
           </p>
           {subscription!.currentPeriodEnd ? (
             <p className="mt-1 text-[13px] text-ink-mute">
-              {subscription!.cancelAtPeriodEnd ? "Finaliza el " : "Próxima renovación el "}
-              {new Intl.DateTimeFormat("es-ES", { dateStyle: "long" }).format(
+              {subscription!.cancelAtPeriodEnd ? "Termina il " : "Prossimo rinnovo il "}
+              {new Intl.DateTimeFormat("it-IT", { dateStyle: "long" }).format(
                 new Date(subscription!.currentPeriodEnd),
               )}
             </p>
@@ -221,16 +221,16 @@ export function SubscriptionCard({
               <CalendarClock className="mt-0.5 size-4 shrink-0 text-amber" aria-hidden />
               <div>
                 <p className="text-[13.5px] font-medium text-ink">
-                  Tu videollamada de seguimiento está disponible
+                  La tua videochiamata di follow-up è disponibile
                 </p>
                 <p className="mt-1 text-[13px] leading-relaxed text-ink-soft">
-                  Tu suscripción se ha renovado. Reserva tu cita de seguimiento con tu médico.
+                  Il tuo abbonamento è stato rinnovato. Prenota il tuo appuntamento di follow-up con il tuo medico.
                 </p>
                 <Link
                   href="/portal/reservar"
                   className="mt-2.5 inline-flex rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-paper transition-opacity hover:opacity-90"
                 >
-                  Reservar seguimiento
+                  Prenota follow-up
                 </Link>
               </div>
             </div>
@@ -242,11 +242,11 @@ export function SubscriptionCard({
               disabled={loading}
               className="mt-4 inline-flex rounded-full border border-ink/20 px-4 py-2 text-[13.5px] font-medium text-ink transition-colors hover:bg-ink/5 disabled:opacity-60"
             >
-              {loading ? "Procesando…" : "Cancelar al final del periodo"}
+              {loading ? "Elaborazione…" : "Disdici alla fine del periodo"}
             </button>
           ) : (
             <p className="mt-4 text-[13.5px] text-ink-soft">
-              Tu suscripción se cancelará al final del periodo actual.
+              Il tuo abbonamento verrà annullato alla fine del periodo attuale.
             </p>
           )}
         </div>

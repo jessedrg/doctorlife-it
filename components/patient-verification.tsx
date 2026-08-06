@@ -14,7 +14,7 @@ type Verification = {
   doctorName: string | null
 }
 
-const dateFmt = new Intl.DateTimeFormat("es-ES", { day: "numeric", month: "long", year: "numeric" })
+const dateFmt = new Intl.DateTimeFormat("it-IT", { day: "numeric", month: "long", year: "numeric" })
 
 export function PatientVerification({ verifications }: { verifications: Verification[] }) {
   const router = useRouter()
@@ -32,12 +32,12 @@ export function PatientVerification({ verifications }: { verifications: Verifica
       const res = await fetch("/api/verification/upload", { method: "POST", body: form })
       if (!res.ok) {
         const data = await res.json().catch(() => ({}))
-        setError(data.error ?? "No se pudo subir el archivo.")
+        setError(data.error ?? "Impossibile caricare il file.")
         return
       }
       router.refresh()
     } catch {
-      setError("No se pudo subir el archivo. Revisa tu conexión.")
+      setError("Impossibile caricare il file. Controlla la connessione.")
     } finally {
       setUploadingId(null)
     }
@@ -48,11 +48,11 @@ export function PatientVerification({ verifications }: { verifications: Verifica
       <div className="rounded-[20px] border border-ink/10 bg-cream p-6">
         <div className="flex items-center gap-2">
           <ShieldCheck className="size-5 text-olive" aria-hidden />
-          <h2 className="text-[16px] font-medium text-ink">Sin verificaciones pendientes</h2>
+          <h2 className="text-[16px] font-medium text-ink">Nessuna verifica in sospeso</h2>
         </div>
         <p className="mt-2 text-[14px] leading-relaxed text-ink-soft">
-          Tu médico no te ha solicitado ninguna verificación adicional. Si lo hace, aparecerá aquí y
-          te avisaremos por correo.
+          Il tuo medico non ti ha richiesto alcuna verifica aggiuntiva. Se lo farà, apparirà qui e
+          ti avviseremo via email.
         </p>
       </div>
     )
@@ -63,9 +63,9 @@ export function PatientVerification({ verifications }: { verifications: Verifica
       <div className="flex items-start gap-2.5 rounded-[16px] border border-olive/25 bg-olive/[.08] p-4">
         <Lock className="mt-0.5 size-4 shrink-0 text-olive" aria-hidden />
         <p className="text-[13.5px] leading-relaxed text-ink-soft">
-          <span className="font-medium text-ink">Todo es estrictamente confidencial.</span> Lo que
-          subas aquí solo lo verá el médico que te lo ha pedido. Nadie más del equipo, ni otros
-          pacientes, tiene acceso. Se almacena cifrado y se usa únicamente para validar tu tratamiento.
+          <span className="font-medium text-ink">Tutto è strettamente riservato.</span> Ciò che
+          carichi qui lo vedrà solo il medico che te l'ha richiesto. Nessun altro del team, né altri
+          pazienti, ha accesso. Viene conservato cifrato e usato unicamente per convalidare il tuo trattamento.
         </p>
       </div>
 
@@ -79,7 +79,7 @@ export function PatientVerification({ verifications }: { verifications: Verifica
                 <StatusBadge status={v.status} />
                 <p className="mt-2 text-[15px] leading-relaxed text-ink">{v.message}</p>
                 <p className="mt-1 text-[12.5px] text-ink-mute">
-                  Solicitada el {dateFmt.format(new Date(v.createdAt))}
+                  Richiesta il {dateFmt.format(new Date(v.createdAt))}
                   {v.doctorName ? ` · Dr. ${v.doctorName}` : ""}
                 </p>
               </div>
@@ -87,22 +87,22 @@ export function PatientVerification({ verifications }: { verifications: Verifica
 
             {v.status === "rejected" && v.reviewNote ? (
               <p className="mt-3 rounded-[12px] bg-clay/10 px-3.5 py-2.5 text-[13px] text-ink-soft">
-                Tu médico necesita que lo repitas: {v.reviewNote}
+                Il tuo medico ha bisogno che tu lo rifaccia: {v.reviewNote}
               </p>
             ) : null}
 
             {v.status === "submitted" ? (
               <p className="mt-3 flex items-center gap-2 text-[13.5px] text-ink-soft">
                 <FileCheck2 className="size-4 text-ink-mute" aria-hidden />
-                {v.fileName ? `Has enviado “${v.fileName}”. ` : "Archivo enviado. "}
-                Tu médico lo revisará en breve.
+                {v.fileName ? `Hai inviato "${v.fileName}". ` : "File inviato. "}
+                Il tuo medico lo esaminerà a breve.
               </p>
             ) : null}
 
             {v.status === "approved" ? (
               <p className="mt-3 flex items-center gap-2 text-[13.5px] text-olive">
                 <Check className="size-4" aria-hidden />
-                Verificación aprobada. Ya puedes activar tu tratamiento.
+                Verifica approvata. Ora puoi attivare il tuo trattamento.
               </p>
             ) : null}
 
@@ -126,10 +126,10 @@ export function PatientVerification({ verifications }: { verifications: Verifica
                   className="inline-flex items-center gap-2 rounded-full bg-ink px-4 py-2.5 text-[13.5px] font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
                 >
                   <Upload className="size-4" aria-hidden />
-                  {busy ? "Subiendo…" : v.status === "rejected" ? "Subir de nuevo" : "Subir archivo"}
+                  {busy ? "Caricamento…" : v.status === "rejected" ? "Carica di nuovo" : "Carica file"}
                 </button>
                 <p className="mt-2 text-[12px] text-ink-mute">
-                  Puedes subir un vídeo, una imagen o un documento (PDF). Tamaño máximo recomendado: 50 MB.
+                  Puoi caricare un video, un'immagine o un documento (PDF). Dimensione massima consigliata: 50 MB.
                 </p>
               </div>
             ) : null}
@@ -144,10 +144,10 @@ export function PatientVerification({ verifications }: { verifications: Verifica
 
 function StatusBadge({ status }: { status: string }) {
   const meta: Record<string, { label: string; cls: string; icon: typeof Clock3 }> = {
-    pending: { label: "Pendiente de enviar", cls: "bg-amber/15 text-amber", icon: Clock3 },
-    submitted: { label: "Enviada · en revisión", cls: "bg-ink/[.08] text-ink-soft", icon: FileCheck2 },
-    approved: { label: "Aprobada", cls: "bg-olive/15 text-olive", icon: Check },
-    rejected: { label: "Necesita repetirse", cls: "bg-clay/15 text-clay", icon: X },
+    pending: { label: "Da inviare", cls: "bg-amber/15 text-amber", icon: Clock3 },
+    submitted: { label: "Inviata · in revisione", cls: "bg-ink/[.08] text-ink-soft", icon: FileCheck2 },
+    approved: { label: "Approvata", cls: "bg-olive/15 text-olive", icon: Check },
+    rejected: { label: "Da rifare", cls: "bg-clay/15 text-clay", icon: X },
   }
   const m = meta[status] ?? meta.pending
   const Icon = m.icon

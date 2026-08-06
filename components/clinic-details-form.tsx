@@ -5,19 +5,19 @@ import { updateClinicDetails, type ClinicStatus } from "@/app/actions/clinic"
 import { CheckCircle2, AlertCircle, Loader2 } from "lucide-react"
 
 const FIELD_LABELS: Record<string, string> = {
-  clinicName: "Nombre de la clínica",
-  name: "Nombre de la clínica",
-  taxId: "CIF/NIF",
-  addressLine: "Dirección",
-  city: "Municipio",
-  postalCode: "Código postal",
+  clinicName: "Nome della clinica",
+  name: "Nome della clinica",
+  taxId: "Partita IVA / Codice Fiscale",
+  addressLine: "Indirizzo",
+  city: "Comune",
+  postalCode: "CAP",
   province: "Provincia",
-  healthRegistryNumber: "Nº registro sanitario",
-  medicalDirectorName: "Director médico",
-  medicalDirectorLicense: "Nº colegiado",
-  billingEmail: "Email de facturación",
-  dataProtectionContact: "Responsable RGPD",
-  domain: "Dominio asignado",
+  healthRegistryNumber: "N. registro sanitario",
+  medicalDirectorName: "Direttore sanitario",
+  medicalDirectorLicense: "N. iscrizione albo",
+  billingEmail: "Email di fatturazione",
+  dataProtectionContact: "Responsabile GDPR",
+  domain: "Dominio assegnato",
 }
 
 type Fields = {
@@ -69,8 +69,8 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
         setMsg({
           type: "ok",
           text: res.dataComplete
-            ? "Datos guardados. La clínica ya cumple los requisitos para operar."
-            : "Datos guardados. Faltan campos obligatorios para poder cobrar.",
+            ? "Dati salvati. La clinica soddisfa ora i requisiti per operare."
+            : "Dati salvati. Mancano campi obbligatori per poter incassare.",
         })
       }
     })
@@ -80,9 +80,9 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
     <section className="rounded-[18px] border border-ink/10 bg-warm p-5">
       <div className="flex items-center justify-between gap-3">
         <div>
-          <h2 className="text-[17px] font-medium text-ink">Datos de la clínica</h2>
+          <h2 className="text-[17px] font-medium text-ink">Dati della clinica</h2>
           <p className="mt-0.5 text-[13.5px] leading-relaxed text-ink-soft">
-            Información fiscal y sanitaria necesaria para operar y facturar como centro sanitario.
+            Informazioni fiscali e sanitarie necessarie per operare e fatturare come struttura sanitaria.
           </p>
         </div>
         {status.dataComplete ? (
@@ -98,7 +98,7 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
 
       {!status.dataComplete && status.missingFields.length > 0 && (
         <p className="mt-3 rounded-xl bg-amber-50 px-4 py-3 text-[13.5px] leading-relaxed text-amber-900">
-          Faltan por completar:{" "}
+          Da completare:{" "}
           <span className="font-medium">
             {status.missingFields.map((f) => FIELD_LABELS[f] ?? f).join(", ")}
           </span>
@@ -107,63 +107,63 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
       )}
 
       <form onSubmit={onSubmit} className="mt-4 grid gap-4 sm:grid-cols-2">
-        <Field label="Nombre de la clínica *" value={values.name} onChange={set("name")} required />
-        <Field label="CIF/NIF *" value={values.taxId} onChange={set("taxId")} required />
+        <Field label="Nome della clinica *" value={values.name} onChange={set("name")} required />
+        <Field label="Partita IVA / Codice Fiscale *" value={values.taxId} onChange={set("taxId")} required />
 
         <Field
-          label="Dirección *"
+          label="Indirizzo *"
           value={values.addressLine}
           onChange={set("addressLine")}
           className="sm:col-span-2"
           required
         />
-        <Field label="Municipio *" value={values.city} onChange={set("city")} required />
+        <Field label="Comune *" value={values.city} onChange={set("city")} required />
         <div className="grid grid-cols-2 gap-4">
-          <Field label="C. Postal *" value={values.postalCode} onChange={set("postalCode")} required />
+          <Field label="CAP *" value={values.postalCode} onChange={set("postalCode")} required />
           <Field label="Provincia *" value={values.province} onChange={set("province")} required />
         </div>
 
         <Field
-          label="Nº registro sanitario (NICA/autorización) *"
+          label="N. registro sanitario (autorizzazione) *"
           value={values.healthRegistryNumber}
           onChange={set("healthRegistryNumber")}
           className="sm:col-span-2"
           required
         />
         <Field
-          label="Director médico *"
+          label="Direttore sanitario *"
           value={values.medicalDirectorName}
           onChange={set("medicalDirectorName")}
           required
         />
         <Field
-          label="Nº colegiado del director *"
+          label="N. iscrizione albo del direttore *"
           value={values.medicalDirectorLicense}
           onChange={set("medicalDirectorLicense")}
           required
         />
 
         <Field
-          label="Email de facturación *"
+          label="Email di fatturazione *"
           type="email"
           value={values.billingEmail}
           onChange={set("billingEmail")}
           required
         />
         <Field
-          label="Teléfono de facturación"
+          label="Telefono di fatturazione"
           value={values.billingPhone}
           onChange={set("billingPhone")}
         />
         <Field
-          label="Responsable de protección de datos (RGPD) *"
+          label="Responsabile della protezione dei dati (GDPR) *"
           value={values.dataProtectionContact}
           onChange={set("dataProtectionContact")}
           className="sm:col-span-2"
           required
         />
         <Field
-          label="Dominio asignado (p.ej. doctorlife-fr.com)"
+          label="Dominio assegnato (es. doctorlife-it.com)"
           value={values.domain}
           onChange={set("domain")}
           className="sm:col-span-2"
@@ -176,7 +176,7 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
             className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-ink px-5 text-[14.5px] font-medium text-cream transition hover:opacity-90 disabled:opacity-60"
           >
             {pending && <Loader2 className="size-4 animate-spin" aria-hidden />}
-            {pending ? "Guardando…" : "Guardar datos"}
+            {pending ? "Salvataggio…" : "Salva dati"}
           </button>
           {msg && (
             <p
@@ -190,7 +190,7 @@ export function ClinicDetailsForm({ status }: { status: ClinicStatus }) {
           )}
         </div>
       </form>
-      <p className="mt-3 text-[12px] leading-relaxed text-ink-mute">* Campos obligatorios para poder cobrar.</p>
+      <p className="mt-3 text-[12px] leading-relaxed text-ink-mute">* Campi obbligatori per poter incassare.</p>
     </section>
   )
 }

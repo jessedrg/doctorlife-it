@@ -26,7 +26,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
   function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0] ?? null
     if (file && file.type !== "application/pdf") {
-      setError("Solo se admiten archivos PDF.")
+      setError("Sono ammessi solo file PDF.")
       setPdfFile(null)
       return
     }
@@ -42,7 +42,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (!medication.trim() || !dosage.trim()) {
-      setError("Medicamento y posología son obligatorios.")
+      setError("Farmaco e posologia sono obbligatori.")
       return
     }
 
@@ -62,7 +62,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
       const json = await res.json()
 
       if (!res.ok || json.error) {
-        setError(json.error ?? "Error al emitir la receta.")
+        setError(json.error ?? "Errore durante l'emissione della ricetta.")
         return
       }
 
@@ -74,7 +74,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
       if (fileInputRef.current) fileInputRef.current.value = ""
       router.refresh()
     } catch {
-      setError("Error de red. Inténtalo de nuevo.")
+      setError("Errore di rete. Riprova.")
     } finally {
       setLoading(false)
     }
@@ -83,7 +83,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
   if (patients.length === 0) {
     return (
       <p className="text-[14px] text-ink-soft">
-        Aún no tienes pacientes con cita. Podrás emitir recetas cuando un paciente reserve contigo.
+        Non hai ancora pazienti con appuntamento. Potrai emettere ricette quando un paziente prenoterà con te.
       </p>
     )
   }
@@ -93,7 +93,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
       {/* Paciente */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="patient" className="text-[13.5px] font-medium text-ink">
-          Paciente
+          Paziente
         </label>
         <select
           id="patient"
@@ -112,14 +112,14 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
       {/* Medicamento */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="medication" className="text-[13.5px] font-medium text-ink">
-          Medicamento <span className="text-clay">*</span>
+          Farmaco <span className="text-clay">*</span>
         </label>
         <input
           id="medication"
           value={medication}
           onChange={(e) => setMedication(e.target.value)}
           required
-          placeholder="Ej. Semaglutida 0,25 mg — Ozempic"
+          placeholder="Es. Semaglutide 0,25 mg — Ozempic"
           className="rounded-[10px] border border-ink/15 bg-paper px-3 py-2.5 text-[14px] text-ink placeholder:text-ink/35 focus:border-amber outline-none"
         />
       </div>
@@ -127,14 +127,14 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
       {/* Dosis */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="dosage" className="text-[13.5px] font-medium text-ink">
-          Posología / dosis <span className="text-clay">*</span>
+          Posologia / dose <span className="text-clay">*</span>
         </label>
         <input
           id="dosage"
           value={dosage}
           onChange={(e) => setDosage(e.target.value)}
           required
-          placeholder="Ej. 1 inyección subcutánea semanal — incrementar mensualmente"
+          placeholder="Es. 1 iniezione sottocutanea a settimana — aumentare mensilmente"
           className="rounded-[10px] border border-ink/15 bg-paper px-3 py-2.5 text-[14px] text-ink placeholder:text-ink/35 focus:border-amber outline-none"
         />
       </div>
@@ -142,15 +142,15 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
       {/* Instrucciones */}
       <div className="flex flex-col gap-1.5">
         <label htmlFor="instructions" className="text-[13.5px] font-medium text-ink">
-          Instrucciones adicionales
-          <span className="ml-1.5 text-[12px] font-normal text-ink-soft">(opcional)</span>
+          Istruzioni aggiuntive
+          <span className="ml-1.5 text-[12px] font-normal text-ink-soft">(facoltativo)</span>
         </label>
         <textarea
           id="instructions"
           value={instructions}
           onChange={(e) => setInstructions(e.target.value)}
           rows={3}
-          placeholder="Indicaciones de almacenamiento, efectos secundarios a vigilar, próxima revisión…"
+          placeholder="Indicazioni di conservazione, effetti collaterali da monitorare, prossimo controllo…"
           className="rounded-[10px] border border-ink/15 bg-paper px-3 py-2.5 text-[14px] text-ink placeholder:text-ink/35 focus:border-amber outline-none resize-none"
         />
       </div>
@@ -158,8 +158,8 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
       {/* PDF de la receta */}
       <div className="flex flex-col gap-1.5">
         <label className="text-[13.5px] font-medium text-ink">
-          PDF de la receta oficial
-          <span className="ml-1.5 text-[12px] font-normal text-ink-soft">(recomendado)</span>
+          PDF della ricetta ufficiale
+          <span className="ml-1.5 text-[12px] font-normal text-ink-soft">(consigliato)</span>
         </label>
 
         {pdfFile ? (
@@ -173,7 +173,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
               type="button"
               onClick={removeFile}
               className="rounded-full p-1 hover:bg-ink/8 transition-colors"
-              aria-label="Quitar archivo"
+              aria-label="Rimuovi file"
             >
               <X className="size-4 text-ink-soft" />
             </button>
@@ -185,10 +185,10 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
           >
             <UploadCloud className="size-7 text-ink/35" aria-hidden />
             <span className="text-[13.5px] text-ink-soft">
-              Arrastra el PDF aquí o{" "}
-              <span className="font-medium text-ink underline underline-offset-2">selecciona un archivo</span>
+              Trascina il PDF qui o{" "}
+              <span className="font-medium text-ink underline underline-offset-2">seleziona un file</span>
             </span>
-            <span className="text-[12px] text-ink/35">Solo PDF · Máx. 10 MB</span>
+            <span className="text-[12px] text-ink/35">Solo PDF · Max. 10 MB</span>
             <input
               id="pdf-upload"
               ref={fileInputRef}
@@ -201,15 +201,15 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
         )}
 
         <p className="text-[12px] text-ink-soft">
-          Si subes el PDF oficial de la receta, se mostrará al paciente tal cual. Si no lo subes,
-          se generará un documento automático con los datos introducidos.
+          Se carichi il PDF ufficiale della ricetta, verrà mostrato al paziente così com'è. Se non lo
+          carichi, verrà generato un documento automatico con i dati inseriti.
         </p>
       </div>
 
       {error && <p className="text-[13.5px] text-clay">{error}</p>}
       {done && (
         <p className="text-[13.5px] text-olive font-medium">
-          Receta emitida correctamente. El paciente ha sido notificado.
+          Ricetta emessa correttamente. Il paziente è stato avvisato.
         </p>
       )}
 
@@ -218,7 +218,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
         disabled={loading}
         className="self-start rounded-full bg-ink px-6 py-2.5 text-[14px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
       >
-        {loading ? "Emitiendo…" : "Emitir receta"}
+        {loading ? "Emissione…" : "Emetti ricetta"}
       </button>
     </form>
   )

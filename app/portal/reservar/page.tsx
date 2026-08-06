@@ -20,21 +20,21 @@ export default async function ReservarPage() {
   if (!isFollowup) {
     const title =
       status === "active"
-        ? "El calendario se activa con la renovación"
+        ? "Il calendario si attiva con il rinnovo"
         : status === "pending_appointment"
-          ? "Tu médico te enviará tu primera cita"
+          ? "Il tuo medico ti invierà il primo appuntamento"
           : status === "pending_prescription"
-            ? "Esperando la valoración de tu médico"
-            : "Activa tu suscripción primero"
+            ? "In attesa della valutazione del tuo medico"
+            : "Attiva prima il tuo abbonamento"
 
     const body =
       status === "active"
-        ? "Ya tienes tu primera consulta hecha. Cuando se renueve tu suscripción mensual podrás reservar aquí tu próxima videollamada de seguimiento."
+        ? "Hai già fatto la tua prima visita. Quando si rinnoverà il tuo abbonamento mensile potrai prenotare qui la tua prossima videochiamata di follow-up."
         : status === "pending_appointment"
-          ? "Tu médico está revisando tu caso y pronto te enviará la fecha de la primera consulta. No tienes que hacer nada más."
+          ? "Il tuo medico sta esaminando il tuo caso e presto ti invierà la data della prima visita. Non devi fare altro."
           : status === "pending_prescription"
-            ? "Tu médico está preparando el tratamiento personalizado para ti. En cuanto lo tenga listo recibirás un aviso."
-            : "Para acceder a las videollamadas de seguimiento activa tu plan de tratamiento desde Recetas."
+            ? "Il tuo medico sta preparando il trattamento personalizzato per te. Appena sarà pronto riceverai un avviso."
+            : "Per accedere alle videochiamate di follow-up attiva il tuo piano di trattamento dalla sezione Ricette."
 
     return (
       <div className="mx-auto w-full max-w-xl">
@@ -48,8 +48,8 @@ export default async function ReservarPage() {
           </p>
           {status === "active" && subscription?.currentPeriodEnd && (
             <p className="mt-2 text-[13px] text-ink-soft">
-              Próxima renovación:{" "}
-              {new Intl.DateTimeFormat("es-ES", { dateStyle: "long" }).format(
+              Prossimo rinnovo:{" "}
+              {new Intl.DateTimeFormat("it-IT", { dateStyle: "long" }).format(
                 new Date(subscription.currentPeriodEnd),
               )}
             </p>
@@ -58,7 +58,7 @@ export default async function ReservarPage() {
             href="/portal"
             className="mt-6 inline-flex rounded-full bg-ink px-5 py-2.5 text-[13.5px] font-medium text-paper transition-opacity hover:opacity-90"
           >
-            Volver al panel
+            Torna al pannello
           </Link>
         </div>
       </div>
@@ -69,12 +69,12 @@ export default async function ReservarPage() {
     <div className="mx-auto w-full max-w-3xl">
       <header className="mb-6">
         <h1 className="text-balance text-2xl font-semibold text-ink">
-          {isFollowup ? "Reserva tu videollamada de seguimiento" : "Reserva tu primera cita"}
+          {isFollowup ? "Prenota la tua videochiamata di follow-up" : "Prenota il tuo primo appuntamento"}
         </h1>
         <p className="mt-1 text-pretty text-ink/70">
           {isFollowup
-            ? "Está incluida en tu suscripción. Elige el horario que mejor te venga."
-            : "Elige el horario que mejor te venga. Te asignaremos un médico disponible y recibirás el enlace de la videollamada."}
+            ? "È inclusa nel tuo abbonamento. Scegli l'orario che preferisci."
+            : "Scegli l'orario che preferisci. Ti assegneremo un medico disponibile e riceverai il link della videochiamata."}
         </p>
       </header>
       <BookingCalendar slots={slots} />

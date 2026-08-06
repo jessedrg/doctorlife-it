@@ -11,10 +11,10 @@ import { FlaskConical, ChevronLeft, IdCard, X, Video } from "lucide-react"
 
 type Msg = { id: number; body: string; mine: boolean; createdAt: Date }
 
-const timeFmt = new Intl.DateTimeFormat("es-ES", {
+const timeFmt = new Intl.DateTimeFormat("it-IT", {
   hour: "2-digit",
   minute: "2-digit",
-  timeZone: "Europe/Madrid",
+  timeZone: "Europe/Rome",
 })
 
 export function ChatThread({
@@ -23,7 +23,7 @@ export function ChatThread({
   counterpartImage,
   canRequestAnalysis = false,
   patientId,
-  subtitle = "Mensajería segura · respuesta no inmediata",
+  subtitle = "Messaggistica sicura · risposta non immediata",
   onBack,
   className,
 }: {
@@ -67,7 +67,7 @@ export function ChatThread({
       const url = res.message.body.replace(CALL_PREFIX, "").trim()
       if (url) window.open(url, "_blank", "noopener,noreferrer")
     } catch {
-      setCallingError("No se pudo crear la llamada.")
+      setCallingError("Impossibile creare la videochiamata.")
     } finally {
       setCreatingCall(false)
     }
@@ -119,7 +119,7 @@ export function ChatThread({
           <button
             type="button"
             onClick={onBack}
-            aria-label="Volver a la lista"
+            aria-label="Torna alla lista"
             className="-ml-1 flex size-9 shrink-0 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-ink/5 md:hidden"
           >
             <ChevronLeft className="size-5" aria-hidden />
@@ -135,11 +135,11 @@ export function ChatThread({
             type="button"
             onClick={startCall}
             disabled={creatingCall}
-            title="Crear videollamada"
+            title="Crea videochiamata"
             className="flex shrink-0 items-center gap-1.5 rounded-full bg-teal px-3 py-1.5 text-[12.5px] font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
           >
             <Video className="size-4" aria-hidden />
-            <span className="hidden sm:inline">{creatingCall ? "Creando…" : "Crear llamada"}</span>
+            <span className="hidden sm:inline">{creatingCall ? "Creazione…" : "Crea chiamata"}</span>
           </button>
         )}
         {patientId && (
@@ -149,7 +149,7 @@ export function ChatThread({
             className="flex shrink-0 items-center gap-1.5 rounded-full border border-ink/15 px-3 py-1.5 text-[12.5px] font-medium text-ink transition-colors hover:bg-ink/5"
           >
             <IdCard className="size-4" aria-hidden />
-            <span className="hidden sm:inline">Ver ficha</span>
+            <span className="hidden sm:inline">Vedi scheda</span>
           </button>
         )}
       </div>
@@ -163,7 +163,7 @@ export function ChatThread({
       <div className="flex-1 space-y-2.5 overflow-y-auto px-5 py-4">
         {messages.length === 0 ? (
           <p className="mt-6 text-center text-[14px] text-ink-soft">
-            Aún no hay mensajes. Escribe el primero.
+            Non ci sono ancora messaggi. Scrivi il primo.
           </p>
         ) : (
           messages.map((m) => {
@@ -199,8 +199,8 @@ export function ChatThread({
           <button
             type="button"
             onClick={() => setAnalysisOpen(true)}
-            aria-label="Pedir análisis al paciente"
-            title="Pedir análisis"
+            aria-label="Richiedi analisi al paziente"
+            title="Richiedi analisi"
             className="flex size-[42px] shrink-0 items-center justify-center rounded-xl border border-teal/30 bg-teal/10 text-teal transition-colors hover:bg-teal/15"
           >
             <FlaskConical className="size-5" aria-hidden />
@@ -213,7 +213,7 @@ export function ChatThread({
             if (e.key === "Enter" && !e.shiftKey) handleSend(e)
           }}
           rows={1}
-          placeholder="Escribe un mensaje…"
+          placeholder="Scrivi un messaggio…"
           className="max-h-32 flex-1 resize-none rounded-xl border border-ink/15 bg-paper px-3.5 py-2.5 text-[14px] text-ink outline-none placeholder:text-ink-soft focus:border-ink/30"
         />
         <button
@@ -221,7 +221,7 @@ export function ChatThread({
           disabled={sending || !text.trim()}
           className="rounded-xl bg-ink px-4 py-2.5 text-[13.5px] font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-40"
         >
-          Enviar
+          Invia
         </button>
       </form>
 
@@ -238,20 +238,20 @@ export function ChatThread({
         <div className="fixed inset-0 z-50">
           <button
             type="button"
-            aria-label="Cerrar ficha"
+            aria-label="Chiudi scheda"
             onClick={() => setDetailOpen(false)}
             className="absolute inset-0 bg-ink/40"
           />
           <div className="absolute right-0 top-0 flex h-full w-[min(560px,94%)] flex-col bg-paper shadow-xl">
             <div className="flex items-center justify-between border-b border-ink/10 px-5 py-4">
               <div>
-                <p className="text-[16px] font-medium text-ink">Ficha del paciente</p>
+                <p className="text-[16px] font-medium text-ink">Scheda del paziente</p>
                 <p className="text-[12.5px] text-ink-soft">{counterpartName}</p>
               </div>
               <button
                 type="button"
                 onClick={() => setDetailOpen(false)}
-                aria-label="Cerrar"
+                aria-label="Chiudi"
                 className="flex size-9 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-warm"
               >
                 <X className="size-5" aria-hidden />
@@ -275,11 +275,11 @@ function CallMessage({ body, mine, createdAt }: { body: string; mine: boolean; c
       <div className="max-w-[80%] overflow-hidden rounded-2xl border border-teal/30 bg-teal/[.07]">
         <div className="flex items-center gap-2 border-b border-teal/20 bg-teal/12 px-3.5 py-2 text-teal">
           <Video className="size-4" aria-hidden />
-          <span className="text-[12.5px] font-semibold uppercase tracking-[.04em]">Videollamada</span>
+          <span className="text-[12.5px] font-semibold uppercase tracking-[.04em]">Videochiamata</span>
         </div>
         <div className="px-3.5 py-2.5">
           <p className="text-[14px] leading-relaxed text-ink">
-            {mine ? "Has iniciado una videollamada." : "Tu médico ha iniciado una videollamada."}
+            {mine ? "Hai avviato una videochiamata." : "Il tuo medico ha avviato una videochiamata."}
           </p>
           <a
             href={url}
@@ -288,7 +288,7 @@ function CallMessage({ body, mine, createdAt }: { body: string; mine: boolean; c
             className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-teal px-4 py-2 text-[13px] font-medium text-paper transition-opacity hover:opacity-90"
           >
             <Video className="size-4" aria-hidden />
-            Unirse a la llamada
+            Partecipa alla chiamata
           </a>
           <p className="mt-1.5 text-[11px] text-ink-soft">{timeFmt.format(new Date(createdAt))}</p>
         </div>
@@ -306,7 +306,7 @@ function AnalysisMessage({ body, mine, createdAt }: { body: string; mine: boolea
       <div className="max-w-[80%] overflow-hidden rounded-2xl border border-teal/30 bg-teal/[.07]">
         <div className="flex items-center gap-2 border-b border-teal/20 bg-teal/12 px-3.5 py-2 text-teal">
           <FlaskConical className="size-4" aria-hidden />
-          <span className="text-[12.5px] font-semibold uppercase tracking-[.04em]">Análisis solicitados</span>
+          <span className="text-[12.5px] font-semibold uppercase tracking-[.04em]">Analisi richieste</span>
         </div>
         <p className="whitespace-pre-wrap break-words px-3.5 py-2.5 text-[14px] leading-relaxed text-ink">
           {clean}

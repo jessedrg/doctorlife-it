@@ -4,24 +4,24 @@ import type { DoctorBilling } from "@/app/actions/doctor"
 import { CreditCard, CheckCircle2, CalendarClock, Clock } from "lucide-react"
 
 function fmtMoney(cents: number, currency = "eur") {
-  return new Intl.NumberFormat("es-ES", {
+  return new Intl.NumberFormat("it-IT", {
     style: "currency",
     currency: currency.toUpperCase(),
   }).format(cents / 100)
 }
 
-const dateFmt = new Intl.DateTimeFormat("es-ES", {
+const dateFmt = new Intl.DateTimeFormat("it-IT", {
   day: "numeric",
   month: "long",
   year: "numeric",
 })
 
 const STATUS_META: Record<string, { label: string; cls: string }> = {
-  active: { label: "Activa", cls: "bg-olive/15 text-olive" },
-  trialing: { label: "En prueba", cls: "bg-olive/15 text-olive" },
-  past_due: { label: "Pago pendiente", cls: "bg-amber/15 text-amber" },
-  incomplete: { label: "Incompleta", cls: "bg-amber/15 text-amber" },
-  canceled: { label: "Cancelada", cls: "bg-ink/[.08] text-ink-soft" },
+  active: { label: "Attivo", cls: "bg-olive/15 text-olive" },
+  trialing: { label: "In prova", cls: "bg-olive/15 text-olive" },
+  past_due: { label: "Pagamento in sospeso", cls: "bg-amber/15 text-amber" },
+  incomplete: { label: "Incompleto", cls: "bg-amber/15 text-amber" },
+  canceled: { label: "Annullato", cls: "bg-ink/[.08] text-ink-soft" },
 }
 
 export function DoctorBillingOverview({ billing }: { billing: DoctorBilling }) {
@@ -35,24 +35,24 @@ export function DoctorBillingOverview({ billing }: { billing: DoctorBilling }) {
           <div className="flex items-center gap-2 text-ink-soft">
             <CheckCircle2 className="size-4" aria-hidden />
             <span className="text-[12px] font-semibold uppercase tracking-[.06em]">
-              Pacientes activos
+              Pazienti attivi
             </span>
           </div>
           <p className="mt-2.5 text-[32px] font-light leading-none text-ink">{activeCount}</p>
-          <p className="mt-1 text-[12px] text-ink-mute">suscripciones en curso</p>
+          <p className="mt-1 text-[12px] text-ink-mute">abbonamenti in corso</p>
         </div>
 
         <div className="rounded-[16px] border border-ink/10 bg-cream p-5">
           <div className="flex items-center gap-2 text-ink-soft">
             <CalendarClock className="size-4" aria-hidden />
             <span className="text-[12px] font-semibold uppercase tracking-[.06em]">
-              Próximas renovaciones
+              Prossimi rinnovi
             </span>
           </div>
           <p className="mt-2.5 text-[32px] font-light leading-none text-ink">
             {upcomingPayouts.length}
           </p>
-          <p className="mt-1 text-[12px] text-ink-mute">en los próximos meses</p>
+          <p className="mt-1 text-[12px] text-ink-mute">nei prossimi mesi</p>
         </div>
       </div>
 
@@ -60,15 +60,15 @@ export function DoctorBillingOverview({ billing }: { billing: DoctorBilling }) {
       <section>
         <div className="flex items-center gap-2">
           <Clock className="size-4 text-ink-soft" aria-hidden />
-          <h3 className="text-[16px] font-medium text-ink">Próximas renovaciones</h3>
+          <h3 className="text-[16px] font-medium text-ink">Prossimi rinnovi</h3>
         </div>
         <p className="mt-1 text-[13.5px] text-ink-soft">
-          Fechas en las que tus pacientes renuevan su tratamiento.
+          Date in cui i tuoi pazienti rinnovano il trattamento.
         </p>
 
         {upcomingPayouts.length === 0 ? (
           <p className="mt-4 rounded-[14px] border border-dashed border-ink/15 bg-warm px-4 py-6 text-center text-[14px] text-ink-soft">
-            No hay renovaciones próximas.
+            Non ci sono rinnovi in arrivo.
           </p>
         ) : (
           <ul className="mt-4 flex flex-col gap-2">
@@ -93,13 +93,13 @@ export function DoctorBillingOverview({ billing }: { billing: DoctorBilling }) {
                   <div>
                     <p className="text-[14px] font-medium text-ink">{p.patientName}</p>
                     <p className="text-[12.5px] text-ink-soft">
-                      Renovación el{" "}
+                      Rinnovo il{" "}
                       <span className={isImminent ? "font-semibold text-olive" : ""}>
                         {dateFmt.format(p.renewalDate)}
                       </span>
                       {isImminent && (
                         <span className="ml-1.5 inline-flex items-center rounded-full bg-olive/15 px-1.5 py-0.5 text-[11px] font-medium text-olive">
-                          en {daysUntil}d
+                          tra {daysUntil}g
                         </span>
                       )}
                     </p>
@@ -113,13 +113,13 @@ export function DoctorBillingOverview({ billing }: { billing: DoctorBilling }) {
 
       {/* Suscripciones de pacientes */}
       <section>
-        <h3 className="text-[16px] font-medium text-ink">Suscripciones de tus pacientes</h3>
+        <h3 className="text-[16px] font-medium text-ink">Abbonamenti dei tuoi pazienti</h3>
         <p className="mt-1 text-[13.5px] text-ink-soft">
-          Estado de cada tratamiento y fecha del próximo cobro al paciente.
+          Stato di ogni trattamento e data del prossimo addebito al paziente.
         </p>
         {subscriptions.length === 0 ? (
           <p className="mt-4 rounded-[14px] border border-dashed border-ink/15 bg-warm px-4 py-6 text-center text-[14px] text-ink-soft">
-            Aún no tienes pacientes con suscripción activa.
+            Non hai ancora pazienti con abbonamento attivo.
           </p>
         ) : (
           <ul className="mt-4 flex flex-col gap-2.5">
@@ -141,7 +141,7 @@ export function DoctorBillingOverview({ billing }: { billing: DoctorBilling }) {
                       {s.currentPeriodEnd && (
                         <span className="inline-flex items-center gap-1">
                           <CalendarClock className="size-3.5" aria-hidden />
-                          {s.cancelAtPeriodEnd ? "Finaliza el " : "Próximo cobro: "}
+                          {s.cancelAtPeriodEnd ? "Termina il " : "Prossimo addebito: "}
                           {dateFmt.format(s.currentPeriodEnd)}
                         </span>
                       )}
@@ -151,7 +151,7 @@ export function DoctorBillingOverview({ billing }: { billing: DoctorBilling }) {
                     <p className="flex items-center gap-1 text-[14px] font-medium text-ink">
                       <CreditCard className="size-3.5 text-ink-mute" aria-hidden />
                       {fmtMoney(s.priceCents, s.currency)}
-                      <span className="text-[12px] font-normal text-ink-mute">/mes</span>
+                      <span className="text-[12px] font-normal text-ink-mute">/mese</span>
                     </p>
                   </div>
                 </li>

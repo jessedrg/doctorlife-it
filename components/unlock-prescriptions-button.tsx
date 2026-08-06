@@ -18,7 +18,7 @@ export function UnlockPrescriptionsButton({ priceLabel }: { priceLabel: string }
       }
       setError(res.error)
     } catch {
-      setError("No se pudo iniciar el pago. Inténtalo de nuevo.")
+      setError("Impossibile avviare il pagamento. Riprova.")
     }
     setLoading(false)
   }
@@ -31,7 +31,7 @@ export function UnlockPrescriptionsButton({ priceLabel }: { priceLabel: string }
         disabled={loading}
         className="inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
       >
-        {loading ? "Redirigiendo…" : `Activar tratamiento · ${priceLabel}`}
+        {loading ? "Reindirizzamento…" : `Attiva trattamento · ${priceLabel}`}
       </button>
       {error && <p className="text-xs text-clay">{error}</p>}
     </div>

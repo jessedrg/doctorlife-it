@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react"
 import { getRescheduleOptions } from "@/app/actions/booking"
 import { RescheduleCalendar } from "@/components/reschedule-calendar"
 
-export const metadata = { title: "Reprogramar cita — DoctorLife" }
+export const metadata = { title: "Riprogramma appuntamento — DoctorLife" }
 
 export default async function ReprogramarPage({
   params,
@@ -28,14 +28,14 @@ export default async function ReprogramarPage({
         className="mb-5 inline-flex items-center gap-1.5 text-sm text-ink/60 transition-colors hover:text-ink"
       >
         <ArrowLeft className="size-4" aria-hidden />
-        Volver a mis citas
+        Torna ai miei appuntamenti
       </Link>
 
       <header className="mb-6">
-        <h1 className="text-balance text-2xl font-semibold text-ink">Elige una nueva hora</h1>
+        <h1 className="text-balance text-2xl font-semibold text-ink">Scegli un nuovo orario</h1>
         <p className="mt-1.5 text-pretty text-ink/60">
-          Tu médico canceló esta cita. Selecciona el horario que mejor te venga y la
-          confirmamos al instante, sin coste adicional.
+          Il tuo medico ha annullato questo appuntamento. Seleziona l'orario che preferisci e lo
+          confermiamo all'istante, senza costi aggiuntivi.
         </p>
       </header>
 

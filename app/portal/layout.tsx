@@ -15,22 +15,22 @@ export default async function PortalLayout({ children }: { children: React.React
   const showReservar = patientStatus === "followup_available"
 
   const nav: { href: string; label: string; icon: NavIcon }[] = [
-    { href: "/portal", label: "Inicio", icon: "home" },
-    ...(showReservar ? [{ href: "/portal/reservar", label: "Reservar seguimiento", icon: "reservar" as NavIcon }] : []),
-    { href: "/portal/citas", label: "Mis citas", icon: "citas" },
-    { href: "/portal/progreso", label: "Mi progreso", icon: "progreso" },
+    { href: "/portal", label: "Home", icon: "home" },
+    ...(showReservar ? [{ href: "/portal/reservar", label: "Prenota follow-up", icon: "reservar" as NavIcon }] : []),
+    { href: "/portal/citas", label: "I miei appuntamenti", icon: "citas" },
+    { href: "/portal/progreso", label: "I miei progressi", icon: "progreso" },
     { href: "/portal/chat", label: "Chat", icon: "mensajes" },
-    { href: "/portal/recetas", label: "Recetas", icon: "recetas" },
-    { href: "/portal/cuenta", label: "Mi cuenta", icon: "cuenta" },
+    { href: "/portal/recetas", label: "Ricette", icon: "recetas" },
+    { href: "/portal/cuenta", label: "Il mio account", icon: "cuenta" },
   ]
   if (verificationPending) {
-    nav.splice(1, 0, { href: "/portal/verificacion", label: "Verificación", icon: "verificacion" })
+    nav.splice(1, 0, { href: "/portal/verificacion", label: "Verifica", icon: "verificacion" })
   }
 
   return (
     <PortalShell
       user={user}
-      badge="Paciente"
+      badge="Paziente"
       homeHref="/portal"
       nav={nav}
     >

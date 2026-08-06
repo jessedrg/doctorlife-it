@@ -27,11 +27,11 @@ function PrescriptionCard({
 }) {
   const [pdfOpen, setPdfOpen] = useState(false)
 
-  const dateStr = new Intl.DateTimeFormat("es-ES", {
+  const dateStr = new Intl.DateTimeFormat("it-IT", {
     day: "numeric",
     month: "long",
     year: "numeric",
-    timeZone: "Europe/Madrid",
+    timeZone: "Europe/Rome",
   }).format(new Date(p.issuedAt))
 
   if (locked) {
@@ -39,14 +39,14 @@ function PrescriptionCard({
       <div className="relative overflow-hidden rounded-2xl border border-ink/10 bg-paper p-5">
         {/* Blurred content */}
         <div className="select-none blur-sm" aria-hidden>
-          <p className="font-semibold text-ink">Tratamiento recetado</p>
-          <p className="mt-1 text-sm text-ink-soft">Posología disponible al activar</p>
+          <p className="font-semibold text-ink">Trattamento prescritto</p>
+          <p className="mt-1 text-sm text-ink-soft">Posologia disponibile all'attivazione</p>
         </div>
         {/* Lock overlay */}
         <div className="absolute inset-0 flex items-center justify-center rounded-2xl bg-cream/60 backdrop-blur-[2px]">
           <div className="flex flex-col items-center gap-1 text-center">
             <Lock className="size-5 text-ink-soft" />
-            <span className="text-xs font-medium text-ink-soft">Activa tu plan para ver</span>
+            <span className="text-xs font-medium text-ink-soft">Attiva il tuo piano per vedere</span>
           </div>
         </div>
       </div>
@@ -74,7 +74,7 @@ function PrescriptionCard({
               </span>
               <span className="flex items-center gap-1 text-xs text-ink-soft/60">
                 <User className="size-3" />
-                {showPatient ? `Paciente: ${p.patientName ?? "—"}` : `Dr. ${p.doctorName ?? "—"}`}
+                {showPatient ? `Paziente: ${p.patientName ?? "—"}` : `Dr. ${p.doctorName ?? "—"}`}
               </span>
             </div>
           </div>
@@ -88,7 +88,7 @@ function PrescriptionCard({
             className="flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-paper transition-opacity hover:opacity-90"
           >
             {pdfOpen ? <EyeOff className="size-3.5" /> : <Eye className="size-3.5" />}
-            {pdfOpen ? "Cerrar" : "Ver receta"}
+            {pdfOpen ? "Chiudi" : "Vedi ricetta"}
           </button>
           <a
             href={`/api/prescriptions/${p.id}`}
@@ -108,7 +108,7 @@ function PrescriptionCard({
         <div className="border-t border-ink/8 px-5 pb-5 pt-4">
           <iframe
             src={`/api/prescriptions/${p.id}#toolbar=0`}
-            title={`Receta: ${p.medication}`}
+            title={`Ricetta: ${p.medication}`}
             className="h-[600px] w-full rounded-xl border border-ink/10 bg-cream"
           />
         </div>
@@ -130,11 +130,11 @@ export function PrescriptionList({
     return (
       <EmptyState
         icon={FileText}
-        title={showPatient ? "Aún no has emitido recetas" : "Todavía no tienes recetas"}
+        title={showPatient ? "Non hai ancora emesso ricette" : "Non hai ancora ricette"}
         description={
           showPatient
-            ? "Cuando emitas una receta, aparecerá aquí y quedará disponible en el portal de tu paciente."
-            : "Tu médico publicará aquí tus tratamientos. Podrás verlos y descargarlos en PDF cuando estén listos."
+            ? "Quando emetti una ricetta, apparirà qui e sarà disponibile nel portale del tuo paziente."
+            : "Il tuo medico pubblicherà qui i tuoi trattamenti. Potrai vederli e scaricarli in PDF quando saranno pronti."
         }
       />
     )
@@ -152,11 +152,11 @@ export function PrescriptionList({
               <Lock className="size-4 text-amber-700" />
             </span>
             <div className="min-w-0">
-              <p className="font-semibold text-ink">Tu receta está lista</p>
+              <p className="font-semibold text-ink">La tua ricetta è pronta</p>
               <p className="mt-1 text-sm leading-relaxed text-ink-soft">
-                Tu médico ha preparado tu tratamiento. Para verlo y descargar el PDF, activa tu
-                suscripción mensual. Incluye seguimiento con tu médico, una consulta por llamada al
-                mes y chat en vivo, por {MAIN_PLAN.totalLabel}. Sin permanencia: cancela cuando quieras.
+                Il tuo medico ha preparato il tuo trattamento. Per vederlo e scaricare il PDF, attiva
+                il tuo abbonamento mensile. Include il monitoraggio con il tuo medico, una consulenza
+                telefonica al mese e chat dal vivo, per {MAIN_PLAN.totalLabel}. Nessun vincolo: disdici quando vuoi.
               </p>
               <div className="mt-3">
                 <UnlockPrescriptionsButton priceLabel={MAIN_PLAN.totalLabel} />
