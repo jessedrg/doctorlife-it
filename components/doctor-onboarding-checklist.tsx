@@ -15,29 +15,29 @@ type Step = {
 const STEPS: Step[] = [
   {
     key: "payments",
-    title: "Cuenta de cobros (Stripe)",
-    doneText: "Puedes recibir pagos y transferencias de tus pacientes.",
-    todoText: "Conecta Stripe Connect para poder cobrar las consultas.",
+    title: "Conto per incassi (Stripe)",
+    doneText: "Puoi ricevere pagamenti e bonifici dai tuoi pazienti.",
+    todoText: "Collega Stripe Connect per poter incassare le visite.",
     href: "/clinica/pagos",
-    cta: "Configurar Stripe",
+    cta: "Configura Stripe",
     icon: CreditCard,
   },
   {
     key: "availability",
-    title: "Disponibilidad",
-    doneText: "Tienes franjas horarias configuradas.",
-    todoText: "Define tu horario semanal para generar huecos reservables.",
+    title: "Disponibilità",
+    doneText: "Hai delle fasce orarie configurate.",
+    todoText: "Definisci il tuo orario settimanale per generare slot prenotabili.",
     href: "/clinica/disponibilidad",
-    cta: "Configurar horario",
+    cta: "Configura orario",
     icon: CalendarClock,
   },
   {
     key: "googleMeet",
-    title: "Google Calendar y Meet",
-    doneText: "Cada cita generará una videollamada de Google Meet automáticamente.",
-    todoText: "Conecta Google para crear las videollamadas con tus pacientes.",
+    title: "Google Calendar e Meet",
+    doneText: "Ogni appuntamento genererà automaticamente una videochiamata Google Meet.",
+    todoText: "Collega Google per creare le videochiamate con i tuoi pazienti.",
     href: "/clinica/cuenta",
-    cta: "Conectar Google",
+    cta: "Collega Google",
     icon: Video,
   },
 ]
@@ -54,9 +54,9 @@ export function DoctorOnboardingChecklist({ readiness }: { readiness: DoctorRead
             <Check className="size-4" aria-hidden />
           </span>
           <div>
-            <h2 className="text-[16px] font-medium text-ink">Tu perfil está activo</h2>
+            <h2 className="text-[16px] font-medium text-ink">Il tuo profilo è attivo</h2>
             <p className="text-[14px] leading-relaxed text-ink-soft">
-              Apareces en la página de reservas y los pacientes ya pueden agendar contigo.
+              Compari nella pagina di prenotazione e i pazienti possono già prenotare con te.
             </p>
           </div>
         </div>
@@ -68,14 +68,14 @@ export function DoctorOnboardingChecklist({ readiness }: { readiness: DoctorRead
     <div className="rounded-[22px] border border-amber/30 bg-amber/[.08] p-6">
       <div className="flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h2 className="text-[18px] font-medium text-ink">Completa tu configuración</h2>
+          <h2 className="text-[18px] font-medium text-ink">Completa la tua configurazione</h2>
           <p className="mt-1 max-w-[60ch] text-[14.5px] leading-relaxed text-ink-soft">
-            Para empezar a recibir pacientes en la página de reservas necesitas terminar estos
-            pasos. Hasta entonces, tu disponibilidad no se publica.
+            Per iniziare a ricevere pazienti nella pagina di prenotazione devi completare questi
+            passaggi. Fino ad allora, la tua disponibilità non viene pubblicata.
           </p>
         </div>
         <span className="rounded-full bg-paper px-3 py-1 text-[12.5px] font-semibold text-ink">
-          {completed} de {total} completados
+          {completed} di {total} completati
         </span>
       </div>
 
@@ -104,7 +104,7 @@ export function DoctorOnboardingChecklist({ readiness }: { readiness: DoctorRead
               {done ? (
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-olive/12 px-3 py-1 text-[12.5px] font-medium text-olive">
                   <Check className="size-3.5" aria-hidden />
-                  Listo
+                  Fatto
                 </span>
               ) : (
                 <Link

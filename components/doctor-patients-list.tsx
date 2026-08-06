@@ -8,18 +8,18 @@ import { EmptyState } from "@/components/empty-state"
 import { PatientDetailPanel } from "@/components/patient-detail-panel"
 import type { DoctorPatient } from "@/app/actions/doctor"
 
-const dateFmt = new Intl.DateTimeFormat("es-ES", { dateStyle: "medium" })
+const dateFmt = new Intl.DateTimeFormat("it-IT", { dateStyle: "medium" })
 
 const ACTIVE = ["active", "trialing", "past_due"]
 
 function statusBadge(status: string | null) {
   if (status && ACTIVE.includes(status)) {
-    return { label: "Tratamiento activo", cls: "bg-olive/15 text-olive" }
+    return { label: "Trattamento attivo", cls: "bg-olive/15 text-olive" }
   }
   if (status === "canceled" || status === "incomplete") {
-    return { label: "Tratamiento inactivo", cls: "bg-clay/15 text-clay" }
+    return { label: "Trattamento inattivo", cls: "bg-clay/15 text-clay" }
   }
-  return { label: "Sin tratamiento", cls: "bg-ink/8 text-ink-soft" }
+  return { label: "Nessun trattamento", cls: "bg-ink/8 text-ink-soft" }
 }
 
 type Filter = "all" | "active" | "inactive"
@@ -42,9 +42,9 @@ export function DoctorPatientsList({ patients }: { patients: DoctorPatient[] }) 
   }, [patients, query, filter])
 
   const tabs: { key: Filter; label: string }[] = [
-    { key: "all", label: "Todos" },
-    { key: "active", label: "En tratamiento" },
-    { key: "inactive", label: "Sin tratamiento" },
+    { key: "all", label: "Tutti" },
+    { key: "active", label: "In trattamento" },
+    { key: "inactive", label: "Senza trattamento" },
   ]
 
   if (patients.length === 0) {
@@ -52,9 +52,9 @@ export function DoctorPatientsList({ patients }: { patients: DoctorPatient[] }) 
       <div className="mt-6">
         <EmptyState
           icon={Users}
-          title="Aún no tienes pacientes"
-          description="Cuando un paciente reserve una consulta contigo, aparecerá aquí con su estado de tratamiento, su historial de citas y accesos rápidos al chat y a las recetas."
-          action={{ href: "/clinica/disponibilidad", label: "Revisar mi disponibilidad" }}
+          title="Non hai ancora pazienti"
+          description="Quando un paziente prenoterà una visita con te, apparirà qui con il suo stato di trattamento, lo storico degli appuntamenti e accessi rapidi alla chat e alle ricette."
+          action={{ href: "/clinica/disponibilidad", label: "Controlla la mia disponibilità" }}
         />
       </div>
     )
@@ -68,7 +68,7 @@ export function DoctorPatientsList({ patients }: { patients: DoctorPatient[] }) 
           <input
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Buscar por nombre o email…"
+            placeholder="Cerca per nome o email…"
             className="w-full bg-transparent text-[14px] text-ink outline-none placeholder:text-ink-soft"
           />
         </div>
@@ -90,7 +90,7 @@ export function DoctorPatientsList({ patients }: { patients: DoctorPatient[] }) 
 
       {filtered.length === 0 ? (
         <div className="mt-6 rounded-[20px] border border-ink/10 bg-cream p-6 text-center text-[14px] text-ink-soft">
-          No hay pacientes que coincidan.
+          Nessun paziente corrisponde.
         </div>
       ) : (
         <ul className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -121,19 +121,19 @@ export function DoctorPatientsList({ patients }: { patients: DoctorPatient[] }) 
 
                 <dl className="grid grid-cols-3 gap-2 border-t border-ink/10 pt-3 text-center">
                   <div>
-                    <dt className="text-[11px] uppercase tracking-[.04em] text-ink-mute">Citas</dt>
+                    <dt className="text-[11px] uppercase tracking-[.04em] text-ink-mute">Appuntamenti</dt>
                     <dd className="mt-0.5 text-[15px] font-medium text-ink">
                       {p.totalAppointments}
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-[11px] uppercase tracking-[.04em] text-ink-mute">Última</dt>
+                    <dt className="text-[11px] uppercase tracking-[.04em] text-ink-mute">Ultima</dt>
                     <dd className="mt-0.5 text-[12.5px] text-ink">
                       {p.lastVisit ? dateFmt.format(new Date(p.lastVisit)) : "—"}
                     </dd>
                   </div>
                   <div>
-                    <dt className="text-[11px] uppercase tracking-[.04em] text-ink-mute">Próxima</dt>
+                    <dt className="text-[11px] uppercase tracking-[.04em] text-ink-mute">Prossima</dt>
                     <dd className="mt-0.5 text-[12.5px] text-ink">
                       {p.nextVisit ? dateFmt.format(new Date(p.nextVisit)) : "—"}
                     </dd>
@@ -153,7 +153,7 @@ export function DoctorPatientsList({ patients }: { patients: DoctorPatient[] }) 
                     className="flex flex-1 items-center justify-center gap-1.5 rounded-full border border-ink/15 py-2 text-[13px] font-medium text-ink transition-colors hover:bg-ink/5"
                   >
                     <FileText className="size-4" aria-hidden />
-                    Recetar
+                    Prescrivi
                   </Link>
                 </div>
 
@@ -167,7 +167,7 @@ export function DoctorPatientsList({ patients }: { patients: DoctorPatient[] }) 
                     className={`size-4 transition-transform ${isExpanded ? "rotate-180" : ""}`}
                     aria-hidden
                   />
-                  {isExpanded ? "Ocultar ficha" : "Ver ficha del paciente"}
+                  {isExpanded ? "Nascondi scheda" : "Vedi scheda del paziente"}
                 </button>
 
                 {isExpanded ? <PatientDetailPanel patientId={p.id} /> : null}

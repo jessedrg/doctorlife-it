@@ -193,13 +193,17 @@ export async function sendRescheduleConfirmedEmail(opts: {
   doctorName?: string | null
   startsAt: Date
   reassigned: boolean
+  byDoctor?: boolean
 }) {
   const firstName = opts.name.split(" ")[0] || "ciao"
   const when = formatWhen(opts.startsAt)
   const rows = [{ label: "Nuovo appuntamento", value: when }]
   if (opts.doctorName) rows.push({ label: "Medico", value: opts.doctorName })
+  const intro = opts.byDoctor
+    ? `Ciao ${firstName}, il tuo medico ha riprogrammato il tuo appuntamento. Il nuovo orario è già confermato: non devi fare nulla.`
+    : `Ciao ${firstName}, il tuo appuntamento è stato riprogrammato correttamente.`
   const body = `
-    ${p(`Ciao ${firstName}, il tuo appuntamento è stato riprogrammato correttamente.`)}
+    ${p(intro)}
     ${opts.reassigned ? p("Per quell'orario ti abbiamo assegnato un medico disponibile.") : ""}
     ${dataBox(rows)}
     ${p("Troverai il link della videochiamata nel tuo pannello.")}

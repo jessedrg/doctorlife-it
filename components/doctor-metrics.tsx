@@ -11,7 +11,7 @@ type Metric = {
 }
 
 function formatEur(cents: number, currency = "eur") {
-  return new Intl.NumberFormat("es-ES", {
+  return new Intl.NumberFormat("it-IT", {
     style: "currency",
     currency: currency.toUpperCase(),
     maximumFractionDigits: 0,
@@ -21,53 +21,53 @@ function formatEur(cents: number, currency = "eur") {
 export function DoctorMetricsGrid({ metrics }: { metrics: DoctorMetrics }) {
   const items: Metric[] = [
     {
-      label: "Citas hoy",
+      label: "Appuntamenti oggi",
       value: String(metrics.appointmentsToday),
-      hint: "Programadas para hoy",
+      hint: "Programmati per oggi",
       href: "/clinica/agenda",
       icon: CalendarCheck,
     },
     {
-      label: "Próximas citas",
+      label: "Prossimi appuntamenti",
       value: String(metrics.upcomingAppointments),
-      hint: "A partir de ahora",
+      hint: "Da adesso in poi",
       href: "/clinica/citas",
       icon: CalendarClock,
     },
     {
-      label: "Pacientes",
+      label: "Pazienti",
       value: String(metrics.totalPatients),
-      hint: "Con consulta realizada",
+      hint: "Con visita effettuata",
       href: "/clinica/pacientes",
       icon: Users,
     },
     {
-      label: "Suscripciones activas",
+      label: "Abbonamenti attivi",
       value: String(metrics.activeSubscriptions),
-      hint: "Pacientes con plan vigente",
+      hint: "Pazienti con piano in corso",
       href: "/clinica/pagos",
       icon: CreditCard,
     },
     {
-      label: "Recetas emitidas",
+      label: "Ricette emesse",
       value: String(metrics.prescriptionsIssued),
-      hint: "Total acumulado",
+      hint: "Totale accumulato",
       href: "/clinica/recetas",
       icon: FileText,
     },
     {
-      label: "Comisiones",
+      label: "Commissioni",
       value: formatEur(metrics.totalCommissionCents),
-      hint: "Ingresos acumulados",
+      hint: "Ricavi accumulati",
       href: "/clinica/pagos",
       icon: Wallet,
     },
   ]
 
   return (
-    <section aria-label="Resumen de tu actividad">
+    <section aria-label="Riepilogo della tua attività">
       <h2 className="text-[13px] font-semibold uppercase tracking-[.08em] text-ink-mute">
-        Resumen
+        Riepilogo
       </h2>
       <div className="mt-3 grid grid-cols-2 gap-3 lg:grid-cols-3">
         {items.map((m) => {

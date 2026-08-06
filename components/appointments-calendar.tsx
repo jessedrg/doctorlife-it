@@ -13,8 +13,9 @@ import {
   CircleDot,
   AlertTriangle,
   Loader2,
+  CalendarClock,
 } from "lucide-react"
-import { cancelAppointmentAsDoctor } from "@/app/actions/booking"
+import { cancelAppointmentAsDoctor, doctorRescheduleAppointment } from "@/app/actions/booking"
 
 export type DoctorAppointment = {
   id: number
@@ -38,6 +39,19 @@ const MONTHS = [
 ]
 
 const timeFmt = new Intl.DateTimeFormat("it-IT", { hour: "2-digit", minute: "2-digit", timeZone: TZ })
+
+/* Valores iniciales para <input type="date"|"time"> a partir de un Date (hora local del navegador). */
+function toLocalDateInput(d: Date): string {
+  const y = d.getFullYear()
+  const mo = String(d.getMonth() + 1).padStart(2, "0")
+  const day = String(d.getDate()).padStart(2, "0")
+  return `${y}-${mo}-${day}`
+}
+function toLocalTimeInput(d: Date): string {
+  const h = String(d.getHours()).padStart(2, "0")
+  const mi = String(d.getMinutes()).padStart(2, "0")
+  return `${h}:${mi}`
+}
 
 /** Devuelve el índice de día de la semana con lunes = 0. */
 function mondayIndex(d: Date) {
@@ -388,6 +402,7 @@ function MiniEvent({ it, onSelect }: { it: Item; onSelect: (a: Item) => void }) 
 function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; onClose: () => void }) {
   const router = useRouter()
   const [confirming, setConfirming] = useState(false)
+  const [rescheduling, setRescheduling] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -405,6 +420,10 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
   const canCancel = isUpcoming && appt.status !== "cancelled"
   // Primera consulta (de pago) → al reprogramar puede reasignarse a otro médico.
   const isFirstConsult = appt.amountCents > 0
+
+  // Valores por defecto para los inputs de reprogramación (hora local del médico).
+  const [newDate, setNewDate] = useState<string>(() => toLocalDateInput(start))
+  const [newTime, setNewTime] = useState<string>(() => toLocalTimeInput(start))
 
   async function doCancel() {
     setLoading(true)
@@ -424,6 +443,38 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
     }
   }
 
+  async function doReschedule() {
+    setError(null)
+    if (!newDate || !newTime) {
+      setError("Scegli data e ora.")
+      return
+    }
+    // Construye un instante a partir de la fecha/hora locales introducidas.
+    const iso = new Date(`${newDate}T${newTime}`).toISOString()
+    if (Number.isNaN(new Date(iso).getTime())) {
+      setError("Data od ora non valida.")
+      return
+    }
+    if (new Date(iso).getTime() < Date.now()) {
+      setError("Scegli un orario futuro.")
+      return
+    }
+    setLoading(true)
+    try {
+      const res = await doctorRescheduleAppointment(appt.id, iso)
+      if ("error" in res) {
+        setError(res.error)
+        setLoading(false)
+        return
+      }
+      onClose()
+      router.refresh()
+    } catch {
+      setError("Impossibile riprogrammare. Riprova.")
+      setLoading(false)
+    }
+  }
+
   return (
     <div
       className="fixed inset-0 z-50 flex items-end justify-center bg-ink/40 p-0 sm:items-center sm:p-4"
@@ -437,7 +488,72 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
       >
         <div className="mx-auto mb-4 h-1 w-10 rounded-full bg-ink/15 sm:hidden" />
 
-        {confirming ? (
+        {rescheduling ? (
+          <div>
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-teal/25 bg-teal/12 px-2.5 py-1 text-[12.5px] font-medium text-teal">
+              <CalendarClock className="size-3.5" aria-hidden />
+              Riprogramma appuntamento
+            </span>
+            <h3 className="mt-3 text-[20px] font-light tracking-[-.01em] text-ink">
+              Scegli la nuova data e ora
+            </h3>
+            <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink-soft">
+              L'appuntamento con <strong>{appt.patientName}</strong> verrà spostato subito e resterà
+              assegnato a te. Il paziente riceverà un'email con il nuovo orario già confermato.
+            </p>
+
+            <div className="mt-4 flex gap-3">
+              <label className="flex-1 text-[12.5px] font-medium text-ink">
+                Data
+                <input
+                  type="date"
+                  value={newDate}
+                  min={toLocalDateInput(new Date())}
+                  onChange={(e) => setNewDate(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-ink/15 bg-warm px-3 py-2.5 text-[14px] text-ink outline-none focus:border-ink/30"
+                />
+              </label>
+              <label className="w-[130px] text-[12.5px] font-medium text-ink">
+                Ora
+                <input
+                  type="time"
+                  value={newTime}
+                  onChange={(e) => setNewTime(e.target.value)}
+                  className="mt-1 w-full rounded-xl border border-ink/15 bg-warm px-3 py-2.5 text-[14px] text-ink outline-none focus:border-ink/30"
+                />
+              </label>
+            </div>
+
+            {error ? (
+              <p role="alert" className="mt-3 text-[13px] text-clay">
+                {error}
+              </p>
+            ) : null}
+
+            <div className="mt-6 flex gap-2.5">
+              <button
+                type="button"
+                disabled={loading}
+                onClick={doReschedule}
+                className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-ink px-4 py-3 text-[14.5px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
+              >
+                {loading ? <Loader2 className="size-4.5 animate-spin" aria-hidden /> : null}
+                Conferma nuovo orario
+              </button>
+              <button
+                type="button"
+                disabled={loading}
+                onClick={() => {
+                  setRescheduling(false)
+                  setError(null)
+                }}
+                className="flex-1 rounded-xl border border-ink/15 px-4 py-3 text-[14.5px] font-medium text-ink transition-colors hover:bg-warm disabled:opacity-60"
+              >
+                Indietro
+              </button>
+            </div>
+          </div>
+        ) : confirming ? (
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-clay/25 bg-clay/12 px-2.5 py-1 text-[12.5px] font-medium text-clay">
               <AlertTriangle className="size-3.5" aria-hidden />
@@ -538,13 +654,28 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
             </div>
 
             {canCancel ? (
-              <button
-                type="button"
-                onClick={() => setConfirming(true)}
-                className="mt-2.5 w-full rounded-xl px-4 py-2.5 text-[13.5px] font-medium text-clay transition-colors hover:bg-clay/10"
-              >
-                Annulla questo appuntamento
-              </button>
+              <>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setError(null)
+                    setNewDate(toLocalDateInput(start))
+                    setNewTime(toLocalTimeInput(start))
+                    setRescheduling(true)
+                  }}
+                  className="mt-2.5 flex w-full items-center justify-center gap-2 rounded-xl border border-ink/15 px-4 py-2.5 text-[13.5px] font-medium text-ink transition-colors hover:bg-warm"
+                >
+                  <CalendarClock className="size-4" aria-hidden />
+                  Riprogramma a un altro orario
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setConfirming(true)}
+                  className="mt-2 w-full rounded-xl px-4 py-2.5 text-[13.5px] font-medium text-clay transition-colors hover:bg-clay/10"
+                >
+                  Annulla questo appuntamento
+                </button>
+              </>
             ) : null}
           </div>
         )}

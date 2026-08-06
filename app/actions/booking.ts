@@ -455,6 +455,128 @@ export async function cancelAppointmentAsDoctor(
   return { ok: true }
 }
 
+/**
+ * El médico reprograma directamente una de sus citas a la fecha y hora que él
+ * elija. A diferencia del flujo del paciente, el médico NO está limitado a sus
+ * huecos publicados: puede fijar cualquier instante futuro. La cita se mueve al
+ * instante (queda confirmada), se mantiene el mismo médico y el paciente recibe
+ * un email con la nueva hora ya confirmada (no tiene que elegir nada).
+ */
+export async function doctorRescheduleAppointment(
+  appointmentId: number,
+  startUtcISO: string,
+): Promise<{ ok: true; newId: number } | { error: string }> {
+  const me = await requireRole("doctor")
+
+  const [old] = await db.select().from(appointments).where(eq(appointments.id, appointmentId))
+  if (!old || old.doctorId !== me.id) return { error: "Appuntamento non trovato." }
+  if (old.status === "cancelled") return { error: "L'appuntamento è già stato annullato." }
+  if (old.rescheduledToId) return { error: "Questo appuntamento è già stato riprogrammato." }
+
+  const start = new Date(startUtcISO)
+  if (Number.isNaN(start.getTime()) || start.getTime() < Date.now()) {
+    return { error: "Quell'orario non è più valido." }
+  }
+
+  // Duración: conserva la de la cita original.
+  const durationMs = new Date(old.endsAt).getTime() - new Date(old.startsAt).getTime()
+  const endUtc = new Date(start.getTime() + (durationMs > 0 ? durationMs : 30 * 60_000))
+
+  // Evita solapar con otra cita activa del propio médico a esa hora.
+  const clash = await db
+    .select({ id: appointments.id })
+    .from(appointments)
+    .where(
+      and(
+        eq(appointments.doctorId, me.id),
+        ne(appointments.status, "cancelled"),
+        eq(appointments.startsAt, start),
+      ),
+    )
+  if (clash.length > 0) {
+    return { error: "Hai già un appuntamento a quell'ora." }
+  }
+
+  const followup = !isFirstConsult(old.amountCents)
+
+  // Crea la nueva cita confirmada (sin cobrar de nuevo; hereda el importe).
+  let newId: number
+  try {
+    const [row] = await db
+      .insert(appointments)
+      .values({
+        patientId: old.patientId,
+        doctorId: me.id,
+        startsAt: start,
+        endsAt: endUtc,
+        status: "confirmed",
+        amountCents: old.amountCents,
+        applicationFeeCents: old.applicationFeeCents,
+        currency: old.currency,
+        stripeSessionId: old.stripeSessionId,
+        stripePaymentIntentId: old.stripePaymentIntentId,
+      })
+      .returning({ id: appointments.id })
+    newId = row.id
+  } catch {
+    return { error: "Impossibile riprogrammare. Riprova." }
+  }
+
+  // Cancela el evento de Google Meet antiguo y marca la cita antigua como movida.
+  await maybeCancelMeeting(old.doctorId, old.googleEventId)
+  await db
+    .update(appointments)
+    .set({ status: "cancelled", cancelledBy: "doctor", rescheduledToId: newId, updatedAt: new Date() })
+    .where(eq(appointments.id, appointmentId))
+
+  // Crea el enlace de la nueva videollamada.
+  const [doc] = await db
+    .select({ email: user.email, fullName: doctorProfiles.fullName })
+    .from(doctorProfiles)
+    .innerJoin(user, eq(user.id, doctorProfiles.userId))
+    .where(eq(doctorProfiles.userId, me.id))
+  const [pat] = await db
+    .select({ email: user.email, name: user.name })
+    .from(user)
+    .where(eq(user.id, old.patientId))
+  const meeting = await maybeCreateMeeting({
+    doctorId: me.id,
+    doctorEmail: doc?.email ?? "",
+    patientEmail: pat?.email ?? "",
+    summary: followup ? "Seguimiento mensual · DoctorLife" : "Primera consulta · DoctorLife",
+    startUtc: start,
+    endUtc,
+  })
+  if (meeting.meetingUrl || meeting.googleEventId) {
+    await db
+      .update(appointments)
+      .set({ meetingUrl: meeting.meetingUrl, googleEventId: meeting.googleEventId, updatedAt: new Date() })
+      .where(eq(appointments.id, newId))
+  }
+
+  // Confirmación al paciente con la nueva hora ya fijada por el médico.
+  if (pat?.email) {
+    try {
+      await sendRescheduleConfirmedEmail({
+        to: pat.email,
+        name: pat.name ?? "",
+        doctorName: doc?.fullName ?? null,
+        startsAt: start,
+        reassigned: false,
+        byDoctor: true,
+      })
+    } catch (e) {
+      console.log("[v0] doctor reschedule email failed:", e instanceof Error ? e.message : e)
+    }
+  }
+
+  revalidatePath("/clinica/agenda")
+  revalidatePath("/clinica/citas")
+  revalidatePath("/portal/citas")
+  revalidatePath("/portal")
+  return { ok: true, newId }
+}
+
 /** Huecos libres de UN médico concreto (para reprogramar seguimientos). */
 async function getSingleDoctorSlots(doctorId: string, days = 21): Promise<PooledSlot[]> {
   const from = new Date()

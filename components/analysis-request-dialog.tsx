@@ -4,43 +4,43 @@ import { useState } from "react"
 import { FlaskConical, X, Check } from "lucide-react"
 
 /** Prefijo marcador para reconocer mensajes de solicitud de análisis. */
-export const ANALYSIS_PREFIX = "[ANÁLISIS]"
+export const ANALYSIS_PREFIX = "[ANALISI]"
 
 type TestCatalogItem = { id: string; label: string }
 type TestGroup = { group: string; items: TestCatalogItem[] }
 
 const CATALOG: TestGroup[] = [
   {
-    group: "Sangre general",
+    group: "Sangue generale",
     items: [
-      { id: "hemograma", label: "Hemograma completo" },
-      { id: "vsg", label: "VSG / PCR" },
-      { id: "coagulacion", label: "Coagulación" },
+      { id: "hemograma", label: "Emocromo completo" },
+      { id: "vsg", label: "VES / PCR" },
+      { id: "coagulacion", label: "Coagulazione" },
     ],
   },
   {
-    group: "Metabólico",
+    group: "Metabolico",
     items: [
-      { id: "glucosa", label: "Glucosa en ayunas" },
-      { id: "hba1c", label: "Hemoglobina glicosilada (HbA1c)" },
-      { id: "lipidos", label: "Perfil lipídico (colesterol/triglicéridos)" },
-      { id: "insulina", label: "Insulina basal" },
+      { id: "glucosa", label: "Glicemia a digiuno" },
+      { id: "hba1c", label: "Emoglobina glicata (HbA1c)" },
+      { id: "lipidos", label: "Profilo lipidico (colesterolo/trigliceridi)" },
+      { id: "insulina", label: "Insulina basale" },
     ],
   },
   {
-    group: "Hormonal / Tiroides",
+    group: "Ormonale / Tiroide",
     items: [
-      { id: "tsh", label: "TSH y T4 libre" },
-      { id: "cortisol", label: "Cortisol" },
+      { id: "tsh", label: "TSH e T4 libera" },
+      { id: "cortisol", label: "Cortisolo" },
       { id: "vitd", label: "Vitamina D" },
     ],
   },
   {
-    group: "Órganos",
+    group: "Organi",
     items: [
-      { id: "hepatico", label: "Perfil hepático" },
-      { id: "renal", label: "Función renal (creatinina/urea)" },
-      { id: "orina", label: "Análisis de orina" },
+      { id: "hepatico", label: "Profilo epatico" },
+      { id: "renal", label: "Funzione renale (creatinina/urea)" },
+      { id: "orina", label: "Analisi delle urine" },
     ],
   },
 ]
