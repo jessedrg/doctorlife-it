@@ -26,7 +26,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
   function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0] ?? null
     if (file && file.type !== "application/pdf") {
-      setError("Solo se admiten archivos PDF.")
+      setError("Sono ammessi solo file PDF.")
       setPdfFile(null)
       return
     }
@@ -42,7 +42,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (!medication.trim() || !dosage.trim()) {
-      setError("Medicamento y posología son obligatorios.")
+      setError("Farmaco e posologia sono obbligatori.")
       return
     }
 
@@ -62,7 +62,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
       const json = await res.json()
 
       if (!res.ok || json.error) {
-        setError(json.error ?? "Error al emitir la receta.")
+        setError(json.error ?? "Errore durante l'emissione della ricetta.")
         return
       }
 
@@ -74,7 +74,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
       if (fileInputRef.current) fileInputRef.current.value = ""
       router.refresh()
     } catch {
-      setError("Error de red. Inténtalo de nuevo.")
+      setError("Errore di rete. Riprova.")
     } finally {
       setLoading(false)
     }
@@ -83,7 +83,7 @@ export function PrescriptionForm({ patients }: { patients: PatientOption[] }) {
   if (patients.length === 0) {
     return (
       <p className="text-[14px] text-ink-soft">
-        Aún no tienes pacientes con cita. Podrás emitir recetas cuando un paciente reserve contigo.
+        Non hai ancora pazienti con appuntamento. Potrai emettere ricette quando un paziente prenoterà con te.
       </p>
     )
   }

@@ -51,7 +51,7 @@ export function ChangePasswordForm() {
         />
       </label>
       <label className="flex flex-col gap-1.5 text-[13px] font-medium text-ink-soft">
-        Nueva contraseña
+        Nuova password
         <input
           type="password"
           value={next}
@@ -63,7 +63,7 @@ export function ChangePasswordForm() {
         />
       </label>
       <label className="flex flex-col gap-1.5 text-[13px] font-medium text-ink-soft">
-        Repite la nueva contraseña
+        Ripeti la nuova password
         <input
           type="password"
           value={confirm}
@@ -82,7 +82,7 @@ export function ChangePasswordForm() {
         disabled={loading}
         className="mt-1 w-full rounded-[13px] bg-ink py-3.5 text-[15px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
       >
-        {loading ? "Guardando..." : "Cambiar contraseña"}
+        {loading ? "Salvataggio..." : "Cambia password"}
       </button>
     </form>
   )
