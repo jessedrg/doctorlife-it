@@ -105,7 +105,7 @@ export function LeadForm({ source = "articulo" }: { source?: string }) {
             onChange={(e) => setEmail(e.target.value)}
             aria-invalid={Boolean(errors.email)}
             className={`${inputBase} ${errors.email ? "border-clay" : "border-ink/15"}`}
-            placeholder="tucorreo@email.com"
+            placeholder="latuaemail@email.com"
           />
           {errors.email && <p className="text-[13px] text-clay">{errors.email}</p>}
         </div>
@@ -159,16 +159,16 @@ export function LeadForm({ source = "articulo" }: { source?: string }) {
         {status === "loading" ? (
           <>
             <Loader2 aria-hidden className="h-4 w-4 animate-spin" />
-            Enviando…
+            Invio…
           </>
         ) : (
-          "Solicitar valoración gratuita"
+          "Richiedi valutazione gratuita"
         )}
       </button>
 
       <p className="flex items-center justify-center gap-2 text-[12.5px] text-ink-mute">
         <ShieldCheck aria-hidden className="h-3.5 w-3.5 text-olive" />
-        Médicos colegiados · 100% online · Sin compromiso
+        Medici iscritti all&apos;albo · 100% online · Senza impegno
       </p>
     </div>
   );
