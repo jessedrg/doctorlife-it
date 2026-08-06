@@ -42,7 +42,7 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
     setUploading(false)
     if (res.ok) {
       setImage(res.url)
-      setMsg({ ok: true, text: "Foto actualizada." })
+      setMsg({ ok: true, text: "Foto aggiornata." })
     } else {
       setMsg({ ok: false, text: res.error })
     }
@@ -63,8 +63,8 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
       })
       setMsg(
         res.ok
-          ? { ok: true, text: "Perfil guardado." }
-          : { ok: false, text: res.error ?? "No se pudo guardar." },
+          ? { ok: true, text: "Profilo salvato." }
+          : { ok: false, text: res.error ?? "Impossibile salvare." },
       )
     })
   }
@@ -78,7 +78,7 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
       {/* Foto */}
       <div className="flex items-center gap-4">
         <div className="relative">
-          <UserAvatar name={fullName || "Médico"} image={image} size={76} />
+          <UserAvatar name={fullName || "Medico"} image={image} size={76} />
           {uploading && (
             <span className="absolute inset-0 flex items-center justify-center rounded-full bg-ink/40">
               <Loader2 className="size-5 animate-spin text-paper" aria-hidden />
@@ -93,9 +93,9 @@ export function DoctorProfileForm({ profile }: { profile: Profile }) {
             className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-warm px-4 py-2 text-[13.5px] font-medium text-ink transition-colors hover:bg-ink/5 disabled:opacity-60"
           >
             <Camera className="size-4" aria-hidden />
-            {image ? "Cambiar foto" : "Subir foto"}
+            {image ? "Cambia foto" : "Carica foto"}
           </button>
-          <p className="mt-1.5 text-[12px] text-ink-mute">JPG o PNG, hasta 5 MB.</p>
+          <p className="mt-1.5 text-[12px] text-ink-mute">JPG o PNG, fino a 5 MB.</p>
           <input
             ref={fileRef}
             type="file"

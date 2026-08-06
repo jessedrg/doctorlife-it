@@ -3,9 +3,9 @@
 import { useMemo, useState } from "react"
 import type { PooledSlot } from "@/lib/scheduling/types"
 
-const WEEKDAY_LABELS = ["L", "M", "X", "J", "V", "S", "D"]
-const MONTH_FORMAT = new Intl.DateTimeFormat("es-ES", { month: "long", year: "numeric" })
-const FULL_DATE_FORMAT = new Intl.DateTimeFormat("es-ES", {
+const WEEKDAY_LABELS = ["L", "M", "M", "G", "V", "S", "D"]
+const MONTH_FORMAT = new Intl.DateTimeFormat("it-IT", { month: "long", year: "numeric" })
+const FULL_DATE_FORMAT = new Intl.DateTimeFormat("it-IT", {
   weekday: "long",
   day: "numeric",
   month: "long",
