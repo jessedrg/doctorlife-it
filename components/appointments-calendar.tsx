@@ -28,16 +28,16 @@ export type DoctorAppointment = {
 
 type ViewMode = "month" | "week" | "day"
 
-const TZ = "Europe/Madrid"
+const TZ = "Europe/Rome"
 
-const WEEKDAYS = ["Lun", "Mar", "Mié", "Jue", "Vie", "Sáb", "Dom"]
-const WEEKDAYS_FULL = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+const WEEKDAYS = ["Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom"]
+const WEEKDAYS_FULL = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"]
 const MONTHS = [
-  "enero", "febrero", "marzo", "abril", "mayo", "junio",
-  "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre",
+  "gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno",
+  "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre",
 ]
 
-const timeFmt = new Intl.DateTimeFormat("es-ES", { hour: "2-digit", minute: "2-digit", timeZone: TZ })
+const timeFmt = new Intl.DateTimeFormat("it-IT", { hour: "2-digit", minute: "2-digit", timeZone: TZ })
 
 /** Devuelve el índice de día de la semana con lunes = 0. */
 function mondayIndex(d: Date) {
@@ -69,19 +69,19 @@ const STATUS_META: Record<
   { label: string; dot: string; chip: string; icon: typeof CheckCircle2 }
 > = {
   confirmed: {
-    label: "Confirmada",
+    label: "Confermato",
     dot: "bg-olive",
     chip: "bg-olive/12 text-olive border-olive/20",
     icon: CheckCircle2,
   },
   completed: {
-    label: "Completada",
+    label: "Completato",
     dot: "bg-teal",
     chip: "bg-teal/12 text-teal border-teal/25",
     icon: CheckCircle2,
   },
   cancelled: {
-    label: "Cancelada",
+    label: "Annullato",
     dot: "bg-clay",
     chip: "bg-clay/12 text-clay border-clay/25",
     icon: XCircle,
@@ -144,7 +144,7 @@ export function AppointmentsCalendar({ appointments }: { appointments: DoctorApp
           <button
             type="button"
             onClick={() => shift(-1)}
-            aria-label="Anterior"
+            aria-label="Precedente"
             className="flex size-9 items-center justify-center rounded-full border border-ink/12 bg-warm text-ink-soft transition-colors hover:bg-ink/[.04] hover:text-ink"
           >
             <ChevronLeft className="size-4.5" aria-hidden />
@@ -152,7 +152,7 @@ export function AppointmentsCalendar({ appointments }: { appointments: DoctorApp
           <button
             type="button"
             onClick={() => shift(1)}
-            aria-label="Siguiente"
+            aria-label="Successivo"
             className="flex size-9 items-center justify-center rounded-full border border-ink/12 bg-warm text-ink-soft transition-colors hover:bg-ink/[.04] hover:text-ink"
           >
             <ChevronRight className="size-4.5" aria-hidden />
@@ -162,7 +162,7 @@ export function AppointmentsCalendar({ appointments }: { appointments: DoctorApp
             onClick={() => setCursor(new Date())}
             className="ml-1 rounded-full border border-ink/12 bg-warm px-3.5 py-2 text-[13px] font-medium text-ink-soft transition-colors hover:bg-ink/[.04] hover:text-ink"
           >
-            Hoy
+            Oggi
           </button>
           <h2 className="ml-1 text-[17px] font-medium capitalize text-ink sm:text-[19px]">{title}</h2>
         </div>
@@ -178,7 +178,7 @@ export function AppointmentsCalendar({ appointments }: { appointments: DoctorApp
                 view === v ? "bg-ink text-paper" : "text-ink-soft hover:text-ink"
               }`}
             >
-              {v === "month" ? "Mes" : v === "week" ? "Semana" : "Día"}
+              {v === "month" ? "Mese" : v === "week" ? "Settimana" : "Giorno"}
             </button>
           ))}
         </div>
@@ -264,7 +264,7 @@ function MonthView({
                   )
                 })}
                 {dayItems.length > 3 && (
-                  <span className="px-1.5 text-[10.5px] text-ink-mute">+{dayItems.length - 3} más</span>
+                  <span className="px-1.5 text-[10.5px] text-ink-mute">+{dayItems.length - 3} altri</span>
                 )}
               </span>
             </button>
@@ -323,8 +323,8 @@ function DayView({ cursor, items, onSelect }: { cursor: Date; items: Item[]; onS
     return (
       <div className="flex flex-col items-center gap-2 rounded-2xl border border-ink/10 bg-warm py-14 text-center">
         <CalendarDays className="size-8 text-ink-mute" aria-hidden />
-        <p className="text-[15px] font-medium text-ink">Sin citas este día</p>
-        <p className="text-[13.5px] text-ink-soft">Disfruta del descanso o ajusta tu disponibilidad.</p>
+        <p className="text-[15px] font-medium text-ink">Nessun appuntamento in questo giorno</p>
+        <p className="text-[13.5px] text-ink-soft">Goditi la pausa o modifica la tua disponibilità.</p>
       </div>
     )
   }
@@ -357,7 +357,7 @@ function DayView({ cursor, items, onSelect }: { cursor: Date; items: Item[]; onS
             {it.meetingUrl && isUpcoming && it.status !== "cancelled" && (
               <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-ink px-3.5 py-2 text-[13px] font-semibold text-paper">
                 <Video className="size-4" aria-hidden />
-                <span className="hidden sm:inline">Unirse</span>
+                <span className="hidden sm:inline">Partecipa</span>
               </span>
             )}
           </button>
@@ -395,7 +395,7 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
   const end = new Date(appt.endsAt)
   const m = statusMeta(appt.status)
   const Icon = m.icon
-  const dateLabel = new Intl.DateTimeFormat("es-ES", {
+  const dateLabel = new Intl.DateTimeFormat("it-IT", {
     weekday: "long",
     day: "numeric",
     month: "long",
@@ -419,7 +419,7 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
       onClose()
       router.refresh()
     } catch {
-      setError("No se pudo cancelar. Inténtalo de nuevo.")
+      setError("Impossibile annullare. Riprova.")
       setLoading(false)
     }
   }
@@ -441,23 +441,23 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
           <div>
             <span className="inline-flex items-center gap-1.5 rounded-full border border-clay/25 bg-clay/12 px-2.5 py-1 text-[12.5px] font-medium text-clay">
               <AlertTriangle className="size-3.5" aria-hidden />
-              Cancelar cita
+              Annulla appuntamento
             </span>
             <h3 className="mt-3 text-[20px] font-light tracking-[-.01em] text-ink">
-              ¿Seguro que quieres cancelar?
+              Vuoi davvero annullare?
             </h3>
 
             <div className="mt-4 rounded-xl border border-amber/30 bg-amber/10 p-4">
               {isFirstConsult ? (
                 <p className="text-[13.5px] leading-relaxed text-ink-soft">
-                  El paciente podrá elegir una nueva hora. Como es una <strong>primera consulta</strong>,
-                  si escoge un hueco que no es tuyo, la cita se <strong>reasignará a otro médico</strong>{" "}
-                  disponible para ese horario — incluido el pago. Podrías perder a este paciente.
+                  Il paziente potrà scegliere un nuovo orario. Trattandosi di una <strong>prima visita</strong>,
+                  se sceglie uno slot che non è tuo, l'appuntamento verrà <strong>riassegnato a un altro medico</strong>{" "}
+                  disponibile per quell'orario — pagamento incluso. Potresti perdere questo paziente.
                 </p>
               ) : (
                 <p className="text-[13.5px] leading-relaxed text-ink-soft">
-                  El paciente podrá elegir una nueva hora <strong>contigo</strong>. Al ser una
-                  videollamada de seguimiento, la cita seguirá asignada a ti.
+                  Il paziente potrà scegliere un nuovo orario <strong>con te</strong>. Trattandosi di una
+                  videochiamata di follow-up, l'appuntamento resterà assegnato a te.
                 </p>
               )}
             </div>
@@ -476,7 +476,7 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
                 className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-clay px-4 py-3 text-[14.5px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
               >
                 {loading ? <Loader2 className="size-4.5 animate-spin" aria-hidden /> : null}
-                Sí, cancelar cita
+                Sì, annulla appuntamento
               </button>
               <button
                 type="button"
@@ -487,7 +487,7 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
                 }}
                 className="flex-1 rounded-xl border border-ink/15 px-4 py-3 text-[14.5px] font-medium text-ink transition-colors hover:bg-warm disabled:opacity-60"
               >
-                Volver
+                Indietro
               </button>
             </div>
           </div>
@@ -512,7 +512,7 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
               </div>
               <div className="flex items-center gap-3 text-[14.5px] text-ink-soft">
                 <CircleDot className="size-4.5 text-ink-mute" aria-hidden />
-                <span>{appt.amountCents > 0 ? `${(appt.amountCents / 100).toFixed(2)} €` : "Incluida en suscripción"}</span>
+                <span>{appt.amountCents > 0 ? `${(appt.amountCents / 100).toFixed(2)} €` : "Inclusa nell'abbonamento"}</span>
               </div>
             </div>
 
@@ -525,7 +525,7 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
                   className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-ink px-4 py-3 text-[14.5px] font-semibold text-paper transition-opacity hover:opacity-90"
                 >
                   <Video className="size-4.5" aria-hidden />
-                  Unirse a Google Meet
+                  Partecipa a Google Meet
                 </a>
               ) : null}
               <button
@@ -533,7 +533,7 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
                 onClick={onClose}
                 className="flex-1 rounded-xl border border-ink/15 px-4 py-3 text-[14.5px] font-medium text-ink transition-colors hover:bg-warm"
               >
-                Cerrar
+                Chiudi
               </button>
             </div>
 
@@ -543,7 +543,7 @@ function AppointmentSheet({ appt, onClose }: { appt: Item | DoctorAppointment; o
                 onClick={() => setConfirming(true)}
                 className="mt-2.5 w-full rounded-xl px-4 py-2.5 text-[13.5px] font-medium text-clay transition-colors hover:bg-clay/10"
               >
-                Cancelar esta cita
+                Annulla questo appuntamento
               </button>
             ) : null}
           </div>

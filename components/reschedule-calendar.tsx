@@ -9,9 +9,9 @@ import type { PooledSlot } from "@/lib/scheduling/types"
 function formatDateLabel(iso: string) {
   const [y, m, d] = iso.split("-").map(Number)
   const date = new Date(Date.UTC(y, m - 1, d))
-  const weekday = new Intl.DateTimeFormat("es-ES", { weekday: "short", timeZone: "UTC" }).format(date)
-  const day = new Intl.DateTimeFormat("es-ES", { day: "numeric", timeZone: "UTC" }).format(date)
-  const month = new Intl.DateTimeFormat("es-ES", { month: "short", timeZone: "UTC" }).format(date)
+  const weekday = new Intl.DateTimeFormat("it-IT", { weekday: "short", timeZone: "UTC" }).format(date)
+  const day = new Intl.DateTimeFormat("it-IT", { day: "numeric", timeZone: "UTC" }).format(date)
+  const month = new Intl.DateTimeFormat("it-IT", { month: "short", timeZone: "UTC" }).format(date)
   return { weekday, day, month }
 }
 
@@ -54,7 +54,7 @@ export function RescheduleCalendar({
       }
       setError(result.error)
     } catch {
-      setError("No se pudo reprogramar. Inténtalo de nuevo.")
+      setError("Impossibile riprogrammare. Riprova.")
     }
     setPendingStart(null)
   }
@@ -66,10 +66,10 @@ export function RescheduleCalendar({
         <Info className="mt-0.5 size-4.5 shrink-0 text-sage" aria-hidden />
         <p className="text-sm leading-relaxed text-ink/70">
           {kind === "followup"
-            ? `Tu videollamada de seguimiento se mantendrá con ${
-                doctorName ? `tu médico, ${doctorName}` : "tu médico asignado"
-              }. Elige una de sus horas disponibles.`
-            : "Elige la hora que mejor te venga. Se te asignará un médico disponible para ese horario, que puede ser distinto al anterior."}
+            ? `La tua videochiamata di follow-up resterà con ${
+                doctorName ? `il tuo medico, ${doctorName}` : "il tuo medico assegnato"
+              }. Scegli uno dei suoi orari disponibili.`
+            : "Scegli l'orario che preferisci. Ti verrà assegnato un medico disponibile per quell'orario, che potrebbe essere diverso dal precedente."}
         </p>
       </div>
 
@@ -77,8 +77,8 @@ export function RescheduleCalendar({
         <div className="rounded-2xl border border-ink/10 bg-paper p-8 text-center">
           <p className="text-pretty text-ink/70">
             {kind === "followup"
-              ? "Tu médico no tiene huecos disponibles ahora mismo. Vuelve a intentarlo más tarde."
-              : "Ahora mismo no hay huecos disponibles. Vuelve a intentarlo más tarde."}
+              ? "Il tuo medico non ha slot disponibili al momento. Riprova più tardi."
+              : "Al momento non ci sono slot disponibili. Riprova più tardi."}
           </p>
         </div>
       ) : (
