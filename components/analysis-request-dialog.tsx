@@ -75,8 +75,8 @@ export function AnalysisRequestDialog({
     if (selected.size === 0 || sending) return
     setSending(true)
     const lines = [...selected].map((id) => `• ${labels[id]}`)
-    let body = `${ANALYSIS_PREFIX}\nSolicitud de análisis clínicos:\n${lines.join("\n")}`
-    if (note.trim()) body += `\n\nIndicaciones: ${note.trim()}`
+    let body = `${ANALYSIS_PREFIX}\nRichiesta di analisi cliniche:\n${lines.join("\n")}`
+    if (note.trim()) body += `\n\nIndicazioni: ${note.trim()}`
     try {
       await onSubmit(body)
       setSelected(new Set())
@@ -93,7 +93,7 @@ export function AnalysisRequestDialog({
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-label="Pedir análisis al paciente"
+      aria-label="Richiedi analisi al paziente"
     >
       <div
         className="flex max-h-[90vh] w-full max-w-[480px] flex-col rounded-t-3xl border border-ink/10 bg-paper shadow-xl sm:rounded-3xl"
@@ -104,12 +104,12 @@ export function AnalysisRequestDialog({
             <span className="flex size-8 items-center justify-center rounded-full bg-teal/15 text-teal">
               <FlaskConical className="size-4.5" aria-hidden />
             </span>
-            <h3 className="text-[16.5px] font-medium text-ink">Pedir análisis</h3>
+            <h3 className="text-[16.5px] font-medium text-ink">Richiedi analisi</h3>
           </div>
           <button
             type="button"
             onClick={onClose}
-            aria-label="Cerrar"
+            aria-label="Chiudi"
             className="flex size-8 items-center justify-center rounded-full text-ink-soft transition-colors hover:bg-ink/[.05] hover:text-ink"
           >
             <X className="size-4.5" aria-hidden />
@@ -118,7 +118,7 @@ export function AnalysisRequestDialog({
 
         <div className="flex-1 overflow-y-auto px-5 py-4">
           <p className="mb-4 text-[13.5px] leading-relaxed text-ink-soft">
-            Selecciona las pruebas que el paciente debe realizarse. Se enviarán como un mensaje en el chat.
+            Seleziona gli esami che il paziente deve effettuare. Verranno inviati come messaggio in chat.
           </p>
           <div className="flex flex-col gap-5">
             {CATALOG.map((grp) => (
@@ -159,13 +159,13 @@ export function AnalysisRequestDialog({
 
             <label className="flex flex-col gap-1.5">
               <span className="text-[12px] font-semibold uppercase tracking-[.05em] text-ink-mute">
-                Indicaciones (opcional)
+                Indicazioni (facoltative)
               </span>
               <textarea
                 value={note}
                 onChange={(e) => setNote(e.target.value)}
                 rows={2}
-                placeholder="Ej. en ayunas de 12 horas, traer resultados a la próxima cita…"
+                placeholder="Es. a digiuno da 12 ore, portare i risultati alla prossima visita…"
                 className="resize-none rounded-xl border border-ink/15 bg-warm px-3.5 py-2.5 text-[14px] text-ink outline-none placeholder:text-ink-mute focus:border-ink/30"
               />
             </label>
@@ -174,7 +174,7 @@ export function AnalysisRequestDialog({
 
         <div className="flex items-center justify-between gap-3 border-t border-ink/10 px-5 py-4">
           <span className="text-[13px] text-ink-soft">
-            {selected.size} {selected.size === 1 ? "prueba" : "pruebas"}
+            {selected.size} {selected.size === 1 ? "esame" : "esami"}
           </span>
           <button
             type="button"
@@ -182,7 +182,7 @@ export function AnalysisRequestDialog({
             disabled={selected.size === 0 || sending}
             className="rounded-xl bg-ink px-5 py-2.5 text-[14px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-40"
           >
-            {sending ? "Enviando…" : "Enviar solicitud"}
+            {sending ? "Invio…" : "Invia richiesta"}
           </button>
         </div>
       </div>

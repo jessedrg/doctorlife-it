@@ -19,24 +19,24 @@ export function AdminCreateDoctor() {
     startTransition(async () => {
       const res = await createDoctor({ name, email, specialty, domain })
       if (res.ok) {
-        setMsg({ ok: true, text: `Cuenta creada. Enviamos las credenciales a ${email}.` })
+        setMsg({ ok: true, text: `Account creato. Abbiamo inviato le credenziali a ${email}.` })
         setName("")
         setEmail("")
         setSpecialty("")
         setDomain("")
         router.refresh()
       } else {
-        setMsg({ ok: false, text: res.error ?? "No se pudo completar." })
+        setMsg({ ok: false, text: res.error ?? "Impossibile completare." })
       }
     })
   }
 
   return (
     <form onSubmit={handleSubmit} className="rounded-[20px] border border-ink/10 bg-cream p-5">
-      <h2 className="text-[16px] font-medium text-ink">Invitar clínica</h2>
+      <h2 className="text-[16px] font-medium text-ink">Invita clinica</h2>
       <p className="mt-1 text-[13.5px] leading-relaxed text-ink-soft">
-        Crea la cuenta de una clínica. Recibirá por email su usuario y una contraseña temporal que
-        podrá cambiar. Después conectará su propio Stripe y sus datos fiscales desde su portal.
+        Crea l'account di una clinica. Riceverà via email il suo utente e una password temporanea che
+        potrà cambiare. In seguito collegherà il proprio Stripe e i suoi dati fiscali dal suo portale.
       </p>
       <div className="mt-4 flex flex-col gap-2.5">
         <div className="flex flex-col gap-2.5 sm:flex-row">
@@ -44,7 +44,7 @@ export function AdminCreateDoctor() {
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Nombre de la clínica o del profesional"
+            placeholder="Nome della clinica o del professionista"
             className="flex-1 rounded-full border border-ink/15 bg-paper px-4 py-2.5 text-[14px] text-ink outline-none placeholder:text-ink-mute focus:border-ink/35"
           />
           <input
@@ -52,7 +52,7 @@ export function AdminCreateDoctor() {
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="clinica@ejemplo.com"
+            placeholder="clinica@esempio.com"
             className="flex-1 rounded-full border border-ink/15 bg-paper px-4 py-2.5 text-[14px] text-ink outline-none placeholder:text-ink-mute focus:border-ink/35"
           />
         </div>
@@ -60,13 +60,13 @@ export function AdminCreateDoctor() {
           <input
             value={specialty}
             onChange={(e) => setSpecialty(e.target.value)}
-            placeholder="Especialidad (p. ej. Endocrinología)"
+            placeholder="Specializzazione (es. Endocrinologia)"
             className="flex-1 rounded-full border border-ink/15 bg-paper px-4 py-2.5 text-[14px] text-ink outline-none placeholder:text-ink-mute focus:border-ink/35"
           />
           <input
             value={domain}
             onChange={(e) => setDomain(e.target.value)}
-            placeholder="Dominio asignado (p. ej. doctorlife-fr.com)"
+            placeholder="Dominio assegnato (es. doctorlife-it.com)"
             className="flex-1 rounded-full border border-ink/15 bg-paper px-4 py-2.5 text-[14px] text-ink outline-none placeholder:text-ink-mute focus:border-ink/35"
           />
           <button
@@ -74,7 +74,7 @@ export function AdminCreateDoctor() {
             disabled={pending}
             className="rounded-full bg-ink px-5 py-2.5 text-[14px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
           >
-            {pending ? "Creando…" : "Invitar clínica"}
+            {pending ? "Creazione…" : "Invita clinica"}
           </button>
         </div>
       </div>

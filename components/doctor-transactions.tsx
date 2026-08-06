@@ -5,24 +5,24 @@ import { ArrowDownLeft, ArrowUpRight, Receipt, Wallet } from "lucide-react"
 import { EmptyState } from "@/components/empty-state"
 import type { DoctorEarnings, DoctorTxnCategory } from "@/app/actions/doctor"
 
-const dateTimeFmt = new Intl.DateTimeFormat("es-ES", {
+const dateTimeFmt = new Intl.DateTimeFormat("it-IT", {
   dateStyle: "medium",
   timeStyle: "short",
-  timeZone: "Europe/Madrid",
+  timeZone: "Europe/Rome",
 })
 
 function money(cents: number, currency: string) {
-  return new Intl.NumberFormat("es-ES", {
+  return new Intl.NumberFormat("it-IT", {
     style: "currency",
     currency: currency.toUpperCase(),
   }).format(cents / 100)
 }
 
 const CATEGORY_META: Record<DoctorTxnCategory, { label: string; cls: string }> = {
-  subscription: { label: "Suscripción", cls: "bg-olive/15 text-olive" },
-  consultation: { label: "Consulta", cls: "bg-sage/25 text-ink" },
-  payout: { label: "Retirada", cls: "bg-ink/8 text-ink-soft" },
-  other: { label: "Otro", cls: "bg-ink/8 text-ink-soft" },
+  subscription: { label: "Abbonamento", cls: "bg-olive/15 text-olive" },
+  consultation: { label: "Visita", cls: "bg-sage/25 text-ink" },
+  payout: { label: "Prelievo", cls: "bg-ink/8 text-ink-soft" },
+  other: { label: "Altro", cls: "bg-ink/8 text-ink-soft" },
 }
 
 type Filter = "all" | "subscription" | "consultation" | "payout"
@@ -38,18 +38,18 @@ export function DoctorTransactions({ earnings }: { earnings: DoctorEarnings }) {
   const currency = earnings.transactions[0]?.currency ?? "eur"
 
   const tabs: { key: Filter; label: string }[] = [
-    { key: "all", label: "Todo" },
-    { key: "subscription", label: "Suscripciones" },
-    { key: "consultation", label: "Consultas" },
-    { key: "payout", label: "Retiradas" },
+    { key: "all", label: "Tutto" },
+    { key: "subscription", label: "Abbonamenti" },
+    { key: "consultation", label: "Visite" },
+    { key: "payout", label: "Prelievi" },
   ]
 
   if (earnings.transactions.length === 0) {
     return (
       <EmptyState
         icon={Receipt}
-        title="Aún no hay transacciones"
-        description="Cuando atiendas tu primera consulta o se renueve la suscripción de un paciente, verás aquí cada ingreso con su detalle y comisiones."
+        title="Non ci sono ancora transazioni"
+        description="Quando effettui la tua prima visita o si rinnova l'abbonamento di un paziente, vedrai qui ogni ricavo con il dettaglio e le commissioni."
       />
     )
   }
@@ -61,18 +61,18 @@ export function DoctorTransactions({ earnings }: { earnings: DoctorEarnings }) {
         <div className="rounded-[18px] border border-ink/10 bg-cream p-4">
           <div className="flex items-center gap-2 text-ink-soft">
             <Wallet className="size-4" aria-hidden />
-            <span className="text-[12.5px]">Ingresos netos</span>
+            <span className="text-[12.5px]">Ricavi netti</span>
           </div>
           <p className="mt-1.5 text-[22px] font-medium text-ink">
             {money(earnings.totalNetCents, currency)}
           </p>
         </div>
         <div className="rounded-[18px] border border-ink/10 bg-cream p-4">
-          <p className="text-[12.5px] text-ink-soft">Repartos de suscripción</p>
+          <p className="text-[12.5px] text-ink-soft">Quote di abbonamento</p>
           <p className="mt-1.5 text-[22px] font-medium text-ink">{earnings.subscriptionCount}</p>
         </div>
         <div className="rounded-[18px] border border-ink/10 bg-cream p-4">
-          <p className="text-[12.5px] text-ink-soft">Primeras consultas</p>
+          <p className="text-[12.5px] text-ink-soft">Prime visite</p>
           <p className="mt-1.5 text-[22px] font-medium text-ink">{earnings.consultationCount}</p>
         </div>
       </div>
@@ -96,7 +96,7 @@ export function DoctorTransactions({ earnings }: { earnings: DoctorEarnings }) {
       {/* Lista */}
       {filtered.length === 0 ? (
         <div className="rounded-[20px] border border-ink/10 bg-cream p-6 text-center text-[14px] text-ink-soft">
-          No hay movimientos en esta categoría.
+          Nessun movimento in questa categoria.
         </div>
       ) : (
         <ul className="overflow-hidden rounded-[20px] border border-ink/10 bg-cream">
@@ -130,7 +130,7 @@ export function DoctorTransactions({ earnings }: { earnings: DoctorEarnings }) {
                   </div>
                   <p className="mt-0.5 text-[12.5px] text-ink-soft">
                     {dateTimeFmt.format(new Date(t.created * 1000))}
-                    {t.feeCents > 0 ? ` · comisión ${money(t.feeCents, t.currency)}` : ""}
+                    {t.feeCents > 0 ? ` · commissione ${money(t.feeCents, t.currency)}` : ""}
                   </p>
                 </div>
                 <p

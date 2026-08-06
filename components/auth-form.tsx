@@ -23,7 +23,7 @@ export function AuthForm() {
     setLoading(false)
 
     if (error) {
-      setError(error.message ?? "Email o contraseña incorrectos.")
+      setError(error.message ?? "Email o password errati.")
       return
     }
 
@@ -41,10 +41,10 @@ export function AuthForm() {
 
         <div className="rounded-[26px] border border-ink/10 bg-cream p-7 sm:p-8" style={{ boxShadow: "0 24px 60px rgba(0,0,0,.08)" }}>
           <h1 className="text-[26px] font-light leading-tight tracking-[-.02em] text-ink text-balance">
-            Bienvenido de nuevo
+            Bentornato
           </h1>
           <p className="mt-1.5 text-[14.5px] leading-relaxed text-ink-soft">
-            Inicia sesión con el correo y la contraseña que te enviamos.
+            Accedi con l'email e la password che ti abbiamo inviato.
           </p>
 
           <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
@@ -60,7 +60,7 @@ export function AuthForm() {
               />
             </label>
             <label className="flex flex-col gap-1.5 text-[13px] font-medium text-ink-soft">
-              Contraseña
+              Password
               <input
                 type="password"
                 value={password}
@@ -83,19 +83,19 @@ export function AuthForm() {
               disabled={loading}
               className="mt-1 w-full cursor-pointer rounded-[13px] bg-ink py-3.5 text-[15px] font-semibold text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
             >
-              {loading ? "Un momento..." : "Iniciar sesión"}
+              {loading ? "Un momento..." : "Accedi"}
             </button>
           </form>
 
           <p className="mt-6 text-center text-[13.5px] text-ink-soft">
             <Link href="/recuperar" className="font-medium text-ink underline underline-offset-4">
-              ¿Olvidaste tu contraseña?
+              Hai dimenticato la password?
             </Link>
           </p>
           <p className="mt-3 text-center text-[13px] leading-relaxed text-ink-mute">
-            ¿Aún no eres paciente?{" "}
+            Non sei ancora un paziente?{" "}
             <Link href="/#planes" className="font-medium text-ink underline underline-offset-4">
-              Empieza tu tratamiento
+              Inizia il tuo trattamento
             </Link>
           </p>
         </div>

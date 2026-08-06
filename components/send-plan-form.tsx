@@ -20,13 +20,13 @@ export function SendPlanForm({ patientId }: { patientId: string }) {
         setPlans(p)
         if (p[0]) setSelected(p[0].id)
       })
-      .catch(() => setError("No se pudieron cargar los planes."))
+      .catch(() => setError("Impossibile caricare i piani."))
   }, [])
 
   const submit = () => {
     setError(null)
     if (!selected) {
-      setError("Elige un plan para enviar.")
+      setError("Scegli un piano da inviare.")
       return
     }
     startTransition(async () => {
@@ -45,17 +45,17 @@ export function SendPlanForm({ patientId }: { patientId: string }) {
       <div className="flex items-start gap-2.5 rounded-[12px] border border-olive/30 bg-olive/10 p-3.5">
         <Check className="mt-0.5 size-4 shrink-0 text-olive" aria-hidden />
         <div>
-          <p className="text-[13.5px] font-medium text-ink">Plan enviado al paciente</p>
+          <p className="text-[13.5px] font-medium text-ink">Piano inviato al paziente</p>
           <p className="mt-1 text-[13px] leading-relaxed text-ink-soft">
-            Le hemos enviado un correo con el plan. Cuando lo pague desde su panel, se activará
-            automáticamente su tratamiento.
+            Gli abbiamo inviato un'email con il piano. Quando lo pagherà dal suo pannello, il
+            trattamento si attiverà automaticamente.
           </p>
           <button
             type="button"
             onClick={() => setSent(false)}
             className="mt-2 text-[12.5px] font-medium text-ink underline underline-offset-2"
           >
-            Enviar otro plan
+            Invia un altro piano
           </button>
         </div>
       </div>
@@ -86,7 +86,7 @@ export function SendPlanForm({ patientId }: { patientId: string }) {
                   {p.name}
                   {p.oneTime && (
                     <span className="ml-2 rounded-full bg-ink/10 px-2 py-0.5 text-[11px] font-medium text-ink-soft align-middle">
-                      Pago único
+                      Pagamento unico
                     </span>
                   )}
                 </p>
@@ -102,7 +102,7 @@ export function SendPlanForm({ patientId }: { patientId: string }) {
         value={note}
         onChange={(e) => setNote(e.target.value)}
         rows={2}
-        placeholder="Nota opcional para el paciente (aparecerá en el correo)…"
+        placeholder="Nota facoltativa per il paziente (apparirà nell'email)…"
         className="resize-none rounded-[12px] border border-ink/15 bg-cream px-3.5 py-2.5 text-[14px] text-ink outline-none transition-colors focus:border-amber"
       />
 
@@ -113,7 +113,7 @@ export function SendPlanForm({ patientId }: { patientId: string }) {
         className="ml-auto flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-[13px] font-medium text-paper transition-opacity hover:opacity-90 disabled:opacity-60"
       >
         <Send className="size-4" aria-hidden />
-        {pending ? "Enviando…" : "Enviar plan por correo"}
+        {pending ? "Invio…" : "Invia piano via email"}
       </button>
 
       {error && <p className="text-[13px] text-clay">{error}</p>}

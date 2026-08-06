@@ -3,7 +3,6 @@ import { getDoctorBilling } from "@/app/actions/doctor"
 import { getClinicStatus } from "@/app/actions/clinic"
 import { DoctorBillingOverview } from "@/components/doctor-billing-overview"
 import { ClinicStripePanel } from "@/components/clinic-stripe-panel"
-import { ClinicDetailsForm } from "@/components/clinic-details-form"
 import { Info } from "lucide-react"
 
 export const metadata = { title: "Pagamenti e fatturazione — DoctorLife" }
@@ -29,13 +28,11 @@ export default async function ClinicaPagosPage() {
         Pagamenti e fatturazione
       </h1>
       <p className="mt-1.5 max-w-[62ch] text-[15.5px] leading-relaxed text-ink-soft">
-        La tua clinica è l'ente sanitario che incassa e fattura le prestazioni mediche. Collega
-        il tuo account Stripe e completa i dati fiscali per poter ricevere i pagamenti.
+        Collega il tuo account Stripe per poter ricevere i pagamenti delle tue prestazioni mediche.
       </p>
 
       <div className="mt-6 grid max-w-[720px] gap-5">
         <ClinicStripePanel status={status} />
-        <ClinicDetailsForm status={status} />
       </div>
 
       <section className="mt-10">

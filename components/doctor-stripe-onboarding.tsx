@@ -88,10 +88,10 @@ export function DoctorStripeOnboarding({ hasAccount, chargesEnabled, payoutsEnab
         window.location.href = result.url
         return
       }
-      setError(result.error ?? "No se pudo iniciar el proceso.")
+      setError(result.error ?? "Impossibile avviare il processo.")
       setLoading(false)
     } catch (e) {
-      setError(e instanceof Error ? e.message : "No se pudo iniciar el proceso.")
+      setError(e instanceof Error ? e.message : "Impossibile avviare il processo.")
       setLoading(false)
     }
   }
@@ -103,7 +103,7 @@ export function DoctorStripeOnboarding({ hasAccount, chargesEnabled, payoutsEnab
         await refreshStripeStatus()
         router.refresh()
       } catch (e) {
-        setError(e instanceof Error ? e.message : "No se pudo actualizar el estado.")
+        setError(e instanceof Error ? e.message : "Impossibile aggiornare lo stato.")
       }
     })
   }
@@ -116,10 +116,10 @@ export function DoctorStripeOnboarding({ hasAccount, chargesEnabled, payoutsEnab
             <Image src="/brand/stripe.svg" alt="Stripe" width={26} height={26} />
           </span>
           <div>
-            <h2 className="text-[18px] font-medium text-ink">Cuenta de cobros · Stripe</h2>
+            <h2 className="text-[18px] font-medium text-ink">Conto per incassi · Stripe</h2>
             <p className="mt-1 max-w-[52ch] text-[14.5px] leading-relaxed text-ink-soft">
-              Conecta tu cuenta de Stripe para recibir los pagos de tus pacientes. DoctorLife retiene una
-              comisión de servicio y te transfiere el resto automáticamente.
+              Collega il tuo account Stripe per ricevere i pagamenti dei tuoi pazienti. DoctorLife trattiene una
+              commissione di servizio e ti trasferisce il resto automaticamente.
             </p>
           </div>
         </div>
@@ -127,8 +127,8 @@ export function DoctorStripeOnboarding({ hasAccount, chargesEnabled, payoutsEnab
       </div>
 
       <div className="grid gap-2.5 px-6 sm:grid-cols-2">
-        <Flag label="Cobros habilitados" ok={chargesEnabled} />
-        <Flag label="Transferencias habilitadas" ok={payoutsEnabled} />
+        <Flag label="Incassi abilitati" ok={chargesEnabled} />
+        <Flag label="Trasferimenti abilitati" ok={payoutsEnabled} />
       </div>
 
       {/* Auto-poll notice */}
@@ -136,7 +136,7 @@ export function DoctorStripeOnboarding({ hasAccount, chargesEnabled, payoutsEnab
         <div className="mx-6 mt-4 flex items-center gap-2 rounded-xl border border-amber/30 bg-amber/8 px-4 py-3">
           <Loader2 className="size-4 shrink-0 animate-spin text-clay" aria-hidden />
           <p className="text-[13.5px] text-ink-soft">
-            Verificando el estado de tu cuenta de Stripe automáticamente…
+            Verifica automatica dello stato del tuo account Stripe in corso…
           </p>
         </div>
       )}
@@ -145,7 +145,7 @@ export function DoctorStripeOnboarding({ hasAccount, chargesEnabled, payoutsEnab
       {!polling && hasAccount && !onboarded && pollCount >= POLL_MAX_ATTEMPTS && (
         <div className="mx-6 mt-4 rounded-xl border border-ink/15 bg-paper px-4 py-3">
           <p className="text-[13.5px] text-ink-soft">
-            Stripe aún no ha confirmado la cuenta. Pulsa «Actualizar estado» cuando termines el proceso.
+            Stripe non ha ancora confermato l'account. Premi «Aggiorna stato» quando termini il processo.
           </p>
         </div>
       )}
@@ -161,12 +161,12 @@ export function DoctorStripeOnboarding({ hasAccount, chargesEnabled, payoutsEnab
         >
           {loading && <Loader2 className="size-4 animate-spin" aria-hidden />}
           {loading
-            ? "Redirigiendo…"
+            ? "Reindirizzamento…"
             : hasAccount && !onboarded
-              ? "Continuar configuración"
+              ? "Continua configurazione"
               : onboarded
-                ? "Gestionar en Stripe"
-                : "Conectar con Stripe"}
+                ? "Gestisci su Stripe"
+                : "Collega con Stripe"}
         </button>
         {hasAccount && (
           <button
@@ -176,7 +176,7 @@ export function DoctorStripeOnboarding({ hasAccount, chargesEnabled, payoutsEnab
             className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-paper px-5 py-2.5 text-[14px] font-medium text-ink transition-colors hover:bg-warm disabled:opacity-60"
           >
             <RefreshCw className={`size-3.5 ${pending ? "animate-spin" : ""}`} aria-hidden />
-            {pending ? "Comprobando…" : "Actualizar estado"}
+            {pending ? "Verifica…" : "Aggiorna stato"}
           </button>
         )}
       </div>
@@ -189,7 +189,7 @@ function StatusBadge({ onboarded, polling }: { onboarded: boolean; polling: bool
     return (
       <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-olive/12 px-3 py-1 text-[12px] font-semibold text-olive">
         <Check className="size-3.5" aria-hidden />
-        Activa
+        Attivo
       </span>
     )
   }
@@ -197,13 +197,13 @@ function StatusBadge({ onboarded, polling }: { onboarded: boolean; polling: bool
     return (
       <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-amber/20 px-3 py-1 text-[12px] font-semibold text-clay">
         <Loader2 className="size-3 animate-spin" aria-hidden />
-        Verificando…
+        Verifica…
       </span>
     )
   }
   return (
     <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-amber/20 px-3 py-1 text-[12px] font-semibold text-clay">
-      Pendiente
+      In attesa
     </span>
   )
 }

@@ -9,7 +9,7 @@ import {
   type NotificationRow,
 } from "@/app/actions/notifications"
 
-const relTime = new Intl.RelativeTimeFormat("es-ES", { numeric: "auto" })
+const relTime = new Intl.RelativeTimeFormat("it-IT", { numeric: "auto" })
 
 function timeAgo(date: Date) {
   const diff = (date.getTime() - Date.now()) / 1000
@@ -70,7 +70,7 @@ export function NotificationsBell() {
       <button
         type="button"
         onClick={toggle}
-        aria-label="Notificaciones"
+        aria-label="Notifiche"
         className="relative flex size-10 items-center justify-center rounded-full text-ink transition-colors hover:bg-warm"
       >
         <Bell className="size-5" aria-hidden />
@@ -84,17 +84,17 @@ export function NotificationsBell() {
       {open && (
         <div className="absolute right-0 z-50 mt-2 w-[320px] max-w-[86vw] overflow-hidden rounded-[16px] border border-ink/10 bg-paper shadow-xl">
           <div className="flex items-center justify-between border-b border-ink/10 px-4 py-3">
-            <p className="text-[14px] font-medium text-ink">Notificaciones</p>
+            <p className="text-[14px] font-medium text-ink">Notifiche</p>
             {items.length > 0 && (
               <span className="inline-flex items-center gap-1 text-[12px] text-ink-mute">
                 <Check className="size-3.5" aria-hidden />
-                Al día
+                Tutto letto
               </span>
             )}
           </div>
           {items.length === 0 ? (
             <p className="px-4 py-8 text-center text-[13.5px] text-ink-soft">
-              No tienes notificaciones todavía.
+              Non hai ancora notifiche.
             </p>
           ) : (
             <ul className="max-h-[360px] divide-y divide-ink/[.06] overflow-y-auto">

@@ -10,7 +10,7 @@ type Variant = "list" | "cards" | "table" | "chat"
  */
 export function DashboardPageSkeleton({ variant = "list" }: { variant?: Variant }) {
   return (
-    <div role="status" aria-label="Cargando…" className="animate-in fade-in duration-300">
+    <div role="status" aria-label="Caricamento…" className="animate-in fade-in duration-300">
       {/* Cabecera */}
       <Skeleton className="h-9 w-[min(60%,280px)] rounded-[10px]" />
       <Skeleton className="mt-3 h-4 w-[min(80%,460px)] rounded-full" />
@@ -22,7 +22,7 @@ export function DashboardPageSkeleton({ variant = "list" }: { variant?: Variant 
         {variant === "chat" && <ChatBody />}
       </div>
 
-      <span className="sr-only">Cargando contenido…</span>
+      <span className="sr-only">Caricamento contenuti…</span>
     </div>
   )
 }

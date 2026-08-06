@@ -24,10 +24,10 @@ export function LeadForm({ source = "articulo" }: { source?: string }) {
 
   function validate(): FieldErrors {
     const next: FieldErrors = {};
-    if (!name.trim()) next.name = "Indícanos tu nombre.";
-    if (!EMAIL_RE.test(email.trim())) next.email = "Introduce un correo electrónico válido.";
-    if (!PHONE_RE.test(phone.trim())) next.phone = "Introduce un teléfono válido.";
-    if (!consent) next.consent = "Debes aceptar la política de privacidad para continuar.";
+    if (!name.trim()) next.name = "Indica il tuo nome.";
+    if (!EMAIL_RE.test(email.trim())) next.email = "Inserisci un indirizzo email valido.";
+    if (!PHONE_RE.test(phone.trim())) next.phone = "Inserisci un numero di telefono valido.";
+    if (!consent) next.consent = "Devi accettare l'informativa sulla privacy per continuare.";
     return next;
   }
 
@@ -61,10 +61,10 @@ export function LeadForm({ source = "articulo" }: { source?: string }) {
         <span className="flex h-12 w-12 items-center justify-center rounded-full bg-olive text-paper">
           <CheckCircle2 aria-hidden className="h-6 w-6" />
         </span>
-        <h3 className="text-[20px] font-medium text-ink">¡Solicitud recibida, {name.split(" ")[0]}!</h3>
+        <h3 className="text-[20px] font-medium text-ink">Richiesta ricevuta, {name.split(" ")[0]}!</h3>
         <p className="max-w-[42ch] text-[15px] leading-relaxed text-ink-soft">
-          Un médico colegiado revisará tu caso y te contactaremos en breve para tu valoración
-          gratuita. Revisa tu correo (también la carpeta de spam).
+          Un medico iscritto all&apos;albo esaminerà il tuo caso e ti contatteremo a breve per la tua
+          valutazione gratuita. Controlla la tua email (anche la cartella spam).
         </p>
       </div>
     );
@@ -77,7 +77,7 @@ export function LeadForm({ source = "articulo" }: { source?: string }) {
     <div className="flex flex-col gap-4">
       <div className="flex flex-col gap-1.5">
         <label htmlFor="lf-name" className="text-[13px] font-medium text-ink">
-          Nombre
+          Nome
         </label>
         <input
           id="lf-name"
@@ -87,7 +87,7 @@ export function LeadForm({ source = "articulo" }: { source?: string }) {
           onChange={(e) => setName(e.target.value)}
           aria-invalid={Boolean(errors.name)}
           className={`${inputBase} ${errors.name ? "border-clay" : "border-ink/15"}`}
-          placeholder="Tu nombre"
+          placeholder="Il tuo nome"
         />
         {errors.name && <p className="text-[13px] text-clay">{errors.name}</p>}
       </div>
@@ -112,7 +112,7 @@ export function LeadForm({ source = "articulo" }: { source?: string }) {
 
         <div className="flex flex-col gap-1.5">
           <label htmlFor="lf-phone" className="text-[13px] font-medium text-ink">
-            Teléfono
+            Telefono
           </label>
           <input
             id="lf-phone"
@@ -139,12 +139,12 @@ export function LeadForm({ source = "articulo" }: { source?: string }) {
             className="mt-0.5 h-4 w-4 flex-shrink-0 accent-olive"
           />
           <span>
-            He leído y acepto la{" "}
+            Ho letto e accetto l&apos;{" "}
             <a href="/privacidad" className="text-olive underline underline-offset-2">
-              política de privacidad
+              informativa sulla privacy
             </a>{" "}
-            y consiento el tratamiento de mis datos, incluidos los de salud, para recibir una
-            valoración médica (art. 9.2.h RGPD). Responsable: DoctorLife.
+            e acconsento al trattamento dei miei dati, inclusi quelli sanitari, per ricevere una
+            valutazione medica (art. 9.2.h GDPR). Titolare: DoctorLife.
           </span>
         </label>
         {errors.consent && <p className="text-[13px] text-clay">{errors.consent}</p>}
