@@ -18,7 +18,7 @@ export function SignOutButton({ className }: { className?: string }) {
         "cursor-pointer rounded-full border border-ink/15 px-4 py-2 text-[13.5px] font-medium text-ink-soft transition-colors hover:bg-warm"
       }
     >
-      Cerrar sesión
+      Esci
     </button>
   )
 }
