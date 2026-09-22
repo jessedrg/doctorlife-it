@@ -35,7 +35,7 @@ export async function Footer() {
               {t("cta")}
               <span className="text-[13px]">↗</span>
             </QuizTrigger>
-            <TrustpilotBadge className="mt-6" height={38} />
+            <TrustpilotBadge className="mt-6" height={20} />
           </div>
 
           <FooterColumns />

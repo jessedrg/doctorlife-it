@@ -52,7 +52,7 @@ export async function Hero() {
             <p className="mt-4 max-w-[40ch] text-balance text-[clamp(15px,1.4vw,24px)] font-light leading-[1.5] text-paper/80 sm:mt-7">
               {t("subtitle")}
             </p>
-            <TrustpilotBadge className="mt-6" height={40} />
+            <TrustpilotBadge className="mt-6" height={20} />
           </div>
         </div>
       </div>
