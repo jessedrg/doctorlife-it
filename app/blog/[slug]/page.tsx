@@ -38,6 +38,7 @@ export async function generateMetadata({
     description: optimizedDescription,
     keywords: [post.keyword, "GLP-1", tHero("titleHighlight"), BRAND],
     authors: [{ name: MEDICAL_REVIEWER.name }],
+    robots: { index: false, follow: true },
     alternates: { canonical: url },
     openGraph: {
       title: optimizedTitle,
