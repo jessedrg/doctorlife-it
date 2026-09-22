@@ -4,7 +4,6 @@ import type { Metadata, Viewport } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { Geist_Mono, Hanken_Grotesk, Instrument_Serif, Sora } from 'next/font/google'
-import { PublicWhatsAppBubble } from '@/components/public-whatsapp-bubble'
 import { JsonLd } from '@/components/seo/json-ld'
 import { organizationSchema, websiteSchema } from '@/lib/seo'
 import { LOCALE, HTML_LANG } from '@/i18n/config'
@@ -108,7 +107,6 @@ export default async function RootLayout({
           src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
         />
         {children}
-        <PublicWhatsAppBubble />
         {process.env.NODE_ENV === 'production' && <Analytics />}
         </NextIntlClientProvider>
       </body>

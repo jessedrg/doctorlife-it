@@ -70,7 +70,7 @@ export async function TrustpilotBadge({ className, height = 28 }: Props) {
           style={{ width: wordmarkStar, height: wordmarkStar }}
         />
         <span
-          className="font-bold leading-none tracking-tight text-current"
+          className="font-bold leading-none tracking-tight text-white"
           style={{ fontSize: Math.round(height * 0.95) }}
         >
           Trustpilot
