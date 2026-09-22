@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { QuizTrigger } from "./quiz-trigger";
 import { BrandLogo } from "./brand-logo";
 import { FooterColumns } from "./footer-columns";
-import { TrustBox } from "./trustbox";
+import { TrustpilotBadge } from "./trustpilot-badge";
 import { tplEntity } from "@/lib/legal-i18n";
 
 const paymentMethods = [
@@ -35,7 +35,7 @@ export async function Footer() {
               {t("cta")}
               <span className="text-[13px]">↗</span>
             </QuizTrigger>
-            <TrustBox theme="dark" alignment="left" className="mt-6 max-w-[260px]" />
+            <TrustpilotBadge className="mt-6" height={38} />
           </div>
 
           <FooterColumns />
