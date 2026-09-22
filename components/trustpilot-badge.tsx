@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 
 type Props = {
   className?: string;
-  /** Alto del logo (fila del wordmark) en px. Por defecto 28px. */
+  /** Alto del logo (fila del wordmark) en px. Por defecto 18px. */
   height?: number;
 };
 
