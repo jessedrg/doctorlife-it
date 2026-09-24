@@ -48,11 +48,8 @@ export const stripe = new Proxy({} as Stripe, {
  * La clínica los remunera fuera de la plataforma.
  */
 
-/**
- * Comisión de servicio tecnológico de DoctorLife, en % del importe cobrado.
- * Parametrizable vía env `PLATFORM_FEE_PERCENT` (por defecto 30%).
- */
-export const PLATFORM_FEE_PERCENT = Number(process.env.PLATFORM_FEE_PERCENT ?? 30)
+/** Comisión de servicio tecnológico de DoctorLife: 65% de cada cobro. */
+export const PLATFORM_FEE_PERCENT = 65
 
 /** Calcula la comisión de plataforma en céntimos a partir de un importe. */
 export function platformFeeCents(amountCents: number): number {
