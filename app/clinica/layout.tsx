@@ -12,6 +12,7 @@ export default async function ClinicaLayout({ children }: { children: React.Reac
       nav={[
         { href: "/clinica", label: "Home", icon: "home" },
         { href: "/clinica/agenda", label: "Agenda", icon: "agenda" },
+        { href: "/clinica/leads", label: "Lead", icon: "leads" },
         { href: "/clinica/pacientes", label: "Pazienti", icon: "pacientes" },
         { href: "/clinica/disponibilidad", label: "Disponibilità", icon: "disponibilidad" },
         { href: "/clinica/chat", label: "Messaggi", icon: "mensajes" },

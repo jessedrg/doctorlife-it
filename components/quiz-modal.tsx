@@ -11,6 +11,7 @@ import { BrandLogo } from "./brand-logo";
 import { analytics } from "@/lib/analytics";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const WHATSAPP_PHONE = "34620213592";
 // Telefono italiano o internazionale: 9-15 cifre, ammette +, spazi e trattini.
 const PHONE_RE = /^\+?[\d\s-]{9,17}$/;
 
@@ -23,7 +24,7 @@ export function QuizModal() {
   const { open, initialPlan, closeQuiz, variant } = useQuiz();
   const isAds = variant === "ads";
   const productList = isAds ? adsProducts : products;
-  const WA_QUIZ_URL = `https://wa.me/39?text=${encodeURIComponent(tw("defaultMessage"))}`;
+  const WA_QUIZ_URL = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(tw("defaultMessage"))}`;
 
   const [phase, setPhase] = useState<Phase>("form");
   const [name, setName] = useState("");
@@ -370,7 +371,7 @@ export function QuizModal() {
                     {t("slot.noSlotsDesc")}
                   </p>
                   <a
-                    href={`https://wa.me/39?text=${encodeURIComponent(tw("noSlotsMessage", { name: name || "…" }))}`}
+                    href={`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(tw("noSlotsMessage", { name: name || "…" }))}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-[14.5px] font-semibold text-white transition-opacity hover:opacity-90"

@@ -1,8 +1,6 @@
 import { requireRole } from "@/lib/session"
 import { ChangePasswordForm } from "@/components/change-password-form"
 import { DoctorProfileForm } from "@/components/doctor-profile-form"
-import { GoogleCalendarConnect } from "@/components/google-calendar-connect"
-import { getGoogleConnectionStatus } from "@/app/actions/google-connection"
 import { getMyDoctorProfileWithImage } from "@/app/actions/doctor"
 
 export const metadata = { title: "Il mio account — DoctorLife" }
@@ -29,10 +27,7 @@ function Section({
 
 export default async function MedicoAccountPage() {
   await requireRole("doctor")
-  const [profile, googleStatus] = await Promise.all([
-    getMyDoctorProfileWithImage(),
-    getGoogleConnectionStatus(),
-  ])
+  const profile = await getMyDoctorProfileWithImage()
 
   return (
     <div>
@@ -41,7 +36,7 @@ export default async function MedicoAccountPage() {
       </h1>
       <p className="mt-1.5 max-w-[60ch] text-[15.5px] leading-relaxed text-ink-soft">
         Il tuo utente è <span className="font-medium text-ink">{profile.email}</span>. Gestisci il tuo
-        profilo pubblico, il calendario e la password.
+        profilo pubblico e la password.
       </p>
 
       <div className="mt-7 flex flex-col gap-5">
@@ -60,10 +55,6 @@ export default async function MedicoAccountPage() {
               image: profile.image,
             }}
           />
-        </Section>
-
-        <Section title="Videochiamate" description="Collega il tuo calendario per generare i link delle videochiamate.">
-          <GoogleCalendarConnect status={googleStatus} />
         </Section>
 
         <Section title="Cambia password">

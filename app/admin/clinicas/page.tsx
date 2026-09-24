@@ -3,6 +3,7 @@ import { listDoctors } from "@/app/actions/admin"
 import { AdminDoctorToggle } from "@/components/admin-doctor-toggle"
 import { AdminDoctorDevToggle } from "@/components/admin-doctor-dev-toggle"
 import { AdminCreateDoctor } from "@/components/admin-create-doctor"
+import { AdminDeleteClinic } from "@/components/admin-delete-clinic"
 
 export const metadata = { title: "Clínicas — DoctorLife" }
 
@@ -33,6 +34,7 @@ export default async function AdminClinicsPage() {
               <th className="px-4 py-3 font-semibold">Stripe</th>
               <th className="px-4 py-3 font-semibold">Estado</th>
               <th className="px-4 py-3 font-semibold">Entorno</th>
+              <th className="px-4 py-3 font-semibold">Acciones</th>
             </tr>
           </thead>
           <tbody>
@@ -58,11 +60,14 @@ export default async function AdminClinicsPage() {
                 <td className="px-4 py-3">
                   <AdminDoctorDevToggle doctorId={d.id} initial={d.isDevOnly ?? false} />
                 </td>
+                <td className="px-4 py-3">
+                  <AdminDeleteClinic doctorId={d.id} clinicName={d.name} />
+                </td>
               </tr>
             ))}
             {doctors.length === 0 && (
               <tr className="bg-warm">
-                <td colSpan={5} className="px-4 py-6 text-center text-ink-mute">
+                <td colSpan={6} className="px-4 py-6 text-center text-ink-mute">
                   Aún no hay clínicas. Invita la primera con el formulario de arriba.
                 </td>
               </tr>
