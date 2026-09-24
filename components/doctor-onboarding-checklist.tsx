@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Check, CreditCard, CalendarClock, Video, ArrowRight } from "lucide-react"
+import { Check, CreditCard, CalendarClock, ArrowRight } from "lucide-react"
 import type { DoctorReadiness } from "@/lib/doctor/readiness"
 
 type Step = {
@@ -30,15 +30,6 @@ const STEPS: Step[] = [
     href: "/clinica/disponibilidad",
     cta: "Configura orario",
     icon: CalendarClock,
-  },
-  {
-    key: "googleMeet",
-    title: "Google Calendar e Meet",
-    doneText: "Ogni appuntamento genererà automaticamente una videochiamata Google Meet.",
-    todoText: "Collega Google per creare le videochiamate con i tuoi pazienti.",
-    href: "/clinica/cuenta",
-    cta: "Collega Google",
-    icon: Video,
   },
 ]
 

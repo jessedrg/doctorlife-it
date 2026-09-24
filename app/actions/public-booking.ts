@@ -201,7 +201,7 @@ async function provisionVisit(params: {
       })
       .returning({ id: appointments.id })
 
-    // Enlace de Google Meet (si está configurado).
+    // Crea una sala de videollamada de Daily.co (si está configurado).
     try {
       const [doc] = await db
         .select({ email: user.email })

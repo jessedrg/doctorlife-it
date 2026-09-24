@@ -288,8 +288,8 @@ async function notifyRecipient(
 }
 
 /**
- * El médico genera una videollamada de Google Meet instantánea y la publica en
- * el chat como un mensaje con botón "Unirse" para ambos.
+* El médico genera una sala Daily.co y la publica en el chat como un mensaje
+   * con botón "Unirse" para ambos.
  */
 export async function createInstantCall(conversationId: number) {
   const me = await requireUser()

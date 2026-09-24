@@ -196,7 +196,7 @@ export async function createIncludedBooking(
     return { error: "Ese horario acaba de ocuparse. Elige otro." }
   }
 
-  // Crea el enlace de la videollamada (si Google está configurado).
+  // Crea una sala de videollamada de Daily.co (si está configurado).
   const [doc] = await db
     .select({ email: user.email })
     .from(doctorProfiles)
@@ -277,7 +277,7 @@ export async function finalizeAppointment(
     .innerJoin(user, eq(user.id, doctorProfiles.userId))
     .where(eq(doctorProfiles.userId, appt.doctorId))
 
-  // Enlace de Google Meet (si Google está configurado y el médico conectado).
+  // Enlace de la sala Daily.co, sin que el médico conecte una cuenta externa.
   const [pat] = await db.select({ email: user.email }).from(user).where(eq(user.id, appt.patientId))
   const meeting = await maybeCreateMeeting({
     doctorId: appt.doctorId,
@@ -422,7 +422,7 @@ export async function cancelAppointmentAsDoctor(
     .set({ status: "cancelled", cancelledBy: "doctor", updatedAt: new Date() })
     .where(eq(appointments.id, appointmentId))
 
-  // Cancela el evento de Google Meet (best-effort).
+  // Elimina la sala de Daily.co (best-effort).
   await maybeCancelMeeting(appt.doctorId, appt.googleEventId)
 
   // Avisa al paciente para que reprograme.
@@ -522,7 +522,7 @@ export async function doctorRescheduleAppointment(
     return { error: "Impossibile riprogrammare. Riprova." }
   }
 
-  // Cancela el evento de Google Meet antiguo y marca la cita antigua como movida.
+  // Elimina la sala Daily.co antigua y marca la cita como reprogramada.
   await maybeCancelMeeting(old.doctorId, old.googleEventId)
   await db
     .update(appointments)
