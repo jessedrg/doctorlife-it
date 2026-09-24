@@ -1,7 +1,7 @@
 "use server"
 
 import { db } from "@/lib/db"
-import { appointments, doctorProfiles, subscriptions, user } from "@/lib/db/schema"
+import { appointments, doctorProfiles, leads, subscriptions, user } from "@/lib/db/schema"
 import { getSessionUser, requireRole } from "@/lib/session"
 import { stripe, platformFeeCents } from "@/lib/stripe"
 import { getDoctorChargeContext } from "@/lib/clinic"
@@ -11,6 +11,7 @@ import { scheduling } from "@/lib/scheduling"
 import { maybeCreateMeeting, maybeCancelMeeting } from "@/lib/video/daily"
 import {
   sendAppointmentCancelledEmail,
+  sendDoctorNewBookingEmail,
   sendRescheduleConfirmedEmail,
 } from "@/lib/email"
 import { and, asc, desc, eq, gte, inArray, lt, lte, ne } from "drizzle-orm"
@@ -178,6 +179,7 @@ export async function createIncludedBooking(
   }
 
   let appointmentId: number
+  let bookedAt = new Date()
   try {
     const [row] = await db
       .insert(appointments)
@@ -190,19 +192,23 @@ export async function createIncludedBooking(
         amountCents: 0,
         applicationFeeCents: 0,
       })
-      .returning({ id: appointments.id })
+      .returning({ id: appointments.id, createdAt: appointments.createdAt })
     appointmentId = row.id
+    bookedAt = row.createdAt
   } catch {
     return { error: "Ese horario acaba de ocuparse. Elige otro." }
   }
 
   // Crea una sala de videollamada de Daily.co (si está configurado).
   const [doc] = await db
-    .select({ email: user.email })
+    .select({ email: user.email, fullName: doctorProfiles.fullName })
     .from(doctorProfiles)
     .innerJoin(user, eq(user.id, doctorProfiles.userId))
     .where(eq(doctorProfiles.userId, doctorId))
-  const [pat] = await db.select({ email: user.email }).from(user).where(eq(user.id, patient.id))
+  const [pat] = await db
+    .select({ email: user.email, name: user.name })
+    .from(user)
+    .where(eq(user.id, patient.id))
   const meeting = await maybeCreateMeeting({
     doctorId,
     doctorEmail: doc?.email ?? "",
@@ -216,6 +222,28 @@ export async function createIncludedBooking(
       .update(appointments)
       .set({ meetingUrl: meeting.meetingUrl, googleEventId: meeting.googleEventId, updatedAt: new Date() })
       .where(eq(appointments.id, appointmentId))
+  }
+
+  try {
+    const [lead] = await db
+      .select({ phone: leads.phone })
+      .from(leads)
+      .where(eq(leads.email, (pat?.email ?? "").toLowerCase()))
+      .orderBy(desc(leads.createdAt))
+      .limit(1)
+    if (doc?.email && pat?.email) {
+      await sendDoctorNewBookingEmail({
+        to: doc.email,
+        doctorName: doc.fullName,
+        patientName: pat.name,
+        patientEmail: pat.email,
+        patientPhone: lead?.phone,
+        startsAt: start,
+        bookedAt,
+      })
+    }
+  } catch (e) {
+    console.log("[v0] doctor booking email error:", e instanceof Error ? e.message : e)
   }
 
   // El seguimiento de este ciclo queda agendado: limpiamos el aviso pendiente.
@@ -258,27 +286,32 @@ export async function finalizeAppointment(
     .where(eq(appointments.id, appointmentId))
   if (!appt || appt.status === "confirmed") return
 
-  await db
+  const [finalized] = await db
     .update(appointments)
     .set({
       status: "confirmed",
       stripePaymentIntentId: paymentIntentId ?? appt.stripePaymentIntentId,
       updatedAt: new Date(),
     })
-    .where(eq(appointments.id, appointmentId))
+    .where(and(eq(appointments.id, appointmentId), eq(appointments.status, "pending_payment")))
+    .returning({ id: appointments.id })
+  if (!finalized) return
 
   // El acto médico ya se liquidó en la clínica en el propio cargo (destination
   // charge con `application_fee`). No se transfiere nada al médico: la clínica
   // gestiona su remuneración fuera de la app. Solo necesitamos el email del
   // médico para crear la videollamada.
   const [doc] = await db
-    .select({ email: user.email })
+    .select({ email: user.email, fullName: doctorProfiles.fullName })
     .from(doctorProfiles)
     .innerJoin(user, eq(user.id, doctorProfiles.userId))
     .where(eq(doctorProfiles.userId, appt.doctorId))
 
   // Enlace de la sala Daily.co, sin que el médico conecte una cuenta externa.
-  const [pat] = await db.select({ email: user.email }).from(user).where(eq(user.id, appt.patientId))
+  const [pat] = await db
+    .select({ email: user.email, name: user.name })
+    .from(user)
+    .where(eq(user.id, appt.patientId))
   const meeting = await maybeCreateMeeting({
     doctorId: appt.doctorId,
     doctorEmail: doc?.email ?? "",
@@ -296,6 +329,28 @@ export async function finalizeAppointment(
         updatedAt: new Date(),
       })
       .where(eq(appointments.id, appointmentId))
+  }
+
+  try {
+    const [lead] = await db
+      .select({ phone: leads.phone })
+      .from(leads)
+      .where(eq(leads.email, (pat?.email ?? "").toLowerCase()))
+      .orderBy(desc(leads.createdAt))
+      .limit(1)
+    if (doc?.email && pat?.email) {
+      await sendDoctorNewBookingEmail({
+        to: doc.email,
+        doctorName: doc.fullName,
+        patientName: pat.name,
+        patientEmail: pat.email,
+        patientPhone: lead?.phone,
+        startsAt: new Date(appt.startsAt),
+        bookedAt: new Date(appt.createdAt),
+      })
+    }
+  } catch (e) {
+    console.log("[v0] doctor booking email error:", e instanceof Error ? e.message : e)
   }
 
   revalidatePath("/portal/citas")
@@ -701,6 +756,7 @@ export async function rescheduleAppointment(
 
   // Crea la nueva cita confirmada (sin cobrar de nuevo; hereda el importe).
   let newId: number
+  let newBookedAt = new Date()
   try {
     const [row] = await db
       .insert(appointments)
@@ -716,8 +772,9 @@ export async function rescheduleAppointment(
         stripeSessionId: old.stripeSessionId,
         stripePaymentIntentId: old.stripePaymentIntentId,
       })
-      .returning({ id: appointments.id })
+      .returning({ id: appointments.id, createdAt: appointments.createdAt })
     newId = row.id
+    newBookedAt = row.createdAt
   } catch {
     return { error: "Ese horario acaba de ocuparse. Elige otro." }
   }
@@ -755,6 +812,28 @@ export async function rescheduleAppointment(
       .update(appointments)
       .set({ meetingUrl: meeting.meetingUrl, googleEventId: meeting.googleEventId, updatedAt: new Date() })
       .where(eq(appointments.id, newId))
+  }
+
+  try {
+    const [lead] = await db
+      .select({ phone: leads.phone })
+      .from(leads)
+      .where(eq(leads.email, (pat?.email ?? "").toLowerCase()))
+      .orderBy(desc(leads.createdAt))
+      .limit(1)
+    if (doc?.email && pat?.email) {
+      await sendDoctorNewBookingEmail({
+        to: doc.email,
+        doctorName: doc.fullName,
+        patientName: pat.name,
+        patientEmail: pat.email,
+        patientPhone: lead?.phone,
+        startsAt: start,
+        bookedAt: newBookedAt,
+      })
+    }
+  } catch (e) {
+    console.log("[v0] doctor booking email error:", e instanceof Error ? e.message : e)
   }
 
   // Confirmación al paciente.

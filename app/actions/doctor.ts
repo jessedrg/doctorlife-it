@@ -15,7 +15,7 @@ import {
 import { stripe } from "@/lib/stripe"
 import { getRequestBaseUrl } from "@/lib/base-url"
 import { getSessionUser } from "@/lib/session"
-import { and, desc, eq, sql } from "drizzle-orm"
+import { and, desc, eq, inArray, sql } from "drizzle-orm"
 import { CONTRAINDICATIONS, COMORBIDITIES } from "@/lib/eligibility"
 import { put } from "@vercel/blob"
 import { revalidatePath } from "next/cache"
@@ -138,6 +138,45 @@ export type DoctorPatient = {
   totalAppointments: number
   lastVisit: Date | null
   nextVisit: Date | null
+}
+
+/** Reservas confirmadas y datos de contacto de los leads asignados a este médico. */
+export async function getMyDoctorLeads() {
+  const me = await requireDoctor()
+  const bookings = await db
+    .select({
+      appointmentId: appointments.id,
+      patientName: userTable.name,
+      patientEmail: userTable.email,
+      startsAt: appointments.startsAt,
+      bookedAt: appointments.createdAt,
+    })
+    .from(appointments)
+    .innerJoin(userTable, eq(userTable.id, appointments.patientId))
+    .where(and(eq(appointments.doctorId, me.id), eq(appointments.status, "confirmed")))
+    .orderBy(desc(appointments.createdAt))
+
+  if (bookings.length === 0) return []
+
+  const emails = [...new Set(bookings.map((booking) => booking.patientEmail.toLowerCase()))]
+  const leadContacts = await db
+    .select({ email: leads.email, phone: leads.phone, createdAt: leads.createdAt })
+    .from(leads)
+    .where(inArray(sql<string>`lower(${leads.email})`, emails))
+    .orderBy(desc(leads.createdAt))
+
+  const phoneByEmail = new Map<string, string>()
+  for (const lead of leadContacts) {
+    const email = lead.email.toLowerCase()
+    if (lead.phone?.trim() && !phoneByEmail.has(email)) {
+      phoneByEmail.set(email, lead.phone.trim())
+    }
+  }
+
+  return bookings.map((booking) => ({
+    ...booking,
+    patientPhone: phoneByEmail.get(booking.patientEmail.toLowerCase()) ?? null,
+  }))
 }
 
 /** Todos los pacientes del médico (con cita previa) + su estado. */

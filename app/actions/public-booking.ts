@@ -1,7 +1,7 @@
 "use server"
 
 import { db } from "@/lib/db"
-import { appointments, user, doctorProfiles } from "@/lib/db/schema"
+import { appointments, user, doctorProfiles, leads } from "@/lib/db/schema"
 import { auth } from "@/lib/auth"
 import { stripe, platformFeeCents } from "@/lib/stripe"
 import { getDoctorChargeContext } from "@/lib/clinic"
@@ -9,9 +9,13 @@ import { getRequestBaseUrl, getRequestDomain } from "@/lib/base-url"
 import { FIRST_VISIT_CENTS, FIRST_VISIT_LABEL } from "@/lib/plans"
 import { getPooledSlots } from "@/lib/scheduling/pool"
 import { generateTempPassword } from "@/lib/credentials"
-import { sendCredentialsEmail, sendBookingConfirmationEmail } from "@/lib/email"
+import {
+  sendCredentialsEmail,
+  sendBookingConfirmationEmail,
+  sendDoctorNewBookingEmail,
+} from "@/lib/email"
 import { maybeCreateMeeting } from "@/lib/video/daily"
-import { eq } from "drizzle-orm"
+import { desc, eq } from "drizzle-orm"
 import type { PooledSlot } from "@/lib/scheduling/types"
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
@@ -199,7 +203,7 @@ async function provisionVisit(params: {
         stripePaymentIntentId: params.paymentIntentId ?? null,
         stripeSessionId: referenceId,
       })
-      .returning({ id: appointments.id })
+      .returning({ id: appointments.id, createdAt: appointments.createdAt })
 
     // Crea una sala de videollamada de Daily.co (si está configurado).
     try {
@@ -224,6 +228,36 @@ async function provisionVisit(params: {
       }
     } catch (e) {
       console.log("[v0] provision meeting error:", e instanceof Error ? e.message : e)
+    }
+
+    try {
+      const [[doctor], [profile], [lead]] = await Promise.all([
+        db.select({ email: user.email }).from(user).where(eq(user.id, doctorId)).limit(1),
+        db
+          .select({ fullName: doctorProfiles.fullName })
+          .from(doctorProfiles)
+          .where(eq(doctorProfiles.userId, doctorId))
+          .limit(1),
+        db
+          .select({ phone: leads.phone })
+          .from(leads)
+          .where(eq(leads.email, email))
+          .orderBy(desc(leads.createdAt))
+          .limit(1),
+      ])
+      if (doctor?.email) {
+        await sendDoctorNewBookingEmail({
+          to: doctor.email,
+          doctorName: profile?.fullName ?? "",
+          patientName: name,
+          patientEmail: email,
+          patientPhone: lead?.phone,
+          startsAt: start,
+          bookedAt: appt.createdAt,
+        })
+      }
+    } catch (e) {
+      console.log("[v0] doctor booking email error:", e instanceof Error ? e.message : e)
     }
   }
 

@@ -158,6 +158,56 @@ export async function sendBookingConfirmationEmail(opts: {
   )
 }
 
+/** Avvisa il medico quando una prenotazione viene confermata. */
+export async function sendDoctorNewBookingEmail(opts: {
+  to: string
+  doctorName: string
+  patientName: string
+  patientEmail: string
+  patientPhone?: string | null
+  startsAt: Date
+  bookedAt: Date
+}) {
+  const escapeHtml = (value: string) =>
+    value.replace(/[&<>"']/g, (character) => {
+      const entities: Record<string, string> = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;",
+      }
+      return entities[character] ?? character
+    })
+  const patientName = escapeHtml(opts.patientName)
+  const patientEmail = escapeHtml(opts.patientEmail)
+  const patientPhone = opts.patientPhone?.trim() ?? ""
+  const phoneDigits = patientPhone.replace(/\D/g, "").replace(/^00/, "")
+  const whatsappUrl = phoneDigits.length >= 7 ? `https://wa.me/${phoneDigits}` : null
+  const rows = [
+    { label: "Paziente", value: patientName },
+    { label: "Email", value: patientEmail },
+    { label: "Appuntamento", value: escapeHtml(formatWhen(opts.startsAt)) },
+    { label: "Prenotato il", value: escapeHtml(formatWhen(opts.bookedAt)) },
+    {
+      label: "WhatsApp",
+      value: whatsappUrl
+        ? `<a href="${whatsappUrl}" style="color:${INK};font-weight:600;">${escapeHtml(patientPhone)} · Apri WhatsApp</a>`
+        : "Numero non fornito",
+    },
+  ]
+  const body = `
+    ${p(`Ciao Dr. ${escapeHtml(opts.doctorName)}, hai ricevuto una nuova prenotazione.`)}
+    ${dataBox(rows)}
+    <div style="margin:22px 0 4px;">${button(`${getCanonicalBaseUrl()}/clinica/leads`, "Vedi i lead")}</div>
+  `
+  return send(
+    opts.to,
+    `Nuova prenotazione — ${patientName} · DoctorLife`,
+    shell({ title: "Nuova prenotazione", body, preheader: `Nuova visita prenotata da ${patientName}.` }),
+  )
+}
+
 /** Avviso al paziente che il suo medico ha annullato l'appuntamento e deve riprogrammare. */
 export async function sendAppointmentCancelledEmail(opts: {
   to: string
